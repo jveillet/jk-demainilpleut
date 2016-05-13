@@ -1,0 +1,33 @@
+# Name of the site (displayed in the header)
+name: demain·il·pleut
+
+# Short bio or description (displayed in the header)
+description: Coding & Design for the rainy days
+
+# Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
+# Used for Sitemap.xml and your RSS feed
+#url: https://www.demainilpleut.fr/
+url: http://192.168.99.100:8080
+
+# Number of post to display on the front page
+paginate: 2
+paginate_path: "/page/:num/"
+
+# Exclude these files from your production _site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - Dockerfile
+  - docker-compose.yml
+
+# Display drafts
+show_drafts: true
+
+include:
+  - css
+  - js
+  - img
+  - styleguide
+
+gems:
+  - jekyll-paginate
