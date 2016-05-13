@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<div class="posts">
+  {% for post in paginator.posts %}
+    <article class="article">
+
+      <h2><a href="{{ site.baseurl }}{{ post.url }}" class="article-title">{{ post.title }}</a></h2>
+      <span class="article-author"><a class="article-author--link" href="https://www.demainilpleut.fr/author/jveillet/">Jérémie Veillet</a></span>
+      <span class="article-pubdate">—&nbsp;<time datetime="2016-04-20T16:56:36+00:00">April 20, 2016 at 16:56</time></span>
+      <div class="article-summary"></div>
+      <p>
+        {{ post.excerpt || strip_links || strip_imgs }}
+      </p>
+      <div class="article-footer"><a class="btn bg-magenta white" href="{{ site.baseurl }}{{ post.url }}">Read more…</a></div>
+    </article>
+  {% endfor %}
+</div>
+
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+  <ul class="page-numbers">
+    {% if paginator.previous_page %}
+      <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="page-numbers previous">&laquo; Prev</a></li>
+    {% endif %}
+
+    {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %}
+        <li><span class="page-numbers current">{{ page }}</span></li>
+      {% elsif page == 1 %}
+        <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="page-numbers">{{ page }}</a></li>
+      {% else %}
+        <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" class="page-numbers">{{ page }}</a></li>
+      {% endif %}
+    {% endfor %}
+
+    {% if paginator.next_page %}
+      <li><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="page-numbers next">Next &raquo;</a></li>
+    {% endif %}
+  </ul>
+</div>
+{% endif %}
