@@ -5,8 +5,8 @@
       <div class="column third">
         <h3 class="black">Latest posts</h3>
         <ul>
-          {% for post in site.posts limit:8 %}
-            <li><a href="{{ site.baseurl }}{{ post.url }}" class="footer-link" title="{{ post.title }}">{{ post.title | truncate: 40, '...' }}</a></li>
+          {% for post in site.posts limit:5 %}
+            <li><a href="{{ site.baseurl }}{{ post.url }}" class="footer-link" title="{{ post.title }}">{{ post.title | truncate: 60, '...' }}</a></li>
           {% endfor %}
         </ul>
       </div><!-- end of column -->
