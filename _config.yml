@@ -7,7 +7,7 @@ description: Coding & Design for the rainy days
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
 #url: https://www.demainilpleut.fr/
-url: http://192.168.99.100:8080
+url: http://192.168.99.1:8080
 
 # Number of post to display on the front page
 paginate: 2

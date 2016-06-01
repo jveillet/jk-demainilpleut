@@ -8,7 +8,7 @@ blog:
   ports:
     - "8080:4000"
   volumes:
-    - "${PWD}:/app"
+    - .:/app
   volumes_from:
     - bundler
   command: bundle exec jekyll serve -H 0.0.0.0
