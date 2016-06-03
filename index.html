@@ -8,7 +8,7 @@ layout: default
 
       <h2><a href="{{ site.baseurl }}{{ post.url }}" class="article-title">{{ post.title }}</a></h2>
       <span class="article-author"><a class="article-author--link" href="https://www.demainilpleut.fr/author/jveillet/">Jérémie Veillet</a></span>
-      <span class="article-pubdate">—&nbsp;<time datetime="2016-04-20T16:56:36+00:00">April 20, 2016 at 16:56</time></span>
+      <span class="article-pubdate">—&nbsp;<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %d, %Y' }} at {{ post.published_at | date: "%R" }}</time></span>
       <div class="article-summary"></div>
       <p>
         {{ post.excerpt || strip_links || strip_imgs }}

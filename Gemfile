@@ -4,3 +4,4 @@ ruby '2.2.4'
 
 gem 'jekyll'
 gem 'jekyll-paginate'
+gem 'jekyll-archives'
