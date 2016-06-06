@@ -4,6 +4,10 @@ layout: default
 
 <h1>Archives for {{ page.date | date: "%B %Y" }}</h1>
 
+<div class="archives archives-return-link">
+  <a href="{{ site.baseurl }}/archives" class="archives-link">&larr; Return to archives</a>
+</div>
+
 <div class="posts">
   {% for post in page.posts %}
    <!-- Look the author details up from the site config. -->
@@ -19,4 +23,8 @@ layout: default
       <div class="article-footer"><a class="btn bg-magenta white" href="{{ site.baseurl }}{{ post.url }}">Read more…</a></div>
     </article>
   {% endfor %}
+</div>
+
+<div class="archives archives-return-link">
+  <a href="{{ site.baseurl }}/archives" class="archives-link">&larr; Return to archives</a>
 </div>

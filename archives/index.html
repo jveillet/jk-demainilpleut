@@ -21,7 +21,7 @@ Welcome to the archives. Here you can find all of the posts made over the years,
 <div class ="archives">
   <ul class="list-unordered">
   {% for category in site.categories %}
-    <li><a href="{{ site.url }}/{{ category | first | downcase | replace: ' ', '_'  }}" class="archives-link">{{ category | first }}</a>&nbsp;({{ category | last | size }})</li>
+    <li><a href="{{ site.url }}/archives/{{ category | first | downcase | replace: ' ', '-'  }}" class="archives-link">{{ category | first }}</a><span class="archives-complement">({{ category | last | size }})</span></li>
   {% endfor %}
   </ul>
 </div>
@@ -34,7 +34,7 @@ Welcome to the archives. Here you can find all of the posts made over the years,
     {% assign prevyear = post.previous.date | date: "%B %Y" %}
     {% assign counter = counter | plus: 1 %}
     {% if thisyear != prevyear %}
-      <span class="archives--small"><a href="/archives/{{ post.date | date:"%Y" }}/{{ post.date | date:"%m" }}" class="archives-link">{{ thisyear }}</a>&nbsp;({{ counter }})</span>
+      <span><a href="/archives/{{ post.date | date:"%Y" }}/{{ post.date | date:"%m" }}" class="archives-link">{{ thisyear }}</a><span class="archives-complement">({{ counter }})</span></span>
       {% if forloop.last == false %}
         |&nbsp;
       {% endif %}

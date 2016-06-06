@@ -185,6 +185,7 @@ a, b, strong, dt {
 .main-container {
   padding-left: 1em;
   padding-right: 1em;
+  margin-bottom: 1em;
 }
 
 /* TopBar */
@@ -697,38 +698,19 @@ code, pre {
   text-decoration: none;
 }
 
-/*
-
 .archives-link:hover,
 .archives-link:focus {
   text-decoration: underline;
 }
 
-.archives>li a:link,
-.archives>li a:visited {
-  color: #ec4882;
-  text-decoration: none;
+.archives-return-link {
+  margin-top: 1em;
 }
 
-.archives>li a:hover,
-.archives>li a:focus {
-  text-decoration: underline;
-}
-
-.archives>p a:link,
-.archives>p a:visited {
-  color: #ec4882;
-  text-decoration: none;
-}
-
-.archives>p a:hover,
-.archives>p a:focus {
-  text-decoration: underline;
-}
-*/
-
-.archives--small {
+.archives-complement {
+  margin-left: .5em;
   font-size: .8em;
+  color: #938cae;
 }
 
 /* Pagination */
