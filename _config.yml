@@ -48,7 +48,7 @@ jekyll-archives:
     - year
     - month
   layouts:
-    category: archives
+    category: archives-category
     year: archives-year
     month: archives-month
   permalinks:

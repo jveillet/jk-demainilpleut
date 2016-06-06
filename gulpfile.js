@@ -11,7 +11,7 @@ var CSS_DEST = 'css';
 
 gulp.task('default', function() {
   // place code for your default task here
-  return gulp.src('*.css')
+  return gulp.src('css/style.css')
         .pipe(sourcemaps.init())
         .pipe(cssnano())
         .pipe(rename({ extname: '.min.css' }))
