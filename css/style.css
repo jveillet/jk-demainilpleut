@@ -56,6 +56,8 @@ ul {
   padding: 0;
 }
 
+
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -689,9 +691,22 @@ code, pre {
 
 /* Archives */
 
+.archives-link,
+.archives-link:visited {
+  color: #ec4882;
+  text-decoration: none;
+}
+
+/*
+
+.archives-link:hover,
+.archives-link:focus {
+  text-decoration: underline;
+}
+
 .archives>li a:link,
 .archives>li a:visited {
-  color: #706694;
+  color: #ec4882;
   text-decoration: none;
 }
 
@@ -702,7 +717,7 @@ code, pre {
 
 .archives>p a:link,
 .archives>p a:visited {
-  color: #706694;
+  color: #ec4882;
   text-decoration: none;
 }
 
@@ -710,6 +725,7 @@ code, pre {
 .archives>p a:focus {
   text-decoration: underline;
 }
+*/
 
 .archives--small {
   font-size: .8em;

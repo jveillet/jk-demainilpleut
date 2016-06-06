@@ -4,7 +4,7 @@ name: demain·il·pleut
 # Short bio or description (displayed in the header)
 description: Coding & Design for the rainy days
 
-# Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
+# Your website URL
 # Used for Sitemap.xml and your RSS feed
 #url: https://www.demainilpleut.fr/
 url: http://192.168.99.1:8080
@@ -19,15 +19,44 @@ exclude:
   - Gemfile.lock
   - Dockerfile
   - docker-compose.yml
+  - gulpfile.js
+  - package.json
+  - install.sh
+  - LICENSE
+  - README.md
+  - node_modules
+  - .editorconfig
+  - .git
+  - .gitignore
+  - .bundle
+  - .bundle-docker
 
 # Display drafts
 show_drafts: true
 
+# Folders and files to include int he build
 include:
   - css
   - js
   - img
   - styleguide
 
+# Archives configuration
+jekyll-archives:
+  enabled:
+    - categories
+    - year
+    - month
+  layouts:
+    category: archives
+    year: archives-year
+    month: archives-month
+  permalinks:
+    category: /archives/:name/
+    year: /archives/:year/
+    month: /archives/:year/:month/
+
+# Gems to include
 gems:
   - jekyll-paginate
+  - jekyll-archives

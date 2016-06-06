@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<h1>Archives</h1>
+
+Welcome to the archives. Here you can find all of the posts made over the years, the most popular stuff, the bad, the ugly and the usefull.
+
+<h2>Last 10 Posts</h2>
+<div class="archives">
+  <ol class="list-ordered" start="1" type="1">
+    {% for post in site.posts limit:10 offset:1 %}
+    <li>
+      <a href="{{ post.url | prepend: site.baseurl }}" class="archives-link">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+  </ol>
+</div>
+
+<h2>By Categories</h2>
+<div class ="archives">
+  <ul class="list-unordered">
+  {% for category in site.categories %}
+    <li><a href="{{ site.url }}/{{ category | first | downcase | replace: ' ', '_'  }}" class="archives-link">{{ category | first }}</a>&nbsp;({{ category | last | size }})</li>
+  {% endfor %}
+  </ul>
+</div>
+
+<h2>By month</h2>
+<div class ="archives">
+  {% assign counter = 0 %}
+  {% for post in site.posts %}
+    {% assign thisyear = post.date | date: "%B %Y" %}
+    {% assign prevyear = post.previous.date | date: "%B %Y" %}
+    {% assign counter = counter | plus: 1 %}
+    {% if thisyear != prevyear %}
+      <span class="archives--small"><a href="/archives/{{ post.date | date:"%Y" }}/{{ post.date | date:"%m" }}" class="archives-link">{{ thisyear }}</a>&nbsp;({{ counter }})</span>
+      {% if forloop.last == false %}
+        |&nbsp;
+      {% endif %}
+      {% assign counter = 0 %}
+    {% endif %}
+  {% endfor %}
+</div>
+
