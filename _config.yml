@@ -58,5 +58,5 @@ jekyll-archives:
 
 # Gems to include
 gems:
-  - jekyll-paginate
   - jekyll-archives
+  - jekyll-paginate

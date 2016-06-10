@@ -16,7 +16,7 @@ RUN echo \"deb http://ftp2.fr.debian.org/debian/ jessie main contrib non-free\" 
 RUN echo \"deb-src http://ftp2.fr.debian.org/debian/ jessie main contrib non-free\" >> /etc/apt/sources.list\n
 \n
 RUN apt-get clean && apt-get update -y \\ \n
-\t\t&& apt-get install -y --no-install-recommends git-core build-essential sudo libffi-dev libxml2-dev libssl-dev python \\ \n
+\t\t&& apt-get install -y --no-install-recommends git-core build-essential sudo libffi-dev libxml2-dev libssl-dev python imagemagick libmagickwand-dev \\ \n
 \t\t&& rm -rf /var/lib/apt/lists/*\n
 \n
 # Add doctor user to sudo group\n
