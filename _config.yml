@@ -56,6 +56,28 @@ jekyll-archives:
     year: /archives/:year/
     month: /archives/:year/:month/
 
+# Responsives images
+#image_url: /img
+
+#collections:
+#  examples:
+#    output: true
+#    permalink: /:path/
+
+#defaults:
+#  -
+#    scope:
+#      type: examples
+#    values:
+#      layout: default
+
+#sizes: '(min-width: 70em) 1000px, (min-width: 50em) 750px, (min-width: 31.5em) 500px, 100vw'
+
+#srcset:
+#  - 500
+#  - 750
+#  - 1000
+
 # Gems to include
 gems:
   - jekyll-archives

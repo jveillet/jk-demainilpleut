@@ -1,17 +1,15 @@
 @charset "UTF-8";
 /**
-Theme Name: wp-demainilpleut
-Theme URI: https://github.com/jveillet/wp-demainilpleut
+Name: style.css
+Github URI: https://github.com/jveillet/jk-demainilpleut
 Author: Jérémie Veillet
 Author URI: https://github.com/jveillet
-Description: Custom responsive Wordpress theme built for demainilpleut.fr
+Description: Styles for demain·il·pleut
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: brown, coffee, light, white, mobile-first, responsive, one-column, flexible-width, custom-header, custom-menu
-Text Domain: wp-demainilpleut
 
-This theme, like WordPress, is licensed under the GPL.
+This stylesheet is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
@@ -55,8 +53,6 @@ ul {
   margin: 0;
   padding: 0;
 }
-
-
 
 table {
   border-collapse: collapse;
@@ -201,7 +197,7 @@ a, b, strong, dt {
   display: block;
   padding: .8em .5em;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1.5em;
   font-weight: 600;
 }
 
@@ -301,7 +297,6 @@ a, b, strong, dt {
     line-height: 1.5em;
     padding: .8em .5em;
     overflow: auto;
-    width: 100%;
   }
 
   .topbar .topbar-menu {
@@ -338,6 +333,11 @@ a, b, strong, dt {
     margin: 1em .25em;
   }
 
+  .topbar-navigation-item {
+    font-size: 1.2em;
+  }
+
+
   .topbar-navigation-item,
   .topbar-navigation-item:visited {
 	  border: 0;
@@ -357,7 +357,7 @@ a, b, strong, dt {
     display: block;
     padding: .8em .5em;
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: 600;
   }
 
@@ -810,13 +810,12 @@ code, pre {
   z-index: 1;
 }
 
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 320px),
-only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 320px),
-only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 320px),
-only screen and (        min-device-pixel-ratio: 2)      and (min-width: 320px),
-only screen and (                min-resolution: 192dpi) and (min-width: 320px),
-only screen and (                min-resolution: 2dppx)  and (min-width: 320px) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px),
+  only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 320px),
+  only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 320px),
+  only screen and (min-device-pixel-ratio: 2) and (min-width: 320px),
+  only screen and (min-resolution: 192dpi) and (min-width: 320px),
+  only screen and (min-resolution: 2dppx) and (min-width: 320px) {
 
   .search .search-submit {
     background: transparent url(img/demainilpleut-search@2x.png) no-repeat 50% 50%;
@@ -831,7 +830,6 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
     top: .5em;
     z-index: 1;
   }
-
 }
 
 /* Text Field */
@@ -1077,3 +1075,4 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
   margin-bottom: 0;
   margin-left: 0;
 }
+
