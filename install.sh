@@ -7,17 +7,19 @@ UID=$(id -u)
 GID=$(id -g)
 
 FILE="
-FROM ruby:2.2.4-slim\n
+FROM ruby:2.2.6-slim\n
 \n
-# Define local mirror (if this one fail, just change http://ftp2.fr to http://ftp2.de)\n
-RUN echo \"deb http://security.debian.org/ jessie/updates main contrib non-free\" > /etc/apt/sources.list\n
-RUN echo \"deb-src http://security.debian.org/ jessie/updates main contrib non-free\" >> /etc/apt/sources.list\n
-RUN echo \"deb http://ftp2.fr.debian.org/debian/ jessie main contrib non-free\" >> /etc/apt/sources.list\n
-RUN echo \"deb-src http://ftp2.fr.debian.org/debian/ jessie main contrib non-free\" >> /etc/apt/sources.list\n
 \n
 RUN apt-get clean && apt-get update -y \\ \n
-\t\t&& apt-get install -y --no-install-recommends git-core build-essential sudo libffi-dev libxml2-dev libssl-dev python \\ \n
+\t\t&& apt-get install -y --no-install-recommends git-core build-essential sudo libffi-dev libxml2-dev libssl-dev python imagemagick libmagickwand-dev curl\\ \n
 \t\t&& rm -rf /var/lib/apt/lists/*\n
+\n
+# Using Debian, as root\n
+# Force install latest version of Nodejs\n
+RUN curl -sL https://deb.nodesource.com/setup_7.x | bash -\n
+RUN apt-get install -y nodejs\n
+# install globally Gulp\n
+RUN /usr/bin/npm install -g gulp\n
 \n
 # Add doctor user to sudo group\n
 RUN groupadd -f -g ${GID} ${USERGROUP}\n
@@ -58,3 +60,9 @@ echo ${FILE} >> Dockerfile
 
 # launch the docker environement setup
 docker-compose build
+
+# Launch the Ruby gems install
+docker-compose run --rm blog bundle install
+
+# Install all the node dependencies
+docker run -it --rm -v ${PWD}:/app/ jkdemainilpleut_blog npm install

@@ -15,7 +15,7 @@ gulp.task('default', function() {
         .pipe(sourcemaps.init())
         .pipe(cssnano())
         .pipe(rename({ extname: '.min.css' }))
-        .pipe( postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]) )
+        .pipe( postcss([ autoprefixer({ browsers: ['last 4 versions'] }) ]) )
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(CSS_DEST));
 });
