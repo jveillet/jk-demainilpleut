@@ -29,6 +29,10 @@ exclude:
   - .gitignore
   - .bundle
   - .bundle-docker
+  - config.ru
+  - vendor
+  - Procfile
+  - Rakefile
 
 # Display drafts
 show_drafts: true
