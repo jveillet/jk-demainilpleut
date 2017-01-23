@@ -11,7 +11,7 @@ Welcome to the archives. Here you can find all of the posts made over the years,
   <ol class="list-ordered" start="1" type="1">
     {% for post in site.posts limit:10 offset:1 %}
     <li>
-      <a href="{{ post.url | prepend: site.baseurl }}" class="archives-link">{{ post.title }}</a>
+      <a href="{{ post.url }}" class="archives-link">{{ post.title }}</a>
     </li>
     {% endfor %}
   </ol>
@@ -21,7 +21,7 @@ Welcome to the archives. Here you can find all of the posts made over the years,
 <div class ="archives">
   <ul class="list-unordered">
   {% for category in site.categories %}
-    <li><a href="{{ site.url }}/archives/{{ category | first | downcase | replace: ' ', '-'  }}" class="archives-link">{{ category | first }}</a><span class="archives-complement">({{ category | last | size }})</span></li>
+    <li><a href="/archives/{{ category | first | downcase | replace: ' ', '-'  }}" class="archives-link">{{ category | first }}</a><span class="archives-complement">({{ category | last | size }})</span></li>
   {% endfor %}
   </ul>
 </div>
