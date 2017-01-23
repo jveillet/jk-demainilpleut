@@ -6,23 +6,23 @@
         <h3 class="black">Latest posts</h3>
         <ul>
           {% for post in site.posts limit:5 %}
-            <li><a href="{{ site.baseurl }}{{ post.url }}" class="footer-link" title="{{ post.title }}">{{ post.title | truncate: 60, '...' }}</a></li>
+            <li><a href="/{{ post.url }}" class="footer-link" title="{{ post.title }}">{{ post.title | truncate: 60, '...' }}</a></li>
           {% endfor %}
         </ul>
       </div><!-- end of column -->
       <div class="column third">
         <h3 class="black">Menu</h3>
         <ul>
-          <li><a href="{{ site.url }}" class="footer-link">Blog</a></li>
-          <li><a href="{{ site.url }}/archives'" class="footer-link">Archives</a></li>
-          <li><a href="{{ site.url }}/styleguide" class="footer-link">Styleguide</a></li>
+          <li><a href="/" class="footer-link">Blog</a></li>
+          <li><a href="/archives" class="footer-link">Archives</a></li>
+          <li><a href="/styleguide" class="footer-link">Styleguide</a></li>
         </ul>
       </div><!-- end of column -->
       <div class="column third">
         <h3 class="black">Categories</h3>
         <ul>
         {% for category in site.categories limit:8 %}
-          <li><a href="{{ site.url }}/{{ category | first | downcase | replace: ' ', '_'  }}" class="footer-link">{{ category | first }} ({{ category | last | size }})</a></li>
+          <li><a href="/archives/{{ category | first | downcase | replace: ' ', '-'  }}" class="footer-link">{{ category | first }} ({{ category | last | size }})</a></li>
         {% endfor %}
         </ul>
       </div><!-- end of column -->
