@@ -4,7 +4,7 @@ layout: post
 title: 'WordPress development environment with Docker Part I: installing Docker'
 published_at: 2016-03-30T16:44:00+00:00
 categories: [Code, Wordpress]
-permalink: /:title
+permalink: /:title/
 author: jveillet
 ---
 

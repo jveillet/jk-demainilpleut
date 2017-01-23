@@ -4,7 +4,7 @@ layout: post
 title: 'Introducing first draft of the Styleguide'
 published_at: 2016-01-19T18:08:00+00:00
 categories: [Blog related, CSS]
-permalink: /:title
+permalink: /:title/
 author: jveillet
 ---
 
