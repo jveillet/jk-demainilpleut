@@ -61,8 +61,6 @@ npm-debug.log
 
 # Jekyll
 _site/
-# _data/
 _drafts/
-# _posts/
 .sass-cache/
 .jekyll-metadata
