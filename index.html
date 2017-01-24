@@ -9,7 +9,7 @@ layout: default
     {% assign author = site.data.authors[post.author] %}
     <article class="article">
       <h2><a href="{{ post.url }}" class="article-title">{{ post.title }}</a></h2>
-      <span class="article-author"><a class="article-author--link" href="/authors/{{ author.handle }}">{{ author.name }}</a></span>
+      <span class="article-author"><a class="article-author--link" href="/author/{{ author.handle }}">{{ author.name }}</a></span>
       <span class="article-pubdate">—&nbsp;<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %d, %Y' }} at {{ post.published_at | date: "%R" }}</time></span>
       <div class="article-summary"></div>
       <p>
