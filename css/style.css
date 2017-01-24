@@ -599,6 +599,10 @@ code, pre {
 
 /* Author */
 
+.page-author {
+  margin-bottom: 1em;
+}
+
 .page-author a:link,
 .page-author a:visited {
   color: #ec4882;
@@ -627,41 +631,13 @@ code, pre {
 }
 
 .social {
-  display: flex;
-  flex-flow: row wrap;
-  flex-direction: row;
-  /* This aligns items to the end line on main-axis */
-  align-items: center;
-  justify-content: space-around;
+  /* On small screens, we are no longer using row direction but column */
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-.social {
-  display: flex;
-  flex-flow: row wrap;
-  flex-direction: row;
-  /* This aligns items to the end line on main-axis */
-  align-items: center;
-  justify-content: space-around;
-}
-
-
-/* Medium screens */
-@media all and (max-width: 800px) {
-  .social {
-    /* When on medium sized screens, we center it by evenly distributing empty space around items */
-    justify-content: space-around;
-  }
-}
-/* Small screens */
-@media all and (max-width: 500px) {
-  .social {
-    /* On small screens, we are no longer using row direction but column */
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  .social-item {
-    margin-right: auto;
-  }
+.social-item {
+  margin-right: auto;
 }
 
 .social-twitter {
@@ -702,6 +678,17 @@ code, pre {
   }
   .page-author-avatar {
     text-align: left;
+  }
+  .social {
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: row;
+    /* This aligns items to the end line on main-axis */
+    align-items: center;
+    justify-content: space-around;
+  }
+  .social-item {
+    margin-right: 0;
   }
 }
 
