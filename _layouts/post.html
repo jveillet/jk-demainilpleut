@@ -11,7 +11,7 @@ layout: default
 
   <article class="article">
     {% if author %}
-    <span class="article-author">by&nbsp;<a class="article-author--link" href="/authors/{{ author.handle }}">{{ author.name }}</a></span>
+    <span class="article-author">by&nbsp;<a class="article-author--link" href="/author/{{ author.handle }}">{{ author.name }}</a></span>
     {% endif %}
     <span class="article-pubdate">&mdash;&nbsp;<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %d, %Y' }} at {{ page.published_at | date: "%R" }}</time></span>
     <div class="article-summary">
@@ -45,8 +45,8 @@ layout: default
     <h2 class="about-title">About the Author</h2>
     <div class="about-author">
       <div class="about-author-bio">
-      <a class="about-author-avatar" href="/authors/{{ author.handle }}"><img src="{{ author.avatar }}" width="80" height="80" alt=""></a>
-        <p><span class="about-author-name"><a href="/authors/{{ author.handle }}">{{ author.name }}</a></span><br><small>{{ author.description }}</small></p>
+      <a class="about-author-avatar" href="/author/{{ author.handle }}"><img src="{{ author.avatar }}" width="80" height="80" alt=""></a>
+        <p><span class="about-author-name"><a href="/author/{{ author.handle }}">{{ author.name }}</a></span><br><small>{{ author.description }}</small></p>
       </div><!-- end of author bio -->
     </div><!-- end of about author -->
   </div><!-- end of about section -->
