@@ -1,5 +1,5 @@
 namespace :assets do
   task :precompile do
-    puts `bundle exec jekyll build`
+    puts `JEKYLL_ENV=production bundle exec jekyll build`
   end
 end
