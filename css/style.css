@@ -301,6 +301,7 @@ a, b, strong, dt {
 
   .topbar .topbar-menu {
     float: right;
+    margin-top: .5em;
   }
 
   .topbar-logo {
