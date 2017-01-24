@@ -670,6 +670,22 @@ code, pre {
   padding: .5em 0 .5em 2em;
 }
 
+.members {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+  align-content: flex-end;
+}
+
+.members-item {
+  text-align: center;
+  margin: 1em;
+}
+
 @media all and (min-width: 47em) {
   .avatar--size {
     width: 8em;
