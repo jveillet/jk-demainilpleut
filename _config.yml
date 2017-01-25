@@ -8,9 +8,6 @@ description: Coding & Design for the rainy days
 # Used for Sitemap.xml and your RSS feed
 url: https://www.demainilpleut.fr/
 
-# Static assets URL
-cdn: https://s3-eu-west-1.amazonaws.com/static.demainilpleut
-
 # Number of post to display on the front page
 paginate: 2
 paginate_path: "/page/:num/"
