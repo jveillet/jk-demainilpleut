@@ -1,0 +1,87 @@
+# Name of the site (displayed in the header)
+name: demain·il·pleut
+
+# Short bio or description (displayed in the header)
+description: Coding & Design for the rainy days
+
+# Your website URL
+# Used for Sitemap.xml and your RSS feed
+url: https://www.demainilpleut.fr/
+
+# Number of post to display on the front page
+paginate: 2
+paginate_path: "/page/:num/"
+
+# Exclude these files from your production _site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - Dockerfile
+  - docker-compose.yml
+  - gulpfile.js
+  - package.json
+  - install.sh
+  - LICENSE
+  - README.md
+  - node_modules
+  - .editorconfig
+  - .git
+  - .gitignore
+  - .bundle
+  - .bundle-docker
+  - config.ru
+  - vendor
+  - Procfile
+  - Rakefile
+
+# Display drafts
+show_drafts: true
+
+# Folders and files to include int he build
+include:
+  - css
+  - js
+  - img
+  - styleguide
+
+# Archives configuration
+jekyll-archives:
+  enabled:
+    - categories
+    - year
+    - month
+  layouts:
+    category: archives-category
+    year: archives-year
+    month: archives-month
+  permalinks:
+    category: /archives/:name/
+    year: /archives/:year/
+    month: /archives/:year/:month/
+
+# Responsives images
+#image_url: /img
+
+#collections:
+#  examples:
+#    output: true
+#    permalink: /:path/
+
+#defaults:
+#  -
+#    scope:
+#      type: examples
+#    values:
+#      layout: default
+
+#sizes: '(min-width: 70em) 1000px, (min-width: 50em) 750px, (min-width: 31.5em) 500px, 100vw'
+
+#srcset:
+#  - 500
+#  - 750
+#  - 1000
+
+# Gems to include
+gems:
+  - jekyll-archives
+  - jekyll-paginate

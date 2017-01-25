@@ -1,0 +1,40 @@
+---
+excerpt_separator: <!--readmore-->
+layout: post
+title: 'Enabling any text editor with git'
+published_at: 2016-01-08T15:58:00+00:00
+categories: [Git]
+permalink: /:title/
+author: jveillet
+---
+
+<p>I'm joining the party a little late, but I've started working with <code>git</code> and <code>GitHub</code>, both for this website, and coincidentally at work for my current project.This is a quick article about using your favorite editor to write your commit messages.</p>
+
+<h2>State of the art</h2>
+<p>If you happen to work with <code>git</code> (if not, you should download and it and play with it, it's marvelous), you probably need to enter a commit message at some point. When you first setup your environment, no default editor is configured (on OSX, if <code>git</code> is installed with XCode, it might use <code>vim</code> as the default editor).</p>
+
+<p>Checking out what is configured, it is as easy as invoking this line in the Terminal:</p>
+<pre><code class="language-bash">
+$ git config core.editor
+vim
+</code></pre>
+<p>Chances are, you will get an empty line as nothing is probably set.</p>
+
+<h2>Change the editor</h2>
+<p>Let's say you want to use SublimeText 3. This software comes with a very handy multiplatform (Windows and OSX) CLI call <code>subl</code>, that you can invoke in the Terminal. To use it anywhere in your command line, you either have to put the path of the executable into the <code>PATH</code> variable of the Windows environment, or do a symlink on OSX (see Resources).</p>
+
+<p>Open up a Terminal then type <code>subl</code>, you should see that it will open a new Sublime window. There is a bunch of optional parameters that you can pass to interact with Sublime, like <code>-n</code> for opening up a new window, or <code>-w</code> to wait for the files to be closed before returning.</p>
+<!--readmore-->
+
+<p>To change the editor settings, use this command in the Terminal:</p>
+<pre><code class="language-bash">
+$ git config --global core.editor "subl -n -w"
+</code></pre>
+
+<p>Now every time the command <code>git commit</code> will be invoked, SublimeText will be the default editor for commit messages.</p>
+
+<h2>Resources</h2>
+<p><a href="https://www.sublimetext.com/docs/3/osx_command_line.html" target="_blank" class="blog-link">SublimeText <code>subl</code> documentation</a><br>
+<a href="http://www.computerhope.com/issues/ch000549.htm" target="_blank" class="blog-link">Configure the PATH variable in Windows</a><br>
+<a href="https://apple.stackexchange.com/questions/115646/how-can-i-create-a-symbolic-link-in-terminal?rq=1" target="_blank" class="blog-link">Configure a symlink in OSX</a><br>
+<a href="https://help.github.com/articles/associating-text-editors-with-git/" target="_blank" class="blog-link">Associating text editors with git - Github help page</a></p>

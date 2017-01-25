@@ -1,0 +1,138 @@
+---
+excerpt_separator: <!--readmore-->
+layout: post
+title: 'Wordpress development environment with Docker Part II: Using Docker Compose to install WordPress'
+published_at: 2016-03-30T17:12:00+00:00
+categories: [Code, Wordpress]
+permalink: /:title/
+author: jveillet
+---
+
+<p>This is part II of an ongoing series about WordPress development with Docker. Part I was about installing Docker and preparing the environment. Our goal this time, is installing WordPress in a container, a database, and play a little bit with it.</p>
+<h2>Table of Contents</h2>
+<ul class="list-unordered">
+    <li><a class="blog-link" href="#prerequisites">Prerequisites</a></li>
+    <li><a class="blog-link" href="#structure">Directory structure</a></li>
+    <li><a class="blog-link" href="#compose">Using docker-compose</a></li>
+    <li><a class="blog-link" href="#wordpress">Setting up WordPress</a></li>
+    <li><a class="blog-link" href="#database">Setting up a database</a></li>
+    <li><a class="blog-link" href="#bonus">Bonus part</a></li>
+    <li><a class="blog-link" href="#conclusion">Wrapping up</a></li>
+    <li><a href="wordpress-development-environment-with-docker-part-iii-using-your-own-wordpress-theme/" class="blog-link">Part III : adding your own development theme</a></li>
+</ul>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>A fonctionning installation of Docker (see <a href="wordpress-development-environment-with-docker-part-i-installing-docker/">Part I</a>).</p>
+<p>A command line / Terminal.</p>
+<p>A web browser of your choosing.</p>
+<h2 id="structure">Directory structure</h2>
+<p>We will use a simple directory structure, create a folder on your OS, then create an empty docker-compose.yml in it.</p>
+<pre><code class="language-bash">
+$ mkdir wp-docker
+$ cd wp-docker/
+$ touch docker-compose.yml
+</code></pre>
+<h2 id="compose">Using docker-compose</h2>
+<p class="quote">Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a Compose file to configure your application’s services. Then, using a single command, you create and start all the services from your configuration —<a href="https://docs.docker.com/compose/overview/" target="_blank">Docker Compose documentation</a></p>
+<p>You can also launch containers one by one by doing a docker run + parameters, but it is not really friendly (yes, this is highly subjective), and very verbose as you have to type a list of parameters the size of the Mississippi. Compose is a tool made to combine the launch of multiple containers ( = multiple run commands), with the help of a YML file. This file can take a lot of parameters, we will focus on the key ones we will need in order to accomplish a WordPress installation. As always check the <a href="https://docs.docker.com/compose/compose-file/" target="_blank">Docker documentation</a> to know more.</p>
+
+<p>For illustration purpose, we will use the syntax version 1 of the Compose file.</p>
+<h2 id="wordpress">Setting up WordPress</h2>
+<p>What we want for starter is to be able to launch WordPress on an Apache server and a database. We have to define two containers, and what image it should use when we will invoke the Compose program. Note that we can name or containers however we want, as it is just a label that will help ourselves to link the containers between them and see what is going on in the CLI.</p>
+
+<p>Fire up your favorite text editor, and insert the following text. Save it into the docker-compose.yml as it is the default name that Docker will invoke. You can name it with another name, but you will have to tell the program explicitely (see <a class="blog-link" href="#bonus">Bonus section</a>).</p>
+<pre><code class="language-docker">
+wordpress:
+  image: wordpress
+  ports:
+    - 8080:80
+</code></pre>
+
+<!--readmore-->
+<p>You see that the text is indented, it is crucial to keep the text as is, as it is the norm for YML files. First line with "worpdress:" is the name of the container. Second line is the name of the image you will use (remember <a href="how-to-clean-up-local-git-branches-matching-a-name/">Part I</a>, Docker has a directory of pre-build images with a lot of softwares ready to be used). We will use the official (and latest version) WordPress image. Next parameter is the ports. In order to connect to the website, we need to tell Docker to map the port that is running on the Docker Machine, to a local port on our computer.</p>
+
+<p>We can see what's going on if we try to launch Docker Compose with what we have in the Compose file.</p>
+<pre><code class="language-bash">
+$ docker-compose up
+[...]
+</code></pre>
+<p>It will pull the WordPress image from the repository, with PHP and an Apache server as dependencies, install and configure everything with default values (it may take a little time, depending on your internet connection). but if you try to connect to the WordPress instance (http://192.168.99.100:8080), chances is that you might get an error due to a lack of database.</p>
+<h2 id="database">Setting up a database</h2>
+<p>In order to use the website, we need to install a database as well, something like MySQL. I choosed <a href="https://mariadb.org/" target="_blank">MariaDB </a> image from the Docker Repository, as it is an open source fork of MySQL, and it is nicely offered to us. You are probably asking yourself how we are going to access this database instance? Docker provide us with a "environment" section where we can put the variables we need to override the default configuration (Refer to the <a href="https://docs.docker.com/compose/compose-file/#environment" target="_blank">Environment section</a> on the Docker documentation, and <a href="https://hub.docker.com/_/mariadb/" target="_blank">Environment Variables section</a> on the Docker Hub page of MariaDB in order to know what can be tweaked).</p>
+
+<p>The final step is to link the WordPress container with this database container: this is a one liner. under a new "links" section, add the following code to your Compose file.</p>
+<pre><code class="language-docker">
+wordpress:
+  image: wordpress
+  links:
+    - wordpress_db:mysql
+  ports:
+    - 8080:80
+wordpress_db:
+  image: mariadb
+  environment:
+    MYSQL_ROOT_PASSWORD: examplepass
+</code></pre>
+<div class="alert alert--danger">Please try not to use this password and use one of your own, even if you are using this on your local machine.</div>
+Run an "up" command and see what is going on.
+<pre><code class="language-bash">
+$ docker-compose up
+[...]
+</code></pre>
+<p>As you can see in the screenshot, launching the browser with the url of the website, we are now greeted with the WordPress install step.</p>
+
+<img src="{{ site.cdn }}/wp_docker_capture_1.png" alt="WordPress install page"
+     srcset="{{ site.cdn }}/large/wp_docker_capture_1.png 1024w, {{ site.cdn }}/wp_docker_capture_1.png 300w, {{ site.cdn }}/small/wp_docker_capture_1.png 768w"
+     sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px">
+
+<p>Configure the parameters that are asked, then login to the WordPress admin interface. And voila!</p>
+
+<img src="{{ site.cdn }}/wp_docker_capture_3.png" alt="WordPress install page"
+     srcset="{{ site.cdn }}/large/wp_docker_capture_3.png 1024w, {{ site.cdn }}/wp_docker_capture_3.png 300w, {{ site.cdn }}/small/wp_docker_capture_3.png 768w"
+     sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px">
+
+<p>You can now configure everything like a regular WP installation, install themes, plugins, etc..</p>
+<h2 id="bonus">Bonus part</h2>
+<h3 id="phpmyadmin">phpMyAdmin</h3>
+<p>Being a command line ninja is pretty cool, but sometimes, one like to have an interface to navigate through the MySQL databases. Just like for MySQL, we need to add a container in the Compose file and link it to the database instance.</p>
+<pre><code class="language-docker">
+wordpress:
+  image: wordpress
+  links:
+    - wordpress_db:mysql
+  ports:
+    - 8080:80
+wordpress_db:
+  image: mariadb
+  environment:
+    MYSQL_ROOT_PASSWORD: examplepass
+phpmyadmin:
+  image: corbinu/docker-phpmyadmin
+  links:
+    - wordpress_db:mysql
+  ports:
+    - 8181:80
+  environment:
+    MYSQL_USERNAME: root
+    MYSQL_ROOT_PASSWORD: examplepass
+</code></pre>
+<p>As you can see, we use the 8181 port to access the admin page of phpMyAdmin, and we add environment variables to configure an account with a login and password. Launch the browser with the new url.</p>
+
+<p>BOOOOM!!!</p>
+
+<img src="{{ site.cdn }}/wp_docker_capture_4.png" alt="WordPress install page"
+     srcset="{{ site.cdn }}/large/wp_docker_capture_4.png 1024w, {{ site.cdn }}/wp_docker_capture_4.png 300w, {{ site.cdn }}/small/wp_docker_capture_4.png 768w"
+     sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px">
+
+<h3 id="renaming">Renaming the Docker Compose file</h3>
+<p>I get it, docker-compose.yml is a lame name, there are situations when you want to be able to launch different configurations. Let's create a different file, called "dev", with the content of the docker-compose.yml file.</p>
+<pre><code class="language-bash">
+$ cp docker-compose.yml dev.yml
+</code></pre>
+<p>Launching this configuration will not be more difficult that previously, we add to tell the program to use a different path to compose. Use the "-f" flag with the new Compose file name.</p>
+<pre><code class="language-bash">
+$ docker-compose -f dev.yml up
+[...]
+</code></pre>
+<h2 id="conclusion">Wrapping up</h2>
+<p>In this article, we learned how to use the Docker Compose program, and create a simple docker-compose.yml file to install and launch a WordPress website with a MySQL instance.
+What comes next? how are we using this to integrate plugins or themes development and get down to business ? <a href="wordpress-development-environment-with-docker-part-iii-using-your-own-wordpress-theme/" class="blog-link">Read part III: integrating a development theme</a>.</p>

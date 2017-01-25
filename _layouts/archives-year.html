@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<h1>Archives for {{ page.date | date: "%Y" }}</h1>
+
+<div class="archives archives-return-link">
+  <a href="/archives" class="archives-link">&larr; Return to archives</a>
+</div>
+
+<div class="posts">
+{% for post in page.posts reversed %}
+    {% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
+    {% capture next_month %}{{ post.next.date | date: "%B" }}{% endcapture %}
+
+    {% if forloop.first %}
+    <h2 id="{{ this_month }}-ref">{{this_month}}</h2>
+    <ul class="list-unordered">
+    {% endif %}
+
+    <li><a href="{{ post.url }}" class="blog-link">{{ post.title }}</a></li>
+
+    {% if forloop.last %}
+    </ul>
+    {% else %}
+        {% if this_month != next_month %}
+        </ul>
+        <h2 id="{{ next_month }}-ref">{{next_month}}</h2>
+        <ul class="list-unordered">
+        {% endif %}
+    {% endif %}
+{% endfor %}
+</div>
+
+<div class="archives archives-return-link">
+  <a href="/archives" class="archives-link">&larr; Return to archives</a>
+</div>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="{{ site.description }}">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="/css/prism.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <link rel="icon" type="image/png" href="/img/favicon-196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="/img/favicon-96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="/img/favicon-32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/img/favicon-16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="/img/favicon-128.png" sizes="128x128" />
+  <script src="/js/picturefill.min.js"></script>
+</head>
+  <body>
+    <!-- wrapper -->
+    <div id="top" class="wrapper">
+      {% include topbar.html %}
+
+       <!-- main -->
+      <main role="main" class="main-container">
+        {{ content }}
+      </main>
+
+      {% include footer.html %}
+    </div><!-- end of wrapper -->
+
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=blissfuljs"></script>
+    <script src="/js/bliss.min.js"></script>
+    <script src="/js/prism.min.js"></script>
+    <script>
+      // Add/display the mobile menu button, and
+      $.ready().then(function() {
+        $("body").classList.add("js");
+        var menu = $("#js-menu");
+        var menulink = $(".topbar-menu-btn");
+        // Toggle the display of menu links
+        menulink
+        .addEventListener("click", function(event) {
+          menulink.classList.toggle("active");
+          menu.classList.toggle('active');
+          return false;
+        });
+      });
+    </script>
+    {% if site.google_analytics and jekyll.environment == 'production' %}
+      {% include analytics.html %}
+    {% endif %}
+  </body>
+</html>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400,400italic,600italic,600,300" rel="stylesheet" />
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,400italic,500,500italic,700,700italic,600italic,600' rel='stylesheet' type='text/css'>
+
