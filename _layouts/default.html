@@ -7,9 +7,11 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <meta name="description" content="{{ site.description }}">
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  {% if jekyll.environment == 'production' %}
+  <link rel="stylesheet" type="text/css" href="/css/style.min.css" />
+  {% else %}
   <link rel="stylesheet" type="text/css" href="/css/style.css" />
-  <link rel="stylesheet" type="text/css" href="/css/prism.min.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  {% endif %}
   <link rel="icon" type="image/png" href="/img/favicon-196.png" sizes="196x196" />
   <link rel="icon" type="image/png" href="/img/favicon-96.png" sizes="96x96" />
   <link rel="icon" type="image/png" href="/img/favicon-32.png" sizes="32x32" />
@@ -30,6 +32,8 @@
       {% include footer.html %}
     </div><!-- end of wrapper -->
 
+    <link rel="stylesheet" type="text/css" href="/css/prism.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=blissfuljs"></script>
     <script src="/js/bliss.min.js"></script>
     <script src="/js/prism.min.js"></script>
