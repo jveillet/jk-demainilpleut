@@ -47,6 +47,12 @@ layout: default
       <div class="about-author-bio">
       <a class="about-author-avatar" href="/author/{{ author.handle }}"><img src="{{ author.avatar }}" width="80" height="80" alt=""></a>
         <p><span class="about-author-name"><a href="/author/{{ author.handle }}">{{ author.name }}</a></span><br><small>{{ author.description }}</small></p>
+        <ul class="social">
+          <li class="social-item"><a href="https://www.twitter.com/{{ author.twitter }}" class="social-twitter blog-link">@{{ author.twitter }}</a></li>
+          <li class="social-item"><a href="https://www.linkedin.com/in/{{ author.linkedin }}" class="social-linkedin blog-link">{{ author.linkedin }}</a></li>
+          <li class="social-item"><a href="https://www.github.com/{{ author.github }}" class="social-github blog-link">@{{ author.github }}</a></li>
+          <li class="social-item"><a href="https://plus.google.com/u/0/+{{ author.gplus }}" class="social-gplus blog-link">+{{ author.gplus }}</a></li>
+        </ul>
       </div><!-- end of author bio -->
     </div><!-- end of about author -->
   </div><!-- end of about section -->
