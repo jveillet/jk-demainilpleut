@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>logo</title>
+  <ellipse stroke="#ff7416" ry="60" rx="60" id="svg_3" cy="115" cx="115" stroke-width="0" fill="#ff7416"/>
+  <ellipse stroke="#ff7416" ry="60" rx="60" id="svg_4" cy="115" cx="190" stroke-width="0" fill="#ff7416"/>
+  <ellipse stroke="#ff7416" ry="60" rx="60" id="svg_6" cy="178" cx="153" stroke-width="0" fill="#ff7416"/>
+  <ellipse stroke="#ff7416" ry="60" rx="60" id="svg_7" cy="178" cx="224" stroke-width="0" fill="#ff7416"/>
+  <ellipse stroke="#ff7416" ry="60" rx="60" id="svg_8" cy="178" cx="79" stroke-width="0" fill="#ff7416"/>
+ </g>
+</svg>
