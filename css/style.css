@@ -207,8 +207,8 @@ a, b, strong, dt {
 }
 
 .topbar-logo {
-  background: url(../img/logo2-small.png) no-repeat left center;
-  background: url(../img/logo2.svg) no-repeat left center,
+  background: url(../img/logo-small.png) no-repeat left center;
+  background: url(../img/logo.svg) no-repeat left center,
     linear-gradient(transparent, transparent);
   background-size: auto 38px;
   float: left;
@@ -229,8 +229,8 @@ a, b, strong, dt {
   padding: 0 1em 0 1em;
   line-height: 3;
   height: 3em;
-  background-color: #ffffff;
-  color: #706694;
+  background-color: #ec4882;
+  color: #ffffff;
   border-radius: 4px;
   overflow: visible;
 }
@@ -305,8 +305,8 @@ a, b, strong, dt {
   }
 
   .topbar-logo {
-    background: url(../img/logo2.png) no-repeat left center;
-    background: url(../img/logo2.svg) no-repeat left center,
+    background: url(../img/logo.png) no-repeat left center;
+    background: url(../img/logo.svg) no-repeat left center,
       linear-gradient(transparent, transparent);
     background-size: auto 54px;
     float: left;
