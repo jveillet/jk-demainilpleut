@@ -1,8 +1,12 @@
-FROM ruby:2.2.6-slim
+FROM heroku/heroku:16-build
 
 RUN apt-get clean && apt-get update -y \
-    && apt-get install -y --no-install-recommends git-core build-essential sudo libffi-dev libxml2-dev libssl-dev python imagemagick libmagickwand-dev curl\
+    && apt-get install -y --no-install-recommends git-core build-essential \
+    sudo libffi-dev libxml2-dev libssl-dev curl \
     && rm -rf /var/lib/apt/lists/*
+
+RUN gem install bundler
+
 # Using Debian, as root
 # Force install latest version of Nodejs
 RUN curl -sL https://deb.nodesource.com/setup_7.x | bash -
@@ -11,22 +15,17 @@ RUN apt-get install -y nodejs
 RUN /usr/bin/npm install -g gulp
 
 # Add doctor user to sudo group
-RUN groupadd -f -g 1001 doctor
-RUN useradd -m -u 1001 -g doctor doctor
+RUN useradd -ms /bin/bash doctor
 RUN echo '%doctor ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
-RUN mkdir -p /app
-RUN mkdir -p /bundle
+RUN mkdir -p /app /bundle
 
 WORKDIR /app
 
-COPY Gemfile /app/
-COPY Gemfile.lock /app/
+COPY Gemfil* /app/
 
 # Give access to doctor user
-RUN chown -R doctor:doctor /app
-RUN chown -R doctor:doctor /bundle
-RUN chown -R doctor:doctor /home/doctor
+RUN chown -R doctor:doctor /app /bundle /home/doctor
 
 USER doctor
 

@@ -9,8 +9,14 @@ On the ruby side, this project uses [Bundler](https://bundler.io/).
 
 ### For Docker
 ```bash
-# Install everything in one shot (see inside the script to lauch the commands individualy)
-$ sh install.sh
+# Build the project image
+$ docker-compose build
+# install RubyGems dependencies
+$ docker-compose run --rm blog bundle install
+# Install the NPM dependencies into the container
+$ docker run -it --rm -v $PWD:/app/ jkdemainilpleut_blog npm install
+# Compile and minify JS + CSS
+$ docker-compose run --rm blog gulp
 # Launch jekyll build & server
 $ docker-compose up
 # (or)
