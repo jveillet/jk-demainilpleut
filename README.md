@@ -12,34 +12,35 @@ On the ruby side, this project uses [Bundler](https://bundler.io/).
 
 ### For Docker
 ```bash
-# Build the docker container
+$ cd jk-demainilpleut/
+# Build the docker container and install Gems dependencies and NPM dependencies
 $ docker-compose build
-# Install ruby dependencies
-$ docker-compose run --rm blog bundle install --clean
-# Install the JS dependencies (optional)
-$ docker-compose run --rm blog npm install
 # Run the tasks to build the CSS and JS (optional)
-$ docker-compose run --rm blog gulp
+$ docker-compose run --rm web gulp
 # Launch the Jekyll build and start the server
 $ docker-compose up
 # (or)
-$ docker-compose run --rm blog bundle exec jekyll serve -H 0.0.0.0
-# The server will run on the 8080 port (see docker-compose.yml)
+$ docker-compose run --rm web bundle exec jekyll serve -H 0.0.0.0 --incremental
+# The server will run on port 8080 (see docker-compose.yml)
 ```
 
 ### Without Docker
 ```bash
+$ cd jk-demainilpleut/
 # Install the gem and dependecies the blog needs
 $ bundle install
-# Install the tools to work on the CSS and JS
+# Debian only: Add the latest node version to the sources
+$ curl -sL https://deb.nodesource.com/setup_7.x | bash - \
+# Install Node and Gulp
 $ apt-get install -y nodejs
-$ npm install -g gulp
+$ npm install -g gulp-cli
 # Install the JS dependencies (optional)
 $ npm install
 # Run the tasks to build the CSS and JS (optional)
 $ gulp
 # Launch the Jekyll build and start the server
-$ bundle exec jekyll serve
+$ bundle exec jekyll serve --incremental
+# The server will run on port 4000
 ```
 
 ### On [Heroku](https://www.heroku.com)
