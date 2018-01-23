@@ -1,14 +1,8 @@
-bundler:
-  image: heroku/heroku:16-build
-  volumes:
-    - /bundle
-
-blog:
+web:
   build: .
+  env_file: .env
   ports:
     - "8080:4000"
   volumes:
-    - .:/app
-  volumes_from:
-    - bundler
-  command: bundle exec jekyll serve -H 0.0.0.0
+    - .:/home/app
+  command: bundle exec jekyll serve -H 0.0.0.0 --incremental
