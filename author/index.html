@@ -11,7 +11,6 @@ layout: default
 <div class="archives">
   <ul class="members">
     {% for author in site.data.authors %}
-      {{ # site.data.authors }}
       {% assign member = author[1] %}
       <li class="members-item">
         <img src="{{ member.avatar }}" alt="" class="avatar avatar--size"><a href="/author/{{ member.handle }}" class="archives-link">

@@ -1,42 +1,47 @@
-FROM ruby:2.2.6-slim
+FROM heroku/heroku:16
 
+# Environment variables
+ENV APP_HOME=/home/app
+ENV RACK_ENV=development
+ENV JEKYLL_ENV=development
+
+# Create the home directory for the new app user.
+RUN mkdir -p $APP_HOME
+
+# Copy the files needed for bundler and NPM
+ADD Gemfile $APP_HOME/
+ADD Gemfile.lock $APP_HOME/
+ADD package*.json $APP_HOME/
+ADD .env $APP_HOME/
+
+# Install essentials softwares whith dev headers
 RUN apt-get clean && apt-get update -y \
-    && apt-get install -y --no-install-recommends git-core build-essential sudo libffi-dev libxml2-dev libssl-dev python imagemagick libmagickwand-dev curl\
-    && rm -rf /var/lib/apt/lists/*
-# Using Debian, as root
-# Force install latest version of Nodejs
-RUN curl -sL https://deb.nodesource.com/setup_7.x | bash -
-RUN apt-get install -y nodejs
-# install globally Gulp
-RUN /usr/bin/npm install -g gulp
+    && apt-get install -y --no-install-recommends build-essential dh-autoreconf ruby2.3-dev \
+    sudo libffi-dev libxml2-dev libssl-dev \
+    && curl -sL https://deb.nodesource.com/setup_7.x | bash - \
+    && apt-get install -y nodejs \
+    && rm -rf /var/lib/apt/lists/* \
+    && gem install bundler --no-ri --no-rdoc
 
-# Add doctor user to sudo group
-RUN groupadd -f -g 1001 doctor
-RUN useradd -m -u 1001 -g doctor doctor
-RUN echo '%doctor ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+# Install global dependencies
+RUN cd $APP_HOME ; bundle install
+RUN cd $APP_HOME ; npm install --global gulp-cli
 
-RUN mkdir -p /app
-RUN mkdir -p /bundle
+# Run the image as a non-root user
+# Create an app user so our program doesn't run as root.
+RUN groupadd -r doctor &&\
+    useradd -r -g doctor -d $APP_HOME -s /sbin/nologin -c "Docker image user" doctor
 
-WORKDIR /app
+ADD . $APP_HOME
 
-COPY Gemfile /app/
-COPY Gemfile.lock /app/
-
-# Give access to doctor user
-RUN chown -R doctor:doctor /app
-RUN chown -R doctor:doctor /bundle
-RUN chown -R doctor:doctor /home/doctor
+# Chown all the files to the app user.
+RUN chown -R doctor:doctor $APP_HOME/
 
 USER doctor
 
- # Set bundler config
-ENV BUNDLE_JOBS=10 \
-    BUNDLE_PATH=/bundle \
-    BUNDLE_APP_CONFIG=/app/.bundle-docker/
+WORKDIR $APP_HOME
 
-# throw errors if Gemfile has been modified since Gemfile.lock
-RUN bundle config
-RUN bundle install --clean
+# Install local NPM dependencies
+RUN npm install --quiet
 
-COPY . /app/
+CMD bundle exec jekyll build
