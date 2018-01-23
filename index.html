@@ -13,7 +13,7 @@ layout: default
       <span class="article-pubdate">—&nbsp;<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %d, %Y' }} at {{ post.published_at | date: "%R" }}</time></span>
       <div class="article-summary"></div>
       <p>
-        {{ post.excerpt || strip_links || strip_imgs }}
+        {{ post.excerpt | strip_links | strip_imgs }}
       </p>
       <div class="article-footer"><a class="btn bg-magenta white" href="{{ post.url }}">Read more…</a></div>
     </article>
