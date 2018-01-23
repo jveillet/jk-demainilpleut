@@ -33,6 +33,8 @@ exclude:
   - vendor
   - Procfile
   - Rakefile
+  - .dockerignore
+  - .DS_Store
 
 # Display drafts
 show_drafts: true
@@ -81,7 +83,7 @@ jekyll-archives:
 #  - 750
 #  - 1000
 
-# Gems to include
-gems:
+# Plugins to include
+plugins:
   - jekyll-archives
   - jekyll-paginate
