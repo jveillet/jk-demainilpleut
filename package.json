@@ -15,14 +15,14 @@
   "bugs": {
     "url": "https://github.com/jveillet/jk-demainilpleut/issues"
   },
-  "homepage": "https://github.com/jveillet/jk-demainilpleut#readme",
+  "homepage": "https://github.com/jveillet/jk-demainilpleut#README.md",
   "devDependencies": {
-    "postcss": "^6.0.11",
-    "autoprefixer": "^7.1.4",
-    "gulp": "^3.9.1",
+    "postcss": "^6.0.16",
+    "autoprefixer": "^7.2.5",
+    "gulp": "^v4.0.0",
     "gulp-cssnano": "^2.1.2",
-    "gulp-postcss": "^7.0.0",
+    "gulp-postcss": "^7.0.1",
     "gulp-rename": "^1.2.2",
-    "gulp-sourcemaps": "^2.6.1"
+    "gulp-sourcemaps": "^2.6.4"
   }
 }
