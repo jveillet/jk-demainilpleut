@@ -1,12 +1,12 @@
 <!-- footer -->
-<div class="footer bg-green--lightgreen">
+<div class="footer">
   <div class="grid-container">
     <div class="row clearfix">
       <div class="column third">
         <h3 class="black">Latest posts</h3>
         <ul>
           {% for post in site.posts limit:5 %}
-            <li><a href="/{{ post.url }}" class="footer-link" title="{{ post.title }}">{{ post.title | truncate: 60, '...' }}</a></li>
+            <li><a href="{{ post.url }}" class="footer-link" title="{{ post.title }}">{{ post.title | truncate: 60, '...' }}</a></li>
           {% endfor %}
         </ul>
       </div><!-- end of column -->
@@ -14,7 +14,7 @@
         <h3 class="black">Menu</h3>
         <ul>
           <li><a href="/archives" class="footer-link">Archives</a></li>
-          <li><a href="/authors" class="footer-link">Authors</a></li>
+          <li><a href="/author" class="footer-link">Authors</a></li>
           <li><a href="/" class="footer-link">Blog</a></li>
           <li><a href="/styleguide" class="footer-link">Styleguide</a></li>
         </ul>
