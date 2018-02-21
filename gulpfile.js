@@ -19,3 +19,15 @@ gulp.task('default', function() {
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(CSS_DEST));
 });
+
+gulp.task('lint-css', function lintCssTask() {
+  const gulpStylelint = require('gulp-stylelint');
+
+  return gulp
+    .src('css/style-dark.css')
+    .pipe(gulpStylelint({
+    reporters: [
+      {formatter: 'string', console: true}
+    ]
+  }));
+});
