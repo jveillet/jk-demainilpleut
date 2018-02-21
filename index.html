@@ -9,37 +9,48 @@ layout: default
     {% assign author = site.data.authors[post.author] %}
     <article class="article">
       <h2><a href="{{ post.url }}" class="article-title">{{ post.title }}</a></h2>
-      <span class="article-author"><a class="article-author--link" href="/author/{{ author.handle }}">{{ author.name }}</a></span>
+      <span class="article-author"><a class="article-author--link" href="/authors/{{ author.handle }}">{{ author.name }}</a></span>
       <span class="article-pubdate">—&nbsp;<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %d, %Y' }} at {{ post.published_at | date: "%R" }}</time></span>
       <div class="article-summary"></div>
-      <p>
+      <div class="article-excerpt">
         {{ post.excerpt | strip_links | strip_imgs }}
-      </p>
+      </div>
       <div class="article-footer"><a class="btn bg-blue white" href="{{ post.url }}">Read more…</a></div>
+      <div class="article-tags">
+        {% assign total_cat = post.categories.size %}
+        {% for category in post.categories %}
+          <span class="article-tags-item">
+            <a href="/archives/{{ category | downcase | replace: ' ', '-'  }}"
+              class="article-tags-link">{{ category }}</a>
+          </span>
+        {% endfor %}
+      </div>
     </article>
   {% endfor %}
 </div>
 
 {% if paginator.total_pages > 1 %}
 <div class="pagination">
-  <ul class="page-numbers">
-    {% if paginator.previous_page %}
-      <li><a href="{{ paginator.previous_page_path | prepend: '/' | replace: '//', '/' }}" class="page-numbers previous">&laquo; Prev</a></li>
-    {% endif %}
-
-    {% for page in (1..paginator.total_pages) %}
-      {% if page == paginator.page %}
-        <li><span class="page-numbers current">{{ page }}</span></li>
-      {% elsif page == 1 %}
-        <li><a href="{{ paginator.previous_page_path | prepend: '/' | replace: '//', '/' }}" class="page-numbers">{{ page }}</a></li>
-      {% else %}
-        <li><a href="{{ site.paginate_path | prepend: '/' | replace: '//', '/' | replace: ':num', page }}" class="page-numbers">{{ page }}</a></li>
+  <div class="pagination-wrapper">
+    <ul class="page-numbers">
+      {% if paginator.previous_page %}
+        <li><a href="{{ paginator.previous_page_path | prepend: '/' | replace: '//', '/' }}" class="page-numbers previous primary-link">&laquo; Prev</a></li>
       {% endif %}
-    {% endfor %}
 
-    {% if paginator.next_page %}
-      <li><a href="{{ paginator.next_page_path | prepend: '/' | replace: '//', '/' }}" class="page-numbers next">Next &raquo;</a></li>
-    {% endif %}
-  </ul>
+      {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+          <li><span class="page-numbers current">{{ page }}</span></li>
+        {% elsif page == 1 %}
+          <li><a href="{{ paginator.previous_page_path | prepend: '/' | replace: '//', '/' }}" class="page-numbers primary-link">{{ page }}</a></li>
+        {% else %}
+          <li><a href="{{ site.paginate_path | prepend: '/' | replace: '//', '/' | replace: ':num', page }}" class="page-numbers primary-link">{{ page }}</a></li>
+        {% endif %}
+      {% endfor %}
+
+      {% if paginator.next_page %}
+        <li><a href="{{ paginator.next_page_path | prepend: '/' | replace: '//', '/' }}" class="page-numbers next primary-link">Next &raquo;</a></li>
+      {% endif %}
+    </ul>
+  </div>
 </div>
 {% endif %}

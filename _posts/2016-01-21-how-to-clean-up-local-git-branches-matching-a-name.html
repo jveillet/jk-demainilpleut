@@ -10,6 +10,8 @@ author: jveillet
 
 <p>If you are like me, and you are in an project using <code>git</code>, you probably create or use a LOT of branches. There can be times when it's hard to keep track of all of them and they pile up in your project's folder until you see 100 of them.</p>
 
+<!--readmore-->
+
 <div class="alert alert--danger">
 <strong>A word of caution:</strong> Deleting branches is a definitive act, you cannot go back, especially if the branches hadn't been pushed to some kind of remote repository (e.g Github, BitBucket, etc..).
 </div>
@@ -49,7 +51,6 @@ $ git branch --no-merged
 </code></pre>
 
 <p>Now you can go and use the results of these commands and add it to the delete method.</p>
-<!--readmore-->
 <pre><code class="language-bash">
 $ git branch -d `git branch --merged`
 </code></pre>

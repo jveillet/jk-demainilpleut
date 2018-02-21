@@ -24,7 +24,7 @@ gulp.task('lint-css', function lintCssTask() {
   const gulpStylelint = require('gulp-stylelint');
 
   return gulp
-    .src('css/style-dark.css')
+    .src('css/style.css')
     .pipe(gulpStylelint({
     reporters: [
       {formatter: 'string', console: true}

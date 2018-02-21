@@ -10,17 +10,19 @@ author: jveillet
 
 <p>Welcome to this (soon to be) series about WordPress development environment using <a href="https://www.docker.com/" target="_blank">Docker</a>. We will cover the basis of how to set up Docker, how to configure it to run a WordPress instance in a container, and how to add our theme, modify it, and see instantly the result.</p>
 
+<!--readmore-->
+
 <p>Part I is aimed at people who heard about Docker and containers, but never got deeper. If you already know what is it all about, and have a functioning environment, skip directly to <a href="wordpress-development-environment-with-docker-part-ii-using-docker-compose-to-install-wordpress/">Part II</a>.</p>
 <h2>Table of Contents</h2>
 <ul class="list-unordered">
-    <li><a href="#prerequisites" class="blog-link">Prerequisites</a></li>
-    <li><a href="#intro" class="blog-link">Introduction</a></li>
-    <li><a href="#create" class="blog-link">Create a docker machine</a></li>
-    <li><a href="#connect" class="blog-link">Connect to the Docker Machine</a></li>
-    <li><a href="#start_stop" class="blog-link">Start and stop machines</a></li>
-    <li><a href="#ip" class="blog-link">Getting the Host IP address</a></li>
-    <li><a href="#conclusion" class="blog-link">Wrapping up</a></li>
-    <li><a href="{{ site.baseurl }}{% link _posts/2016-03-30-wordpress-development-environment-with-docker-part-ii-using-docker-compose-to-install-wordpress.html %}" class="blog-link">Part II : using Docker Compose to install WordPress</a></li>
+    <li><a href="#prerequisites" class="primary-link">Prerequisites</a></li>
+    <li><a href="#intro" class="primary-link">Introduction</a></li>
+    <li><a href="#create" class="primary-link">Create a docker machine</a></li>
+    <li><a href="#connect" class="primary-link">Connect to the Docker Machine</a></li>
+    <li><a href="#start_stop" class="primary-link">Start and stop machines</a></li>
+    <li><a href="#ip" class="primary-link">Getting the Host IP address</a></li>
+    <li><a href="#conclusion" class="primary-link">Wrapping up</a></li>
+    <li><a href="{{ site.baseurl }}{% link _posts/2016-03-30-wordpress-development-environment-with-docker-part-ii-using-docker-compose-to-install-wordpress.html %}" class="primary-link">Part II : using Docker Compose to install WordPress</a></li>
 </ul>
 
 <h2 id="prerequisites">Prerequisites</h2>
@@ -52,7 +54,6 @@ $ docker run mysql
 
 <p>But, how is it going to know how to launch MySQL, you might say? Well, Docker has an "image hub", basically a repository with a lot of already configured images ready for you to use. So if the image doesn't exist on your system, it will "pull" it from the repository and install it before anything else. Of course you can build your own images, and even pushed them on the Docker repository, but it's a another story, for a different time.</p>
 
-<!--readmore-->
 <p>Once again, I encourage you to read through the <a href="https://www.docker.com/" target="_blank">Docker Website</a>, there are good tutorials and example.</p>
 
 <h2 id="create">Create a docker machine (first install only)</h2>
@@ -138,5 +139,5 @@ $ docker-machine ip default
 </code></pre>
 
 <h2 id"conclusion">Wrapping up</h2>
-<p>In this tutorial, you've learn a little about Docker, how to install it and
-configure your Terminal to use it. Now everything is set up for the next level: <a href="{% link _posts/2016-03-30-wordpress-development-environment-with-docker-part-ii-using-docker-compose-to-install-wordpress.html %}">Using Docker Compose to run WordPress</a>.</p>
+<p>In this tutorial, you've learn a little about Docker, how to install it and configure your Terminal to use it. Now everything is set up for the next level:
+<a href="{{ site.baseurl }}{% link _posts/2016-03-30-wordpress-development-environment-with-docker-part-ii-using-docker-compose-to-install-wordpress.html %}">Using Docker Compose to run WordPress</a>.</p>

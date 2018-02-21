@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<article class="article page-author">
+  <h1>Authors at {{ site.name }}</h1>
+  <div class="article-excerpt">Here is all the beautifull people that are
+    contributing to this blog. </div>
+
+  <div class="archives">
+    <ul class="members">
+      {% for author in site.data.authors %}
+        {% assign member = author[1] %}
+        <li class="members-item">
+          <img src="{{ member.avatar }}" alt="" class="avatar avatar--size"><a href="/authors/{{ member.handle }}" class="primary-link">
+          <div class=""><a href="/authors/{{ member.handle }}" class="primary-link">{{ member.name }}</a></div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</article>

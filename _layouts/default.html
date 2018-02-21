@@ -8,14 +8,14 @@
   <meta name="description" content="{{ site.description }}">
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   {% if jekyll.environment == 'production' %}
-  <link rel="stylesheet" type="text/css" href="/css/style-dark.min.css" />
+  <link rel="stylesheet" type="text/css" href="/css/style.min.css" />
   <link rel="icon" type="image/png" href="/img/favicon-196.png" sizes="196x196" />
   <link rel="icon" type="image/png" href="/img/favicon-96.png" sizes="96x96" />
   <link rel="icon" type="image/png" href="/img/favicon-32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="/img/favicon-16.png" sizes="16x16" />
   <link rel="icon" type="image/png" href="/img/favicon-128.png" sizes="128x128" />
   {% else %}
-  <link rel="stylesheet" type="text/css" href="/css/style-dark.css" />
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
   <link rel="icon" type="image/png" href="/img/favicon-dev-196.png" sizes="196x196" />
   <link rel="icon" type="image/png" href="/img/favicon-dev-96.png" sizes="96x96" />
   <link rel="icon" type="image/png" href="/img/favicon-dev-32.png" sizes="32x32" />
@@ -55,6 +55,13 @@
           menu.classList.toggle('active');
           return false;
         });
+        path = window.location.pathname.split('/');
+        if (path[1] == null || path[1] == undefined || path[1]== '') {
+          $(".page-home").classList.add("topbar-navigation-item-current");
+        }
+        else {
+          $(".page-"+path[1]).classList.add("topbar-navigation-item-current");
+        }
       });
     </script>
     {% if site.google_analytics and jekyll.environment == 'production' %}

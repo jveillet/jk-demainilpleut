@@ -9,21 +9,25 @@ author: jveillet
 ---
 
 <p>This is part II of an ongoing series about WordPress development with Docker. Part I was about installing Docker and preparing the environment. Our goal this time, is installing WordPress in a container, a database, and play a little bit with it.</p>
+
+<!--readmore-->
+
 <h2>Table of Contents</h2>
 <ul class="list-unordered">
-    <li><a class="blog-link" href="#prerequisites">Prerequisites</a></li>
-    <li><a class="blog-link" href="#structure">Directory structure</a></li>
-    <li><a class="blog-link" href="#compose">Using docker-compose</a></li>
-    <li><a class="blog-link" href="#wordpress">Setting up WordPress</a></li>
-    <li><a class="blog-link" href="#database">Setting up a database</a></li>
-    <li><a class="blog-link" href="#bonus">Bonus part</a></li>
-    <li><a class="blog-link" href="#conclusion">Wrapping up</a></li>
-    <li><a href="wordpress-development-environment-with-docker-part-iii-using-your-own-wordpress-theme/" class="blog-link">Part III : adding your own development theme</a></li>
+    <li><a class="primary-link" href="#prerequisites">Prerequisites</a></li>
+    <li><a class="primary-link" href="#structure">Directory structure</a></li>
+    <li><a class="primary-link" href="#compose">Using docker-compose</a></li>
+    <li><a class="primary-link" href="#wordpress">Setting up WordPress</a></li>
+    <li><a class="primary-link" href="#database">Setting up a database</a></li>
+    <li><a class="primary-link" href="#bonus">Bonus part</a></li>
+    <li><a class="primary-link" href="#conclusion">Wrapping up</a></li>
+    <li><a href="{{ site.baseurl }} {% link _posts/2016-04-20-wordpress-development-environment-with-docker-part-iii-using-your-own-wordpress-theme.html %}" class="primary-link">Part III : adding your own development theme</a></li>
 </ul>
 <h2 id="prerequisites">Prerequisites</h2>
-<p>A fonctionning installation of Docker (see <a href="wordpress-development-environment-with-docker-part-i-installing-docker/">Part I</a>).</p>
+<p>A fonctionning installation of Docker (see <a href="{{ site.baseurl }}{% link _posts/2016-03-30-wordpress-development-environment-with-docker-part-i-installing-docker.html %}">Part I</a>).</p>
 <p>A command line / Terminal.</p>
 <p>A web browser of your choosing.</p>
+
 <h2 id="structure">Directory structure</h2>
 <p>We will use a simple directory structure, create a folder on your OS, then create an empty docker-compose.yml in it.</p>
 <pre><code class="language-bash">
@@ -39,7 +43,10 @@ $ touch docker-compose.yml
 <h2 id="wordpress">Setting up WordPress</h2>
 <p>What we want for starter is to be able to launch WordPress on an Apache server and a database. We have to define two containers, and what image it should use when we will invoke the Compose program. Note that we can name or containers however we want, as it is just a label that will help ourselves to link the containers between them and see what is going on in the CLI.</p>
 
-<p>Fire up your favorite text editor, and insert the following text. Save it into the docker-compose.yml as it is the default name that Docker will invoke. You can name it with another name, but you will have to tell the program explicitely (see <a class="blog-link" href="#bonus">Bonus section</a>).</p>
+<p>Fire up your favorite text editor, and insert the following text. Save it
+into the docker-compose.yml as it is the default name that Docker will invoke.
+You can name it with another name, but you will have to tell the program
+explicitely (see <a class="primary-link" href="#bonus">Bonus section</a>).</p>
 <pre><code class="language-docker">
 wordpress:
   image: wordpress
@@ -47,7 +54,6 @@ wordpress:
     - 8080:80
 </code></pre>
 
-<!--readmore-->
 <p>You see that the text is indented, it is crucial to keep the text as is, as it is the norm for YML files. First line with "worpdress:" is the name of the container. Second line is the name of the image you will use (remember <a href="how-to-clean-up-local-git-branches-matching-a-name/">Part I</a>, Docker has a directory of pre-build images with a lot of softwares ready to be used). We will use the official (and latest version) WordPress image. Next parameter is the ports. In order to connect to the website, we need to tell Docker to map the port that is running on the Docker Machine, to a local port on our computer.</p>
 
 <p>We can see what's going on if we try to launch Docker Compose with what we have in the Compose file.</p>
@@ -136,4 +142,5 @@ $ docker-compose -f dev.yml up
 <h2 id="conclusion">Wrapping up</h2>
 <p>In this article, we learned how to use the Docker Compose program, and create a simple docker-compose.yml file to install and launch a WordPress website with a MySQL instance.
 What comes next? how are we using this to integrate plugins or themes
-development and get down to business ? <a href="{{ site.baseurl }}{% link _posts/2016-04-20-wordpress-development-environment-with-docker-part-iii-using-your-own-wordpress-theme.html %}" class="blog-link">Read part III: integrating a development theme</a>.</p>
+development and get down to business ? <a href="w{{ site.baseurl }} {% link
+_posts/2016-04-20-wordpress-development-environment-with-docker-part-iii-using-your-own-wordpress-theme.html %}" class="primary-link">Read part III: integrating a development theme</a>.</p>
