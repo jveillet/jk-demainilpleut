@@ -55,6 +55,13 @@
           menu.classList.toggle('active');
           return false;
         });
+        path = window.location.pathname.split('/');
+        if (path[1] == null || path[1] == undefined || path[1]== '') {
+          $(".page-home").classList.add("topbar-navigation-item-current");
+        }
+        else {
+          $(".page-"+path[1]).classList.add("topbar-navigation-item-current");
+        }
       });
     </script>
     {% if site.google_analytics and jekyll.environment == 'production' %}

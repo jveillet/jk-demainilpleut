@@ -5,7 +5,7 @@ layout: default
 <h1>Archives for {{ page.date | date: "%Y" }}</h1>
 
 <div class="archives archives-return-link">
-  <a href="/archives" class="archives-link">&larr; Return to archives</a>
+  <a href="/archives" class="primary-link">&larr; Return to archives</a>
 </div>
 
 <div class="posts">
@@ -18,7 +18,7 @@ layout: default
     <ul class="list-unordered">
     {% endif %}
 
-    <li><a href="{{ post.url }}" class="blog-link">{{ post.title }}</a></li>
+    <li><a href="{{ post.url }}" class="primary-link">{{ post.title }}</a></li>
 
     {% if forloop.last %}
     </ul>
@@ -33,5 +33,5 @@ layout: default
 </div>
 
 <div class="archives archives-return-link">
-  <a href="/archives" class="archives-link">&larr; Return to archives</a>
+  <a href="/archives" class="primary-link">&larr; Return to archives</a>
 </div>
