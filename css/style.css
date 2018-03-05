@@ -477,21 +477,23 @@ a:hover {
 }
 
 .article-footer {
-  margin-top: 2em;
   margin-bottom: 2em;
+  margin-top: 2em;
 }
 
 .article-tags {
-  width: 100%;
   font-size: .8em;
   font-weight: 600;
+  width: 100%;
 }
 
 .article-tags-item {
-  padding: .5em;
-  border-radius: 5%;
-  margin-right: .5em;
   background-color: #f1f1f1;
+  border-radius: 5%;
+  display: inline-block;
+  margin-right: .5em;
+  margin-top: .5em;
+  padding: .5em;
 }
 
 .article-tags-link:link,
@@ -520,6 +522,10 @@ a:hover {
     width: 80%;
   }
 
+  .article-tags-item {
+    margin-top: 0;
+  }
+
 }
 
 @media all and (min-width: 67em) {
@@ -534,10 +540,10 @@ a:hover {
 
 .article-top {
   display: block;
+  font-size: .8em;
   margin-top: 1.5em;
   text-align: center;
   width: 100%;
-  font-size: .8em;
 }
 
 .top {
@@ -556,10 +562,10 @@ a:hover {
 @media all and (min-width: 47em) {
 
   .article-top {
-    width: 20%;
     display: inline-block;
     font-size: .8em;
     margin-top: .5em;
+    width: 20%;
   }
 
   .top {
