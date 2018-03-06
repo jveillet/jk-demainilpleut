@@ -9,8 +9,8 @@ var autoprefixer = require('autoprefixer');
 
 var CSS_DEST = 'css';
 
-gulp.task('default', function() {
-  // place code for your default task here
+gulp.task('build', function() {
+  // Build the CSS and minify it
   return gulp.src('css/style.css')
         .pipe(sourcemaps.init())
         .pipe(cssnano())

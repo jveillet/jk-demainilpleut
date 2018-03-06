@@ -52,6 +52,7 @@ build-iPhoneSimulator/
 # NPM modules
 node_modules/
 npm-debug.log
+*.map
 
 # IDE files
 /.idea/
@@ -64,3 +65,4 @@ _site/
 _drafts/
 .sass-cache/
 .jekyll-metadata
+css/style.min.css
