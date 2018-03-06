@@ -1,10 +1,13 @@
 {
   "name": "jk-demainilpleut",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Static demainilpleut.fr generated with Jekyll",
-  "main": "index.html",
+  "engines": {
+    "node": "8.9.4",
+    "npm": "5.6.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "gulp build"
   },
   "repository": {
     "type": "git",
@@ -16,14 +19,16 @@
     "url": "https://github.com/jveillet/jk-demainilpleut/issues"
   },
   "homepage": "https://github.com/jveillet/jk-demainilpleut#README.md",
-  "devDependencies": {
+  "dependencies": {
     "postcss": "^6.0.16",
     "autoprefixer": "^7.2.5",
     "gulp": "^v4.0.0",
     "gulp-cssnano": "^2.1.2",
     "gulp-postcss": "^7.0.1",
     "gulp-rename": "^1.2.2",
-    "gulp-sourcemaps": "^2.6.4",
+    "gulp-sourcemaps": "^2.6.4"
+  },
+  "devDependencies": {
     "stylelint": "^8.3.0",
     "gulp-stylelint": "^6.0.0"
   }
