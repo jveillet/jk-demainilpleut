@@ -15,8 +15,10 @@ On the ruby side, this project uses [Bundler](https://bundler.io/).
 $ cd jk-demainilpleut/
 # Build the docker container and install Gems dependencies and NPM dependencies
 $ docker-compose build
-# Run the tasks to build the CSS and JS (optional)
-$ docker-compose run --rm web gulp
+# Run the tasks to build the CSS and JS
+$ docker-compose run --rm web gulp build
+# Lint the CSS (required before commiting any CSS change).
+$ docker-compose run --rm web gulp lint-css
 # Launch the Jekyll build and start the server
 $ docker-compose up
 # (or)
@@ -34,10 +36,12 @@ $ curl -sL https://deb.nodesource.com/setup_7.x | bash - \
 # Install Node and Gulp
 $ apt-get install -y nodejs
 $ npm install -g gulp-cli
-# Install the JS dependencies (optional)
+# Install the JS dependencies
 $ npm install
-# Run the tasks to build the CSS and JS (optional)
+# Run the tasks to build the CSS and JS
 $ gulp
+# Lint the CSS (required before commiting any CSS change).
+$ gulp lint-css
 # Launch the Jekyll build and start the server
 $ bundle exec jekyll serve --incremental
 # The server will run on port 4000
