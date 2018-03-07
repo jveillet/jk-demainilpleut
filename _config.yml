@@ -6,7 +6,10 @@ description: Coding & Design for the rainy days
 
 # Your website URL
 # Used for Sitemap.xml and your RSS feed
-url: https://www.demainilpleut.fr/
+url: https://www.demainilpleut.fr
+
+# Your website logo (usefull for Twitter Cards)
+logo: img/logo.png
 
 # Number of post to display on the front page
 paginate: 4
@@ -14,27 +17,30 @@ paginate_path: "/page/:num/"
 
 # Exclude these files from your production _site
 exclude:
-  - Gemfile
-  - Gemfile.lock
-  - Dockerfile
-  - docker-compose.yml
-  - gulpfile.js
-  - package.json
-  - install.sh
-  - LICENSE
-  - README.md
-  - node_modules
-  - .editorconfig
-  - .git
-  - .gitignore
+  - .DS_Store
   - .bundle
   - .bundle-docker
-  - config.ru
-  - vendor
-  - Procfile
-  - Rakefile
   - .dockerignore
-  - .DS_Store
+  - .editorconfig
+  - .git
+  - .github
+  - .gitignore
+  - Dockerfile
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - Procfile
+  - README.md
+  - Rakefile
+  - config.ru
+  - docker-compose.yml
+  - gulpfile.js
+  - gulpfile.js
+  - install.sh
+  - node_modules
+  - package-lock.json
+  - package.json
+  - vendor
 
 # Display drafts
 show_drafts: true
