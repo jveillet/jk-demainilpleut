@@ -671,8 +671,8 @@ code, pre {
 }
 
 .social-twitter {
-  background: url("../img/Twitter_Social_Icon_Circle_Color.png") no-repeat left center;
-  background: url("../img/Twitter_Social_Icon_Circle_Color.svg") no-repeat left center,
+  background: url("../img/twitter.png") no-repeat left center;
+  background: url("../img/twitter.svg") no-repeat left center,
     linear-gradient(transparent, transparent);
   background-size: auto 1.5em;
   display: block;
@@ -680,21 +680,72 @@ code, pre {
 }
 
 .social-linkedin {
-  background: url("../img/In-2C-128px-R.png") no-repeat left center;
+  background: url("../img/linkedin.png") no-repeat left center;
+  background: url("../img/linkedin.svg") no-repeat left center,
+    linear-gradient(transparent, transparent);
   background-size: auto 1.5em;
   display: block;
   padding: .5em 0 .5em 2em;
 }
 
 .social-github {
-  background: url("../img/GitHub-Mark-120px-plus.png") no-repeat left center;
+  background: url("../img/github.png") no-repeat left center;
+  background: url("../img/github.svg") no-repeat left center,
+    linear-gradient(transparent, transparent);
   background-size: auto 1.5em;
   display: block;
   padding: .5em 0 .5em 2em;
 }
 
 .social-gplus {
-  background: url("../img/gplus-64.png") no-repeat left center;
+  background: url("../img/google_plus.png") no-repeat left center;
+  background: url("../img/google_plus.svg") no-repeat left center,
+    linear-gradient(transparent, transparent);
+  background-size: auto 1.5em;
+  display: block;
+  padding: .5em 0 .5em 2em;
+}
+
+.social-facebook {
+  background: url("../img/facebook.png") no-repeat left center;
+  background: url("../img/facebook.svg") no-repeat left center,
+    linear-gradient(transparent, transparent);
+  background-size: auto 1.5em;
+  display: block;
+  padding: .5em 0 .5em 2em;
+}
+
+.social-gitlab {
+  background: url("../img/gitlab.png") no-repeat left center;
+  background: url("../img/gitlab.svg") no-repeat left center,
+    linear-gradient(transparent, transparent);
+  background-size: auto 1.5em;
+  display: block;
+  padding: .5em 0 .5em 2em;
+}
+
+.social-mastodon {
+  background: url("../img/mastodon.png") no-repeat left center;
+  background: url("../img/mastodon.svg") no-repeat left center,
+    linear-gradient(transparent, transparent);
+  background-size: auto 1.5em;
+  display: block;
+  padding: .5em 0 .5em 2em;
+}
+
+.social-slack {
+  background: url("../img/slack.png") no-repeat left center;
+  background: url("../img/slack.svg") no-repeat left center,
+    linear-gradient(transparent, transparent);
+  background-size: auto 1.5em;
+  display: block;
+  padding: .5em 0 .5em 2em;
+}
+
+.social-instagram {
+  background: url("../img/instagram.png") no-repeat left center;
+  background: url("../img/instagram.svg") no-repeat left center,
+    linear-gradient(transparent, transparent);
   background-size: auto 1.5em;
   display: block;
   padding: .5em 0 .5em 2em;
