@@ -1,0 +1,209 @@
+/**
+Name: post.css
+Github URI: https://github.com/jveillet/jk-demainilpleut
+Author: Jérémie Veillet
+Author URI: https://github.com/jveillet
+Description: Styles for articles / posts
+Version: 1.1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+This stylesheet is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+.article {
+  background-color: #ffffff;
+  border-radius: .2em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  padding: 2em;
+}
+
+.primary-link,
+.primary-link:visited{
+  color: #0a0000;
+  text-decoration: none;
+}
+
+.primary-link:hover,
+.primary-link:focus {
+  color: #0071bc;
+  text-decoration: underline;
+}
+
+.article-title,
+.article-title a:link,
+.article-title a:visited {
+  font-family: Raleway, Palatino, Arial, serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #0a0000;
+  line-height: 1.125;
+  text-decoration: none;
+}
+
+.article-content p:first-child:first-letter {
+  float: left;
+  color: #323a45;
+  font-size: 4em;
+  line-height: 1.5;
+  padding-top: .1em;
+  padding-right: .1em;
+  padding-left: .1em;
+  font-family: Raleway, Palatino, Arial, serif;
+  font-weight: 800;
+}
+
+.article-summary {
+  font-size: .9em;
+  border-top: .0625em solid #c2bed1;
+  margin-top: .8em;
+  padding-top: .5em;
+}
+
+.article-excerpt {
+  color: #5b616b;
+  font-weight: 400;
+}
+
+.article p a:link {
+  color: #0071bc;
+  text-decoration: underline;
+}
+
+.article p a:visited {
+  color: #205493;
+  text-decoration: underline;
+}
+
+.article-pubdate {
+  color: #aeb0b5;
+  font-size: .8em;
+  font-style: italic;
+}
+
+.article-categories {
+  display: inline-block;
+  margin-top: .5em;
+  width: 100%;
+}
+
+.article-readingTime {
+  background: url("../img/icon-time-small.png") no-repeat left center;
+  background: url("../img/icon-time.svg") no-repeat left center,
+    linear-gradient(transparent, transparent);
+  background-size: auto 1.25em;
+  color: #0a0000;
+  font-size: .9em;
+  display: block;
+  padding: .5em 0 .5em 2em;
+}
+
+.article-author--link,
+.article-author--link:visited {
+  color: #0071bc;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.article-author--link:hover{
+  text-decoration: underline;
+}
+
+.article-footer {
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+
+.article-tags {
+  font-size: .8em;
+  font-weight: 600;
+  width: 100%;
+}
+
+.article-tags-item {
+  background-color: #f1f1f1;
+  border-radius: 5%;
+  display: inline-block;
+  margin-right: .5em;
+  margin-top: .5em;
+  padding: .5em;
+}
+
+.article-tags-link:link,
+.article-tags-link:visited{
+  color: #494440;
+}
+
+.article-top {
+  display: block;
+  font-size: .8em;
+  margin-top: 1.5em;
+  text-align: center;
+  width: 100%;
+}
+
+.top {
+  color: #0071bc;
+  color: rgba(0, 113, 188, .5);
+  transition: color 500ms, transform 500ms;
+}
+
+.top:hover,
+.top:active,
+.top:focus {
+  color: #0071bc;
+  color: rgba(0, 113, 188, 1);
+}
+
+@media all and (min-width: 47em) {
+
+  .article-wrapper {
+    margin: 0 auto;
+    width: 45.5em;
+    width: calc(60vw + 6em);
+  }
+
+  h1.article-title {
+    font-size: 3em;
+  }
+
+  .article-content {
+    font-size: 1.3em;
+  }
+
+  .article-categories {
+    float: left;
+    width: 80%;
+  }
+
+  .article-tags-item {
+    margin-top: 0;
+  }
+
+  .article-top {
+    display: inline-block;
+    font-size: .8em;
+    margin-top: .5em;
+    width: 20%;
+  }
+
+  .top {
+    color: #0071bc;
+    color: rgba(0, 113, 188, .5);
+    float: right;
+    transition: color 500ms, transform 500ms;
+  }
+
+}
+
+@media all and (min-width: 67em) {
+
+  .article-wrapper {
+    margin: 0 auto;
+    width: 56em;
+    width: calc(50vw + 6em);
+  }
+
+}

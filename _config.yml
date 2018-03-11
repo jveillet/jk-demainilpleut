@@ -35,17 +35,16 @@ exclude:
   - config.ru
   - docker-compose.yml
   - gulpfile.js
-  - gulpfile.js
   - install.sh
   - node_modules
   - package-lock.json
   - package.json
-  - vendor
+  - styles
 
 # Display drafts
 show_drafts: true
 
-# Folders and files to include int he build
+# Folders and files to include in the build
 include:
   - css
   - js

@@ -1,0 +1,31 @@
+/**
+Name: archive.css
+Github URI: https://github.com/jveillet/jk-demainilpleut
+Author: Jérémie Veillet
+Author URI: https://github.com/jveillet
+Description: Archives section styles
+Version: 1.1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+This stylesheet is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+.archives-spacing {
+  margin-bottom: 2em;
+}
+
+.archives-return-link {
+  margin-top: 1em;
+}
+
+.archives-complement {
+  margin-left: .5em;
+  font-size: .8em;
+  color: #0a0000;
+}
+
+.archives-header {
+  margin-bottom: 3em;
+}

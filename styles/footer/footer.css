@@ -1,0 +1,46 @@
+/**
+Name: footer.css
+Github URI: https://github.com/jveillet/jk-demainilpleut
+Author: Jérémie Veillet
+Author URI: https://github.com/jveillet
+Description: Footer  section styles
+Version: 1.1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+This stylesheet is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+.footer {
+  padding-top: 1rem;
+  background-color: #e4e2e0;
+}
+
+.footer-disclaimer {
+  font-size: .8em;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.footer-disclaimer-link,
+.footer-disclaimer-link:visited {
+  color: #0a0000;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-disclaimer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-link,
+.footer-link:visited {
+  color: #0a0000;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}

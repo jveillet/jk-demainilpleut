@@ -65,4 +65,4 @@ _site/
 _drafts/
 .sass-cache/
 .jekyll-metadata
-css/style.min.css
+css/bundle.min.css
