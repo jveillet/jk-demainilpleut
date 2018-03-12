@@ -1,0 +1,202 @@
+/**
+Name: topbar.css
+Github URI: https://github.com/jveillet/jk-demainilpleut
+Author: Jérémie Veillet
+Author URI: https://github.com/jveillet
+Description: Topbar styles
+Version: 1.1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+This stylesheet is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+.topbar {
+  position: relative;
+  background-color: #ffffff;
+  border-bottom: .0625em solid #f1f1f1;
+}
+
+.topbar-logo-url,
+.topbar-Logo-url:visited {
+  color: #0a0000;
+  display: block;
+  padding: .8em .5em;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.topbar-logo-url:hover,
+.topbar-logo-url:focus {
+  color: #0071bc;
+  text-decoration: underline;
+}
+
+.topbar-logo {
+  background: url("../img/logo-small.png") no-repeat left center;
+  background: url("../img/logo.svg") no-repeat left center,
+    linear-gradient(transparent, transparent);
+  background-size: auto 3em;
+  float: left;
+  padding-left: 2.8em;
+  position: relative;
+  z-index: 1;
+  margin-left: .5em;
+}
+
+.topbar-menu-btn {
+  float: right;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-family: inherit;
+  font-size: 100%;
+  cursor: pointer;
+  border: none;
+  margin: 0;
+  padding: 0 1em;
+  line-height: 3;
+  height: 3em;
+  background-color: #0071bc;
+  color: #ffffff;
+  border-radius: .25em;
+  overflow: visible;
+  margin-right: 1em;
+}
+
+.topbar-menu-btn--small {
+  padding-right: .5em;
+  padding-left: .5em;
+  line-height: 2;
+  height: 2em;
+  margin-top: 1.3em;
+}
+
+.topbar-menu-btn::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.topbar-menu-btn:hover,
+.button:focus {
+  box-shadow: 0 0 .3125em rgba(0, 0, 0, .5);
+}
+
+.topbar-menu-btn:active {
+  outline: none;
+  box-shadow: 0 0 .3125em rgba(0, 0, 0, .5) inset;
+}
+
+.topbar .topbar-navigation {
+  clear: both;
+  transition: all .3s ease-out;
+}
+
+.js .topbar .topbar-navigation {
+  overflow: hidden;
+  max-height: 0;
+}
+
+.topbar nav[role = navigation].active {
+  max-height: 15em;
+}
+
+.topbar .topbar-navigation ul {
+  margin: 0;
+  padding: 0;
+}
+
+.topbar-navigation-item,
+.topbar-navigation-item:visited {
+  color: #aeb0b5;
+  display: block;
+  padding: .5em;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
+}
+
+.topbar-navigation-item-current {
+  color: #0071bc !important;
+  border: 0;
+  font-weight: 600;
+}
+
+@media all and (min-width: 47em) {
+
+  .topbar {
+    line-height: 1.5em;
+    overflow: auto;
+  }
+
+  .topbar .topbar-menu {
+    float: right;
+    margin-right: 2em;
+  }
+
+  .topbar-logo {
+    background: url("../img/logo.png") no-repeat left center;
+    background: url("../img/logo.svg") no-repeat left center,
+      linear-gradient(transparent, transparent);
+    background-size: auto 3em;
+    float: left;
+    font-size: 1.2em;
+    padding-left: 3em;
+    position: relative;
+    z-index: 1;
+    top: .2em;
+    margin-left: 2em;
+  }
+
+  .topbar-menu-btn {
+    display: none;
+  }
+
+  .js .topbar .topbar-navigation {
+    max-height: none;
+  }
+
+  .topbar .topbar-navigation ul {
+    margin: 0 0 0 -.25em;
+    border: 0;
+  }
+
+  .topbar .topbar-navigation li {
+    display: inline-block;
+    margin: 1em .25em;
+  }
+
+  .topbar-navigation-item {
+    font-size: .9em;
+  }
+
+  .topbar-navigation-item,
+  .topbar-navigation-item:visited {
+    color: #aeb0b5;
+    text-decoration: none;
+    font-weight: 400;
+  }
+
+  .topbar-navigation-item:hover,
+  .topbar-navigation-item:focus {
+    color: #0071bc;
+  }
+
+  .topbar-navigation-item-current {
+    color: #0a0000 !important;
+    border-bottom: .25em solid #0071bc;
+    font-weight: 600;
+  }
+
+  .topbar-logo-url,
+  .topbar-Logo-url:visited {
+    color: #0a0000;
+    display: block;
+    padding: .8em .5em;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+
+}
