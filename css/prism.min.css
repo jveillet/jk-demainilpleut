@@ -1,4 +1,5 @@
-/* http://prismjs.com/download.html?themes=prism-okaidia&languages=markup+css+clike+javascript+bash+c+cpp+ruby+docker+git+java+json+objectivec+php+jsx+vim */
+/* PrismJS 1.12.2
+http://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clike+javascript+applescript+c+bash+basic+batch+cpp+csharp+coffeescript+ruby+css-extras+diff+docker+gherkin+git+graphql+haml+handlebars+http+hpkp+hsts+java+json+julia+kotlin+latex+liquid+lua+makefile+markdown+objectivec+perl+php+php-extras+powershell+properties+python+jsx+typescript+rust+sql+swift+vim+yaml&plugins=line-highlight */
 /**
  * okaidia theme for JavaScript, CSS and HTML
  * Loosely based on Monokai textmate theme by http://www.monokai.nl/
@@ -119,5 +120,55 @@ pre[class*="language-"] {
 
 .token.entity {
 	cursor: help;
+}
+
+pre[data-line] {
+	position: relative;
+	padding: 1em 0 1em 3em;
+}
+
+.line-highlight {
+	position: absolute;
+	left: 0;
+	right: 0;
+	padding: inherit 0;
+	margin-top: 1em; /* Same as .prism’s padding-top */
+
+	background: hsla(24, 20%, 50%,.08);
+	background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+
+	pointer-events: none;
+
+	line-height: inherit;
+	white-space: pre;
+}
+
+	.line-highlight:before,
+	.line-highlight[data-end]:after {
+		content: attr(data-start);
+		position: absolute;
+		top: .4em;
+		left: .6em;
+		min-width: 1em;
+		padding: 0 .5em;
+		background-color: hsla(24, 20%, 50%,.4);
+		color: hsl(24, 20%, 95%);
+		font: bold 65%/1.5 sans-serif;
+		text-align: center;
+		vertical-align: .3em;
+		border-radius: 999px;
+		text-shadow: none;
+		box-shadow: 0 1px white;
+	}
+
+	.line-highlight[data-end]:after {
+		content: attr(data-end);
+		top: auto;
+		bottom: .4em;
+	}
+
+.line-numbers .line-highlight:before,
+.line-numbers .line-highlight:after {
+	content: none;
 }
 

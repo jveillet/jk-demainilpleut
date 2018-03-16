@@ -1,0 +1,40 @@
+---
+layout: default
+author: jveillet
+---
+
+{% assign author = site.data.authors[page.author] %}
+
+<article class="article page-author">
+
+  <h1>About author {{author.name}}</h1>
+
+  <div class="page-author-avatar">
+    <img src="{{ author.avatar }}" alt="{{ author.handle }}" class="avatar avatar--size">
+  </div>
+
+  <div class="article-excerpt archives-spacing">{{ author.description }}</div>
+
+  <div class="archives archives-spacing">
+    <ul class="social">
+      <li class="social-item"><a href="https://www.twitter.com/{{ author.twitter }}" class="social-twitter primary-link">@{{ author.twitter }}</a></li>
+      <li class="social-item"><a href="https://www.linkedin.com/in/{{ author.linkedin }}" class="social-linkedin primary-link">{{ author.linkedin }}</a></li>
+      <li class="social-item"><a href="https://www.github.com/{{ author.github }}" class="social-github primary-link">@{{ author.github }}</a></li>
+      <li class="social-item"><a href="https://plus.google.com/u/0/+{{ author.gplus }}" class="social-gplus primary-link">+{{ author.gplus }}</a></li>
+    </ul>
+  </div>
+
+<div class="archives">
+  <span class="section-title color-gray-warm-dark">Articles by {{ author.name }}</span>
+  <ol class="list-unordered" start="1" type="1">
+    {% for post in site.posts %}
+      {% if author.handle == post.author %}
+        <li>
+          <a href="{{ post.url }}" class="primary-link">{{ post.title }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ol>
+</div>
+
+</article>

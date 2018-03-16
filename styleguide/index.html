@@ -4,66 +4,60 @@ layout: default
 
 <main id="content" role="main" class="main-container">
 
+<div class= "article">
+
   <h1>Styleguide</h1>
+  <div class="article-excerpt">This is the collection of UI components we are using on the blog,
+    completed with code samples.</div>
 
   <div class="patterns">
 
     <div class="pattern">
-      <h1 class="pattern-title">Colors</h1>
+      <span class="section-title color-gray-warm-dark">Primary colors</span>
       <div class="pattern-item">
         <ul class="colors">
+          <li class="color" style="background: #0071bc;">
+            <div class="color-text white">color-primary</div>
+          </li>
+          <li class="color" style="background: #205493">
+            <div class="color-text white">color-primary-darker</div>
+          </li>
+          <li class="color" style="background: #ffffff;border: 1px solid #f1f1f1;">
+            <div class="color-text black">white</div>
+          </li>
           <li class="color" style="background: #0a0000;">
-            <div class="color-text white">#0a0000</div>
+            <div class="color-text white">black</div>
           </li>
-          <li class="color" style="background: #392d65;">
-            <div class="color-text white">#392d65</div>
+          <li class="color" style="background: #5b616b">
+            <div class="color-text white">gray</div>
           </li>
-          <li class="color" style="background: #706694;">
-            <div class="color-text white">#706694</div>
+        </ul>
+      </div>
+    <div class="pattern">
+      <span class="section-title color-gray-warm-dark">Secondary colors</span>
+      <div class="pattern-item">
+        <ul class="colors">
+          <li class="color" style="background: #aeb0b5">
+            <div class="color-text white">gray light</div>
           </li>
-          <li class="color" style="background: #938cae;">
-            <div class="color-text white">#938cae</div>
+          <li class="color" style="background: #d6d7d9">
+            <div class="color-text black">gray lighter</div>
           </li>
-          <li class="color" style="background: #c2bed1;">
-            <div class="color-text">#c2bed1</div>
+          <li class="color" style="background: #f1f1f1">
+            <div class="color-text black">gray lightest</div>
           </li>
-          <li class="color" style="background: #8ca755;">
-            <div class="color-text">#8ca755</div>
+          <li class="color" style="background: #494440">
+            <div class="color-text white">gray warm dark</div>
           </li>
-          <li class="color" style="background: #edf5db;">
-            <div class="color-text">#edf5db</div>
-          </li>
-          <li class="color bg-magenta">
-            <div class="color-text white">#ec4882</div>
-          </li>
-          <li class="color" style="background: #fdedf2;">
-            <div class="color-text">#fdedf2</div>
+          <li class="color" style="background: #e4e2e0">
+            <div class="color-text white">gray warm light</div>
           </li>
         </ul>
       </div>
     </div><!-- end of pattern item -->
 
     <div class="pattern">
-      <h1 class="pattern-title">Headings</h1>
-      <div class="pattern-item">
-        <h1 class="black">Heading 1</h1>
-        <h2 class="black">Heading 2</h2>
-        <h3 class="black">Heading 3</h3>
-        <h4 class="black">Heading 4</h4>
-        <h5 class="black">Heading 5</h5>
-        <h6 class="black">Heading 6</h6>
-      </div>
-    </div><!-- end of pattern item -->
-
-    <div class="pattern">
-      <h1 class="pattern-title">Paragraphs</h1>
-      <div class="pattern-item">
-        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dictum odio eget mauris vestibulum feugiat. Praesent ante sapien, luctus pulvinar ultricies quis, aliquet in mi. Nulla facilisi. Donec malesuada fringilla iaculis. Praesent nec quam sit amet orci volutpat volutpat in eget eros. Duis pellentesque bibendum erat. Integer pretium nunc vel augue rutrum eget feugiat mi molestie. Cras venenatis, turpis et rhoncus scelerisque, mi augue suscipit urna, quis sagittis tortor nisl ut purus. Aliquam at enim est. Donec sit amet suscipit quam. Aliquam sit amet commodo eros.</p>
-      </div>
-    </div><!-- end of pattern item -->
-
-    <div class="pattern">
-      <h1 class="pattern-title">Typography</h1>
+      <span class="section-title color-gray-warm-dark">Typography</span>
       <div class="pattern-item">
         <p class="text">Body text: Open Sans, Helvetica, Arial, sans-serif.</p>
         <p class="text"><small>Small body text: Open Sans, Helvetica, Arial, sans-serif.</small></p>
@@ -75,28 +69,59 @@ layout: default
     </div><!-- end of pattern item -->
 
     <div class="pattern">
-      <h1 class="pattern-title">Blockquote</h1>
+      <span class="section-title color-gray-warm-dark">Headings</span>
+      <div class="pattern-item">
+        <h1 class="black">Heading 1</h1>
+        <h2 class="black">Heading 2</h2>
+        <h3 class="black">Heading 3</h3>
+        <h4 class="black">Heading 4</h4>
+        <h5 class="black">Heading 5</h5>
+        <h6 class="black">Heading 6</h6>
+      </div>
+    </div><!-- end of pattern item -->
+
+    <div class="pattern">
+      <span class="section-title color-gray-warm-dark">Blockquote</span>
       <div class="pattern-item">
         <p class="quote">&ldquo;Let me explain something to you. Um, I am not “Mr. Lebowski”. You’re Mr. Lebowski. I’m the Dude. So that’s what you call me. You know, that or, uh, His Dudeness, or uh, Duder, or El Duderino if you’re not into the whole brevity thing.&rdquo; &mdash;The Big Lebowski</p>
       </div>
-    </div><!-- end of pattern item -->
-
-    <div class="pattern">
-      <h1 class="pattern-title">Tables of content</h1>
       <div class="pattern-item">
-        <ul class="list-unordered">
-          <li><a class="blog-link" href="#">Link 1</a></li>
-          <li><a class="blog-link" href="#">Link 2</a></li>
-          <li><a class="blog-link" href="#">Link 3</a></li>
-          <li><a class="blog-link" href="#">Link 4</a></li>
-        </ul>
+        <pre>
+          <code class="language-markup">
+            &lt;p class="quote">...&lt;/p>
+          </code>
+        </pre>
       </div>
     </div><!-- end of pattern item -->
 
     <div class="pattern">
-      <h1 class="pattern-title">TopBar</h1>
+      <span class="section-title color-gray-warm-dark">Tables of content</span>
       <div class="pattern-item">
-        <div  class="topbar bg-purple--light">
+        <ul class="list-unordered">
+          <li><a class="primary-link" href="#">Link 1</a></li>
+          <li><a class="primary-link" href="#">Link 2</a></li>
+          <li><a class="primary-link" href="#">Link 3</a></li>
+          <li><a class="primary-link" href="#">Link 4</a></li>
+        </ul>
+      </div>
+      <div class="pattern-item">
+        <pre>
+          <code class="language-markup">
+            &lt;ul class="list-unordered">
+              &lt;li>&lt;a class="primary-link" href="#">Link 1&lt;/a>&lt;/li>
+              &lt;li>&lt;a class="primary-link" href="#">Link 2&lt;/a>&lt;/li>
+              &lt;li>&lt;a class="primary-link" href="#">Link 3&lt;/a>&lt;/li>
+              &lt;li>&lt;a class="primary-link" href="#">Link 4&lt;/a>&lt;/li>
+            &lt;/ul>
+          </code>
+        </pre>
+      </div>
+    </div><!-- end of pattern item -->
+
+    <div class="pattern">
+      <span class="section-title color-gray-warm-dark">TopBar</span>
+      <div class="pattern-item">
+        <div  class="topbar">
           <div class="topbar-logo">
             <a href="#" class="topbar-logo-url">Foo bar</a>
           </div><!-- end of topBar logo -->
@@ -113,28 +138,93 @@ layout: default
           </div><!-- end of topBarMenu -->
         </div><!-- end of topBar -->
       </div><!-- end of pattern item -->
+       <div class="pattern-item">
+        <pre>
+          <code class="language-markup">
+            &lt;div  class="topbar">
+              &lt;div class="topbar-logo">
+                &lt;a href="#" class="topbar-logo-url">Foo bar&lt;/a>
+              &lt;/div>
+              &lt;div class="topbar-menu">
+                &lt;button class="topbar-menu-btn topbar-menu-btn--small">Menu&lt;/button>
+                &lt;nav id="js-menu" role="navigation" class="topbar-navigation">
+                  &lt;ul>
+                    &lt;li>&lt;a href="#" class="topbar-navigation-item">Link 1&lt;/a>&lt;/li>
+                    &lt;li>&lt;a href="#" class="topbar-navigation-item">Link 2&lt;/a>&lt;/li>
+                    &lt;li>&lt;a href="#" class="topbar-navigation-item">Link 3&lt;/a>&lt;/li>
+                    &lt;li>&lt;a href="#" class="topbar-navigation-item">Link 4&lt;/a>&lt;/li>
+                  &lt;/ul>
+                &lt;/nav>
+              &lt;/div>
+            &lt;/div>
+          </code>
+        </pre>
     </div><!-- end of pattern -->
 
 <div class="pattern">
-  <h1 class="pattern-title">Blog post summary</h1>
+  <span class="section-title color-gray-warm-dark">Blog post summary</span>
   <div class="pattern-item">
     <article id="post-1" class="article">
       <h2><a href="#" title="Lorem ipsum dolor sit amet." class="article-title">Lorem ipsum dolor sit amet.</a></h2>
-      <span class="article-author"><a class="blog-link" href="#">John Appleseed</a></span>
+      <span class="article-author"><a class="article-author--link" href="#">John Appleseed</a></span>
       <span class="article-pubdate">&mdash;&nbsp;<time datetime="2014-02-10T12:10:48-05:00">February 10, 2014</time></span>
       <div class="article-summary"></div>
-      <p>Donec nec leo fringilla, pulvinar eros sit amet, scelerisque enim. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec fringilla a quam sit amet iaculis. Nullam a nisl sit amet arcu posuere iaculis non a tortor. Fusce non nulla arcu...</p>
-      <div><a class="btn bg-magenta white" href="#">Read more...</a></div>
+      <div class="article-excerpt">Donec nec leo fringilla, pulvinar eros sit
+        amet, scelerisque enim. Cum sociis natoque penatibus et magnis dis
+        parturient montes, nascetur ridiculus mus. Donec fringilla a quam sit
+        amet iaculis. Nullam a nisl sit amet arcu posuere iaculis non a tortor.
+        Fusce non nulla arcu...</div>
+      <div class="article-footer"><a class="btn bg-blue white" href="#">Read more...</a></div>
+      <div class="article-tags">
+        <span class="article-tags-item">
+          <a href="#" class="article-tags-link">tag 1</a>
+        </span>
+        <span class="article-tags-item">
+          <a href="#" class="article-tags-link">tag 2</a>
+        </span>
+        <span class="article-tags-item">
+          <a href="#" class="article-tags-link">tag 3</a>
+        </span>
+      </div>
     </article><!-- end of article -->
   </div><!-- end of pattern item -->
+  <div class="pattern-item">
+    <pre>
+      <code class="language-markup">
+        &lt;article id="post-1" class="article">
+          &lt;h2>&lt;a href="#" title="Lorem ipsum dolor sit amet." class="article-title">Lorem ipsum dolor sit amet.&lt;/a>&lt;/h2>
+          &lt;span class="article-author">&lt;a class="article-author--link" href="#">John Appleseed&lt;/a>&lt;/span>
+          &lt;span class="article-pubdate">&mdash;&nbsp;&lt;time datetime="2014-02-10T12:10:48-05:00">February 10, 2014&lt;/time>&lt;/span>
+          &lt;div class="article-summary">&lt;/div>
+          &lt;div class="article-excerpt">Donec nec leo fringilla, pulvinar eros sit
+            amet, scelerisque enim. Cum sociis natoque penatibus et magnis dis
+            parturient montes, nascetur ridiculus mus. Donec fringilla a quam sit
+            amet iaculis. Nullam a nisl sit amet arcu posuere iaculis non a tortor.
+          Fusce non nulla arcu...&lt;/div>
+          &lt;div class="article-footer">&lt;a class="btn bg-blue white" href="#">Read more...&lt;/a>&lt;/div>
+          &lt;div class="article-tags">
+            &lt;span class="article-tags-item">
+              &lt;a href="#" class="article-tags-link">tag 1&lt;/a>
+            &lt;/span>
+            &lt;span class="article-tags-item">
+              &lt;a href="#" class="article-tags-link">tag 2&lt;/a>
+            &lt;/span>
+            &lt;span class="article-tags-item">
+              &lt;a href="#" class="article-tags-link">tag 3&lt;/a>
+            &lt;/span>
+          &lt;/div>
+        &lt;/article>
+      </code>
+    </pre>
+  </div>
 </div><!-- end of pattern -->
 
 <div class="pattern">
-  <h1 class="pattern-title">Blog post</h1>
+  <span class="section-title color-gray-warm-dark">Blog post</span>
   <div class="pattern-item">
-    <h1 class="article-title">Lorem ipsum dolor sit amet.</h1>
-    <article id="post-1"class="article">
-      <span class="article-author"><a class="blog-link" href="#">John Appleseed</a></span>
+    <article id="post-1" class="article">
+      <h1 class="article-title">Lorem ipsum dolor sit amet.</h1>
+      <span class="article-author"><a class="article-author--link" href="#">John Appleseed</a></span>
       <span class="article-pubdate">&mdash;&nbsp;<time datetime="2014-02-10T12:10:48-05:00">February 10, 2014</time></span>
       <div class="article-summary">
         <span class="article-readingTime">15 min read</span>
@@ -142,57 +232,152 @@ layout: default
       <p>Donec nec leo fringilla, pulvinar eros sit amet, scelerisque enim. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec fringilla a quam sit amet iaculis. Nullam a nisl sit amet arcu posuere iaculis non a tortor. Fusce non nulla arcu. Vivamus pellentesque nulla sem, id faucibus magna aliquet eget. Ut elit turpis, tincidunt quis ligula sit amet, lobortis placerat odio. Cras a sapien aliquet, ultricies sem ornare, varius felis.</p>
       <p>Duis rhoncus bibendum ultricies. Donec vestibulum ornare felis sit amet tincidunt. Suspendisse potenti. Donec sit amet dolor diam. Fusce luctus fermentum tellus non consectetur. Curabitur nec tellus odio. Etiam vitae nibh molestie, semper ante ac, interdum est. Nullam leo turpis, vulputate sed massa quis, elementum euismod nisi. Sed quis tellus quis velit vehicula consectetur non at nibh. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse suscipit placerat turpis quis lobortis. Mauris nisi orci, faucibus a malesuada at, auctor vitae nulla. Nulla ac erat a tortor vulputate gravida. Quisque fringilla eu purus sit amet pulvinar. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
       <p>Vivamus condimentum elit eu libero dapibus bibendum. Sed commodo, metus et pellentesque mattis, nisl elit laoreet mi, nec scelerisque arcu neque id tortor. Cras vehicula nulla quis hendrerit mattis. Nullam laoreet dignissim quam vitae faucibus. Pellentesque dignissim sit amet odio ac tempus. Integer quis faucibus ipsum. Aliquam bibendum metus eu sagittis aliquet. Aenean sollicitudin euismod dolor vel euismod. Nullam blandit lacinia venenatis.</p>
-      <span class="article-categories">Published in <a href="#" rel="tag">Uncategorized</a></span>
+      <span class="article-categories article-tags">Published in
+        <span class="article-tags-item">
+          <a href="#" class="article-tags-link" rel="tag">tag 1</a>
+        </span>
+        <span class="article-tags-item">
+          <a href="#" class="article-tags-link" rel="tag">tag 2</a>
+        </span>
+        <span class="article-tags-item">
+          <a href="#" class="article-tags-link" rel="tag">tag 3</a>
+        </span>
+      </span>
     </article><!-- end of article -->
+  </div><!-- end of pattern item -->
+  <div class="pattern-item">
+    <pre>
+      <code class="language-markup">
+        &lt;article id="post-1" class="article">
+          &lt;h1 class="article-title">Lorem ipsum dolor sit amet.&lt;/h1>
+          &lt;span class="article-author">&lt;a class="article-author--link" href="#">John Appleseed&lt;/a>&lt;/span>
+          &lt;span class="article-pubdate">&mdash;&nbsp;&lt;time datetime="2014-02-10T12:10:48-05:00">February 10, 2014&lt;/time>&lt;/span>
+          &lt;div class="article-summary">
+            &lt;span class="article-readingTime">15 min read&lt;/span>
+          &lt;/div>
+          &lt;p>Donec nec leo fringilla, pulvinar eros sit amet, scelerisque enim. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec fringilla a quam sit amet iaculis. Nullam a nisl sit amet arcu posuere iaculis non a tortor. Fusce non nulla arcu. Vivamus pellentesque nulla sem, id faucibus magna aliquet eget. Ut elit turpis, tincidunt quis ligula sit amet, lobortis placerat odio. Cras a sapien aliquet, ultricies sem ornare, varius felis.&lt;/p>
+          &lt;p>Duis rhoncus bibendum ultricies. Donec vestibulum ornare felis sit amet tincidunt. Suspendisse potenti. Donec sit amet dolor diam. Fusce luctus fermentum tellus non consectetur. Curabitur nec tellus odio. Etiam vitae nibh molestie, semper ante ac, interdum est. Nullam leo turpis, vulputate sed massa quis, elementum euismod nisi. Sed quis tellus quis velit vehicula consectetur non at nibh. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse suscipit placerat turpis quis lobortis. Mauris nisi orci, faucibus a malesuada at, auctor vitae nulla. Nulla ac erat a tortor vulputate gravida. Quisque fringilla eu purus sit amet pulvinar. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.&lt;/p>
+          &lt;p>Vivamus condimentum elit eu libero dapibus bibendum. Sed commodo, metus et pellentesque mattis, nisl elit laoreet mi, nec scelerisque arcu neque id tortor. Cras vehicula nulla quis hendrerit mattis. Nullam laoreet dignissim quam vitae faucibus. Pellentesque dignissim sit amet odio ac tempus. Integer quis faucibus ipsum. Aliquam bibendum metus eu sagittis aliquet. Aenean sollicitudin euismod dolor vel euismod. Nullam blandit lacinia venenatis.&lt;/p>
+          &lt;span class="article-categories article-tags">Published in
+            &lt;span class="article-tags-item">
+              &lt;a href="#" class="article-tags-link" rel="tag">tag 1&lt;/a>
+            &lt;/span>
+            &lt;span class="article-tags-item">
+              &lt;a href="#" class="article-tags-link" rel="tag">tag 2&lt;/a>
+            &lt;/span>
+            &lt;span class="article-tags-item">
+              &lt;a href="#" class="article-tags-link" rel="tag">tag 3&lt;/a>
+            &lt;/span>
+          &lt;/span>
+        &lt;/article>
+      </code>
+    </pre>
   </div><!-- end of pattern item -->
 </div><!-- end of pattern -->
 
 <div class="pattern">
-  <h1 class="pattern-title">About</h1>
+  <span class="section-title color-gray-warm-dark">About</span>
   <div class="pattern-item">
     <div class="about about-box">
       <h2 class="about-title">About the Author</h2>
       <div class="about-author">
         <div class="about-author-bio">
-          <a class="about-author-avatar" href="#"><img src="https://demainilpleut.fr/wp-content/uploads/2015/12/capitan.jpg" width="80" height="80" alt="author"></a>
-          <p><span class="about-author-name"><a href="#">Reno Raines</a></span><br><small>He was a cop, and good at his job. But he committed the ultimate sin—and testified against other cops gone bad. Cops that tried to kill him, but got the woman he loved instead. Framed for murder, now he prowls the badlands...an outlaw hunting outlaws...a bounty hunter...a RENEGADE.</small></p>
+          <a class="about-author-avatar" href="#"><img
+            src="https://placehold.it/80x80"
+            width="80" height="80" alt="user avatar"></a>
+          <p><span class="about-author-name"><a href="#" class="primary-link">John Appleseed</a></span>
+            <br><small class="about-author-description">
+              bla bla bla
+            </small>
+          </p>
+          <ul class="social">
+            <li class="social-item"><a href="#" class="social-twitter primary-link">@john</a></li>
+            <li class="social-item"><a href="#" class="social-linkedin primary-link">john</a></li>
+            <li class="social-item"><a href="#" class="social-github primary-link">@john</a></li>
+            <li class="social-item"><a href="#" class="social-gplus primary-link">+john</a></li>
+          </ul>
         </div><!-- end of author bio -->
       </div><!-- end of about author -->
     </div><!-- end of about section -->
   </div><!-- end of pattern item -->
+  <div class="pattern-item">
+    <pre>
+      <code class="language-markup">
+        &lt;div class="about about-box">
+          &lt;h2 class="about-title">About the Author&lt;/h2>
+          &lt;div class="about-author">
+            &lt;div class="about-author-bio">
+              &lt;a class="about-author-avatar" href="#">&lt;img
+                src="https://placehold.it/80x80"
+                width="80" height="80" alt="user avatar">&lt;/a>
+                &lt;p>&lt;span class="about-author-name">&lt;a href="#" class="primary-link">John Appleseed&lt;/a>&lt;/span>
+                  &lt;br>&lt;small class="about-author-description">
+                    bla bla bla
+                  &lt;/small>
+                &lt;/p>
+                &lt;ul class="social">
+                  &lt;li class="social-item">&lt;a href="#" class="social-twitter primary-link">@john&lt;/a>&lt;/li>
+                  &lt;li class="social-item">&lt;a href="#" class="social-linkedin primary-link">john&lt;/a>&lt;/li>
+                  &lt;li class="social-item">&lt;a href="#" class="social-github primary-link">@john&lt;/a>&lt;/li>
+                  &lt;li class="social-item">&lt;a href="#" class="social-gplus primary-link">+john&lt;/a>&lt;/li>
+                &lt;/ul>
+              &lt;/div>
+            &lt;/div>
+        &lt;/div>
+      </code>
+    </pre>
+  </div><!-- end of pattern item -->
 </div><!-- end of pattern -->
 
 <div class="pattern">
-  <h1 class="pattern-title">Images</h1>
+  <span class="section-title color-gray-warm-dark">Images</span>
   <div class="pattern-item">
     <div class="resp-images">
-      <img src="https://placehold.it/1920x600/ec4882/ffffff?text=Placeholder%20image" alt="placeholder" class="aligncenter size-full wp-image-34" style="width: 100%;"/>
+      <img src="https://placehold.it/1920x600?text=Placeholder%20image" alt="placeholder" class="aligncenter size-full " style="width: 100%;"/>
     </div><!-- end of about section -->
   </div><!-- end of pattern item -->
 </div><!-- end of pattern -->
 
 <div class="pattern">
-  <h1 class="pattern-title">Pagination</h1>
+  <span class="section-title color-gray-warm-dark">Pagination</span>
   <div class="pattern-item">
    <div class="pagination">
     <ul class="page-numbers">
       <li><span class="page-numbers current">1</span></li>
-      <li><a class="page-numbers" href="#">2</a></li>
-      <li><a class="page-numbers" href="#">3</a></li>
-      <li><a class="page-numbers" href="#">4</a></li>
-      <li><a class="page-numbers" href="#">5</a></li>
-      <li><a class="page-numbers" href="#">6</a></li>
-      <li><a class="page-numbers" href="#">7</a></li>
-      <li><a class="next page-numbers" href="#">Next »</a></li>
+      <li><a class="page-numbers primary-link" href="#">2</a></li>
+      <li><a class="page-numbers primary-link" href="#">3</a></li>
+      <li><a class="page-numbers primary-link" href="#">4</a></li>
+      <li><a class="page-numbers primary-link" href="#">5</a></li>
+      <li><a class="page-numbers primary-link" href="#">6</a></li>
+      <li><a class="page-numbers primary-link" href="#">7</a></li>
+      <li><a class="next page-numbers primary-link" href="#">Next »</a></li>
     </ul>
   </div><!-- end of pagination -->
 </div><!-- end of pattern item -->
+<div class="pattern-item">
+    <pre>
+      <code class="language-markup">
+        &lt;div class="pagination">
+          &lt;ul class="page-numbers">
+            &lt;li>&lt;span class="page-numbers current">1&lt;/span>&lt;/li>
+            &lt;li>&lt;a class="page-numbers primary-link" href="#">2&lt;/a>&lt;/li>
+            &lt;li>&lt;a class="page-numbers primary-link" href="#">3&lt;/a>&lt;/li>
+            &lt;li>&lt;a class="page-numbers primary-link" href="#">4&lt;/a>&lt;/li>
+            &lt;li>&lt;a class="page-numbers primary-link" href="#">5&lt;/a>&lt;/li>
+            &lt;li>&lt;a class="page-numbers primary-link" href="#">6&lt;/a>&lt;/li>
+            &lt;li>&lt;a class="page-numbers primary-link" href="#">7&lt;/a>&lt;/li>
+            &lt;li>&lt;a class="next page-numbers primary-link" href="#">Next »&lt;/a>&lt;/li>
+          &lt;/ul>
+        &lt;/div>
+      </code>
+    </pre>
+  </div><!-- end of pattern item -->
 </div><!-- end of pattern -->
 
 <div class="pattern">
-  <h1 class="pattern-title">Footer</h1>
+  <span class="section-title color-gray-warm-dark">Footer</span>
   <div class="pattern-item">
-    <div class="footer bg-green--lightgreen">
+    <div class="footer">
       <div class="grid-container">
         <div class="row clearfix">
           <div class="column third">
@@ -232,10 +417,55 @@ layout: default
     </div>
   </div><!-- end of footer -->
 </div><!-- end of pattern item -->
+<div class="pattern-item">
+    <pre>
+      <code class="language-markup">
+        &lt;div class="footer">
+          &lt;div class="grid-container">
+            &lt;div class="row clearfix">
+              &lt;div class="column third">
+                &lt;h3 class="black">Latest posts&lt;/h3>
+                &lt;ul>
+                  &lt;li>&lt;a href="#" class="footer-link">Your cells react to ba...&lt;/a>&lt;/li>
+                  &lt;li>&lt;a href="#" class="footer-link">Hello world!&lt;/a>&lt;/li>
+                  &lt;li>&lt;a href="#" class="footer-link">You think water moves ...&lt;/a>&lt;/li>
+                  &lt;li>&lt;a href="#" class="footer-link">That show's called a p...&lt;/a>&lt;/li>
+                  &lt;li>&lt;a href="#" class="footer-link">Your bones don't break&lt;/a>&lt;/li>
+                  &lt;li>&lt;a href="#" class="footer-link">My money's in that off...&lt;/a>&lt;/li>
+                  &lt;li>&lt;a href="#" class="footer-link">Now that we know who y...&lt;/a>&lt;/li>
+                &lt;/ul>
+              &lt;/div>
+              &lt;div class="column third">
+                &lt;h3 class="black">Menu&lt;/h3>
+                &lt;ul>
+                  &lt;li>&lt;a href="#" class="footer-link">Link 1&lt;/a>&lt;/li>
+                  &lt;li>&lt;a href="#" class="footer-link">Link 2&lt;/a>&lt;/li>
+                  &lt;li>&lt;a href="#" class="footer-link">Link 3&lt;/a>&lt;/li>
+                  &lt;li>&lt;a href="#" class="footer-link">Link 3&lt;/a>&lt;/li>
+                &lt;/ul>
+              &lt;/div>
+              &lt;div class="column third">
+                &lt;h3 class="black">Categories&lt;/h3>
+                &lt;ul>
+                 &lt;li>&lt;a href="#" class="footer-link">Category_1 (7)&lt;/a>&lt;/li>
+                 &lt;li>&lt;a href="#" class="footer-link">Category_2 (2)&lt;/a>&lt;/li>
+                 &lt;li>&lt;a href="#" class="footer-link">Category_3 (4)&lt;/a>&lt;/li>
+                 &lt;li>&lt;a href="#" class="footer-link">Category_4 (4)&lt;/a>&lt;/li>
+               &lt;/ul>
+             &lt;/div>
+           &lt;/div>
+         &lt;/div>
+         &lt;div class="footer-disclaimer">
+          Copyright &copy; demain·il·pleut 2018 - All this site's content under a &lt;a rel="license" class="footer-disclaimer-link" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License&lt;/a>.
+        &lt;/div>
+        &lt;/div>
+      </code>
+    </pre>
+  </div><!-- end of pattern item -->
 </div><!-- end of pattern -->
 
 <div class="pattern">
-  <h1 class="pattern-title">Code</h1>
+  <span class="section-title color-gray-warm-dark">Code</span>
   <div class="pattern-item">
     <pre>
       <code class="language-javascript">
@@ -243,54 +473,97 @@ layout: default
       </code>
     </pre>
   </div><!-- end of pattern item -->
+  <div class="pattern-item">
+    <pre>
+      <code class="language-markup">
+        &lt;pre>
+          &lt;code class="language-javascript">
+            var foo = "bar", baz = 5;      
+          &lt;/code>
+        &lt;/pre>
+      </code>
+    </pre>
+  </div><!-- end of pattern item -->
 </div><!-- end of pattern -->
 
 <div class="pattern">
-  <h1 class="pattern-title">Alerts</h1>
+  <span class="section-title color-gray-warm-dark">Alerts</span>
   <div class="pattern-item">
     <div>
-      <h2>Info</h2>
+      <h3>Info</h3>
       <div class="alert alert--info">
         <strong>Hello there!</strong> I'm a simple info panel.
       </div>
     </div>
     <div>
-      <h2>Warning</h2>
+      <h3>Warning</h3>
       <div class="alert alert--warning">
         <strong>Be careful!!</strong> This advice needs your attention.
       </div>
     </div>
     <div>
-      <h2>Danger</h2>
+      <h3>Danger</h3>
       <div class="alert alert--danger">
         <strong>Stop righ there!!!</strong> If you don't look this you're probably unleashing some kind of kraken.
       </div>
     </div>
   </div><!-- end of pattern item -->
+  <div class="pattern-item">
+    <pre>
+      <code class="language-markup">
+        &lt;div>
+          &lt;h3>Info&lt;/h3>
+          &lt;div class="alert alert--info">
+            &lt;strong>Hello there!&lt;/strong> I'm a simple info panel.
+          &lt;/div>
+        &lt;/div>
+        &lt;div>
+          &lt;h3>Warning&lt;/h3>
+          &lt;div class="alert alert--warning">
+            &lt;strong>Be careful!!&lt;/strong> This advice needs your attention.
+          &lt;/div>
+        &lt;/div>
+        &lt;div>
+          &lt;h3>Danger&lt;/h3>
+          &lt;div class="alert alert--danger">
+            &lt;strong>Stop righ there!!!&lt;/strong> If you don't look this you're probably unleashing some kind of kraken.
+          &lt;/div>
+        &lt;/div>
+      </code>
+    </pre>
+  </div><!-- end of pattern item -->
 </div><!-- end of pattern -->
 
 <div class="pattern">
-  <h1 class="pattern-title">Buttons</h1>
+  <span class="section-title color-gray-warm-dark">Buttons</span>
   <div class="pattern-item">
-    <h2>Normal</h2>
     <div class="inline">
-      <button class="btn bg-purple--light black" name="Normal button" type="button">Button</button>
-      <button class="btn bg-purple--dark white" name="Normal button" type="button">Button</button>
-      <button class="btn bg-green white" name="Normal button" type="button">Button</button>
-      <button class="btn bg-magenta white" name="Normal button" type="button">Button</button>
+      <button class="btn bg-blue white" name="Primary button"
+        type="button">Primary</button>
+    </div>
+    <div class="inline">
+      <button class="btn btn--small bg-blue white" name="Small primary button"
+        type="button">Primary small</button>
     </div>
   </div><!-- end of pattern item -->
   <div class="pattern-item">
-    <h2>Small</h2>
-    <div class="inline">
-      <button class="btn btn--small bg-purple--light black" name="Small button" type="button">Button</button>
-      <button class="btn btn--small bg-purple--dark white" name="Small button" type="button">Button</button>
-      <button class="btn btn--small bg-green white" name="Small button" type="button">Button</button>
-      <button class="btn btn--small bg-magenta white" name="Small button" type="button">Button</button>
-    </div>
+    <pre>
+      <code class="language-markup">
+        &lt;div class="inline">
+          &lt;button class="btn bg-blue white" name="Primary button"
+          type="button">Primary&lt;/button>
+        &lt;/div>
+        &lt;div class="inline">
+          &lt;button class="btn btn--small bg-blue white" name="Small primary button"
+          type="button">Primary small&lt;/button>
+        &lt;/div>
+      </code>
+    </pre>
   </div><!-- end of pattern item -->
 </div><!-- end of pattern -->
 
 </div><!-- end of patterns -->
+
+  </div><!-- end of article -->
 
 </main><!-- end of main -->

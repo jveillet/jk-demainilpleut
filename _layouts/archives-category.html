@@ -7,11 +7,11 @@ layout: default
 <div class="archives">
   <ul class="list-unordered">
   {% for post in page.posts %}
-  <li><a href="{{ post.url }}" class="archives-link">{{ post.title }}</a><span class="archives-complement">&mdash;{{ post.date | date: '%B %d, %Y' }} at {{ post.published_at | date: "%R" }}</span></li>
+  <li><a href="{{ post.url }}" class="primary-link">{{ post.title }}</a><span class="archives-complement">&mdash;{{ post.date | date: '%B %d, %Y' }} at {{ post.published_at | date: "%R" }}</span></li>
   {% endfor %}
   </ul>
 </div>
 
 <div class="archives archives-return-link">
-  <a href="/archives" class="archives-link">&larr; Return to archives</a>
+  <a href="/archives" class="primary-link">&larr; Return to archives</a>
 </div>

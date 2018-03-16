@@ -8,15 +8,20 @@ permalink: /:title/
 author: jveillet
 ---
 
-<p>Welcome to the last part of the WordPress development environment with Docker. We will see how to use your own theme in the previous Docker container we created in <a href="wordpress-development-environment-with-docker-part-ii-using-docker-compose-to-install-wordpress/" class="blog-link">Part II</a>. If you followed up from the last time, you will see this is straightforward.</p>
+<p>Welcome to the last part of the WordPress development environment with
+Docker. We will see how to use your own theme in the previous Docker container
+we created in <a
+href="wordpress-development-environment-with-docker-part-ii-using-docker-compose-to-install-wordpress/" class="primary-link">Part II</a>. If you followed up from the last time, you will see this is straightforward.</p>
+
+<!--readmore-->
 
 <h2>Table of Contents</h2>
 <ul class="list-unordered">
- <li><a class="blog-link" href="#container">Accessing the container</a></li>
- <li><a class="blog-link" href="#mount">Sharing data</a></li>
- <li><a class="blog-link" href="#theme">Adding your own theme</a></li>
- <li><a class="blog-link" href="#side">Side note on volumes</a></li>
- <li><a class="blog-link" href="#conclusion">Wrapping up</a></li>
+ <li><a class="primary-link" href="#container">Accessing the container</a></li>
+ <li><a class="primary-link" href="#mount">Sharing data</a></li>
+ <li><a class="primary-link" href="#theme">Adding your own theme</a></li>
+ <li><a class="primary-link" href="#side">Side note on volumes</a></li>
+ <li><a class="primary-link" href="#conclusion">Wrapping up</a></li>
 </ul>
 
 <h2 id="container">Accessing the container.</h2>
@@ -36,8 +41,6 @@ For this example, we want to mount the directory in a "wordpress" folder.</p>
     - /my/awesome/path:/var/www/html
 [...]
 </code></pre>
-
-<!--readmore-->
 
 <p>Let's add this in our Compose file:</p>
 
@@ -111,7 +114,9 @@ drwxr-xr-x 1 jeremie.veillet Domain Users     0 Apr 15 13:51 wp-includes
 </code></pre>
 
 <h2 id="theme">Adding your own theme</h2>
-<p>Now that we have full access to the WordPress installation, we can copy and paste our own theme into wp-content/theme, just like usual. For the sake of the demonstration, I will use <a href="https://github.com/jveillet/wp-demainilpleut" target="_blank" class="blog-link">demain·il·pleut's</a> theme, but you can use whatever theme you like, even modify the ones provided by WordPress like Twenty Sixteen or something.</p>
+<p>Now that we have full access to the WordPress installation, we can copy and
+paste our own theme into wp-content/theme, just like usual. For the sake of the
+demonstration, I will use <a href="https://github.com/jveillet/wp-demainilpleut" target="_blank" class="primary-link">demain·il·pleut's</a> theme, but you can use whatever theme you like, even modify the ones provided by WordPress like Twenty Sixteen or something.</p>
 
 <pre><code class="language-bash">
 $ cd wordpress/wp-content/themes
@@ -139,6 +144,7 @@ $ cd wp-demainilpleut
 
 <strong>Other Parts</strong>:
 <p>
-<a href="wordpress-development-environment-with-docker-part-i-installing-docker/">WordPress development environment with Docker Part I: installing Docker</a><br>
-<a href="wordpress-development-environment-with-docker-part-ii-using-docker-compose-to-install-wordpress/">Wordpress development environment with Docker Part II: Using Docker Compose to install WordPress</a>
+<a href="{{ site.baseurl }}{% link _posts/2016-03-30-wordpress-development-environment-with-docker-part-i-installing-docker.html %}">WordPress development environment with Docker Part I: installing Docker</a><br>
+<a href="{{ site.baseurl }}{% link
+_posts/2016-03-30-wordpress-development-environment-with-docker-part-ii-using-docker-compose-to-install-wordpress.html %}">Wordpress development environment with Docker Part II: Using Docker Compose to install WordPress</a>
 </p>

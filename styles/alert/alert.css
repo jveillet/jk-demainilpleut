@@ -1,0 +1,31 @@
+/**
+Name: alert.css
+Github URI: https://github.com/jveillet/jk-demainilpleut
+Author: Jérémie Veillet
+Author URI: https://github.com/jveillet
+Description: Styles for alert boxes
+Version: 1.1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+This stylesheet is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+.alert {
+  padding: .5em;
+  background-color: #ffffff;
+  box-shadow: 0 .25em .375em 0 hsla(0, 0%, 0%, .2);
+}
+
+.alert--info {
+  border-left: .5em solid rgb(52, 152, 219);
+}
+
+.alert--warning {
+  border-left: .5em solid rgb(242, 121, 53);
+}
+
+.alert--danger {
+  border-left: .5em solid rgb(207, 0, 15);
+}

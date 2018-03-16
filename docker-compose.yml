@@ -1,8 +1,11 @@
-web:
-  build: .
-  env_file: .env
-  ports:
-    - "8080:4000"
-  volumes:
-    - .:/home/app
-  command: bundle exec jekyll serve -H 0.0.0.0 --incremental
+version: '3'
+
+services:
+  web:
+    build: .
+    env_file: .env
+    ports:
+      - "8080:4000"
+    volumes:
+      - .:/home/doctor/demainilpleut
+    command: bundle exec jekyll serve -H 0.0.0.0 --incremental
