@@ -7,11 +7,10 @@ layout: default
 
 <div class="article-wrapper">
 
-  <h1 class="article-title">{{ page.title }}</h1>
-
   <article class="article">
+  <h1 class="article-title">{{ page.title }}</h1>
     {% if author %}
-    <span class="article-author">by&nbsp;<a class="article-author--link" href="/author/{{ author.handle }}">{{ author.name }}</a></span>
+    <span class="article-author">by&nbsp;<a class="article-author--link" href="/authors/{{ author.handle }}">{{ author.name }}</a></span>
     {% endif %}
     <span class="article-pubdate">&mdash;&nbsp;<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %d, %Y' }} at {{ page.published_at | date: "%R" }}</time></span>
     <div class="article-summary">
@@ -25,17 +24,17 @@ layout: default
       </span>
     </div>
     <div class="article-content">
-      <p>{{ content }}</p>
+      {{ content }}
     </div>
-    <span class="article-categories">
+    <span class="article-categories article-tags">
       Published in
-      {% assign total_cat = page.categories.size %}
-      {% for category in page.categories %}
-        <a href="/archives/{{ category | downcase | replace: ' ', '-'  }}" class="footer-link">{{ category }}</a>
-        {% if forloop.last == false %}
-        ,
-        {% endif %}
-      {% endfor %}
+        {% assign total_cat = page.categories.size %}
+        {% for category in page.categories %}
+          <span class="article-tags-item">
+            <a href="/archives/{{ category | downcase | replace: ' ', '-'  }}"
+              class="article-tags-link">{{ category }}</a>
+          </span>
+        {% endfor %}
     </span>
     <span class="article-top"><a href="#top" class="top" title="Go to the top of the page">↑ Back to top</a></span>
   </article>
@@ -45,13 +44,14 @@ layout: default
     <h2 class="about-title">About the Author</h2>
     <div class="about-author">
       <div class="about-author-bio">
-      <a class="about-author-avatar" href="/author/{{ author.handle }}"><img src="{{ author.avatar }}" width="80" height="80" alt=""></a>
-        <p><span class="about-author-name"><a href="/author/{{ author.handle }}">{{ author.name }}</a></span><br><small>{{ author.description }}</small></p>
+      <a class="about-author-avatar" href="/authors/{{ author.handle }}"><img src="{{ author.avatar }}" width="80" height="80" alt=""></a>
+        <p><span class="about-author-name"><a href="/authors/{{ author.handle}}"
+            class="primary-link">{{ author.name }}</a></span><br><small class="about-author-description">{{ author.description }}</small></p>
         <ul class="social">
-          <li class="social-item"><a href="https://www.twitter.com/{{ author.twitter }}" class="social-twitter blog-link">@{{ author.twitter }}</a></li>
-          <li class="social-item"><a href="https://www.linkedin.com/in/{{ author.linkedin }}" class="social-linkedin blog-link">{{ author.linkedin }}</a></li>
-          <li class="social-item"><a href="https://www.github.com/{{ author.github }}" class="social-github blog-link">@{{ author.github }}</a></li>
-          <li class="social-item"><a href="https://plus.google.com/u/0/+{{ author.gplus }}" class="social-gplus blog-link">+{{ author.gplus }}</a></li>
+          <li class="social-item"><a href="https://www.twitter.com/{{ author.twitter }}" class="social-twitter primary-link">@{{ author.twitter }}</a></li>
+          <li class="social-item"><a href="https://www.linkedin.com/in/{{ author.linkedin }}" class="social-linkedin primary-link">{{ author.linkedin }}</a></li>
+          <li class="social-item"><a href="https://www.github.com/{{ author.github }}" class="social-github primary-link">@{{ author.github }}</a></li>
+          <li class="social-item"><a href="https://plus.google.com/u/0/+{{ author.gplus }}" class="social-gplus primary-link">+{{ author.gplus }}</a></li>
         </ul>
       </div><!-- end of author bio -->
     </div><!-- end of about author -->

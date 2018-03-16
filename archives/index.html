@@ -2,39 +2,44 @@
 layout: default
 ---
 
-<h1>Archives</h1>
+<article class="article">
 
-Welcome to the archives. Here you can find all of the posts made over the years, the most popular stuff, the bad, the ugly and the usefull.
+<div class="archives-header">
+  <h1>Archives</h1>
 
-<h2>Last 10 Posts</h2>
-<div class="archives">
+  <div class="article-excerpt">Welcome to the archives. Here you can find all of the posts made over the
+      years, the most popular stuff, the bad, the ugly and the usefull.</div>
+</div>
+
+<div class="archives archives-spacing">
+  <span class="section-title color-gray-warm-dark">Last 10 Posts</span>
   <ol class="list-ordered" start="1" type="1">
     {% for post in site.posts limit:10 offset:1 %}
     <li>
-      <a href="{{ post.url }}" class="archives-link">{{ post.title }}</a>
+      <a href="{{ post.url }}" class="primary-link">{{ post.title }}</a>
     </li>
     {% endfor %}
   </ol>
 </div>
 
-<h2>By Categories</h2>
-<div class ="archives">
+<div class ="archives archives-spacing">
+  <span class="section-title color-gray-warm-dark">By Categories</span>
   <ul class="list-unordered">
   {% for category in site.categories %}
-    <li><a href="/archives/{{ category | first | downcase | replace: ' ', '-'  }}" class="archives-link">{{ category | first }}</a><span class="archives-complement">({{ category | last | size }})</span></li>
+    <li><a href="/archives/{{ category | first | downcase | replace: ' ', '-' }}" class="primary-link">{{ category | first }}</a><span class="archives-complement">({{ category | last | size }})</span></li>
   {% endfor %}
   </ul>
 </div>
 
-<h2>By month</h2>
 <div class ="archives">
+  <span class="section-title color-gray-warm-dark">By month</span>
   {% assign counter = 0 %}
   {% for post in site.posts %}
     {% assign thisyear = post.date | date: "%B %Y" %}
     {% assign prevyear = post.previous.date | date: "%B %Y" %}
     {% assign counter = counter | plus: 1 %}
     {% if thisyear != prevyear %}
-      <span><a href="/archives/{{ post.date | date:"%Y" }}/{{ post.date | date:"%m" }}" class="archives-link">{{ thisyear }}</a><span class="archives-complement">({{ counter }})</span></span>
+      <span><a href="/archives/{{ post.date | date:"%Y" }}/{{ post.date | date:"%m" }}" class="primary-link">{{ thisyear }}</a><span class="archives-complement">({{ counter }})</span></span>
       {% if forloop.last == false %}
         |&nbsp;
       {% endif %}
@@ -42,4 +47,6 @@ Welcome to the archives. Here you can find all of the posts made over the years,
     {% endif %}
   {% endfor %}
 </div>
+
+</article>
 

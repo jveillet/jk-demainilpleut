@@ -1,0 +1,64 @@
+/**
+Name: utility.css
+Github URI: https://github.com/jveillet/jk-demainilpleut
+Author: Jérémie Veillet
+Author URI: https://github.com/jveillet
+Description: Utility classes
+Version: 1.1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+This stylesheet is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* Text utilities */
+
+.quote {
+  border-left: .375em solid #8ca755;
+  font-style: italic;
+  font-weight: 400;
+  color: #494440;
+  padding: .5em;
+}
+
+code, pre {
+  font-family: Consolas, Monaco, "Andale Mono", monospace;
+  font-size: .85em;
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: pre-line;
+  padding: .15625em .3125em;
+  color: #4e4e4e;
+  background-color: #dce4ef;
+}
+
+.section-title {
+  display: block;
+  font-weight: bold;
+  letter-spacing: .07em;
+  margin-bottom: .75em;
+  margin-top: .75em;
+  text-transform: uppercase;
+}
+
+/* Lists utilities */
+
+.list-unordered {
+  list-style-type: disc;
+  margin-left: 2em;
+}
+
+.list-ordered {
+  list-style-type: decimal;
+  margin-left: 2em;
+}
+
+/* Form elements */
+
+.input {
+  border: .0625em solid #706666;
+  display: block;
+  font-family: inherit;
+  font-size: 100%;
+}

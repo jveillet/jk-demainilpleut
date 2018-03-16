@@ -6,6 +6,7 @@ published_at: 2017-01-30T18:10:00+00:00
 categories: [Code, Ruby, Middleman, Heroku]
 permalink: /:title/
 author: jveillet
+summary: 'Learn how to deploy the Slate documentation, and build the assets automatically on Heroku'
 ---
 
 <p>
@@ -14,13 +15,15 @@ author: jveillet
   on Heroku, and how to configure it to generate the static HTML files with each commit on a repository.
 </p>
 
+<!--readmore-->
+
 <h2>Table of Contents</h2>
 <ul class="list-unordered">
- <li><a class="blog-link" href="#context">Some context</a></li>
- <li><a class="blog-link" href="#install">Set up Slate locally</a></li>
- <li><a class="blog-link" href="#building">Building the documentation on Heroku</a></li>
- <li><a class="blog-link" href="#serving">Serving files</a></li>
- <li><a class="blog-link" href="#customizing">Customizing the Middleman build configuration</a></li>
+ <li><a class="primary-link" href="#context">Some context</a></li>
+ <li><a class="primary-link" href="#install">Set up Slate locally</a></li>
+ <li><a class="primary-link" href="#building">Building the documentation on Heroku</a></li>
+ <li><a class="primary-link" href="#serving">Serving files</a></li>
+ <li><a class="primary-link" href="#customizing">Customizing the Middleman build configuration</a></li>
 </ul>
 
 <h2 id="context">Some context</h2>
@@ -28,7 +31,6 @@ author: jveillet
 leading us to a lot of manipulations and possibly errors, particularly when we wanted someone outside the dev team to write the documentation. What we were trying to
 achieve was to just commit the markdown page and be done with it.</p>
 
-<!--readmore-->
 
 <h2 id="install">Set up Slate locally</h2>
 <p>
