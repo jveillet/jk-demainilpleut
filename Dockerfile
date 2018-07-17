@@ -24,14 +24,12 @@ RUN apt-get clean \
     && apt-get update -y \
     && apt-get install -y --no-install-recommends \
     build-essential \
-    git-core \
     ruby2.3-dev \
     sudo \
     libffi-dev \
-    libxml2-dev \
     libssl-dev \
+    libxml2-dev \
     libcurl4-gnutls-dev \
-    apt-utils \
     nodejs \
     && rm -rf /var/lib/apt/lists/*
 
