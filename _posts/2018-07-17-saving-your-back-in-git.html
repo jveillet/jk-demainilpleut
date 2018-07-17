@@ -1,0 +1,167 @@
+---
+excerpt_separator: <!--readmore-->
+layout: post
+title: 'Saving your back in git'
+published_at: 2018-07-17T18:00:00+00:00
+categories: [git, commands]
+permalink: /:title/
+author: jveillet
+---
+
+<p>
+Here is a usefull collection of git commands that I keep coming back to, it saved me countless times when I was in tricky 
+situations. I have finally decided to compile them here, I hope it can help you too!
+</p>
+
+<!--readmore-->
+
+<h2>Table of Contents</h2>
+<ul class="list-unordered">
+ <li><a class="primary-link" href="#rename-branch">Rename a local branch</a></li>
+ <li><a class="primary-link" href="#delete-tag">Delete a remote tag</a></li>
+ <li><a class="primary-link" href="#checkout-remote-branch">Check out a remote branch</a></li>
+ <li><a class="primary-link" href="#list-files-commit">List all the files in a commit</a></li>
+ <li><a class="primary-link" href="#remove-files-commit">Remove files from a commit</a></li>
+ <li><a class="primary-link" href="#undo-commit">Undo a git commit --amend</a></li>
+ <li><a class="primary-link" href="#ignore-files">Ignore files already commited</a></li>
+ <li><a class="primary-link" href="#exclude-file-diff">Exclude a file from a diff</a></li>
+ <li><a class="primary-link" href="#usefull-resources">Usefull resources</a></li>
+</ul>
+
+<h2 id="rename-branch">Rename a local branch</h2>
+<p>Rename a branch while pointed to any branch:</p>
+<pre><code class="language-bash">
+git branch -m oldname newname
+</code></pre>
+
+<p>Rename the current branch:</p>
+<pre><code class="language-bash">
+git branch -m newname
+</code></pre>
+
+<h2 id="delete-tag">Delete a remote tag</h2>
+<p>Remove a tag on the origin:</p>
+<pre><code class="language-bash">
+git push -d origin tagname
+</code></pre>
+
+<p>Remove a tag locally:</p>
+<pre><code class="language-bash">
+git tag -d tagname
+</code></pre>
+
+<h2 id="checkout-remote-branch">Check out a remote branch</h2>
+
+<p>You can be in a situation when you need to check out a remote branch locally. This branch has been pushed to 
+the remote repository, by someone else or you.</p>
+
+<pre><code class="language-bash">
+git pull --all
+Fetching origin
+remote: Counting objects: 1, done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 1
+Unpacking objects: 100% (1/1), done.
+From github.com:github-user/my-repo
+XXXXf37..XXXXb28  my-branch     -> origin/my-branch
+...
+</code></pre>
+
+<p>You can then checkout out this branch:</p>
+<pre><code class="language-bash">
+git co my-branch
+</code></pre>
+
+<h2 id="list-files-commit">List all the files in a commit</h2>
+
+<pre><code class="language-bash">
+git diff-tree --no-commit-id --name-only -r my_commit_id
+test.txt
+src/lib.rb
+</code></pre>
+
+<ul class="list-unordered">
+    <li>The <code>--name-only</code> show only names of changed files.</li>
+    <li>The <code>--no-commit-id</code> removes the commit ID output.</li>
+    <li>The <code>-r</code> argument is to recurse into sub-trees.</li>
+</ul>
+
+<p>Listing files from the parent commit, use a <code>-m</code> argument:</p>
+<pre><code class="language-bash">
+git diff-tree --no-commit-id --name-only -m -r my_parent_commit_id
+</code></pre>
+
+<h2 id="remove-files-commit">Remove files from a commit</h2>
+
+<p>You have mistakely commited files locally, and you want this files to be back in the staging area without undoing the work
+that has been done on them.</p>
+
+<pre><code class="language-bash">
+git reset --soft HEAD~1
+
+git reset HEAD path/to/file_to_remove
+
+git commit -c ORIG_HEAD
+</code></pre>
+
+<p>Alternatively, you can define this with a git alias:</p>
+<pre><code class="language-bash">
+git config --global alias.undo 'reset --soft HEAD~1'
+</code></pre>
+
+<h2 id="undo-commit">Undo a git commit --amend</h2>
+
+<pre><code class="language-bash">
+# Move the current head so that it's pointing at the old commit
+# Leave the index intact for redoing the commit.
+# HEAD@{1} gives you "the commit that HEAD pointed at before 
+# it was moved to where it currently points at". Note that this is
+# different from HEAD~1, which gives you "the commit that is the
+# parent node of the commit that HEAD is currently pointing to."
+git reset --soft HEAD@{1}
+</code></pre>
+
+<pre><code class="language-bash">
+# commit the current tree using the commit details of the previous
+# HEAD commit. (Note that HEAD@{1} is pointing somewhere different from the
+# previous command. It's now pointing at the erroneously amended commit.)
+git commit -C HEAD@{1}
+</code></pre>
+
+<p>Thanks to this <a href="https://stackoverflow.com/questions/1459150/how-to-undo-git-commit-amend-done-instead-of-git-commit#1459264">Stackoverflow</a> question.</p>
+
+<h2 id="ignore-files">Ignore files already commited</h2>
+
+<p>Create a new branch to apply the effective removal of files.</p>
+<pre><code class="language-bash">
+git checkout -b new-branch
+</code></pre>
+
+<p>Apply the removal of the file, without removing the local copy.</p>
+<pre><code class="language-bash">
+git rm --cached my-file
+</code></pre>
+
+<p>It's now safe to commit the file and push it to the remote.</p>
+<pre><code class="language-bash">
+git add . && git commit my-file
+</code></pre>
+
+<h2 id="exclude-file-diff">Exclude a file from a diff</h2>
+
+<pre><code class="language-bash">
+git diff -- . ":(exclude)path/to/file-to-exclude.rb"
+</code></pre>
+
+<p>Exclude files from the diff based on the extension:</p>
+<pre><code class="language-bash">
+git diff -- . ":(exclude)*.min.js" ":(exclude)*.min.css" 
+</code></pre>
+
+<h2 id="usefull-resources">Usefull resources</h2>
+
+<p>
+    <ul class="list-unordered">
+        <li><a href="http://ohshitgit.com/">Oh, shit, git</a></li>
+    </ul>
+</p>
+
