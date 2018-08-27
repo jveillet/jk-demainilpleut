@@ -13,6 +13,13 @@ layout: default
     <span class="article-author">by&nbsp;<a class="article-author--link" href="/authors/{{ author.handle }}">{{ author.name }}</a></span>
     {% endif %}
     <span class="article-pubdate">&mdash;&nbsp;<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %d, %Y' }} at {{ page.published_at | date: "%R" }}</time></span>
+    <div class="article-tags">
+      {% for category in page.categories %}
+        <span class="article-tags-item">
+          <a href="/archives/{{ category | downcase | replace: ' ', '-'  }}" class="article-tags-link">#{{ category }}</a>
+        </span>
+      {% endfor %}
+    </div>
     <div class="article-summary">
       {% capture words %}
         {{ page.content | number_of_words | minus: 250 }}
@@ -26,17 +33,9 @@ layout: default
     <div class="article-content">
       {{ content }}
     </div>
-    <span class="article-categories article-tags">
-      Published in
-        {% assign total_cat = page.categories.size %}
-        {% for category in page.categories %}
-          <span class="article-tags-item">
-            <a href="/archives/{{ category | downcase | replace: ' ', '-'  }}"
-              class="article-tags-link">{{ category }}</a>
-          </span>
-        {% endfor %}
-    </span>
-    <span class="article-top"><a href="#top" class="top" title="Go to the top of the page">↑ Back to top</a></span>
+    <div class="article-top">
+      <a href="#top" class="top" title="Go to the top of the page">↑ Back to top</a>
+    </div>
   </article>
 
   {% if author %}

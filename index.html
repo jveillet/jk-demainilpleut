@@ -21,7 +21,7 @@ layout: default
             {% assign total_cat = post.categories.size %}
             {% for category in post.categories %}
               <span class="article-tags-item">
-                <a href="/archives/{{ category | downcase | replace: ' ', '-'  }}" class="article-tags-link">{{ category }}</a>
+                <a href="/archives/{{ category | downcase | replace: ' ', '-'  }}" class="article-tags-link">#{{ category }}</a>
               </span>
             {% endfor %}
           </div><!-- end of articles footer tags -->

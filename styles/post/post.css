@@ -159,6 +159,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .article-tags {
+  margin-top: 1em;
   font-size: .8em;
   font-weight: 600;
   width: 100%;
@@ -176,19 +177,22 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .article-tags-link:link,
 .article-tags-link:visited{
   color: #494440;
+  text-decoration: none;
+}
+
+.article-tags-link:hover{
+  text-decoration: underline;
 }
 
 .article-top {
-  display: block;
-  font-size: .8em;
-  margin-top: 1.5em;
+  margin-top: 2em;
   text-align: center;
-  width: 100%;
 }
 
 .top {
   color: #0071bc;
   color: rgba(0, 113, 188, .5);
+  font-size: 1em;
   transition: color 500ms, transform 500ms;
 }
 
@@ -235,6 +239,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
     width: 80%;
   }
 
+  .article-tags {
+    font-size: 1em;
+  }
+
   .article-tags-item {
     margin-top: 0;
   }
@@ -244,20 +252,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
     margin-left: .5em;
     font-size: 1em;
     font-style: italic;
-  }
-
-  .article-top {
-    display: inline-block;
-    font-size: .8em;
-    margin-top: .5em;
-    width: 20%;
-  }
-
-  .top {
-    color: #0071bc;
-    color: rgba(0, 113, 188, .5);
-    float: right;
-    transition: color 500ms, transform 500ms;
   }
 
 }
