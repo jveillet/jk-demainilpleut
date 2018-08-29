@@ -44,6 +44,9 @@ author: jveillet
       {% if author.instagram %}
       <li class="social-item"><a href="https://www.instagram.com/{{ author.instagram }}" class="social-instagram primary-link">{{ author.instagram }}</a></li>
       {% endif %}
+      {% if author.devto %}
+      <li class="social-item"><a href="https://dev.to/{{ author.devto }}" class="social-devto primary-link">@{{ author.devto }}</a></li>
+      {% endif %}
     </ul>
   </div>
 
