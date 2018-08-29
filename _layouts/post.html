@@ -12,7 +12,7 @@ layout: default
     {% if author %}
     <span class="article-author">by&nbsp;<a class="article-author--link" href="/authors/{{ author.handle }}">{{ author.name }}</a></span>
     {% endif %}
-    <span class="article-pubdate">&mdash;&nbsp;<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %d, %Y' }} at {{ page.published_at | date: "%R" }}</time></span>
+    <span class="article-pubdate">on&nbsp;<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %d, %Y' }}</time></span>
     <div class="article-tags">
       {% for category in page.categories %}
         <span class="article-tags-item">
