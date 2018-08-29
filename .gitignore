@@ -66,3 +66,4 @@ _drafts/
 .sass-cache/
 .jekyll-metadata
 css/bundle.min.css
+_config.override.yml

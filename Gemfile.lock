@@ -30,6 +30,8 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-archives (2.1.1)
       jekyll (>= 2.4)
+    jekyll-feed (0.10.0)
+      jekyll (~> 3.3)
     jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
@@ -71,6 +73,7 @@ DEPENDENCIES
   dotenv (~> 2.5.0)
   jekyll (~> 3.8.3)
   jekyll-archives (~> 2.1.1)
+  jekyll-feed (~> 0.10.0)
   jekyll-paginate (~> 1.1.0)
   puma (~> 3.12.0)
   rack-jekyll (~> 0.5.0)
@@ -80,4 +83,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.16.3
+   1.16.4
