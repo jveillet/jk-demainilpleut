@@ -7,24 +7,26 @@ layout: default
 
     <!-- Look the author details up from the site config. -->
     {% assign author = site.data.authors[post.author] %}
-    <article class="article">
+    <article class="articles">
       <h2><a href="{{ post.url }}" class="article-title">{{ post.title }}</a></h2>
-      <span class="article-author"><a class="article-author--link" href="/authors/{{ author.handle }}">{{ author.name }}</a></span>
-      <span class="article-pubdate">—&nbsp;<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %d, %Y' }} at {{ post.published_at | date: "%R" }}</time></span>
-      <div class="article-summary"></div>
       <div class="article-excerpt">
         {{ post.excerpt | strip_links | strip_imgs }}
       </div>
-      <div class="article-footer"><a class="btn bg-blue white" href="{{ post.url }}">Read more…</a></div>
-      <div class="article-tags">
-        {% assign total_cat = post.categories.size %}
-        {% for category in post.categories %}
-          <span class="article-tags-item">
-            <a href="/archives/{{ category | downcase | replace: ' ', '-'  }}"
-              class="article-tags-link">{{ category }}</a>
-          </span>
-        {% endfor %}
-      </div>
+      <div class="articles-footer">
+        <div class="articles-footer-wrapper">
+          <img src="{{ author.avatar }}" width="32" height="32" alt="{{ author.name }}" class="articles-footer-avatar">
+          <span style="article-author"><a class="article-author--link" href="/authors/{{ author.handle }}">{{ author.name }}</a></span>
+          <span class="article-pubdate"> on <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %d, %Y' }}</time></span>
+          <div class="articles-footer-tags">
+            {% assign total_cat = post.categories.size %}
+            {% for category in post.categories %}
+              <span class="article-tags-item">
+                <a href="/archives/{{ category | downcase | replace: ' ', '-'  }}" class="article-tags-link">#{{ category }}</a>
+              </span>
+            {% endfor %}
+          </div><!-- end of articles footer tags -->
+        </div><!-- end of articles footer wrapper -->
+      </div><!-- end of articles footer -->
     </article>
   {% endfor %}
 </div>

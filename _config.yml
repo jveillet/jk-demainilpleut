@@ -93,3 +93,4 @@ jekyll-archives:
 plugins:
   - jekyll-archives
   - jekyll-paginate
+  - jekyll-feed

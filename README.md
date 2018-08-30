@@ -10,8 +10,9 @@ JS.
 
 On the ruby side, this project uses [Bundler](https://bundler.io/).
 
-### For Docker
+### With Docker
 ```bash
+$ git clone git@github.com:jveillet/jk-demainilpleut.git
 $ cd jk-demainilpleut/
 # Build the docker container and install Gems dependencies and NPM dependencies
 $ docker-compose build
@@ -28,18 +29,19 @@ $ docker-compose run --rm web bundle exec jekyll serve -H 0.0.0.0 --incremental
 
 ### Without Docker
 ```bash
+$ git clone git@github.com:jveillet/jk-demainilpleut.git
 $ cd jk-demainilpleut/
 # Install the gem and dependecies the blog needs
 $ bundle install
 # Debian only: Add the latest node version to the sources
-$ curl -sL https://deb.nodesource.com/setup_7.x | bash - \
+$ curl -sL https://deb.nodesource.com/setup_8.x | bash - \
 # Install Node and Gulp
 $ apt-get install -y nodejs
 $ npm install -g gulp-cli
 # Install the JS dependencies
 $ npm install
 # Run the tasks to build the CSS and JS
-$ gulp
+$ gulp build
 # Lint the CSS (required before commiting any CSS change).
 $ gulp lint-css
 # Launch the Jekyll build and start the server
