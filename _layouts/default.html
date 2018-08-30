@@ -17,6 +17,7 @@
   <meta name="twitter:image" content="{{ site.url }}/{{ site.logo }}">
   <meta name="twitter:card"  content="summary">
   {% endif %}
+  <link href='{{ site.url }}/feed.xml' rel='alternate' type='application/atom+xml'>
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link rel="stylesheet" type="text/css" href="/css/bundle.min.css" />
   {% if jekyll.environment == 'production' %}
@@ -54,6 +55,7 @@
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=blissfuljs"></script>
     <script src="/js/bliss.min.js"></script>
     <script src="/js/prism.min.js"></script>
+    <script src="/js/dnt-helper.js"></script>
     <script>
       // Add/display the mobile menu button, and
       $.ready().then(function() {

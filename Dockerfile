@@ -63,4 +63,4 @@ RUN npm install
 
 EXPOSE 4000
 
-CMD bundle exec jekyll build
+CMD ["bundle", "exec", "jekyll", "build"]

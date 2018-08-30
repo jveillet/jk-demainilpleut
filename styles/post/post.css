@@ -20,6 +20,47 @@ Use it to make something cool, have fun, and share what you've learned with othe
   padding: 2em;
 }
 
+.articles {
+  background-color: #ffffff;
+  padding: 2em;
+  border-bottom: .0625em solid #f1f1f1;
+}
+
+.articles:first-child {
+  margin-top: 1em;
+  border-radius: .2em .2em 0 0;
+}
+
+.articles:last-child {
+  margin-bottom: 1em;
+  border-radius: 0 0 .2em .2em;
+  border-bottom: 0;
+}
+
+.articles-footer {
+  margin-top: 3em;
+}
+
+.articles-footer-wrapper {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.articles-footer-avatar {
+  border-radius: 100%;
+  margin-right: .5em;
+}
+
+.articles-footer-tags {
+  font-size: .9em;
+  display: inline;
+  font-weight: 600;
+  margin: 0;
+}
+
 .primary-link,
 .primary-link:visited{
   color: #0a0000;
@@ -79,8 +120,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 .article-pubdate {
   color: #aeb0b5;
-  font-size: .8em;
+  margin: 0;
   font-style: italic;
+  font-size: 1em;
 }
 
 .article-categories {
@@ -117,6 +159,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .article-tags {
+  margin-top: 1em;
   font-size: .8em;
   font-weight: 600;
   width: 100%;
@@ -134,19 +177,22 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .article-tags-link:link,
 .article-tags-link:visited{
   color: #494440;
+  text-decoration: none;
+}
+
+.article-tags-link:hover{
+  text-decoration: underline;
 }
 
 .article-top {
-  display: block;
-  font-size: .8em;
-  margin-top: 1.5em;
+  margin-top: 2em;
   text-align: center;
-  width: 100%;
 }
 
 .top {
   color: #0071bc;
   color: rgba(0, 113, 188, .5);
+  font-size: 1em;
   transition: color 500ms, transform 500ms;
 }
 
@@ -158,6 +204,21 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 @media all and (min-width: 47em) {
+
+  .articles-footer-wrapper {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .articles-footer-tags {
+    font-size: .9em;
+    display: inline;
+    font-weight: 600;
+    margin-left: 3em;
+  }
 
   .article-wrapper {
     margin: 0 auto;
@@ -178,22 +239,19 @@ Use it to make something cool, have fun, and share what you've learned with othe
     width: 80%;
   }
 
+  .article-tags {
+    font-size: 1em;
+  }
+
   .article-tags-item {
     margin-top: 0;
   }
 
-  .article-top {
-    display: inline-block;
-    font-size: .8em;
-    margin-top: .5em;
-    width: 20%;
-  }
-
-  .top {
-    color: #0071bc;
-    color: rgba(0, 113, 188, .5);
-    float: right;
-    transition: color 500ms, transform 500ms;
+  .article-pubdate {
+    color: #aeb0b5;
+    margin-left: .5em;
+    font-size: 1em;
+    font-style: italic;
   }
 
 }

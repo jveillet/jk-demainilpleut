@@ -122,6 +122,14 @@ Use it to make something cool, have fun, and share what you've learned with othe
   padding: .5em 0 .5em 2em;
 }
 
+.social-devto {
+  background: url("../img/devblacksquarelogo.png") no-repeat left center;
+  background: url("../img/devblacksquarelogo.svg") no-repeat left center,
+    linear-gradient(transparent, transparent);
+  background-size: auto 1.5em;
+  display: block;
+  padding: .5em 0 .5em 2.8em;
+}
 
 .members {
   display: flex;
