@@ -23,7 +23,7 @@
         <h3 class="black">Categories</h3>
         <ul>
         {% for category in site.categories limit:8 %}
-          <li><a href="/archives/{{ category | first | downcase | replace: ' ', '-'  }}" class="footer-link">{{ category | first }} ({{ category | last | size }})</a></li>
+          <li><span class="footer-hastgag">#</span><a href="/archives/{{ category | first | downcase | replace: ' ', '-'  }}" class="footer-link">{{ category | first }} ({{ category | last | size }})</a></li>
         {% endfor %}
         </ul>
       </div><!-- end of column -->
