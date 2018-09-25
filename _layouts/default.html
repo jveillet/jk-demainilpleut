@@ -61,12 +61,24 @@
       $.ready().then(function() {
         $("body").classList.add("js");
         var menu = $("#js-menu");
-        var menulink = $(".topbar-menu-btn");
+        var menuLink = $(".topbar-menu-btn");
+        var menuClose = $(".topbar-btn-close");
+        var topbar = $(".topbar");
         // Toggle the display of menu links
-        menulink
+        menuLink
         .addEventListener("click", function(event) {
-          menulink.classList.toggle("active");
+          menuLink.classList.toggle("active");
           menu.classList.toggle('active');
+          menuClose.classList.toggle('active');
+          topbar.classList.toggle('active');
+          return false;
+        });
+        menuClose
+        .addEventListener("click", function(event) {
+          menuLink.classList.toggle("active");
+          menu.classList.toggle('active');
+          menuClose.classList.toggle('active');
+          topbar.classList.toggle('active');
           return false;
         });
         path = window.location.pathname.split('/');
