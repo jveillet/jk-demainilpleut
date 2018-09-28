@@ -1,4 +1,4 @@
-FROM heroku/heroku:16
+FROM heroku/heroku:18
 
 # Environment variables
 ENV DEBIAN_FRONTEND noninteractive
@@ -24,7 +24,7 @@ RUN apt-get clean \
     && apt-get update -y \
     && apt-get install -y --no-install-recommends \
     build-essential \
-    ruby2.3-dev \
+    ruby2.5-dev \
     sudo \
     libffi-dev \
     libssl-dev \
