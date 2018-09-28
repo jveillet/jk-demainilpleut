@@ -19,7 +19,7 @@ $ docker-compose build
 # Run the tasks to build the CSS and JS
 $ docker-compose run --rm web gulp build
 # Lint the CSS (required before commiting any CSS change).
-$ docker-compose run --rm web gulp lint-css
+$ docker-compose run --rm web gulp lint:css
 # Launch the Jekyll build and start the server
 $ docker-compose up
 # (or)
@@ -43,10 +43,23 @@ $ npm install
 # Run the tasks to build the CSS and JS
 $ gulp build
 # Lint the CSS (required before commiting any CSS change).
-$ gulp lint-css
+$ gulp lint:css
 # Launch the Jekyll build and start the server
 $ bundle exec jekyll serve --incremental
 # The server will run on port 4000
+```
+
+### Individual Tasks
+
+```bash
+# Building CSS
+$ gulp build:css
+# Building Javascript
+$ gulp build:js
+# Gbobal build (CSS + JS)
+$ gulp build
+# Linting CSS
+$ gulp lint:css
 ```
 
 ### On [Heroku](https://www.heroku.com)
