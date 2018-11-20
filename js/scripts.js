@@ -1,4 +1,4 @@
-PAGES = ['archives', 'styleguide', 'authors'];
+var PAGES = ['archives', 'styleguide', 'authors'];
 
 // Add/display the mobile menu button, and
 $.ready().then(function() {

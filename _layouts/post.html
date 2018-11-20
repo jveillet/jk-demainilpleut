@@ -16,7 +16,7 @@ layout: default
     <div class="article-tags">
       {% for category in page.categories %}
         <span class="article-tags-item">
-          <a href="/archives/{{ category | downcase | replace: ' ', '-'  }}" class="article-tags-link">#{{ category }}</a>
+          <a href="{{ site.url }}/archives/{{ category | downcase | replace: ' ', '-'  }}" class="article-tags-link">#{{ category }}</a>
         </span>
       {% endfor %}
     </div>
@@ -43,7 +43,7 @@ layout: default
     <h2 class="about-title">About the Author</h2>
     <div class="about-author">
       <div class="about-author-bio">
-      <a class="about-author-avatar" href="/authors/{{ author.handle }}"><img src="{{ author.avatar }}" width="80" height="80" alt="{{ author.handle }}"></a>
+      <a class="about-author-avatar" href="{{ site.url }}/authors/{{ author.handle }}"><img src="{{ author.avatar }}" width="80" height="80" alt="{{ author.handle }}"></a>
         <p><span class="about-author-name"><a href="/authors/{{ author.handle}}"
             class="primary-link">{{ author.name }}</a></span><br><small class="about-author-description">{{ author.description }}</small></p>
         <ul class="social">
