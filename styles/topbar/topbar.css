@@ -39,8 +39,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .topbar-logo {
-  background: url("../img/logo-small.png") no-repeat left center;
-  background: url("../img/logo.svg") no-repeat left center,
+  background: url("/img/logo-small.png") no-repeat left center;
+  background: url("/img/logo.svg") no-repeat left center,
     linear-gradient(transparent, transparent);
   background-size: auto 3em;
   float: left;
@@ -218,7 +218,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 .topbar-navigation-item,
 .topbar-navigation-item:visited {
-  color: #aeb0b5;
+  color: #4d4f56;
   display: block;
   font-weight: 600;
   padding: .5em;
@@ -249,8 +249,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
   }
 
   .topbar-logo {
-    background: url("../img/logo.png") no-repeat left center;
-    background: url("../img/logo.svg") no-repeat left center,
+    background: url("/img/logo.png") no-repeat left center;
+    background: url("/img/logo.svg") no-repeat left center,
       linear-gradient(transparent, transparent);
     background-size: auto 3em;
     float: left;
@@ -289,7 +289,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
   .topbar-navigation-item,
   .topbar-navigation-item:visited {
-    color: #aeb0b5;
+    color: #4d4f56;
     font-weight: 400;
     text-decoration: none;
   }
