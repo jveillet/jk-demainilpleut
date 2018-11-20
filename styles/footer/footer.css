@@ -44,3 +44,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .footer-link:hover {
   text-decoration: underline;
 }
+
+.footer-hastgag {
+  color: #205493;
+  font-weight: bold;
+}

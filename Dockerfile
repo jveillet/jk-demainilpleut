@@ -1,4 +1,4 @@
-FROM heroku/heroku:16
+FROM heroku/heroku:18
 
 # Environment variables
 ENV DEBIAN_FRONTEND noninteractive
@@ -7,6 +7,8 @@ ENV RACK_ENV=development
 ENV JEKYLL_ENV=development
 ENV BUNDLE_APP_CONFIG=$APP_HOME/.bundle/
 ENV BUNDLE_JOBS=10
+ENV GEM_HOME="/usr/local/bundle"
+ENV PATH $GEM_HOME/bin:$GEM_HOME/gems/bin:$PATH
 
 # Create the home directory for the new app user.
 RUN mkdir -p $APP_HOME
@@ -24,7 +26,7 @@ RUN apt-get clean \
     && apt-get update -y \
     && apt-get install -y --no-install-recommends \
     build-essential \
-    ruby2.3-dev \
+    ruby2.5-dev \
     sudo \
     libffi-dev \
     libssl-dev \
@@ -63,4 +65,9 @@ RUN npm install
 
 EXPOSE 4000
 
-CMD ["bundle", "exec", "jekyll", "build"]
+RUN unset BUNDLE_PATH
+RUN unset BUNDLE_BIN
+
+ENTRYPOINT ["bundle", "exec"]
+
+CMD ["jekyll", "build"]

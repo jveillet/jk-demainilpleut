@@ -5,7 +5,7 @@ layout: default
 <h1>Archives for {{ page.date | date: "%B %Y" }}</h1>
 
 <div class="archives archives-return-link">
-  <a href="/archives" class="primary-link">&larr; Return to archives</a>
+  <a href="{{ site.url }}/archives" class="primary-link">&larr; Return to archives</a>
 </div>
 
 <div class="posts">
@@ -13,18 +13,18 @@ layout: default
    <!-- Look the author details up from the site config. -->
     {% assign author = site.data.authors[post.author] %}
     <article class="article">
-      <h2><a href="{{ post.url }}" class="article-title">{{ post.title }}</a></h2>
-      <span class="article-author"><a class="article-author--link" href="/authors/{{ author.handle }}/">{{ author.name }}</a></span>
+      <h2><a href="{{ site.url }}{{ post.url }}" class="article-title">{{ post.title }}</a></h2>
+      <span class="article-author"><a class="article-author--link" href="{{ site.url }}/authors/{{ author.handle }}/">{{ author.name }}</a></span>
       <span class="article-pubdate">—&nbsp;<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %d, %Y' }} at {{ post.published_at | date: "%R" }}</time></span>
       <div class="article-summary"></div>
       <div class="article-excerpt">
         {{ post.excerpt | strip_links | strip_imgs }}
       </div>
-      <div class="article-footer"><a class="btn bg-blue white" href="{{ post.url }}">Read more…</a></div>
+      <div class="article-footer"><a class="btn bg-blue white" href="{{ site.url }}{{ post.url }}">Read more…</a></div>
     </article>
   {% endfor %}
 </div>
 
 <div class="archives archives-return-link">
-  <a href="/archives" class="primary-link">&larr; Return to archives</a>
+  <a href="{{ site.url }}/archives" class="primary-link">&larr; Return to archives</a>
 </div>
