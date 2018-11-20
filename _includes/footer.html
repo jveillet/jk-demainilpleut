@@ -6,31 +6,31 @@
         <h3 class="black">Latest posts</h3>
         <ul>
           {% for post in site.posts limit:5 %}
-            <li><a href="{{ post.url }}" class="footer-link" title="{{ post.title }}">{{ post.title | truncate: 60, '...' }}</a></li>
+            <li><a href="{{ site.url }}{{ post.url }}" class="footer-link" title="{{ post.title }}">{{ post.title | truncate: 60, '...' }}</a></li>
           {% endfor %}
         </ul>
       </div><!-- end of column -->
       <div class="column third">
         <h3 class="black">Menu</h3>
         <ul>
-          <li><a href="/" class="footer-link">Home</a></li>
-          <li><a href="/archives" class="footer-link">Archives</a></li>
-          <li><a href="/authors" class="footer-link">Authors</a></li>
-          <li><a href="/feed.xml" class="footer-link">RSS feed</a></li>
-          <li><a href="/styleguide" class="footer-link">Styleguide</a></li>
+          <li><a href="{{ site.url }}" class="footer-link">Home</a></li>
+          <li><a href="{{ site.url }}/archives" class="footer-link">Archives</a></li>
+          <li><a href="{{ site.url }}/authors" class="footer-link">Authors</a></li>
+          <li><a href="{{ site.url }}/feed.xml" class="footer-link">RSS feed</a></li>
+          <li><a href="{{ site.url }}/styleguide" class="footer-link">Styleguide</a></li>
         </ul>
       </div><!-- end of column -->
       <div class="column third">
         <h3 class="black">Categories</h3>
         <ul>
         {% for category in site.categories limit:8 %}
-          <li><span class="footer-hastgag">#</span><a href="/archives/{{ category | first | downcase | replace: ' ', '-'  }}" class="footer-link">{{ category | first }} ({{ category | last | size }})</a></li>
+          <li><span class="footer-hastgag">#</span><a href="{{ site.url }}/archives/{{ category | first | downcase | replace: ' ', '-'  }}" class="footer-link">{{ category | first }} ({{ category | last | size }})</a></li>
         {% endfor %}
         </ul>
       </div><!-- end of column -->
     </div><!-- end of row -->
   </div><!-- end of grid-container -->
   <div class="footer-disclaimer">
-    Copyright &copy; {{ site.time | date: '%Y' }} - All this site's content under a <a rel="license" class="footer-disclaimer-link" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+    Copyright &copy; {{ site.time | date: '%Y' }} - All this site's content under a <a rel="license" class="footer-disclaimer-link" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
   </div>
 </div><!-- end of footer -->
