@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'liquid'
 
 ##
@@ -5,15 +7,16 @@ require 'liquid'
 # in the outpout of the articles excerpts.
 #
 module StripHtmlTags
+  EMPTY_STRING = ''
+
   def strip_links(input)
-    input.gsub(/<a([^>]+)>(.+?)<\/a>/mi) do
-      $2.to_s
+    input.gsub(%r{<a([^>]+)>(.+?)</a>}mi) do
+      Regexp.last_match(2)
     end
   end
 
   def strip_imgs(input)
-    empty = ''.freeze
-    input.gsub(/<img\s?.*?\/?>/mi, empty)
+    input.gsub(%r{<img\s?.*?\/?>}mi, EMPTY_STRING)
   end
 end
 

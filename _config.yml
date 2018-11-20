@@ -41,6 +41,8 @@ exclude:
   - package.json
   - styles
   - vendor
+  - js/dnt-helper.js
+  - js/scripts.js
 
 # Display drafts
 show_drafts: true
