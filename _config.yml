@@ -9,7 +9,7 @@ description: Coding & Design for the rainy days
 url: https://www.demainilpleut.fr
 
 # Your website logo (usefull for Twitter Cards)
-logo: img/logo.png
+logo: assets/images/logo.png
 
 # Number of post to display on the front page
 paginate: 4
@@ -33,25 +33,22 @@ exclude:
   - README.md
   - Rakefile
   - config.ru
+  - css
   - docker-compose.yml
   - gulpfile.js
-  - install.sh
+  - js
   - node_modules
   - package-lock.json
   - package.json
-  - styles
   - vendor
-  - js/dnt-helper.js
-  - js/scripts.js
 
 # Display drafts
 show_drafts: true
 
 # Folders and files to include in the build
 include:
-  - css
-  - js
-  - img
+  - assets
+  - authors
   - styleguide
 
 # Archives configuration

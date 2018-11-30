@@ -39,8 +39,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .topbar-logo {
-  background: url("/img/logo-small.png") no-repeat left center;
-  background: url("/img/logo.svg") no-repeat left center,
+  background: url("/assets/images/logo-small.png") no-repeat left center;
+  background: url("/assets/images/logo.svg") no-repeat left center,
     linear-gradient(transparent, transparent);
   background-size: auto 3em;
   float: left;
@@ -51,8 +51,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .topbar-logo-dev {
-  background: url("/img/dev/logo-small.png") no-repeat left center;
-  background: url("/img/dev/logo.svg") no-repeat left center,
+  background: url("/assets/images/dev/logo-small.png") no-repeat left center;
+  background: url("/assets/images/dev/logo.svg") no-repeat left center,
     linear-gradient(transparent, transparent);
   background-size: auto 3em;
   float: left;
@@ -261,8 +261,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
   }
 
   .topbar-logo {
-    background: url("/img/logo.png") no-repeat left center;
-    background: url("/img/logo.svg") no-repeat left center,
+    background: url("/assets/images/logo.png") no-repeat left center;
+    background: url("/assets/images/logo.svg") no-repeat left center,
       linear-gradient(transparent, transparent);
     background-size: auto 3em;
     float: left;
@@ -275,8 +275,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
   }
 
   .topbar-logo-dev {
-    background: url("/img/dev/logo.png") no-repeat left center;
-    background: url("/img/dev/logo.svg") no-repeat left center,
+    background: url("/assets/images/dev/logo.png") no-repeat left center;
+    background: url("/assets/images/dev/logo.svg") no-repeat left center,
       linear-gradient(transparent, transparent);
     background-size: auto 3em;
     float: left;

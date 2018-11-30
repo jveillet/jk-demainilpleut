@@ -42,8 +42,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .social-twitter {
-  background: url("../img/twitter.png") no-repeat left center;
-  background: url("../img/twitter.svg") no-repeat left center,
+  background: url("/assets/images/twitter.png") no-repeat left center;
+  background: url("/assets/images/twitter.svg") no-repeat left center,
     linear-gradient(transparent, transparent);
   background-size: auto 1.5em;
   display: block;
@@ -51,8 +51,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .social-linkedin {
-  background: url("../img/linkedin.png") no-repeat left center;
-  background: url("../img/linkedin.svg") no-repeat left center,
+  background: url("/assets/images/linkedin.png") no-repeat left center;
+  background: url("/assets/images/linkedin.svg") no-repeat left center,
     linear-gradient(transparent, transparent);
   background-size: auto 1.5em;
   display: block;
@@ -60,8 +60,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .social-github {
-  background: url("../img/github.png") no-repeat left center;
-  background: url("../img/github.svg") no-repeat left center,
+  background: url("/assets/images/github.png") no-repeat left center;
+  background: url("/assets/images/github.svg") no-repeat left center,
     linear-gradient(transparent, transparent);
   background-size: auto 1.5em;
   display: block;
@@ -69,8 +69,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .social-gplus {
-  background: url("../img/google_plus.png") no-repeat left center;
-  background: url("../img/google_plus.svg") no-repeat left center,
+  background: url("/assets/images/google_plus.png") no-repeat left center;
+  background: url("/assets/images/google_plus.svg") no-repeat left center,
     linear-gradient(transparent, transparent);
   background-size: auto 1.5em;
   display: block;
@@ -78,8 +78,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .social-facebook {
-  background: url("../img/facebook.png") no-repeat left center;
-  background: url("../img/facebook.svg") no-repeat left center,
+  background: url("/assets/images/facebook.png") no-repeat left center;
+  background: url("/assets/images/facebook.svg") no-repeat left center,
     linear-gradient(transparent, transparent);
   background-size: auto 1.5em;
   display: block;
@@ -87,8 +87,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .social-gitlab {
-  background: url("../img/gitlab.png") no-repeat left center;
-  background: url("../img/gitlab.svg") no-repeat left center,
+  background: url("/assets/images/gitlab.png") no-repeat left center;
+  background: url("/assets/images/gitlab.svg") no-repeat left center,
     linear-gradient(transparent, transparent);
   background-size: auto 1.5em;
   display: block;
@@ -96,8 +96,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .social-mastodon {
-  background: url("../img/mastodon.png") no-repeat left center;
-  background: url("../img/mastodon.svg") no-repeat left center,
+  background: url("/assets/images/mastodon.png") no-repeat left center;
+  background: url("/assets/images/mastodon.svg") no-repeat left center,
     linear-gradient(transparent, transparent);
   background-size: auto 1.5em;
   display: block;
@@ -105,8 +105,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .social-slack {
-  background: url("../img/slack.png") no-repeat left center;
-  background: url("../img/slack.svg") no-repeat left center,
+  background: url("/assets/images/slack.png") no-repeat left center;
+  background: url("/assets/images/slack.svg") no-repeat left center,
     linear-gradient(transparent, transparent);
   background-size: auto 1.5em;
   display: block;
@@ -114,8 +114,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .social-instagram {
-  background: url("../img/instagram.png") no-repeat left center;
-  background: url("../img/instagram.svg") no-repeat left center,
+  background: url("/assets/images/instagram.png") no-repeat left center;
+  background: url("/assets/images/instagram.svg") no-repeat left center,
     linear-gradient(transparent, transparent);
   background-size: auto 1.5em;
   display: block;
@@ -123,8 +123,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .social-devto {
-  background: url("../img/devblacksquarelogo.png") no-repeat left center;
-  background: url("../img/devblacksquarelogo.svg") no-repeat left center,
+  background: url("/assets/images/devblacksquarelogo.png") no-repeat left center;
+  background: url("/assets/images/devblacksquarelogo.svg") no-repeat left center,
     linear-gradient(transparent, transparent);
   background-size: auto 1.5em;
   display: block;
