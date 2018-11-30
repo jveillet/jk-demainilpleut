@@ -1,5 +1,9 @@
 <div class="topbar">
+  {% if jekyll.environment == 'production' %}
   <div class="topbar-logo">
+  {% else %}
+  <div class="topbar-logo-dev">
+  {% endif %}
     <a href="{{ site.url }}" class="topbar-logo-url">{{site.name}}</a>
   </div><!-- end of topBar logo -->
   <div class="topbar-menu">

@@ -50,6 +50,18 @@ Use it to make something cool, have fun, and share what you've learned with othe
   z-index: 1;
 }
 
+.topbar-logo-dev {
+  background: url("/img/dev/logo-small.png") no-repeat left center;
+  background: url("/img/dev/logo.svg") no-repeat left center,
+    linear-gradient(transparent, transparent);
+  background-size: auto 3em;
+  float: left;
+  margin-left: .5em;
+  padding-left: 2.8em;
+  position: relative;
+  z-index: 1;
+}
+
 .topbar-menu-btn {
   background-color: #0071bc;
   border-radius: .25em;
@@ -251,6 +263,20 @@ Use it to make something cool, have fun, and share what you've learned with othe
   .topbar-logo {
     background: url("/img/logo.png") no-repeat left center;
     background: url("/img/logo.svg") no-repeat left center,
+      linear-gradient(transparent, transparent);
+    background-size: auto 3em;
+    float: left;
+    font-size: 1.2em;
+    margin-left: 2em;
+    padding-left: 3em;
+    position: relative;
+    top: .2em;
+    z-index: 1;
+  }
+
+  .topbar-logo-dev {
+    background: url("/img/dev/logo.png") no-repeat left center;
+    background: url("/img/dev/logo.svg") no-repeat left center,
       linear-gradient(transparent, transparent);
     background-size: auto 3em;
     float: left;
