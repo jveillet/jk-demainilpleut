@@ -27,14 +27,12 @@ $ docker-compose run --rm web bundle exec jekyll serve -H 0.0.0.0 --incremental
 # The server will run on port 8080 (see docker-compose.yml)
 ```
 
-### Without Docker
+### On linux (Debian 8+)
+
+Install nodejs and dependencies:
 ```bash
-$ git clone git@github.com:jveillet/jk-demainilpleut.git
-$ cd jk-demainilpleut/
-# Install the gem and dependecies the blog needs
-$ bundle install
-# Debian only: Add the latest node version to the sources
-$ curl -sL https://deb.nodesource.com/setup_8.x | bash - \
+# Add the latest node version to the sources
+$ curl -sL https://deb.nodesource.com/setup_10.x | bash - \
 # Install Node and Gulp
 $ apt-get install -y nodejs
 $ npm install -g gulp-cli
@@ -44,6 +42,30 @@ $ npm install
 $ gulp build
 # Lint the CSS (required before commiting any CSS change).
 $ gulp lint:css
+```
+
+### On macOS (Sierra+)
+
+Install nodejs and dependencies:
+```bash
+$ brew install node
+# Install Gulp
+$ npm install -g gulp-cli
+# Install the JS dependencies
+$ npm install
+# Run the tasks to build the CSS and JS
+$ gulp build
+# Lint the CSS (required before commiting any CSS change).
+$ gulp lint:css
+```
+
+### Build the Jekyll project (every OS)
+
+```bash
+$ git clone git@github.com:jveillet/jk-demainilpleut.git
+$ cd jk-demainilpleut/
+# Install the gem and dependecies the blog needs
+$ bundle install
 # Launch the Jekyll build and start the server
 $ bundle exec jekyll serve --incremental
 # The server will run on port 4000
@@ -52,13 +74,13 @@ $ bundle exec jekyll serve --incremental
 ### Individual Tasks
 
 ```bash
-# Building CSS
+# Building CSS (assets will be compiled and installed in assets/css/)
 $ gulp build:css
-# Building Javascript
+# Building Javascript (assets will be compiled and installed in assets/js/)
 $ gulp build:js
-# Gbobal build (CSS + JS)
+# Gbobal build (CSS + JS, compiled and installed into their relative folders in assets/)
 $ gulp build
-# Linting CSS
+# Linting CSS (lint every individual component from the css/ folder)
 $ gulp lint:css
 ```
 
