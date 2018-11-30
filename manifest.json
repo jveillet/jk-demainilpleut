@@ -1,0 +1,20 @@
+{
+  "short_name": "dmip",
+  "name": "demain·il·pleut",
+  "icons": [
+    {
+      "src":"img/logo-splash-192.png",
+      "sizes": "192x192",
+      "type": "png"
+    },
+    {
+      "src":"img/logo-splash-512.png",
+      "sizes": "512x512",
+      "type": "png"
+    }
+  ],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#f1f1f1",
+  "theme_color": "#ffffff",
+  "display": "standalone"
+}
