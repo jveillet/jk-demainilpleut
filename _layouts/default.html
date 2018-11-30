@@ -22,20 +22,16 @@
   <link media="screen" rel="stylesheet" type="text/css" href="{{ site.url }}/css/bundle.min.css" />
   <link media="screen" rel="stylesheet" type="text/css" href="{{ site.url }}/css/prism.min.css" />
   {% if jekyll.environment == 'production' %}
-  <link rel="icon" href="{{ site.url }}/img/favicon.ico" />
-  <link rel="icon" type="image/png" href="{{ site.url }}/img/favicon-196.png" sizes="196x196" />
-  <link rel="icon" type="image/png" href="{{ site.url }}/img/favicon-96.png" sizes="96x96" />
-  <link rel="icon" type="image/png" href="{{ site.url }}/img/favicon-32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="{{ site.url }}/img/favicon-16.png" sizes="16x16" />
-  <link rel="icon" type="image/png" href="{{ site.url }}/img/favicon-128.png" sizes="128x128" />
+    {% assign img_url = site.url | append: '/img' %}
   {% else %}
-  <link rel="icon" href="{{ site.url }}/img/favicon-dev.ico" />
-  <link rel="icon" type="image/png" href="{{ site.url }}/img/favicon-dev-196.png" sizes="196x196" />
-  <link rel="icon" type="image/png" href="{{ site.url }}/img/favicon-dev-96.png" sizes="96x96" />
-  <link rel="icon" type="image/png" href="{{ site.url }}/img/favicon-dev-32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="{{ site.url }}/img/favicon-dev-16.png" sizes="16x16" />
-  <link rel="icon" type="image/png" href="{{ site.url }}/img/favicon-dev-128.png" sizes="128x128" />
+    {% assign img_url = site.url | append: '/img/dev' %}
   {% endif %}
+  <link rel="icon" href="{{ img_url }}/favicon.ico" />
+  <link rel="icon" type="image/png" href="{{ img_url }}/favicon-196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="{{ img_url }}/favicon-96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="{{ img_url }}/favicon-32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="{{ img_url }}/favicon-16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="{{ img_url }}/favicon-128.png" sizes="128x128" />
 </head>
   <body>
     <!-- wrapper -->
