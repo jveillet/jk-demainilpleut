@@ -33,10 +33,10 @@ exclude:
   - README.md
   - Rakefile
   - config.ru
-  - css
+  - custom_css
   - docker-compose.yml
   - gulpfile.js
-  - js
+  - custom_js
   - node_modules
   - package-lock.json
   - package.json
