@@ -11,7 +11,7 @@ var uglify = require('gulp-uglify');
 
 // Gulp task to minify and combine CSS files.
 gulp.task('build:css', function() {
-  return gulp.src(['css/**/*.css', '!css/vendor/**/*.css', '!css/**/*.css.map', '!css/**/*.min.css'])
+  return gulp.src(['custom_css/**/*.css'])
         .pipe(sourcemaps.init())
         .pipe(cssnano())
         .pipe( postcss([ autoprefixer({ browsers: ['last 4 versions'] }) ]) )
@@ -22,7 +22,7 @@ gulp.task('build:css', function() {
 
 // Gulp task to minify and combine Javascript files.
 gulp.task('build:js', function() {
-  return gulp.src(['js/dnt-helper.js', 'js/scripts.js'])
+  return gulp.src(['custom_js/**/*.js'])
     .pipe(concat('bundle.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('assets/js/'));
@@ -37,7 +37,7 @@ gulp.task('lint:css', function lintCssTask() {
   const gulpStylelint = require('gulp-stylelint');
 
   return gulp
-    .src(['css/**/*.css', '!css/vendor/**/*.css', '!css/**/*.css.map', '!css/**/*.min.css'])
+    .src(['custom_css/**/*.css'])
     .pipe(gulpStylelint({
     reporters: [
       {formatter: 'verbose', console: true}
