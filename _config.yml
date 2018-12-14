@@ -25,6 +25,7 @@ exclude:
   - .git
   - .github
   - .gitignore
+  - .travis.yml
   - Dockerfile
   - Gemfile
   - Gemfile.lock
@@ -32,11 +33,12 @@ exclude:
   - Procfile
   - README.md
   - Rakefile
+  - bin
   - config.ru
   - custom_css
+  - custom_js
   - docker-compose.yml
   - gulpfile.js
-  - custom_js
   - node_modules
   - package-lock.json
   - package.json

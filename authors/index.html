@@ -12,8 +12,8 @@ layout: default
       {% for author in site.data.authors %}
         {% assign member = author[1] %}
         <li class="members-item">
-          <img src="{{ member.avatar }}" alt="" class="avatar avatar--size"><a href="{{ site.url }}/authors/{{ member.handle }}" class="primary-link">
-          <div class=""><a href="{{ site.url }}/authors/{{ member.handle }}" class="primary-link">{{ member.name }}</a></div>
+          <img src="{{ member.avatar }}" class="avatar avatar--size" alt="{{ member.name }}"><a href="{{ site.url }}/authors/{{ member.handle }}" class="primary-link">
+          <div><a href="{{ site.url }}/authors/{{ member.handle }}" class="primary-link">{{ member.name }}</a></div>
         </li>
       {% endfor %}
     </ul>
