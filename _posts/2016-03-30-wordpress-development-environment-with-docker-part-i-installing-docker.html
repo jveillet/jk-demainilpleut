@@ -12,7 +12,8 @@ author: jveillet
 
 <!--readmore-->
 
-<p>Part I is aimed at people who heard about Docker and containers, but never got deeper. If you already know what is it all about, and have a functioning environment, skip directly to <a href="wordpress-development-environment-with-docker-part-ii-using-docker-compose-to-install-wordpress/">Part II</a>.</p>
+<p>Part I is aimed at people who heard about Docker and containers, but never got deeper. If you already know what is it
+all about, and have a functioning environment, skip directly to <a href="{{ site.url }}{% link _posts/2016-03-30-wordpress-development-environment-with-docker-part-ii-using-docker-compose-to-install-wordpress.html %}">Part II</a>.</p>
 <h2>Table of Contents</h2>
 <ul class="list-unordered">
     <li><a href="#prerequisites" class="primary-link">Prerequisites</a></li>
@@ -22,7 +23,7 @@ author: jveillet
     <li><a href="#start_stop" class="primary-link">Start and stop machines</a></li>
     <li><a href="#ip" class="primary-link">Getting the Host IP address</a></li>
     <li><a href="#conclusion" class="primary-link">Wrapping up</a></li>
-    <li><a href="{{ site.baseurl }}{% link _posts/2016-03-30-wordpress-development-environment-with-docker-part-ii-using-docker-compose-to-install-wordpress.html %}" class="primary-link">Part II : using Docker Compose to install WordPress</a></li>
+    <li><a href="{{ site.url }}{% link _posts/2016-03-30-wordpress-development-environment-with-docker-part-ii-using-docker-compose-to-install-wordpress.html %}" class="primary-link">Part II : using Docker Compose to install WordPress</a></li>
 </ul>
 
 <h2 id="prerequisites">Prerequisites</h2>
@@ -124,7 +125,7 @@ CONTAINER ID    IMAGE    COMMAND    CREATED    STATUS    PORTS    NAMES
 <strong>Where is .bashrc, or .zshrc?</strong> Those files are located in your home folder, so if you <code>cd ~/</code> in your terminal, you should find them. If they do not exist, just do a <code>touch ~/.bashrc</code> or <code>touch ~/.zshrc</code> before editing them.
 </div>
 
-<h2 id"start_stop">Start and stop machines</h2>
+<h2 id="start_stop">Start and stop machines</h2>
 <p>When you're done with whatever you were doing with your Docker environment, there is a command that permits to stop the machine (just like shutting down your computer), and, the opposite, a command to start the machine again.</p>
 <pre><code class="language-bash">
 $ docker-machine stop default
@@ -138,6 +139,6 @@ $ docker-machine ip default
 192.168.99.100
 </code></pre>
 
-<h2 id"conclusion">Wrapping up</h2>
+<h2 id="conclusion">Wrapping up</h2>
 <p>In this tutorial, you've learn a little about Docker, how to install it and configure your Terminal to use it. Now everything is set up for the next level:
-<a href="{{ site.baseurl }}{% link _posts/2016-03-30-wordpress-development-environment-with-docker-part-ii-using-docker-compose-to-install-wordpress.html %}">Using Docker Compose to run WordPress</a>.</p>
+<a href="{{ site.url }}{% link _posts/2016-03-30-wordpress-development-environment-with-docker-part-ii-using-docker-compose-to-install-wordpress.html %}">Using Docker Compose to run WordPress</a>.</p>
