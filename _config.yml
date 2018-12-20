@@ -22,9 +22,11 @@ exclude:
   - .bundle-docker
   - .dockerignore
   - .editorconfig
+  - .eslintrc.yml
   - .git
   - .github
   - .gitignore
+  - .stylelintrc
   - .travis.yml
   - Dockerfile
   - Gemfile
