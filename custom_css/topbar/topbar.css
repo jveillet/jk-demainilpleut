@@ -152,10 +152,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
   display: block;
   font-size: 1.1em;
   height: 3em;
-  left: 46%;
+  left: 50%;
   position: absolute;
   text-align: center;
   width: 3em;
+  margin-left: -1.5em;
 }
 
 @keyframes bounce {
