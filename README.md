@@ -18,8 +18,8 @@ $ cd jk-demainilpleut/
 $ docker-compose build
 # Run the tasks to build the CSS and JS
 $ docker-compose run --rm web gulp build
-# Lint the CSS (required before commiting any CSS change).
-$ docker-compose run --rm web gulp lint:css
+# Lint the CSS and JS (required before commiting any CSS and/or JS updates).
+$ docker-compose run --rm web gulp lint
 # Launch the Jekyll build and start the server
 $ docker-compose up
 # (or)
@@ -40,8 +40,8 @@ $ npm install -g gulp-cli
 $ npm install
 # Run the tasks to build the CSS and JS
 $ gulp build
-# Lint the CSS (required before commiting any CSS change).
-$ gulp lint:css
+# Lint the CSS and JS (required before commiting any CSS and/or JS updates).
+$ gulp lint
 ```
 
 ### On macOS (Sierra+)
@@ -55,11 +55,11 @@ $ npm install -g gulp-cli
 $ npm install
 # Run the tasks to build the CSS and JS
 $ gulp build
-# Lint the CSS (required before commiting any CSS change).
-$ gulp lint:css
+# Lint the CSS and JS (required before commiting any CSS and/or JS updates).
+$ gulp lint
 ```
 
-### Build the Jekyll project (every OS)
+### Build and launch the Jekyll project (every OS)
 
 ```bash
 $ git clone git@github.com:jveillet/jk-demainilpleut.git
@@ -78,10 +78,14 @@ $ bundle exec jekyll serve --incremental
 $ gulp build:css
 # Building Javascript (assets will be compiled and installed in assets/js/)
 $ gulp build:js
-# Gbobal build (CSS + JS, compiled and installed into their relative folders in assets/)
+# Global build (CSS + JS, compiled and installed into their relative folders in assets/)
 $ gulp build
-# Linting CSS (lint every individual component from the css/ folder)
+# Linting CSS (lint every individual component from the custom_css/ folder)
 $ gulp lint:css
+# Linting JS (lint every individual scripts from the custom_js/ folder)
+$ gulp lint:js
+# Global codebase linting (CSS + JS)
+$ gulp lint
 ```
 
 ### On [Heroku](https://www.heroku.com)
@@ -90,3 +94,20 @@ No need to store the _site directory content into the repository.
 Enable the automatic deploy of a branch into your app pipeline, the static files
 will be build automatically with every merge on that branch, using Rake
 precompile tasks.
+
+## Tests
+
+Basic tests are performed on the structure of the site (broken links, alt attributes on images,..), by using the
+[html-proofer](https://github.com/gjtorikian/html-proofer) Ruby Gem.
+
+They are launched automatically with every Pull Requests, via [Travis CI](https://travis-ci.org) (see [.travis.yml](https://github.com/jveillet/jk-demainilpleut/blob/master/.travis.yml) file).
+
+You can run them manually via command line:
+```bash
+$ ./bin/cibuild.sh
+```
+
+Or with Docker:
+```bash
+$ docker-compose run --rm web bin/cibuild.sh
+```

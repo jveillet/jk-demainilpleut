@@ -28,17 +28,17 @@ gulp.task('build:js', function() {
     .pipe(gulp.dest('assets/js/'));
 });
 
-// Guil build task to run the CSS & JS Build.
+// Gulp build task to run the CSS & JS Build.
 gulp.task('build', gulp.series('build:css', 'build:js'));
 
-// Gulp task to lint the CSS styles in the project.
+// Gulp task to lint the CSS styles in the codebase.
 // It uses Stylelint under the hood.
 gulp.task('lint:css', function lintCssTask() {
-  const gulpStylelint = require('gulp-stylelint');
+  const stylelint = require('gulp-stylelint');
 
   return gulp
     .src(['custom_css/**/*.css'])
-    .pipe(gulpStylelint({
+    .pipe(stylelint({
     reporters: [
       {formatter: 'verbose', console: true}
     ],
@@ -46,4 +46,31 @@ gulp.task('lint:css', function lintCssTask() {
     failAfterError: true
   }));
 });
+
+// Gulp task to lint the javascript in the codebase.
+// It uses ESLint under the hood.
+gulp.task('lint:js', function lintJSTask() {
+  const eslint = require('gulp-eslint');
+
+  return gulp
+    .src(['custom_js/**/*.js'])
+    // eslint() attaches the lint output to the "eslint" property
+    // of the file object so it can be used by other modules.
+    .pipe(eslint({
+      rules: {
+        'no-unused-vars': ['error', { 'argsIgnorePattern': '^_', 'varsIgnorePattern': '^_' }]
+      },
+      globals: ['$']
+    }))
+    // eslint.format() outputs the lint results to the console.
+    // Alternatively use eslint.formatEach() (see Docs).
+    .pipe(eslint.format('stylish'))
+    // To have the process exit with an error code (1) on
+    // lint error, return the stream and pipe to failAfterError last.
+    .pipe(eslint.failAfterError());
+});
+
+
+// Gulp build task to run the CSS & JS linters.
+gulp.task('lint', gulp.series('lint:css', 'lint:js'));
 
