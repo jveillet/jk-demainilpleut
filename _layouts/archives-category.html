@@ -2,16 +2,44 @@
 layout: default
 ---
 
-<h1>Archives for {{ page.title }} category</h1>
+<div class= "article" id="top">
 
-<div class="archives">
-  <ul class="list-unordered">
-  {% for post in page.posts %}
-    <li><a href="{{ site.url }}{{ post.url }}" class="primary-link">{{ post.title }}</a><span class="archives-complement">&mdash;{{ post.date | date: '%B %d, %Y' }} at {{ post.published_at | date: "%R" }}</span></li>
-  {% endfor %}
-  </ul>
-</div>
+  <div class="archives-breadcrumb">
+    <div class="breadcrumbs">
+      <div class="breadcrumb-item"><a href="{{ site.url }}/archives" class="primary-link breadcrumb-chevron">Archives</a></div>
+      <div class="breadcrumb-item breadcrumb-active">{{ page.title }}</div>
+    </div>
+  </div>
 
-<div class="archives archives-return-link">
-  <a href="{{ site.url }}/archives" class="primary-link">&larr; Return to archives</a>
+  <div class="posts">
+      {% for post in page.posts %}
+      <!-- Look the author details up from the site config. -->
+      {% assign author = site.data.authors[post.author] %}
+      <article class="articles">
+        <h2><a href="{{ site.url }}{{ post.url }}" class="article-title">{{ post.title }}</a></h2>
+        <div class="article-excerpt">
+          {{ post.excerpt | strip_links | strip_imgs }}
+        </div>
+        <div class="articles-footer">
+          <div class="articles-footer-wrapper">
+            <img src="{{ author.avatar }}" width="32" height="32" alt="{{ author.name }}" class="articles-footer-avatar">
+            <span class="article-author"><a class="article-author--link" href="{{ site.url }}/authors/{{ author.handle }}">{{ author.name }}</a></span>
+            <span class="article-pubdate"> on <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %d, %Y' }}</time></span>
+            <div class="articles-footer-tags">
+              {% assign total_cat = post.categories.size %}
+              {% for category in post.categories %}
+              <span class="article-tags-item">
+                <a href="{{ site.url }}/archives/{{ category | downcase | replace: ' ', '-'  }}" class="article-tags-link">#{{ category }}</a>
+              </span>
+              {% endfor %}
+            </div><!-- end of articles footer tags -->
+          </div><!-- end of articles footer wrapper -->
+        </div><!-- end of articles footer -->
+      </article>
+      {% endfor %}
+    </div>
+
+  <div class="article-top">
+    <a href="#top" class="top" title="Go to the top of the page">↑ Back to top</a>
+  </div>
 </div>
