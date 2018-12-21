@@ -25,13 +25,3 @@ Use it to make something cool, have fun, and share what you've learned with othe
   padding-right: 1em;
   margin-bottom: 1em;
 }
-
-@media all and (min-width: 47em) {
-
-  .main-container {
-    padding-left: 8em;
-    padding-right: 8em;
-    margin-bottom: 1em;
-  }
-
-}
