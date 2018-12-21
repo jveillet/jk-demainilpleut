@@ -26,6 +26,7 @@ exclude:
   - .git
   - .github
   - .gitignore
+  - .ruby-version
   - .stylelintrc
   - .travis.yml
   - Dockerfile
