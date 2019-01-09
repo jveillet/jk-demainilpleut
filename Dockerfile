@@ -19,7 +19,7 @@ COPY package* $APP_HOME/
 COPY .env $APP_HOME/
 
 # Fetch the last version of Nodejs 8
-RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 
 # Install essentials softwares whith dev headers
 RUN apt-get clean \

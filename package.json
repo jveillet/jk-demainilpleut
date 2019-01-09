@@ -1,9 +1,9 @@
 {
   "name": "jk-demainilpleut",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Static demainilpleut.fr generated with Jekyll",
   "engines": {
-    "node": "8.12.0",
+    "node": "10.14.1",
     "npm": "6.4.1"
   },
   "scripts": {
@@ -32,6 +32,8 @@
   },
   "devDependencies": {
     "stylelint": "^9.5.0",
-    "gulp-stylelint": "^7.0.0"
+    "gulp-stylelint": "^7.0.0",
+    "eslint": "^5.10.0",
+    "gulp-eslint": "^5.0.0"
   }
 }

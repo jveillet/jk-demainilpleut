@@ -12,3 +12,7 @@ gem 'jekyll-paginate', '~> 1.1.0'
 gem 'puma', '~> 3.12.0'
 gem 'rack-jekyll', '~> 0.5.0'
 gem 'rake', '~> 12.3.1'
+
+group :development, :test do
+  gem 'html-proofer', '~> 3.9', '>= 3.9.3'
+end

@@ -1,0 +1,42 @@
+/**
+Name: footer.css
+Description: Footer section styles
+*/
+
+.footer {
+  padding-top: 1rem;
+  background-color: #e4e2e0;
+}
+
+.footer-disclaimer {
+  font-size: .8em;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.footer-disclaimer-link,
+.footer-disclaimer-link:visited {
+  color: #0a0000;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-disclaimer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-link,
+.footer-link:visited {
+  color: #0a0000;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-hastgag {
+  color: #205493;
+  font-weight: bold;
+}

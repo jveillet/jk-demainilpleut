@@ -17,25 +17,23 @@
   <meta name="twitter:image" content="{{ site.url }}/{{ site.logo }}">
   <meta name="twitter:card"  content="summary">
   {% endif %}
-  <link href='{{ site.url }}/feed.xml' rel='alternate' type='application/atom+xml'>
+  <meta name="theme-color" content="#ffffff"/>
+  <link href='{{ site.url }}/feed.xml' rel='alternate'>
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-  <link media="screen" rel="stylesheet" type="text/css" href="{{ site.url }}/css/bundle.min.css" />
-  <link media="screen" rel="stylesheet" type="text/css" href="{{ site.url }}/css/prism.min.css" />
+  <link media="screen" rel="stylesheet" href="{{ site.url}}/assets/css/bundle.min.css" />
+  <link media="screen" rel="stylesheet" href="{{ site.url}}/assets/css/vendor/prism.min.css" />
   {% if jekyll.environment == 'production' %}
-  <link rel="icon" href="{{ site.url }}/img/favicon.ico" />
-  <link rel="icon" type="image/png" href="{{ site.url }}/img/favicon-196.png" sizes="196x196" />
-  <link rel="icon" type="image/png" href="{{ site.url }}/img/favicon-96.png" sizes="96x96" />
-  <link rel="icon" type="image/png" href="{{ site.url }}/img/favicon-32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="{{ site.url }}/img/favicon-16.png" sizes="16x16" />
-  <link rel="icon" type="image/png" href="{{ site.url }}/img/favicon-128.png" sizes="128x128" />
+    {% assign img_url = site.url | append: '/assets/images' %}
   {% else %}
-  <link rel="icon" href="{{ site.url }}/img/favicon-dev.ico" />
-  <link rel="icon" type="image/png" href="{{ site.url }}/img/favicon-dev-196.png" sizes="196x196" />
-  <link rel="icon" type="image/png" href="{{ site.url }}/img/favicon-dev-96.png" sizes="96x96" />
-  <link rel="icon" type="image/png" href="{{ site.url }}/img/favicon-dev-32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="{{ site.url }}/img/favicon-dev-16.png" sizes="16x16" />
-  <link rel="icon" type="image/png" href="{{ site.url }}/img/favicon-dev-128.png" sizes="128x128" />
+    {% assign img_url = site.url | append: '/assets/images/dev' %}
   {% endif %}
+  <link rel="icon" href="{{ img_url }}/favicon.ico" />
+  <link rel="icon" href="{{ img_url }}/favicon-196.png" sizes="196x196" />
+  <link rel="icon" href="{{ img_url }}/favicon-96.png" sizes="96x96" />
+  <link rel="icon" href="{{ img_url }}/favicon-32.png" sizes="32x32" />
+  <link rel="icon" href="{{ img_url }}/favicon-16.png" sizes="16x16" />
+  <link rel="icon" href="{{ img_url }}/favicon-128.png" sizes="128x128" />
+  <link rel="manifest" href="{{ site.url }}/manifest.json">
 </head>
   <body>
     <!-- wrapper -->
@@ -50,17 +48,14 @@
       {% include footer.html %}
     </div><!-- end of wrapper -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js"></script>
-    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=blissfuljs"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/blissfuljs/1.0.4/bliss.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
-    <script src="{{ site.url }}/js/bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" defer></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=blissfuljs" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blissfuljs/1.0.4/bliss.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js" defer></script>
+    <script src="{{ site.url }}/assets/js/bundle.min.js" defer></script>
     {% if site.google_analytics and jekyll.environment == 'production' %}
       {% include analytics.html %}
     {% endif %}
   </body>
 </html>
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400,400italic,600italic,600,300" rel="stylesheet" />
-<link href='https://fonts.googleapis.com/css?family=Raleway:400,400italic,500,500italic,700,700italic,600italic,600' rel='stylesheet' type='text/css'>
-

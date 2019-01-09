@@ -1,0 +1,77 @@
+/**
+Name: grid.css
+Description: Grid styles (not using CSS Grids)
+*/
+/* Grids */
+
+.grid-container {
+  margin: 0 auto;
+  max-width: 63rem;
+  width: 100%;
+}
+
+.column {
+  margin-bottom: 1.5rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
+.row {
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 40rem) {
+
+  .column {
+    float: left;
+    margin: 0;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .column.full {
+    width: 100%;
+  }
+
+  .column.two-thirds {
+    width: 66.7%;
+  }
+
+  .column.half {
+    width: 50%;
+  }
+
+  .column.third {
+    width: 33.3%;
+  }
+
+  .column.fourth {
+    width: 24.95%;
+  }
+
+  .column.flow-opposite {
+    float: right;
+  }
+
+  .footer {
+    display: table-row;
+    height: .0625em;
+    width: 100%;
+    background-color: #e4e2e0;
+  }
+
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
