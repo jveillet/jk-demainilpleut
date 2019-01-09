@@ -18,8 +18,8 @@ $ cd jk-demainilpleut/
 $ docker-compose build
 # Run the tasks to build the CSS and JS
 $ docker-compose run --rm web gulp build
-# Lint the CSS (required before commiting any CSS change).
-$ docker-compose run --rm web gulp lint:css
+# Lint the CSS and JS (required before commiting any CSS and/or JS updates).
+$ docker-compose run --rm web gulp lint
 # Launch the Jekyll build and start the server
 $ docker-compose up
 # (or)
@@ -27,14 +27,12 @@ $ docker-compose run --rm web bundle exec jekyll serve -H 0.0.0.0 --incremental
 # The server will run on port 8080 (see docker-compose.yml)
 ```
 
-### Without Docker
+### On linux (Debian 8+)
+
+Install nodejs and dependencies:
 ```bash
-$ git clone git@github.com:jveillet/jk-demainilpleut.git
-$ cd jk-demainilpleut/
-# Install the gem and dependecies the blog needs
-$ bundle install
-# Debian only: Add the latest node version to the sources
-$ curl -sL https://deb.nodesource.com/setup_8.x | bash - \
+# Add the latest node version to the sources
+$ curl -sL https://deb.nodesource.com/setup_10.x | bash - \
 # Install Node and Gulp
 $ apt-get install -y nodejs
 $ npm install -g gulp-cli
@@ -42,8 +40,32 @@ $ npm install -g gulp-cli
 $ npm install
 # Run the tasks to build the CSS and JS
 $ gulp build
-# Lint the CSS (required before commiting any CSS change).
-$ gulp lint:css
+# Lint the CSS and JS (required before commiting any CSS and/or JS updates).
+$ gulp lint
+```
+
+### On macOS (Sierra+)
+
+Install nodejs and dependencies:
+```bash
+$ brew install node
+# Install Gulp
+$ npm install -g gulp-cli
+# Install the JS dependencies
+$ npm install
+# Run the tasks to build the CSS and JS
+$ gulp build
+# Lint the CSS and JS (required before commiting any CSS and/or JS updates).
+$ gulp lint
+```
+
+### Build and launch the Jekyll project (every OS)
+
+```bash
+$ git clone git@github.com:jveillet/jk-demainilpleut.git
+$ cd jk-demainilpleut/
+# Install the gem and dependecies the blog needs
+$ bundle install
 # Launch the Jekyll build and start the server
 $ bundle exec jekyll serve --incremental
 # The server will run on port 4000
@@ -52,14 +74,18 @@ $ bundle exec jekyll serve --incremental
 ### Individual Tasks
 
 ```bash
-# Building CSS
+# Building CSS (assets will be compiled and installed in assets/css/)
 $ gulp build:css
-# Building Javascript
+# Building Javascript (assets will be compiled and installed in assets/js/)
 $ gulp build:js
-# Gbobal build (CSS + JS)
+# Global build (CSS + JS, compiled and installed into their relative folders in assets/)
 $ gulp build
-# Linting CSS
+# Linting CSS (lint every individual component from the custom_css/ folder)
 $ gulp lint:css
+# Linting JS (lint every individual scripts from the custom_js/ folder)
+$ gulp lint:js
+# Global codebase linting (CSS + JS)
+$ gulp lint
 ```
 
 ### On [Heroku](https://www.heroku.com)
@@ -68,3 +94,20 @@ No need to store the _site directory content into the repository.
 Enable the automatic deploy of a branch into your app pipeline, the static files
 will be build automatically with every merge on that branch, using Rake
 precompile tasks.
+
+## Tests
+
+Basic tests are performed on the structure of the site (broken links, alt attributes on images,..), by using the
+[html-proofer](https://github.com/gjtorikian/html-proofer) Ruby Gem.
+
+They are launched automatically with every Pull Requests, via [Travis CI](https://travis-ci.org) (see [.travis.yml](https://github.com/jveillet/jk-demainilpleut/blob/master/.travis.yml) file).
+
+You can run them manually via command line:
+```bash
+$ ./bin/cibuild.sh
+```
+
+Or with Docker:
+```bash
+$ docker-compose run --rm web bin/cibuild.sh
+```

@@ -1,0 +1,49 @@
+/**
+Name: button.css
+Description: Buttons  styles
+*/
+
+.btn {
+  appearance: none;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-family: inherit;
+  font-size: 100%;
+  cursor: pointer;
+  border: none;
+  margin: 0;
+  line-height: 3;
+  height: 3em;
+  padding: 0 1em;
+  border-radius: .25em;
+  overflow: visible;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus,
+.btn:visited {
+  text-decoration: none;
+}
+
+.btn:active,
+.btn:focus {
+  outline: none;
+}
+
+.btn--small {
+  padding-right: .8em;
+  padding-left: .8em;
+  line-height: 2;
+  height: 2em;
+  margin-top: .8em;
+  font-size: .8em;
+}

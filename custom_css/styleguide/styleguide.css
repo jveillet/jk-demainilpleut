@@ -1,0 +1,59 @@
+/**
+Name: styleguide.css
+Description: Styleguide specific  styles
+*/
+
+.patterns {
+  margin-top: 5em;
+}
+
+.pattern-item {
+  border-bottom: .0625em solid #938cae;
+  padding-bottom: 1em;
+}
+
+.pattern:last-child .pattern-item {
+  border: none;
+}
+
+.pattern-title {
+  color: #494440;
+  font-size: 1.5em;
+}
+
+.colors {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+  align-content: flex-end;
+}
+
+.color {
+  width: 10em;
+  height: 6em;
+  text-align: center;
+  margin: 1em;
+}
+
+.color-text {
+  font-size: .8em;
+  font-weight: bold;
+  width: 100%;
+  margin-top: 40%;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.inline button {
+  margin-top: .25em;
+}
+
+.inline button:last-child {
+  margin-bottom: 0;
+  margin-left: 0;
+}

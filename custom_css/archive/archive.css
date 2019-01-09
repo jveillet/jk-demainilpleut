@@ -1,0 +1,48 @@
+/**
+Name: archive.css
+Description: Archives section styles
+*/
+
+.archives-spacing {
+  margin-bottom: 2em;
+}
+
+.archives-return-link {
+  margin-top: 1em;
+}
+
+.archives-complement {
+  margin-left: .5em;
+  font-size: .8em;
+  color: #0a0000;
+}
+
+.archives-header {
+  margin-bottom: 3em;
+}
+
+.breadcrumb-chevron {
+  background: url("/assets/images/chevron-right.png") no-repeat right center;
+  background: url("/assets/images/chevron-right.svg") no-repeat right center,
+    linear-gradient(transparent, transparent);
+  background-size: auto 1.5em;
+  display: block;
+  padding: .5em 1.5em .5em 1em;
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: row;
+  /* This aligns items to the end line on main-axis */
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.archives-breadcrumb {
+  margin-left: 1em;
+}
+
+.breadcrumb-active {
+  margin-left: 1em;
+}

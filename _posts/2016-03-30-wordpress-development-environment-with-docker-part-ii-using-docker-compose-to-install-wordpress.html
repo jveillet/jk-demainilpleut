@@ -21,10 +21,10 @@ author: jveillet
     <li><a class="primary-link" href="#database">Setting up a database</a></li>
     <li><a class="primary-link" href="#bonus">Bonus part</a></li>
     <li><a class="primary-link" href="#conclusion">Wrapping up</a></li>
-    <li><a href="{{ site.baseurl }} {% link _posts/2016-04-20-wordpress-development-environment-with-docker-part-iii-using-your-own-wordpress-theme.html %}" class="primary-link">Part III : adding your own development theme</a></li>
+    <li><a href="{{ site.url }}{% link _posts/2016-04-20-wordpress-development-environment-with-docker-part-iii-using-your-own-wordpress-theme.html %}" class="primary-link">Part III : adding your own development theme</a></li>
 </ul>
 <h2 id="prerequisites">Prerequisites</h2>
-<p>A fonctionning installation of Docker (see <a href="{{ site.baseurl }}{% link _posts/2016-03-30-wordpress-development-environment-with-docker-part-i-installing-docker.html %}">Part I</a>).</p>
+<p>A fonctionning installation of Docker (see <a href="{{ site.url }}{% link _posts/2016-03-30-wordpress-development-environment-with-docker-part-i-installing-docker.html %}">Part I</a>).</p>
 <p>A command line / Terminal.</p>
 <p>A web browser of your choosing.</p>
 
@@ -54,7 +54,9 @@ wordpress:
     - 8080:80
 </code></pre>
 
-<p>You see that the text is indented, it is crucial to keep the text as is, as it is the norm for YML files. First line with "worpdress:" is the name of the container. Second line is the name of the image you will use (remember <a href="how-to-clean-up-local-git-branches-matching-a-name/">Part I</a>, Docker has a directory of pre-build images with a lot of softwares ready to be used). We will use the official (and latest version) WordPress image. Next parameter is the ports. In order to connect to the website, we need to tell Docker to map the port that is running on the Docker Machine, to a local port on our computer.</p>
+<p>You see that the text is indented, it is crucial to keep the text as is, as it is the norm for YML files. First line
+with "worpdress:" is the name of the container. Second line is the name of the image you will use (remember <a href="{{
+site.url}}{% link _posts/2016-01-21-how-to-clean-up-local-git-branches-matching-a-name.html %}">Part I</a>, Docker has a directory of pre-build images with a lot of softwares ready to be used). We will use the official (and latest version) WordPress image. Next parameter is the ports. In order to connect to the website, we need to tell Docker to map the port that is running on the Docker Machine, to a local port on our computer.</p>
 
 <p>We can see what's going on if we try to launch Docker Compose with what we have in the Compose file.</p>
 <pre><code class="language-bash">
@@ -142,5 +144,5 @@ $ docker-compose -f dev.yml up
 <h2 id="conclusion">Wrapping up</h2>
 <p>In this article, we learned how to use the Docker Compose program, and create a simple docker-compose.yml file to install and launch a WordPress website with a MySQL instance.
 What comes next? how are we using this to integrate plugins or themes
-development and get down to business ? <a href="w{{ site.baseurl }} {% link
-_posts/2016-04-20-wordpress-development-environment-with-docker-part-iii-using-your-own-wordpress-theme.html %}" class="primary-link">Read part III: integrating a development theme</a>.</p>
+development and get down to business ?
+<a href="{{ site.url }}{% link _posts/2016-04-20-wordpress-development-environment-with-docker-part-iii-using-your-own-wordpress-theme.html %}" class="primary-link">Read part III: integrating a development theme</a>.</p>

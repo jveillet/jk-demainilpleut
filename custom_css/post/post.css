@@ -1,0 +1,246 @@
+/**
+Name: post.css
+Description: Styles for articles / posts
+*/
+
+.article {
+  background-color: #ffffff;
+  border-radius: .2em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  padding: 2em;
+}
+
+.articles {
+  background-color: #ffffff;
+  padding: 2em;
+  border-bottom: .0625em solid #f1f1f1;
+}
+
+.articles:first-child {
+  margin-top: 1em;
+  border-radius: .2em .2em 0 0;
+}
+
+.articles:last-child {
+  margin-bottom: 1em;
+  border-radius: 0 0 .2em .2em;
+  border-bottom: 0;
+}
+
+.articles-footer {
+  margin-top: 3em;
+}
+
+.articles-footer-wrapper {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.articles-footer-avatar {
+  border-radius: 100%;
+  margin-right: .5em;
+}
+
+.articles-footer-tags {
+  font-size: .9em;
+  display: inline;
+  font-weight: 600;
+  margin: 0;
+}
+
+.primary-link,
+.primary-link:visited{
+  color: #0a0000;
+  text-decoration: none;
+}
+
+.primary-link:hover,
+.primary-link:focus {
+  color: #0071bc;
+  text-decoration: underline;
+}
+
+.article-title,
+.article-title a:link,
+.article-title a:visited {
+  font-family: Raleway, Palatino, Arial, serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #0a0000;
+  line-height: 1.125;
+  text-decoration: none;
+}
+
+.article-content p:first-child:first-letter {
+  float: left;
+  color: #323a45;
+  font-size: 4em;
+  line-height: 1.5;
+  padding-top: .1em;
+  padding-right: .1em;
+  padding-left: .1em;
+  font-family: Raleway, Palatino, Arial, serif;
+  font-weight: 800;
+}
+
+.article-summary {
+  font-size: .9em;
+  border-top: .0625em solid #c2bed1;
+  margin-top: .8em;
+  padding-top: .5em;
+}
+
+.article-excerpt {
+  color: #5b616b;
+  font-weight: 400;
+}
+
+.article p a:link {
+  color: #0071bc;
+  text-decoration: underline;
+}
+
+.article p a:visited {
+  color: #205493;
+  text-decoration: underline;
+}
+
+.article-pubdate {
+  color: #52545c;
+  margin: 0;
+  font-style: italic;
+  font-size: 1em;
+}
+
+.article-categories {
+  display: inline-block;
+  margin-top: .5em;
+  width: 100%;
+}
+
+.article-readingTime {
+  background: url("/assets/images/icon-time-small.png") no-repeat left center;
+  background: url("/assets/images/icon-time.svg") no-repeat left center,
+    linear-gradient(transparent, transparent);
+  background-size: auto 1.25em;
+  color: #0a0000;
+  font-size: .9em;
+  display: block;
+  padding: .5em 0 .5em 2em;
+}
+
+.article-author--link,
+.article-author--link:visited {
+  color: #0071bc;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.article-author--link:hover{
+  text-decoration: underline;
+}
+
+.article-footer {
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+
+.article-tags {
+  margin-top: 1em;
+  font-size: .8em;
+  font-weight: 600;
+  width: 100%;
+}
+
+.article-tags-item {
+  background-color: #f1f1f1;
+  border-radius: 5%;
+  display: inline-block;
+  margin-right: .5em;
+  margin-top: .5em;
+  padding: .5em;
+}
+
+.article-tags-link:link,
+.article-tags-link:visited{
+  color: #494440;
+  text-decoration: none;
+}
+
+.article-tags-link:hover{
+  text-decoration: underline;
+}
+
+.article-top {
+  margin-top: 2em;
+  text-align: center;
+}
+
+.top {
+  color: #0071bc;
+  color: rgba(0, 113, 188, .5);
+  font-size: 1em;
+  transition: color 500ms, transform 500ms;
+}
+
+.top:hover,
+.top:active,
+.top:focus {
+  color: #0071bc;
+  color: rgba(0, 113, 188, 1);
+}
+
+@media all and (min-width: 47em) {
+
+  .articles-footer-wrapper {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .articles-footer-tags {
+    font-size: .9em;
+    display: inline;
+    font-weight: 600;
+    margin-left: 3em;
+  }
+
+  .article-wrapper {
+    margin: 0 auto;
+  }
+
+  h1.article-title {
+    font-size: 3em;
+  }
+
+  .article-content {
+    font-size: 1.3em;
+  }
+
+  .article-categories {
+    float: left;
+    width: 80%;
+  }
+
+  .article-tags {
+    font-size: 1em;
+  }
+
+  .article-tags-item {
+    margin-top: 0;
+  }
+
+  .article-pubdate {
+    color: #52545c;
+    margin-left: .5em;
+    font-size: 1em;
+    font-style: italic;
+  }
+
+}

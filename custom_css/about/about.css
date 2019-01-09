@@ -1,0 +1,63 @@
+/**
+Name: about.css
+Description: About section styles
+*/
+
+.about {
+  background: #ffffff;
+  color: #0a0000;
+  margin-bottom: 1em;
+}
+
+.about-box {
+  padding: .5em;
+  background: #ffffff;
+  box-shadow: 0 .25em .375em 0 hsla(0, 0%, 0%, .2);
+}
+
+.about-title {
+  text-align: center;
+}
+
+.about-author-avatar img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 100%;
+}
+
+.about-author {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.about-author-bio {
+  margin: 0 auto;
+}
+
+.about-author-name {
+  font-weight: 700;
+}
+
+.about-author-description {
+  color: #5b616b;
+}
+
+@media all and (min-width: 47em) {
+
+  .about-author-avatar img {
+    display: block;
+    float: left;
+    margin: .25em .75em .75em 0;
+    border-radius: 100%;
+    shape-outside: circle(30%);
+    shape-margin: 1em;
+  }
+
+  .about-author {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+}
+
