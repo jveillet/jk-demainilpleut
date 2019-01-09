@@ -18,21 +18,21 @@
   <meta name="twitter:card"  content="summary">
   {% endif %}
   <meta name="theme-color" content="#ffffff"/>
-  <link href='{{ site.url }}/feed.xml' rel='alternate' type='application/atom+xml'>
+  <link href='{{ site.url }}/feed.xml' rel='alternate'>
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-  <link media="screen" rel="stylesheet" type="text/css" href="{{ site.url}}/assets/css/bundle.min.css" />
-  <link media="screen" rel="stylesheet" type="text/css" href="{{ site.url}}/assets/css/vendor/prism.min.css" />
+  <link media="screen" rel="stylesheet" href="{{ site.url}}/assets/css/bundle.min.css" />
+  <link media="screen" rel="stylesheet" href="{{ site.url}}/assets/css/vendor/prism.min.css" />
   {% if jekyll.environment == 'production' %}
     {% assign img_url = site.url | append: '/assets/images' %}
   {% else %}
     {% assign img_url = site.url | append: '/assets/images/dev' %}
   {% endif %}
   <link rel="icon" href="{{ img_url }}/favicon.ico" />
-  <link rel="icon" type="image/png" href="{{ img_url }}/favicon-196.png" sizes="196x196" />
-  <link rel="icon" type="image/png" href="{{ img_url }}/favicon-96.png" sizes="96x96" />
-  <link rel="icon" type="image/png" href="{{ img_url }}/favicon-32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="{{ img_url }}/favicon-16.png" sizes="16x16" />
-  <link rel="icon" type="image/png" href="{{ img_url }}/favicon-128.png" sizes="128x128" />
+  <link rel="icon" href="{{ img_url }}/favicon-196.png" sizes="196x196" />
+  <link rel="icon" href="{{ img_url }}/favicon-96.png" sizes="96x96" />
+  <link rel="icon" href="{{ img_url }}/favicon-32.png" sizes="32x32" />
+  <link rel="icon" href="{{ img_url }}/favicon-16.png" sizes="16x16" />
+  <link rel="icon" href="{{ img_url }}/favicon-128.png" sizes="128x128" />
   <link rel="manifest" href="{{ site.url }}/manifest.json">
 </head>
   <body>
