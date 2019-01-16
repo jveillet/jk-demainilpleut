@@ -13,8 +13,9 @@ script: ./bin/cibuild.sh
 branches:
   only:
   - develop     # test the development branch
-  - release/(.*)/ # test every branch which starts with "release/"
+  - release\/(.*) # test every branch which starts with "release/"
   - ISSUE-(.*)/ # test every branch which starts with "ISSUE-"
+  - master
 
 env:
   global:
