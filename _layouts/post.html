@@ -5,30 +5,41 @@ layout: default
 <!-- Look the author details up from the site config. -->
 {% assign author = site.data.authors[page.author] %}
 
+{% capture words %}
+  {{ page.content | number_of_words | minus: 250 }}
+{% endcapture %}
+
 <div class="article-wrapper">
 
   <article class="article">
   <h1 class="article-title">{{ page.title }}</h1>
-    {% if author %}
-    <span class="article-author">by&nbsp;<a class="article-author--link" href="/authors/{{ author.handle }}">{{ author.name }}</a></span>
-    {% endif %}
-    <span class="article-pubdate">on&nbsp;<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %d, %Y' }}</time></span>
+    <div class="author-grid">
+      <div class="author-avatar-area">
+        <img src="{{ author.avatar }}" width="80" height="80" alt="{{ author.name }}" class="article-author-avatar">
+      </div>
+      <div class="author-name-area">
+        <div class="author-name-header">Author</div>
+        <a class="author-name article-author--link" href="/authors/{{ author.handle }}">{{ author.name }}</a>
+      </div>
+      <div class="published">
+        <div class="published-header">Published</div>
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %d, %Y' }}</time>
+      </div>
+      <div class="reading-area">
+        <div class="reading-header">Reading time</div>
+        <span class="reading-time">
+        {% unless words contains "-" %}
+          {{ words | plus: 250 | divided_by: 180 | append: " minute(s)" | prepend: '~ ' }}
+        {% endunless %}
+        </span>
+      </div>
+    </div><!-- End of author-grid -->
     <div class="article-tags">
       {% for category in page.categories %}
         <span class="article-tags-item">
           <a href="{{ site.url }}/archives/{{ category | downcase | replace: ' ', '-'  }}" class="article-tags-link">#{{ category }}</a>
         </span>
       {% endfor %}
-    </div>
-    <div class="article-summary">
-      {% capture words %}
-        {{ page.content | number_of_words | minus: 250 }}
-      {% endcapture %}
-      <span class="article-readingTime">
-      {% unless words contains "-" %}
-        {{ words | plus: 250 | divided_by: 180 | append: " minute read"}}
-      {% endunless %}
-      </span>
     </div>
     <div class="article-content">
       {{ content }}
@@ -37,19 +48,4 @@ layout: default
       <a href="#top" class="top" title="Go to the top of the page">↑ Back to top</a>
     </div>
   </article>
-
-  {% if author %}
-  <div class="about about-box">
-    <h2 class="about-title">About the Author</h2>
-    <div class="about-author">
-      <div class="about-author-bio">
-      <a class="about-author-avatar" href="{{ site.url }}/authors/{{ author.handle }}"><img src="{{ author.avatar }}" width="80" height="80" alt="{{ author.handle }}"></a>
-        <p><span class="about-author-name"><a href="/authors/{{ author.handle}}"
-            class="primary-link">{{ author.name }}</a></span><br><small class="about-author-description">{{ author.description }}</small></p>
-        {% include author-links.html %}
-      </div><!-- end of author bio -->
-    </div><!-- end of about author -->
-  </div><!-- end of about section -->
-  {% endif %}
-
 </div>
