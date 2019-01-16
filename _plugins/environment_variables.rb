@@ -9,7 +9,6 @@ module Jekyll
   #
   class EnvironmentVariablesGenerator < Generator
     def generate(site)
-      site.config['google_analytics'] = ENV['GA_TRACKING_ID']
       # Add other environment variables to `site.config` here...
       site.config['cdn'] = ENV['S3_IMG_BUCKET_URL']
       # Override the site URL, mainly for development purposes
