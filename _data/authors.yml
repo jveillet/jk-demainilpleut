@@ -1,14 +1,16 @@
 jveillet:
+  display: true
   name: Jérémie Veillet
   handle: jveillet
-  description: I am a french software developer from Nantes, France. I currently work at Accenture, and I love art in every shape and form. Thoughts expressed here are my own and does not represent the opinions of my employer’s past, present and future.
+  description: Jérémie is a french software developer from Nantes, France. he is currently working at Accenture, and he loves art in every shape and form.
   avatar: https://avatars1.githubusercontent.com/u/5037407?v=3&s=460
   email: jveillet@users.noreply.github.com
-  web: https://www.demainilpleut.fr
+  web:
+    handle: demainilpleut.fr
+    link: https://www.demainilpleut.fr
   twitter: jveillet
   github: jveillet
   gplus: JeremieVeillet
   linkedin: jveillet
   gitlab: jveillet
   devto: jveillet
-

@@ -11,6 +11,8 @@ url: https://www.demainilpleut.fr
 # Your website logo (usefull for Twitter Cards)
 logo: assets/images/logo.png
 
+encoding: utf-8
+
 # Number of post to display on the front page
 paginate: 4
 paginate_path: "/page/:num/"
