@@ -7,7 +7,6 @@ Description: Author section styles
   margin-bottom: 1em;
 }
 
-
 .avatar {
   border-radius: 100%;
 }
@@ -15,11 +14,38 @@ Description: Author section styles
 .avatar--size {
   width: 6em;
   height: 6em;
-  border: .2em solid #0071bc;
 }
 
 .page-author-avatar {
   text-align: center;
+}
+
+.members-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+  grid-gap: 4rem;
+  margin: 2em 0 4rem;
+}
+
+.member-links {
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+.member-name {
+  font-size: 1.2em;
+}
+
+.member-bio {
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  width: 15em;
+  border-bottom: .06em solid #aeb0b5;
+}
+
+.members-articles-count {
+  color: #0071bc;
+  font-weight: 600;
 }
 
 .social {
@@ -30,6 +56,15 @@ Description: Author section styles
 
 .social-item {
   margin-right: auto;
+}
+
+.social-web {
+  background: url("/assets/images/icon-web.png") no-repeat left center;
+  background: url("/assets/images/icon-web.svg") no-repeat left center,
+    linear-gradient(transparent, transparent);
+  background-size: auto 1.5em;
+  display: block;
+  padding: .5em 0 .5em 2em;
 }
 
 .social-twitter {
@@ -122,27 +157,11 @@ Description: Author section styles
   padding: .5em 0 .5em 2.8em;
 }
 
-.members {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  flex-flow: row wrap;
-  align-content: flex-end;
-}
-
-.members-item {
-  text-align: center;
-  margin: 1em;
-}
-
 @media all and (min-width: 47em) {
 
   .avatar--size {
     width: 8em;
     height: 8em;
-    border: .2em solid #0071bc;
   }
 
   .page-author-avatar {
