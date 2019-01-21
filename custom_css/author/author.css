@@ -32,6 +32,10 @@ Description: Author section styles
   margin-bottom: .5em;
 }
 
+.member-links a {
+  text-decoration: none;
+}
+
 .member-name {
   font-size: 1.2em;
 }

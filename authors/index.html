@@ -4,8 +4,7 @@ layout: default
 
 <article class="article page-author">
   <h1>Authors</h1>
-  <div class="article-excerpt">Here is all the beautifull people that are
-    contributing to this blog. </div>
+  <div class="article-excerpt">Here is all the beautifull people that are contributing to this blog.</div>
 
   <div class="members-list">
     {% for author in site.data.authors %}
@@ -16,24 +15,23 @@ layout: default
     <div class="member">
       <div class="member-avatar">
         <a href="{{ site.url }}/authors/{{ member.handle }}">
-          <img src="{{ member.avatar }}" class="avatar avatar--size" alt="{{ member.name }}"><a href="{{ site.url }}/authors/{{ member.handle }}" class="primary-link">
+          <img src="{{ member.avatar }}" class="avatar avatar--size" alt="{{ member.name }}">
         </a>
       </div><!-- End of member-avatar -->
       <div class="member-links">
-          {% if member.twitter %}
-          <a href="https://www.twitter.com/{{ member.twitter }}">
-            <img src="{{ site.url }}/assets/images/twitter.svg" width="32" height="32" alt="Twitter profile">
-          </a>
-          {% endif %}
-          {% if member.web.link %}
-          <a href="{{ member.web.link }}">
-            <img src="{{ site.url }}/assets/images/icon-web.svg" width="32" height="32" alt="Personal website: {{ member.web.handle }}">
-          </a>
-          {% endif %}
+        {% if member.twitter %}
+        <a href="https://www.twitter.com/{{ member.twitter }}">
+          <img src="{{ site.url }}/assets/images/twitter.svg" width="32" height="32" alt="Twitter: @{{ member.twitter }}">
         </a>
+        {% endif %}
+        {% if member.web.link %}
+        <a href="{{ member.web.link }}">
+          <img src="{{ site.url }}/assets/images/icon-web.svg" width="32" height="32" alt="Personal website: {{ member.web.handle }}">
+        </a>
+        {% endif %}
       </div><!-- End of member-links -->
       <div class="member-name">
-          <div><a href="{{ site.url }}/authors/{{ member.handle }}" class="primary-link">{{ member.name }}</a></div>
+        <div><a href="{{ site.url }}/authors/{{ member.handle }}" class="primary-link">{{ member.name }}</a></div>
       </div><!-- End of member-name -->
       <div class="member-bio">
         <div class="article-excerpt">{{ member.description | truncate: 250, "..." }}</div>
