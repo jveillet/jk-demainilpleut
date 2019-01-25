@@ -157,22 +157,23 @@ Description: Styles for articles / posts
 }
 
 .article-tags-item {
-  background-color: #f1f1f1;
-  border-radius: 5%;
-  display: inline-block;
   margin-right: .5em;
-  margin-top: .5em;
-  padding: .5em;
 }
 
 .article-tags-link:link,
 .article-tags-link:visited{
+  background-color: #f1f1f1;
+  border-radius: 5%;
   color: #494440;
+  display: inline-block;
+  margin-top: .5em;
+  padding: .5em;
   text-decoration: none;
 }
 
-.article-tags-link:hover{
-  text-decoration: underline;
+.article-tags-item .article-tags-link:hover{
+  background-color: #494440;
+  color: #f1f1f1;
 }
 
 .author-grid {
