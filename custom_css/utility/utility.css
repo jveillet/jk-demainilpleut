@@ -13,9 +13,8 @@ Description: Utility classes
   padding: .5em;
 }
 
-code, pre {
+code {
   font-family: Consolas, Monaco, "Andale Mono", monospace;
-  font-size: .85em;
   white-space: pre;
   white-space: pre-wrap;
   white-space: pre-line;
