@@ -1,27 +1,34 @@
 var PAGES = ['archives', 'styleguide', 'authors'];
 
 // Add/display the mobile menu button, and
-$.ready().then(function() {
-    $('body').classList.add('js');
-    var menuButton = $('.topbar-menu-btn');
-    var menuCloseButton = $('.topbar-btn-close');
-    menuButton.addEventListener('click', menuEventHandler);
-    menuCloseButton.addEventListener('click', menuEventHandler);
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('body').classList.add('js');
+    addMenuClickEvent('.topbar-menu-btn');
+    addMenuClickEvent('.topbar-btn-close');
     displayCurrentMenuItem(window.location.pathname);
 });
 
+/**
+ * Add Click event on the Menu based on a selector.
+ * @params {string} [selector] A DOMString containing one selector to match.
+ *                             This string must be a valid CSS selector string.
+ * @returns {void}
+ */
+function addMenuClickEvent(selector) {
+    var element = document.querySelector(selector);
+    element.addEventListener('click', menuEventHandler);
+}
 
 /**
  * Mobile Menu Event Handler
  * Toggles the appropriate CSS classes when menu buttons are clicked.
- *
  * @returns {void}
  */
 function menuEventHandler() {
-    $('.topbar-menu-btn').classList.toggle('active');
-    $('#js-menu').classList.toggle('active');
-    $('.topbar-btn-close').classList.toggle('active');
-    $('.topbar').classList.toggle('active');
+    document.querySelector('#js-menu').classList.toggle('active');
+    document.querySelector('.topbar').classList.toggle('active');
+    document.querySelector('.topbar-menu-btn').classList.toggle('active');
+    document.querySelector('.topbar-btn-close').classList.toggle('active');
 }
 
 /**
@@ -32,12 +39,14 @@ function menuEventHandler() {
  */
 function displayCurrentMenuItem(pathname){
     var path = pathname.split('/');
+    var pageElement = null;
     if (findInArray(PAGES, path[1])) {
-        $('.page-'+path[1]).classList.add('topbar-navigation-item-current');
+        pageElement = document.querySelector('.page-'+path[1]);
     }
     else {
-        $('.page-home').classList.add('topbar-navigation-item-current');
+        pageElement = document.querySelector('.page-home');
     }
+    pageElement.classList.add('topbar-navigation-item-current');
 }
 
 /**
