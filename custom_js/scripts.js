@@ -1,13 +1,5 @@
 var PAGES = ['archives', 'styleguide', 'authors'];
 
-// Add/display the mobile menu button, and
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('body').classList.add('js');
-    addMenuClickEvent('.topbar-menu-btn');
-    addMenuClickEvent('.topbar-btn-close');
-    displayCurrentMenuItem(window.location.pathname);
-});
-
 /**
  * Add Click event on the Menu based on a selector.
  * @params {string} [selector] A DOMString containing one selector to match.
@@ -58,3 +50,17 @@ function displayCurrentMenuItem(pathname){
 function findInArray(arr, obj) {
     return (arr.indexOf(obj) != -1);
 }
+
+/**
+ * Detect if the document is Ready.
+ * Alternative to DOMContentLoaded.
+ * Add utility classes and attach events to menu buttons.
+*/
+document.onreadystatechange = function () {
+    if (document.readyState === 'complete') {
+        document.querySelector('body').classList.add('js');
+        addMenuClickEvent('.topbar-menu-btn');
+        addMenuClickEvent('.topbar-btn-close');
+        displayCurrentMenuItem(window.location.pathname);
+    }
+};

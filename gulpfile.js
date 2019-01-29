@@ -15,7 +15,8 @@ gulp.task('build:css', function() {
   return gulp.src(['custom_css/**/*.css'])
         .pipe(sourcemaps.init())
         .pipe(purgecss({
-          content: ["_site/**/*.html"]
+          content: ['_site/**/*.html', 'custom_js/**/*.js'],
+          css: ['custom_css/**/*.css']
         }))
         .pipe(cssnano())
         .pipe( postcss([ autoprefixer({ browsers: ['last 4 versions'] }) ]) )
@@ -27,8 +28,10 @@ gulp.task('build:css', function() {
 // Gulp task to minify and combine Javascript files.
 gulp.task('build:js', function() {
   return gulp.src(['custom_js/**/*.js'])
+    .pipe(sourcemaps.init())
     .pipe(concat('bundle.min.js'))
     .pipe(uglify())
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('assets/js/'));
 });
 
