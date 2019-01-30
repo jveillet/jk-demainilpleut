@@ -8,15 +8,21 @@ var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('autoprefixer');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
-var purgecss = require('gulp-purgecss')
+var purgecss = require('gulp-purgecss');
+var del = require('del');
+
+// Gulp task to clean bundled CSS files
+gulp.task('clean', function() {
+  return del(['assets/**/bundle.min.*', ]);
+});
 
 // Gulp task to minify and combine CSS files.
 gulp.task('build:css', function() {
-  return gulp.src(['custom_css/**/*.css'])
+  return gulp.src(['_assets/css/**/*.css'])
         .pipe(sourcemaps.init())
         .pipe(purgecss({
-          content: ['_site/**/*.html', 'custom_js/**/*.js'],
-          css: ['custom_css/**/*.css']
+          content: ['_site/**/*.html', '_assets/js/**/*.js'],
+          css: ['_assets/css/**/*.css']
         }))
         .pipe(cssnano())
         .pipe( postcss([ autoprefixer({ browsers: ['last 4 versions'] }) ]) )
@@ -27,7 +33,7 @@ gulp.task('build:css', function() {
 
 // Gulp task to minify and combine Javascript files.
 gulp.task('build:js', function() {
-  return gulp.src(['custom_js/**/*.js'])
+  return gulp.src(['_assets/js/**/*.js'])
     .pipe(sourcemaps.init())
     .pipe(concat('bundle.min.js'))
     .pipe(uglify())
@@ -36,7 +42,7 @@ gulp.task('build:js', function() {
 });
 
 // Gulp build task to run the CSS & JS Build.
-gulp.task('build', gulp.series('build:css', 'build:js'));
+gulp.task('build', gulp.series('clean', 'build:css', 'build:js'));
 
 // Gulp task to lint the CSS styles in the codebase.
 // It uses Stylelint under the hood.
@@ -44,7 +50,7 @@ gulp.task('lint:css', function lintCssTask() {
   const stylelint = require('gulp-stylelint');
 
   return gulp
-    .src(['custom_css/**/*.css'])
+    .src(['_assets/css/**/*.css'])
     .pipe(stylelint({
     reporters: [
       {formatter: 'verbose', console: true}
@@ -60,7 +66,7 @@ gulp.task('lint:js', function lintJSTask() {
   const eslint = require('gulp-eslint');
 
   return gulp
-    .src(['custom_js/**/*.js'])
+    .src(['_assets/js/**/*.js'])
     // eslint() attaches the lint output to the "eslint" property
     // of the file object so it can be used by other modules.
     .pipe(eslint({

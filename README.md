@@ -80,12 +80,14 @@ $ gulp build:css
 $ gulp build:js
 # Global build (CSS + JS, compiled and installed into their relative folders in assets/)
 $ gulp build
-# Linting CSS (lint every individual component from the custom_css/ folder)
+# Linting CSS (lint every individual component from the _assets/css/ folder)
 $ gulp lint:css
-# Linting JS (lint every individual scripts from the custom_js/ folder)
+# Linting JS (lint every individual scripts from the _assets/js/ folder)
 $ gulp lint:js
 # Global codebase linting (CSS + JS)
 $ gulp lint
+# Delete bundled CSS and JS files
+$ gulp clean
 ```
 
 ### On [Heroku](https://www.heroku.com)
