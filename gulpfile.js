@@ -8,7 +8,6 @@ var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('autoprefixer');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
-var purgecss = require('gulp-purgecss');
 var del = require('del');
 
 // Gulp task to clean bundled CSS files
@@ -20,10 +19,6 @@ gulp.task('clean', function() {
 gulp.task('build:css', function() {
   return gulp.src(['_assets/css/**/*.css'])
         .pipe(sourcemaps.init())
-        .pipe(purgecss({
-          content: ['_site/**/*.html', '_assets/js/**/*.js'],
-          css: ['_assets/css/**/*.css']
-        }))
         .pipe(cssnano())
         .pipe( postcss([ autoprefixer({ browsers: ['last 4 versions'] }) ]) )
         .pipe(concat('bundle.min.css'))
