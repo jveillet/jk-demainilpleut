@@ -8,7 +8,13 @@ var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('autoprefixer');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
-var purgecss = require('gulp-purgecss')
+var purgecss = require('gulp-purgecss');
+var del = require('del');
+
+// Gulp task to clean bundled CSS files
+gulp.task('clean', function() {
+  return del(['assets/**/bundle.min.*', ]);
+});
 
 // Gulp task to minify and combine CSS files.
 gulp.task('build:css', function() {
@@ -36,7 +42,7 @@ gulp.task('build:js', function() {
 });
 
 // Gulp build task to run the CSS & JS Build.
-gulp.task('build', gulp.series('build:css', 'build:js'));
+gulp.task('build', gulp.series('clean', 'build:css', 'build:js'));
 
 // Gulp task to lint the CSS styles in the codebase.
 // It uses Stylelint under the hood.
