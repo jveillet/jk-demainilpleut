@@ -9,10 +9,11 @@ var autoprefixer = require('autoprefixer');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var del = require('del');
+var rev = require('gulp-rev');
 
 // Gulp task to clean bundled CSS files
 gulp.task('clean', function() {
-  return del(['assets/**/bundle.min.*', ]);
+  return del(['assets/**/bundle*', 'assets/rev-manifest.json']);
 });
 
 // Gulp task to minify and combine CSS files.
@@ -21,19 +22,29 @@ gulp.task('build:css', function() {
         .pipe(sourcemaps.init())
         .pipe(cssnano())
         .pipe( postcss([ autoprefixer({ browsers: ['last 4 versions'] }) ]) )
-        .pipe(concat('bundle.min.css'))
+        .pipe(concat({path: 'bundle.min.css', cwd: ''}))
+        .pipe(rev())
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('assets/css/'));
+        .pipe(gulp.dest('assets/css/'))
+        .pipe(rev.manifest('assets/rev-manifest.json', {
+          merge: true // Merge with the existing manifest if one exists
+        }))
+        .pipe(gulp.dest('.'));
 });
 
 // Gulp task to minify and combine Javascript files.
 gulp.task('build:js', function() {
   return gulp.src(['_assets/js/**/*.js'])
     .pipe(sourcemaps.init())
-    .pipe(concat('bundle.min.js'))
+    .pipe(concat({path: 'bundle.min.js', cwd: ''}))
     .pipe(uglify())
+    .pipe(rev())
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('assets/js/'));
+    .pipe(gulp.dest('assets/js/'))
+    .pipe(rev.manifest('assets/rev-manifest.json', {
+      merge: true // Merge with the existing manifest if one exists
+    }))
+    .pipe(gulp.dest('.'));
 });
 
 // Gulp build task to run the CSS & JS Build.
@@ -77,7 +88,6 @@ gulp.task('lint:js', function lintJSTask() {
     // lint error, return the stream and pipe to failAfterError last.
     .pipe(eslint.failAfterError());
 });
-
 
 // Gulp build task to run the CSS & JS linters.
 gulp.task('lint', gulp.series('lint:css', 'lint:js'));
