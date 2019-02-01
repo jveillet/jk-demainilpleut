@@ -1,6 +1,9 @@
 FROM ruby:2.5.1
 
 # Environment variables
+ENV LANG en_US.UTF-8
+ENV LC_ALL C.UTF-8
+ENV LANGUAGE en_US.UTF-8
 ENV DEBIAN_FRONTEND noninteractive
 ENV APP_HOME=/home/doctor/demainilpleut
 ENV RACK_ENV=development
@@ -12,10 +15,6 @@ ENV PATH $GEM_HOME/bin:$GEM_HOME/gems/bin:$PATH
 
 # Create the home directory for the new app user.
 RUN mkdir -p $APP_HOME
-
-# Copy the files needed for bundler and NPM
-COPY Gemfile* $APP_HOME/
-COPY package* $APP_HOME/
 
 # Fetch the last version of Nodejs
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
@@ -35,7 +34,6 @@ RUN apt-get clean \
 
 # Install the last bundler version
 # It is not available with the Heroku image
-#RUN gem install bundler --no-ri --no-rdoc
 RUN gem install bundler --no-document
 
 # Install Gulp
@@ -55,15 +53,18 @@ WORKDIR $APP_HOME
 # Use custom user
 USER doctor
 
+# Copy the files needed for bundler
+COPY --chown=doctor:doctor Gemfile* $APP_HOME/
+
 # Install Bundler dependencies
 RUN bundle config
 RUN bundle install
 
+# Copy the files needed for NPM
+COPY --chown=doctor:doctor package* $APP_HOME/
+
 # Install local NPM dependencies
 RUN npm install
-
-# Enforce rights on npm for the user
-RUN chown -hR doctor:doctor /home/doctor/
 
 EXPOSE 4000
 
