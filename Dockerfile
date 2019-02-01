@@ -1,4 +1,4 @@
-FROM heroku/heroku:18
+FROM ruby:2.5.1
 
 # Environment variables
 ENV DEBIAN_FRONTEND noninteractive
@@ -16,9 +16,8 @@ RUN mkdir -p $APP_HOME
 # Copy the files needed for bundler and NPM
 COPY Gemfile* $APP_HOME/
 COPY package* $APP_HOME/
-COPY .env $APP_HOME/
 
-# Fetch the last version of Nodejs 8
+# Fetch the last version of Nodejs
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 
 # Install essentials softwares whith dev headers
@@ -26,7 +25,6 @@ RUN apt-get clean \
     && apt-get update -y \
     && apt-get install -y --no-install-recommends \
     build-essential \
-    ruby2.5-dev \
     sudo \
     libffi-dev \
     libssl-dev \
@@ -37,7 +35,8 @@ RUN apt-get clean \
 
 # Install the last bundler version
 # It is not available with the Heroku image
-RUN gem install bundler --no-ri --no-rdoc
+#RUN gem install bundler --no-ri --no-rdoc
+RUN gem install bundler --no-document
 
 # Install Gulp
 RUN npm install --global gulp-cli
