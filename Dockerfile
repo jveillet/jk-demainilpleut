@@ -44,7 +44,7 @@ RUN useradd -ms /bin/bash doctor
 RUN echo '%doctor ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 # Copy local files to the container and apply rights to the user
-COPY . $APP_HOME/
+COPY --chown=doctor:doctor . $APP_HOME/
 RUN chown -hR doctor:doctor /home/doctor/
 
 # Move to the application folder
@@ -65,6 +65,8 @@ COPY --chown=doctor:doctor package* $APP_HOME/
 
 # Install local NPM dependencies
 RUN npm install
+
+RUN chown -hR doctor:doctor /home/doctor/
 
 EXPOSE 4000
 
