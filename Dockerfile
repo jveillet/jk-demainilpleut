@@ -62,6 +62,9 @@ RUN bundle install
 # Install local NPM dependencies
 RUN npm install
 
+# Enforce rights on npm for the user
+RUN chown -hR doctor:doctor /home/doctor/
+
 EXPOSE 4000
 
 RUN unset BUNDLE_PATH
