@@ -15,6 +15,7 @@ before_script:
 # the `install` step will run `bundle install` by default.
 script:
   - gulp lint
+  - gulp build
   - ./bin/cibuild.sh
 
 env:
