@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
 <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta charset="UTF-8">
   <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -20,7 +21,7 @@
   <meta name="theme-color" content="#ffffff"/>
   <link href='{{ site.url }}/feed.xml' rel='alternate'>
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-  <link media="screen" rel="stylesheet" href="{{ site.url}}/assets/css/bundle.min.css" />
+  <link media="screen" rel="stylesheet" href="{{ site.url}}/assets/css/{% assets_src bundle.min.css %}" />
   <link media="screen" rel="stylesheet" href="{{ site.url}}/assets/css/vendor/prism.min.css" />
   {% if jekyll.environment == 'production' %}
     {% assign img_url = site.url | append: '/assets/images' %}
@@ -50,9 +51,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" defer></script>
-    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=blissfuljs" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/blissfuljs/1.0.4/bliss.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js" defer></script>
-    <script src="{{ site.url }}/assets/js/bundle.min.js" defer></script>
+    <script src="{{ site.url }}/assets/js/{% assets_src bundle.min.js %}" defer></script>
   </body>
 </html>

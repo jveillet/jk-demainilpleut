@@ -1,4 +1,7 @@
 <ul class="social">
+  {% if author.web %}
+    <li class="social-item"><a href="{{ author.web.link }}" class="social-web primary-link">{{ author.web.handle }}</a></li>
+  {% endif %}
   {% if author.twitter %}
   <li class="social-item"><a href="https://www.twitter.com/{{ author.twitter }}" class="social-twitter primary-link">@{{ author.twitter }}</a></li>
   {% endif %}

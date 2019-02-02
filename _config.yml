@@ -11,16 +11,19 @@ url: https://www.demainilpleut.fr
 # Your website logo (usefull for Twitter Cards)
 logo: assets/images/logo.png
 
+# Default site encoding
+encoding: utf-8
+
 # Number of post to display on the front page
 paginate: 4
 paginate_path: "/page/:num/"
 
 # Exclude these files from your production _site
 exclude:
-  - .DS_Store
   - .bundle
   - .bundle-docker
   - .dockerignore
+  - .DS_Store
   - .editorconfig
   - .eslintrc.yml
   - .git
@@ -29,22 +32,21 @@ exclude:
   - .ruby-version
   - .stylelintrc
   - .travis.yml
+  - bin
+  - config.ru
+  - docker-compose.yml
   - Dockerfile
   - Gemfile
   - Gemfile.lock
-  - LICENSE
-  - Procfile
-  - README.md
-  - Rakefile
-  - bin
-  - config.ru
-  - custom_css
-  - custom_js
-  - docker-compose.yml
   - gulpfile.js
+  - LICENSE
   - node_modules
   - package-lock.json
   - package.json
+  - Procfile
+  - Rakefile
+  - README.md
+  - static.json
   - vendor
 
 # Display drafts
@@ -70,28 +72,6 @@ jekyll-archives:
     category: /archives/:name/
     year: /archives/:year/
     month: /archives/:year/:month/
-
-# Responsives images
-#image_url: /img
-
-#collections:
-#  examples:
-#    output: true
-#    permalink: /:path/
-
-#defaults:
-#  -
-#    scope:
-#      type: examples
-#    values:
-#      layout: default
-
-#sizes: '(min-width: 70em) 1000px, (min-width: 50em) 750px, (min-width: 31.5em) 500px, 100vw'
-
-#srcset:
-#  - 500
-#  - 750
-#  - 1000
 
 # Plugins to include
 plugins:

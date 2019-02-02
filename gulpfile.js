@@ -8,28 +8,47 @@ var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('autoprefixer');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var del = require('del');
+var rev = require('gulp-rev');
+
+// Gulp task to clean bundled CSS files
+gulp.task('clean', function() {
+  return del(['assets/**/bundle*', 'assets/rev-manifest.json']);
+});
 
 // Gulp task to minify and combine CSS files.
 gulp.task('build:css', function() {
-  return gulp.src(['custom_css/**/*.css'])
+  return gulp.src(['_assets/css/**/*.css'])
         .pipe(sourcemaps.init())
         .pipe(cssnano())
         .pipe( postcss([ autoprefixer({ browsers: ['last 4 versions'] }) ]) )
-        .pipe(concat('bundle.min.css'))
+        .pipe(concat({path: 'bundle.min.css', cwd: ''}))
+        .pipe(rev())
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('assets/css/'));
+        .pipe(gulp.dest('assets/css/'))
+        .pipe(rev.manifest('assets/rev-manifest.json', {
+          merge: true // Merge with the existing manifest if one exists
+        }))
+        .pipe(gulp.dest('.'));
 });
 
 // Gulp task to minify and combine Javascript files.
 gulp.task('build:js', function() {
-  return gulp.src(['custom_js/**/*.js'])
-    .pipe(concat('bundle.min.js'))
+  return gulp.src(['_assets/js/**/*.js'])
+    .pipe(sourcemaps.init())
+    .pipe(concat({path: 'bundle.min.js', cwd: ''}))
     .pipe(uglify())
-    .pipe(gulp.dest('assets/js/'));
+    .pipe(rev())
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('assets/js/'))
+    .pipe(rev.manifest('assets/rev-manifest.json', {
+      merge: true // Merge with the existing manifest if one exists
+    }))
+    .pipe(gulp.dest('.'));
 });
 
 // Gulp build task to run the CSS & JS Build.
-gulp.task('build', gulp.series('build:css', 'build:js'));
+gulp.task('build', gulp.series('clean', 'build:css', 'build:js'));
 
 // Gulp task to lint the CSS styles in the codebase.
 // It uses Stylelint under the hood.
@@ -37,7 +56,7 @@ gulp.task('lint:css', function lintCssTask() {
   const stylelint = require('gulp-stylelint');
 
   return gulp
-    .src(['custom_css/**/*.css'])
+    .src(['_assets/css/**/*.css'])
     .pipe(stylelint({
     reporters: [
       {formatter: 'verbose', console: true}
@@ -53,7 +72,7 @@ gulp.task('lint:js', function lintJSTask() {
   const eslint = require('gulp-eslint');
 
   return gulp
-    .src(['custom_js/**/*.js'])
+    .src(['_assets/js/**/*.js'])
     // eslint() attaches the lint output to the "eslint" property
     // of the file object so it can be used by other modules.
     .pipe(eslint({
@@ -70,7 +89,5 @@ gulp.task('lint:js', function lintJSTask() {
     .pipe(eslint.failAfterError());
 });
 
-
 // Gulp build task to run the CSS & JS linters.
 gulp.task('lint', gulp.series('lint:css', 'lint:js'));
-

@@ -157,22 +157,73 @@ Description: Styles for articles / posts
 }
 
 .article-tags-item {
-  background-color: #f1f1f1;
-  border-radius: 5%;
-  display: inline-block;
   margin-right: .5em;
-  margin-top: .5em;
-  padding: .5em;
 }
 
 .article-tags-link:link,
 .article-tags-link:visited{
+  background-color: #f1f1f1;
+  border-radius: 5%;
   color: #494440;
+  display: inline-block;
+  margin-top: .5em;
+  padding: .5em;
   text-decoration: none;
 }
 
-.article-tags-link:hover{
-  text-decoration: underline;
+.article-tags-item .article-tags-link:hover{
+  background-color: #494440;
+  color: #f1f1f1;
+}
+
+.author-grid {
+  display: grid;
+  align-items: center;
+  margin: 0 0 1.5rem;
+  grid-template-columns: .8fr;
+  grid-template-areas: "avatar author" "published time";
+  white-space: nowrap;
+  font-size: .8em;
+  grid-gap: .75rem;
+  justify-content: stretch;
+}
+
+.author-avatar-area {
+  grid-area: avatar;
+}
+
+.author-name-area {
+  grid-area: author;
+}
+
+.published {
+  grid-area: published;
+}
+
+.reading-area {
+  grid-area: time;
+}
+
+.author-avatar {
+  grid-area: avatar;
+  align-self: start;
+}
+
+.article-author-avatar {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+}
+
+.author-name-header,
+.published-header,
+.reading-header {
+  font-weight: 600;
+}
+
+.published time,
+.reading-area .reading-time {
+  color: #52545c;
 }
 
 .article-top {
@@ -194,7 +245,57 @@ Description: Styles for articles / posts
   color: rgba(0, 113, 188, 1);
 }
 
+@media all and (max-width: 21em) {
+
+  .author-grid {
+    display: grid;
+    align-items: center;
+    margin: 0 0 1.5rem;
+    grid-template-columns: .8fr;
+    grid-template-areas: "avatar" "author" "published" "time";
+    white-space: nowrap;
+    font-size: .9em;
+    grid-gap: .7rem;
+    justify-content: stretch;
+  }
+
+}
+
+@media all and (min-width: 31em) {
+
+  .author-grid {
+    display: grid;
+    align-items: center;
+    margin: 0 0 1.5rem;
+    grid-template-columns: min-content;
+    grid-template-areas: "avatar author published time";
+    white-space: nowrap;
+    font-size: .8em;
+    grid-gap: .8rem;
+    justify-content: stretch;
+  }
+
+}
+
 @media all and (min-width: 47em) {
+
+  .author-grid {
+    display: grid;
+    align-items: center;
+    margin: 0 0 1.5rem;
+    grid-template-columns: min-content min-content min-content min-content;
+    grid-template-areas: "avatar author published time";
+    white-space: nowrap;
+    font-size: 1em;
+    grid-gap: .5rem 2rem;
+    justify-content: stretch;
+  }
+
+  .article-author-avatar {
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+  }
 
   .articles-footer-wrapper {
     display: flex;
@@ -217,10 +318,6 @@ Description: Styles for articles / posts
 
   h1.article-title {
     font-size: 3em;
-  }
-
-  .article-content {
-    font-size: 1.3em;
   }
 
   .article-categories {
