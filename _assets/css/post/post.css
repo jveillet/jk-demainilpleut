@@ -320,10 +320,6 @@ Description: Styles for articles / posts
     font-size: 3em;
   }
 
-  .article-content {
-    font-size: 1.3em;
-  }
-
   .article-categories {
     float: left;
     width: 80%;
