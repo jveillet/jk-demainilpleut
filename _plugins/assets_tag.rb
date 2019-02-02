@@ -34,10 +34,10 @@ class AssetsSourceTag < Liquid::Tag
   end
 
   def load_manifest_file
-    return '' unless manifest?
+    return {} unless manifest?
 
     file = File.read MANIFEST_PATH
-    return '' unless file
+    return {} unless file
 
     Oj.load(file)
   end
