@@ -73,8 +73,16 @@ jekyll-archives:
     year: /archives/:year/
     month: /archives/:year/:month/
 
+defaults:
+  -
+    scope:
+      path:            "assets/**/*"
+    values:
+      sitemap:         false
+
 # Plugins to include
 plugins:
   - jekyll-archives
   - jekyll-paginate
   - jekyll-feed
+  - jekyll-sitemap
