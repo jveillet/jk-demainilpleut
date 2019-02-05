@@ -11,7 +11,7 @@ GEM
     colorator (1.1.0)
     colorize (0.8.1)
     concurrent-ruby (1.1.4)
-    dotenv (2.5.0)
+    dotenv (2.6.0)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
@@ -101,8 +101,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  dotenv (~> 2.5.0)
-  html-proofer (~> 3.9, >= 3.9.3)
+  dotenv (~> 2.6.0)
+  html-proofer (~> 3.10, >= 3.10.2)
   jekyll (~> 3.8.5)
   jekyll-archives (~> 2.1.1)
   jekyll-feed (~> 0.11.0)
@@ -111,10 +111,10 @@ DEPENDENCIES
   oj
   puma (~> 3.12.0)
   rack-jekyll (~> 0.5.0)
-  rake (~> 12.3.1)
+  rake (~> 12.3.2)
 
 RUBY VERSION
-   ruby 2.5.1p57
+   ruby 2.6.1p33
 
 BUNDLED WITH
-   1.17.3
+   2.0.1
