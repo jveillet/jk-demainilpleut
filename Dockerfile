@@ -1,10 +1,14 @@
-FROM ruby:2.5.1
+FROM ruby:2.6.1
+
+# Environment variables
+# Defaults can be changed in the docker-compose file
+ARG RACK_ENV=development
+ARG JEKYLL_ENV=development
+ARG NODE_ENV=development
 
 # Environment variables
 ENV DEBIAN_FRONTEND noninteractive
 ENV APP_HOME=/home/doctor/demainilpleut
-ENV RACK_ENV=development
-ENV JEKYLL_ENV=development
 ENV BUNDLE_APP_CONFIG=$APP_HOME/.bundle/
 ENV BUNDLE_JOBS=10
 ENV GEM_HOME="/usr/local/bundle"
@@ -31,7 +35,7 @@ RUN apt-get clean \
 
 # Install the last bundler version
 # It is not available with the Heroku image
-RUN gem install bundler -v 1.17.3 --no-ri --no-rdoc
+RUN gem install bundler --no-document
 
 # Install Gulp
 RUN npm install --global gulp-cli
@@ -41,7 +45,7 @@ RUN useradd -ms /bin/bash doctor
 RUN echo '%doctor ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 # Copy local files to the container and apply rights to the user
-COPY . $APP_HOME/
+COPY --chown=doctor:doctor . $APP_HOME/
 RUN chown -hR doctor:doctor /home/doctor/
 
 # Move to the application folder
