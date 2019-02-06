@@ -35,7 +35,7 @@ RUN apt-get clean \
 
 # Install the last bundler version
 # It is not available with the Heroku image
-RUN gem install bundler --no-document
+RUN gem install bundler:1.17.3 --no-document
 
 # Install Gulp
 RUN npm install --global gulp-cli
