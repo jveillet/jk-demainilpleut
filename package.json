@@ -20,22 +20,22 @@
   },
   "homepage": "https://github.com/jveillet/jk-demainilpleut#README.md",
   "dependencies": {
-    "postcss": "^7.0.14",
-    "autoprefixer": "^9.4.6",
+    "autoprefixer": "^9.4.7",
+    "del": "^3.0.0",
     "gulp": "^v4.0.0",
+    "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.3",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
-    "gulp-concat": "^2.6.1",
+    "gulp-rev": "^9.0.0",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.1",
-    "del": "^3.0.0",
-    "gulp-rev": "^9.0.0"
+    "postcss": "^7.0.14"
   },
   "devDependencies": {
-    "stylelint": "^9.10.1",
+    "eslint": "^5.13.0",
+    "gulp-eslint": "^5.0.0",
     "gulp-stylelint": "^8.0.0",
-    "eslint": "^5.12.1",
-    "gulp-eslint": "^5.0.0"
+    "stylelint": "^9.10.1"
   }
 }
