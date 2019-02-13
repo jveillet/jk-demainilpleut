@@ -14,7 +14,3 @@ gem 'oj'
 gem 'puma', '~> 3.12.0'
 gem 'rack-jekyll', '~> 0.5.0'
 gem 'rake', '~> 12.3.2'
-
-group :development, :test do
-  gem 'html-proofer', '~> 3.10', '>= 3.10.2'
-end

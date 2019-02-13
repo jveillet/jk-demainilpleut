@@ -76,9 +76,9 @@ jekyll-archives:
 defaults:
   -
     scope:
-      path:            "assets/**/*"
+      path: "assets/**/*"
     values:
-      sitemap:         false
+      sitemap: false
 
 # Plugins to include
 plugins:

@@ -5,6 +5,7 @@ FROM ruby:2.6.1
 ARG RACK_ENV=development
 ARG JEKYLL_ENV=development
 ARG NODE_ENV=development
+ARG PORT=8080
 
 # Environment variables
 ENV DEBIAN_FRONTEND noninteractive
@@ -67,7 +68,7 @@ COPY --chown=doctor:doctor package* $APP_HOME/
 # Install local NPM dependencies
 RUN npm install
 
-EXPOSE 4000
+EXPOSE 8080
 
 RUN unset BUNDLE_PATH
 RUN unset BUNDLE_BIN
