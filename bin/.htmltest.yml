@@ -1,0 +1,10 @@
+DirectoryPath: "./_site"
+EnforceHTTPS: false
+EnforceHTML5: true
+IgnoreDirs:
+  - "lib"
+CacheExpires: "6h"
+IgnoreInternalEmptyHash: true
+IgnoreDirectoryMissingTrailingSlash: true
+IgnoreURLs:
+  - "linkedin.com"

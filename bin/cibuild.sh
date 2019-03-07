@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
-set -e # halt script on error
+# halt script on error
+set -e
 
-export NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-
+# Buil the static site first
 bundle exec jekyll build
-time bundle exec htmlproofer ./_site --disable-external --allow-hash-href
+
+# Test the HTML of the site
+time ./bin/htmltest -c ./bin/.htmltest.yml
