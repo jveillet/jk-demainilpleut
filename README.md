@@ -1,4 +1,6 @@
 # jk-demainilpleut
+[![Build Status](https://travis-ci.org/jveillet/jk-demainilpleut.svg?branch=master)](https://travis-ci.org/jveillet/jk-demainilpleut)
+
 Static HTML version of demainilpleut.fr using the static website generator
 [Jekyll](https://jekyllrb.com/).
 

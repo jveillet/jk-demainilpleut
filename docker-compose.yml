@@ -5,7 +5,7 @@ services:
     build: .
     env_file: .env
     ports:
-      - "8080:4000"
+      - "8080:8080"
     volumes:
       - .:/home/doctor/demainilpleut
-    command: jekyll serve -H 0.0.0.0 --incremental
+    command: jekyll serve -H 0.0.0.0 --port 8080 --incremental
