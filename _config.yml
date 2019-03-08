@@ -14,6 +14,11 @@ logo: assets/images/logo.png
 # Default site encoding
 encoding: utf-8
 
+# Markdown options
+kramdown:
+  input: GFM
+  hard_wrap: false
+
 # Number of post to display on the front page
 paginate: 4
 paginate_path: "/page/:num/"
