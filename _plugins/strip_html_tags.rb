@@ -9,6 +9,13 @@ require 'liquid'
 module StripHtmlTags
   EMPTY_STRING = ''
 
+  def strip_html(input)
+    links = strip_links(input)
+    imgs = strip_imgs(links)
+    result = strip_classes(imgs)
+    result
+  end
+
   def strip_links(input)
     input.gsub(%r{<a([^>]+)>(.+?)</a>}mi) do
       Regexp.last_match(2)
@@ -17,6 +24,10 @@ module StripHtmlTags
 
   def strip_imgs(input)
     input.gsub(%r{<img\s?.*?\/?>}mi, EMPTY_STRING)
+  end
+
+  def strip_classes(input)
+    input.gsub(%r{class="(.+?)"}mi, EMPTY_STRING)
   end
 end
 

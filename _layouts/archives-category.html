@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class= "article" id="top">
+<div class="page" id="top">
 
   <div class="archives-breadcrumb">
     <div class="breadcrumbs">
@@ -18,7 +18,7 @@ layout: default
       <article class="articles">
         <h2><a href="{{ site.url }}{{ post.url }}" class="article-title">{{ post.title }}</a></h2>
         <div class="article-excerpt">
-          {{ post.excerpt | strip_links | strip_imgs }}
+          {{ post.excerpt | strip_html }}
         </div>
         <div class="articles-footer">
           <div class="articles-footer-wrapper">
