@@ -27,6 +27,11 @@ script:
 #     - page\/(.*) # test every branch which starts with "page/"
 #     - ISSUE-(.*)/ # test every branch which starts with "ISSUE-"
 #     - master
+branches:
+  only:
+  only:
+    - master
+    - /^release\/.*$/
 
 sudo: false # route your build to the container-based infrastructure for a faster build
 
