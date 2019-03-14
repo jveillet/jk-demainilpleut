@@ -19,14 +19,11 @@ script:
   - gulp build
   - ./bin/cibuild.sh
 
-# branch whitelist, only for GitHub Pages
+# # branch whitelist, only for GitHub Pages
 branches:
   only:
-    - develop     # test the development branch
-    - release\/(.*) # test every branch which starts with "release/"
-    - page\/(.*) # test every branch which starts with "page/"
-    - ISSUE-(.*)/ # test every branch which starts with "ISSUE-"
     - master
+    - /^release\/.*$/
 
 sudo: false # route your build to the container-based infrastructure for a faster build
 
