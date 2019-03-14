@@ -20,15 +20,7 @@ script:
   - ./bin/cibuild.sh
 
 # # branch whitelist, only for GitHub Pages
-# branches:
-#   only:
-#     - develop     # test the development branch
-#     - release\/(.*) # test every branch which starts with "release/"
-#     - page\/(.*) # test every branch which starts with "page/"
-#     - ISSUE-(.*)/ # test every branch which starts with "ISSUE-"
-#     - master
 branches:
-  only:
   only:
     - master
     - /^release\/.*$/
