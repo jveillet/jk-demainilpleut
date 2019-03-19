@@ -8,3 +8,4 @@ IgnoreInternalEmptyHash: true
 IgnoreDirectoryMissingTrailingSlash: true
 IgnoreURLs:
   - "linkedin.com"
+  - "crates.io"

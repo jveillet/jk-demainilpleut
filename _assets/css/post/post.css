@@ -11,6 +11,14 @@ Description: Styles for articles / posts
   padding: 2em;
 }
 
+.page {
+  background-color: #ffffff;
+  border-radius: .2em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  padding: 2em;
+}
+
 .articles {
   background-color: #ffffff;
   padding: 2em;
@@ -64,18 +72,22 @@ Description: Styles for articles / posts
   text-decoration: underline;
 }
 
-.article-title,
-.article-title a:link,
-.article-title a:visited {
+h2 .article-title,
+h2 .article-title:link,
+h2 .article-title:visited {
   font-family: Raleway, Palatino, Arial, serif;
   font-size: 1.5em;
   font-weight: 700;
-  color: #0a0000;
+  color: #0a0000 !important;
   line-height: 1.125;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
-.article-content p:first-child:first-letter {
+.article-content {
+  margin-top: 2em;
+}
+
+.intro:first-child:first-letter {
   float: left;
   color: #323a45;
   font-size: 4em;
@@ -99,12 +111,12 @@ Description: Styles for articles / posts
   font-weight: 400;
 }
 
-.article p a:link {
+.article a:link {
   color: #0071bc;
   text-decoration: underline;
 }
 
-.article p a:visited {
+.article a:visited {
   color: #205493;
   text-decoration: underline;
 }
@@ -164,16 +176,16 @@ Description: Styles for articles / posts
 .article-tags-link:visited{
   background-color: #f1f1f1;
   border-radius: 5%;
-  color: #494440;
+  color: #494440 !important;
   display: inline-block;
   margin-top: .5em;
   padding: .5em;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .article-tags-item .article-tags-link:hover{
   background-color: #494440;
-  color: #f1f1f1;
+  color: #f1f1f1 !important;
 }
 
 .author-grid {
@@ -232,8 +244,8 @@ Description: Styles for articles / posts
 }
 
 .top {
-  color: #0071bc;
-  color: rgba(0, 113, 188, .5);
+  color: #0071bc !important;
+  color: rgba(0, 113, 188, .5) !important;
   font-size: 1em;
   transition: color 500ms, transform 500ms;
 }
@@ -241,8 +253,8 @@ Description: Styles for articles / posts
 .top:hover,
 .top:active,
 .top:focus {
-  color: #0071bc;
-  color: rgba(0, 113, 188, 1);
+  color: #0071bc !important;
+  color: rgba(0, 113, 188, 1) !important;
 }
 
 @media all and (max-width: 21em) {

@@ -21,8 +21,8 @@
   <meta name="theme-color" content="#ffffff"/>
   <link href='{{ site.url }}/feed.xml' rel='alternate'>
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-  <link media="screen" rel="stylesheet" href="{{ site.url}}/assets/css/{% assets_src bundle.min.css %}" />
-  <link media="screen" rel="stylesheet" href="{{ site.url}}/assets/css/vendor/prism.min.css" />
+  <link media="screen" rel="stylesheet" href="{{ site.url}}/assets/css/{% assets_src bundle.min.css %}" data-proofer-ignore/>
+  <link media="screen" rel="stylesheet" href="{{ site.url}}/assets/css/vendor/prism.min.css"/>
   {% if jekyll.environment == 'production' %}
     {% assign img_url = site.url | append: '/assets/images' %}
   {% else %}
@@ -51,7 +51,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js" defer></script>
-    <script src="{{ site.url }}/assets/js/{% assets_src bundle.min.js %}" defer></script>
+    <script src="{{ site.url }}/assets/js/vendor/prism.min.js" defer></script>
+    <script src="{{ site.url }}/assets/js/{% assets_src bundle.min.js %}" defer data-proofer-ignore></script>
   </body>
 </html>
