@@ -4,7 +4,7 @@ layout: post
 title: 'Dealing with the MongoDB error /data/db not found in OSX'
 published_at: 2016-01-10T10:50:00+00:00
 categories: [Code, Javascript, NoSQL]
-permalink: /:title
+permalink: /:title/
 author: jveillet
 summary: 'How to fix MongoDB error /data/db not found'
 ---
