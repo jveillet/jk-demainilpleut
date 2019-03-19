@@ -4,7 +4,7 @@ layout: post
 title: 'Saving your back in git'
 published_at: 2018-07-17T18:00:00+00:00
 categories: [git, commands]
-permalink: /:title
+permalink: /:title/
 author: jveillet
 summary: 'Common situations with Git and how to resolve them'
 ---

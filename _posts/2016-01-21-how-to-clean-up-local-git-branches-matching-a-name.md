@@ -4,7 +4,7 @@ layout: post
 title: 'How to clean up local git branches matching a name'
 published_at: 2016-01-21T18:00:00+00:00
 categories: [Git]
-permalink: /:title
+permalink: /:title/
 author: jveillet
 summary: 'How to clean your local Git branches'
 ---
