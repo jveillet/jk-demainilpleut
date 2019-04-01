@@ -1,8 +1,7 @@
 'use strict';
 
 var gulp = require('gulp');
-var cssnano = require('gulp-cssnano');
-var rename = require('gulp-rename');
+var cssnano = require('cssnano');
 var postcss = require('gulp-postcss');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('autoprefixer');
@@ -18,10 +17,13 @@ gulp.task('clean', function() {
 
 // Gulp task to minify and combine CSS files.
 gulp.task('build:css', function() {
+  var plugins = [
+    autoprefixer({browsers: ['last 4 versions']}),
+    cssnano()
+  ];
   return gulp.src(['_assets/css/**/*.css'])
         .pipe(sourcemaps.init())
-        .pipe(cssnano())
-        .pipe( postcss([ autoprefixer({ browsers: ['last 4 versions'] }) ]) )
+        .pipe(postcss(plugins))
         .pipe(concat({path: 'bundle.min.css', cwd: ''}))
         .pipe(rev())
         .pipe(sourcemaps.write('.'))
