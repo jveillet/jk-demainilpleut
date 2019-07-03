@@ -21,7 +21,7 @@
   "homepage": "https://github.com/jveillet/jk-demainilpleut#README.md",
   "dependencies": {
     "autoprefixer": "^9.4.7",
-    "del": "^3.0.0",
+    "del": "^5.0.0",
     "gulp": "^v4.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.3",
