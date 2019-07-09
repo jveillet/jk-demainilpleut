@@ -7,7 +7,9 @@
     "npm": "6.7.0"
   },
   "scripts": {
-    "postinstall": "gulp build"
+    "postinstall": "gulp build",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -30,12 +32,14 @@
     "gulp-rev": "^9.0.0",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.1",
-    "postcss": "^7.0.14"
+    "postcss": "^7.0.14",
+    "snyk": "^1.192.4"
   },
   "devDependencies": {
     "eslint": "^5.13.0",
     "gulp-eslint": "^5.0.0",
     "gulp-stylelint": "^8.0.0",
     "stylelint": "^9.10.1"
-  }
+  },
+  "snyk": true
 }
