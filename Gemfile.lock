@@ -47,7 +47,7 @@ GEM
       ruby_dep (~> 1.2)
     mercenary (0.3.6)
     nio4r (2.4.0)
-    oj (3.7.8)
+    oj (3.9.0)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (3.1.1)
