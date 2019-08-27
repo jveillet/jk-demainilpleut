@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 ruby '2.6.1'
 
 gem 'dotenv', '~> 2.6.0'
-gem 'jekyll', '~> 3.8.5'
+gem 'jekyll', '~> 3.8.6'
 gem 'jekyll-archives', '~> 2.1.1'
 gem 'jekyll-feed', '~> 0.12.1'
 gem 'jekyll-paginate', '~> 1.1.0'
