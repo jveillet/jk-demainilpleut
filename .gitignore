@@ -70,3 +70,4 @@ assets/css/bundle*.css
 assets/js/bundle*.js
 assets/*.json
 _config.override.yml
+.jekyll-cache

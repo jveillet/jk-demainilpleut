@@ -3,7 +3,7 @@ excerpt_separator: <!--readmore-->
 layout: post
 title: 'How to clean up local git branches matching a name'
 published_at: 2016-01-21T18:00:00+00:00
-categories: [Git]
+categories: [git]
 permalink: /:title/
 author: jveillet
 summary: 'How to clean your local Git branches'
@@ -18,7 +18,7 @@ If you are like me, and you are in an project using `git`, you probably create o
 ## Listing branches and deleting them
 
 <div class="alert alert--danger">
-<strong>A word of caution:</strong> Deleting branches is a definitive act, you cannot go back, especially if the branches hadn't been pushed to some kind of remote repository (e.g Github, BitBucket, etc..).
+  <strong>A word of caution:</strong> Deleting branches is a definitive act, you cannot go back, especially if the branches hadn't been pushed to some kind of remote repository (e.g Github, BitBucket, etc..).
 </div>
 
 Navigate through your project and list the branches, you probably already know that `*` represent your current default branch:

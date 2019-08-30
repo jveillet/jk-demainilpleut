@@ -10,7 +10,7 @@ author: jveillet
 
 Welcome to this (soon to be) series about WordPress development environment using [Docker](https://www.docker.com/). We will cover the basis of how to set up Docker, how to configure it to run a WordPress instance in a container, and how to add our theme, modify it, and see instantly the result.
 Part I is aimed at people who heard about Docker and containers, but never got deeper. If you already know what is it
-all about, and have a functioning environment, skip directly to [Part II]({{ site.url }}{% link _posts/2016-03-30-wordpress-development-environment-with-docker-part-ii-using-docker-compose-to-install-wordpress.md %}).
+all about, and have a functioning environment, skip directly to [Part II]({% post_url 2016-03-30-wordpress-development-environment-with-docker-part-ii-using-docker-compose-to-install-wordpress %}).
 {: .intro}
 
 <!--readmore-->
@@ -129,7 +129,7 @@ CONTAINER ID    IMAGE    COMMAND    CREATED    STATUS    PORTS    NAMES
 The problem is, if you don't want to repeat this steps every time you start the Docker Machine, you can add the `eval "$(docker-machine env default)"` command into your `.bashrc` or your `.zshrc`, so that it will be launched every time you open a terminal window. Otherwise you are left with putting this command in your terminal before doing anything else with Docker, so go for the lazy way and put it in your bash profile file.
 
 <div class="alert alert--info">
-<strong>Where is .bashrc, or .zshrc?</strong> Those files are located in your home folder, so if you <code>cd ~/</code> in your terminal, you should find them. If they do not exist, just do a <code>touch ~/.bashrc</code> or <code>touch ~/.zshrc</code> before editing them.
+  <strong>Where is .bashrc, or .zshrc?</strong> Those files are located in your home folder, so if you <code>cd ~/</code> in your terminal, you should find them. If they do not exist, just do a <code>touch ~/.bashrc</code> or <code>touch ~/.zshrc</code> before editing them.
 </div>
 
 ## Start and stop machines {#start_stop}
@@ -153,4 +153,4 @@ $ docker-machine ip default
 ## Wrapping up {#conclusion}
 
 In this tutorial, you've learn a little about Docker, how to install it and configure your Terminal to use it. Now everything is set up for the next level:
-[Using Docker Compose to run WordPress]({{ site.url }}{% link _posts/2016-03-30-wordpress-development-environment-with-docker-part-ii-using-docker-compose-to-install-wordpress.md %}).
+[Using Docker Compose to run WordPress]({% post_url 2016-03-30-wordpress-development-environment-with-docker-part-ii-using-docker-compose-to-install-wordpress %}).
