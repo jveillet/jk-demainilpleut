@@ -1,11 +1,13 @@
 <div class="topbar">
   {% if jekyll.environment == 'production' %}
   <div class="topbar-logo">
-  {% else %}
-  <div class="topbar-logo-dev">
-  {% endif %}
     <a href="{{ site.url }}" class="topbar-logo-url">{{site.name}}</a>
   </div><!-- end of topBar logo -->
+  {% else %}
+  <div class="topbar-logo-dev">
+    <a href="{{ site.url }}" class="topbar-logo-url">{{site.name}}</a>
+  </div><!-- end of topBar logo -->
+  {% endif %}
   <div class="topbar-menu">
     <button class="topbar-menu-btn topbar-menu-btn--small">Menu</button>
       <nav id="js-menu" role="navigation" class="topbar-navigation">
