@@ -14,6 +14,9 @@ logo: assets/images/logo.png
 # Default site encoding
 encoding: utf-8
 
+# Cause a build to fail if there is a YAML syntax error in a page's front matter
+strict_front_matter: true
+
 # Markdown options
 kramdown:
   input: GFM

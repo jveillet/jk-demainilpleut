@@ -3,7 +3,7 @@ excerpt_separator: <!--readmore-->
 layout: post
 title: 'Enabling any text editor with git'
 published_at: 2016-01-08T15:58:00+00:00
-categories: [Git, editor, commit]
+categories: [git, editor, commit]
 permalink: /:title/
 author: jveillet
 summary: 'How to enable any text editor to work with git commands'

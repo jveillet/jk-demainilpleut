@@ -14,7 +14,7 @@ require 'oj'
 # Example:
 # {% assets_src site.min.css %}
 # This will look in the manifest-rev.json for the key site.min.css and return
-# the valur associated, like site-1234.min.css
+# the value associated, like site-1234.min.css
 #
 class AssetsSourceTag < Liquid::Tag
   MANIFEST_PATH = ENV['REV_MANIFEST_PATH'] || 'assets/rev-manifest.json'
@@ -44,7 +44,7 @@ class AssetsSourceTag < Liquid::Tag
 
   def render(_context)
     # Get the parameter sent with the tag
-    asset_name = @text.strip!
+    asset_name = @text.strip
     return '' unless manifest.key?(asset_name)
 
     # Lookup the asset name in the manifest-rev.json

@@ -26,7 +26,7 @@ This is part II of an ongoing series about WordPress development with Docker. Pa
 
 ## Prerequisites {#prerequisites}
 
-A fonctionning installation of Docker (see [Part I]({{ site.url }}{% link _posts/2016-03-30-wordpress-development-environment-with-docker-part-i-installing-docker.md %}).
+A fonctionning installation of Docker (see [Part I]({% post_url 2016-03-30-wordpress-development-environment-with-docker-part-i-installing-docker %}).
 A command line / Terminal.
 A web browser of your choosing.
 
@@ -169,4 +169,4 @@ $ docker-compose -f dev.yml up
 
 In this article, we learned how to use the Docker Compose program, and create a simple `docker-compose.yml` file to install and launch a WordPress website with a MySQL instance.
 What comes next? how are we using this to integrate plugins or themes
-development and get down to business ? [Read part III: integrating a development theme]({{ site.url }}{% link _posts/2016-04-20-wordpress-development-environment-with-docker-part-iii-using-your-own-wordpress-theme.md %}).
+development and get down to business ? [Read part III: integrating a development theme]({% post_url 2016-04-20-wordpress-development-environment-with-docker-part-iii-using-your-own-wordpress-theme %}).
