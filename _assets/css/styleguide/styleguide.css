@@ -4,16 +4,11 @@ Description: Styleguide specific  styles
 */
 
 .patterns {
-  margin-top: 5em;
+  margin-top: 1em;
 }
 
-.pattern-item {
-  border-bottom: .0625em solid #938cae;
-  padding-bottom: 1em;
-}
-
-.pattern:last-child .pattern-item {
-  border: none;
+.pattern {
+  margin-top: 2em;
 }
 
 .pattern-title {

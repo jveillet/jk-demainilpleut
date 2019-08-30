@@ -8,10 +8,32 @@ layout: default
     completed with code samples.
   </div>
 
+
+
   <div class="patterns">
 
     <div class="pattern">
-      <span class="section-title color-gray-warm-dark">Primary colors</span>
+      <span class="section-title color-gray-warm-dark">Sections</span>
+        <ul class="list-unordered">
+          <li><a class="primary-link" href="#colors">Primary colors</a></li>
+          <li><a class="primary-link" href="#typography">Typography</a></li>
+          <li><a class="primary-link" href="#headings">Headings</a></li>
+          <li><a class="primary-link" href="#blockquote">Blockquote</a></li>
+          <li><a class="primary-link" href="#toc">Table of content</a></li>
+          <li><a class="primary-link" href="#topbar">TopBar</a></li>
+          <li><a class="primary-link" href="#blog-summary">Blog Post Summary</a></li>
+          <li><a class="primary-link" href="#blog-post">Blog Post</a></li>
+          <li><a class="primary-link" href="#images">Images</a></li>
+          <li><a class="primary-link" href="#pagination">Pagination</a></li>
+          <li><a class="primary-link" href="#footer">Footer</a></li>
+          <li><a class="primary-link" href="#code">Code</a></li>
+          <li><a class="primary-link" href="#alerts">Alerts</a></li>
+          <li><a class="primary-link" href="#buttons">Buttons</a></li>
+        </ul>
+    </div><!-- end of pattern -->
+
+    <div class="pattern">
+      <span class="section-title color-gray-warm-dark" id="colors">Primary colors</span>
       <div class="pattern-item">
         <ul class="colors">
           <li class="color" style="background: #0071bc;">
@@ -57,7 +79,7 @@ layout: default
     </div><!-- end of pattern -->
 
     <div class="pattern">
-      <span class="section-title color-gray-warm-dark">Typography</span>
+      <span class="section-title color-gray-warm-dark" id="typography">Typography</span>
       <div class="pattern-item">
         <p class="text">Body text: Open Sans, Helvetica, Arial, sans-serif.</p>
         <p class="text"><small>Small body text: Open Sans, Helvetica, Arial, sans-serif.</small></p>
@@ -67,9 +89,9 @@ layout: default
         <p class="text"><s>Scrached body text: Open Sans, Helvetica, Arial, sans-serif.</s></p>
       </div><!-- end of pattern item -->
     </div><!-- end of pattern -->
-  
+
     <div class="pattern">
-      <span class="section-title color-gray-warm-dark">Headings</span>
+      <span class="section-title color-gray-warm-dark" id="headings">Headings</span>
       <div class="pattern-item">
         <h1 class="black">Heading 1</h1>
         <h2 class="black">Heading 2</h2>
@@ -81,11 +103,15 @@ layout: default
     </div><!-- end of pattern -->
 
     <div class="pattern">
-      <span class="section-title color-gray-warm-dark">Blockquote</span>
+      <span class="section-title color-gray-warm-dark" id="blockquote">Blockquote</span>
       <div class="pattern-item">
         <p class="quote">&ldquo;Let me explain something to you. Um, I am not “Mr. Lebowski”. You’re Mr. Lebowski. I’m the Dude. So that’s what you call me. You know, that or, uh, His Dudeness, or uh, Duder, or El Duderino if you’re not into the whole brevity thing.&rdquo; &mdash;The Big Lebowski</p>
       </div>
-      <div class="pattern-item">
+
+      <button type="button" class="btn btn--small bg-blue white" data-a11y-toggle="target">
+          Display code »
+      </button>
+      <div class="pattern-item" id="target">
         <pre>
           <code class="language-markup">
             &lt;p class="quote">...&lt;/p>
@@ -95,7 +121,7 @@ layout: default
     </div><!-- end of pattern -->
 
     <div class="pattern">
-      <span class="section-title color-gray-warm-dark">Tables of content</span>
+      <span class="section-title color-gray-warm-dark" id="toc">Tables of content</span>
       <div class="pattern-item">
         <ul class="list-unordered">
           <li><a class="primary-link" href="#">Link 1</a></li>
@@ -104,7 +130,11 @@ layout: default
           <li><a class="primary-link" href="#">Link 4</a></li>
         </ul>
       </div><!-- end of pattern item -->
-      <div class="pattern-item">
+
+      <button type="button" class="btn btn--small bg-blue white" data-a11y-toggle="target-1">
+          Display code »
+      </button>
+      <div class="pattern-item" id="target-1">
         <pre>
           <code class="language-markup">
             &lt;ul class="list-unordered">
@@ -119,7 +149,7 @@ layout: default
     </div><!-- end of pattern -->
 
     <div class="pattern">
-      <span class="section-title color-gray-warm-dark">TopBar</span>
+      <span class="section-title color-gray-warm-dark" id="topbar">TopBar</span>
       <div class="pattern-item">
         <div class="topbar">
           <div class="topbar-logo">
@@ -139,7 +169,10 @@ layout: default
         </div><!-- end of topBar -->
       </div><!-- end of pattern item -->
 
-      <div class="pattern-item">
+      <button type="button" class="btn btn--small bg-blue white" data-a11y-toggle="target-2">
+          Display code »
+      </button>
+      <div class="pattern-item" id="target-2">
         <pre>
           <code class="language-markup">
             &lt;div  class="topbar">
@@ -164,7 +197,7 @@ layout: default
     </div><!-- end of pattern -->
 
     <div class="pattern">
-      <span class="section-title color-gray-warm-dark">Blog post summary</span>
+      <span class="section-title color-gray-warm-dark" id="blog-summary">Blog post summary</span>
       <div class="pattern-item">
         <article class="article">
           <h2><a href="#" title="Lorem ipsum dolor sit amet." class="article-title">Lorem ipsum dolor sit amet.</a></h2>
@@ -195,7 +228,10 @@ layout: default
         </article><!-- end of article -->
       </div><!-- end of pattern item -->
 
-      <div class="pattern-item">
+      <button type="button" class="btn btn--small bg-blue white" data-a11y-toggle="target-3">
+          Display code »
+      </button>
+      <div class="pattern-item" id="target-3">
         <pre>
           <code class="language-markup">
             &lt;article class="article">
@@ -232,7 +268,7 @@ layout: default
     </div><!-- end of pattern -->
 
     <div class="pattern">
-      <span class="section-title color-gray-warm-dark">Blog post</span>
+      <span class="section-title color-gray-warm-dark" id="blog-post">Blog post</span>
       <div class="pattern-item">
         <article class="article">
           <h1 class="article-title">Lorem ipsum dolor sit amet.</h1>
@@ -257,7 +293,11 @@ layout: default
           <p>Vivamus condimentum elit eu libero dapibus bibendum. Sed commodo, metus et pellentesque mattis, nisl elit laoreet mi, nec scelerisque arcu neque id tortor. Cras vehicula nulla quis hendrerit mattis. Nullam laoreet dignissim quam vitae faucibus. Pellentesque dignissim sit amet odio ac tempus. Integer quis faucibus ipsum. Aliquam bibendum metus eu sagittis aliquet. Aenean sollicitudin euismod dolor vel euismod. Nullam blandit lacinia venenatis.</p>
         </article><!-- end of article -->
       </div><!-- end of pattern item -->
-      <div class="pattern-item">
+
+      <button type="button" class="btn btn--small bg-blue white" data-a11y-toggle="target-4">
+          Display code »
+      </button>
+      <div class="pattern-item" id="target-4">
         <pre>
           <code class="language-markup">
             &lt;article class="article">
@@ -288,7 +328,7 @@ layout: default
     </div><!-- end of pattern -->
 
     <div class="pattern">
-      <span class="section-title color-gray-warm-dark">Images</span>
+      <span class="section-title color-gray-warm-dark" id="images">Images</span>
       <div class="pattern-item">
         <div class="resp-images">
           <img src="https://placehold.it/1920x600?text=Placeholder%20image" alt="placeholder" class="aligncenter size-full " style="width: 100%;"/>
@@ -297,7 +337,7 @@ layout: default
     </div><!-- end of pattern -->
 
     <div class="pattern">
-      <span class="section-title color-gray-warm-dark">Pagination</span>
+      <span class="section-title color-gray-warm-dark" id="pagination">Pagination</span>
       <div class="pattern-item">
         <div class="pagination">
           <ul class="page-numbers">
@@ -313,7 +353,10 @@ layout: default
         </div><!-- end of pagination -->
       </div><!-- end of pattern item -->
 
-      <div class="pattern-item">
+      <button type="button" class="btn btn--small bg-blue white" data-a11y-toggle="target-5">
+          Display code »
+      </button>
+      <div class="pattern-item" id="target-5">
         <pre>
           <code class="language-markup">
             &lt;div class="pagination">
@@ -334,7 +377,7 @@ layout: default
     </div><!-- end of pattern -->
 
     <div class="pattern">
-      <span class="section-title color-gray-warm-dark">Footer</span>
+      <span class="section-title color-gray-warm-dark" id="footer">Footer</span>
       <div class="pattern-item">
         <div class="footer">
           <div class="grid-container">
@@ -377,7 +420,10 @@ layout: default
         </div><!-- end of footer -->
       </div><!-- end of pattern item -->
 
-      <div class="pattern-item">
+      <button type="button" class="btn btn--small bg-blue white" data-a11y-toggle="target-6">
+          Display code »
+      </button>
+      <div class="pattern-item" id="target-6">
         <pre>
           <code class="language-markup">
             &lt;div class="footer">
@@ -425,7 +471,7 @@ layout: default
     </div><!-- end of pattern -->
 
     <div class="pattern">
-      <span class="section-title color-gray-warm-dark">Code</span>
+      <span class="section-title color-gray-warm-dark" id="code">Code</span>
       <div class="pattern-item">
         <pre>
           <code class="language-javascript">
@@ -433,7 +479,11 @@ layout: default
           </code>
         </pre>
       </div><!-- end of pattern item -->
-      <div class="pattern-item">
+
+      <button type="button" class="btn btn--small bg-blue white" data-a11y-toggle="target-7">
+          Display code »
+      </button>
+      <div class="pattern-item" id="target-7">
         <pre>
           <code class="language-markup">
             &lt;pre>
@@ -447,7 +497,7 @@ layout: default
     </div><!-- end of pattern -->
 
     <div class="pattern">
-      <span class="section-title color-gray-warm-dark">Alerts</span>
+      <span class="section-title color-gray-warm-dark" id="alerts">Alerts</span>
       <div class="pattern-item">
         <div>
           <h3>Info</h3>
@@ -469,7 +519,10 @@ layout: default
         </div>
       </div><!-- end of pattern item -->
 
-      <div class="pattern-item">
+      <button type="button" class="btn btn--small bg-blue white" data-a11y-toggle="target-8">
+          Display code »
+      </button>
+      <div class="pattern-item" id="target-8">
         <pre>
           <code class="language-markup">
             &lt;div>
@@ -496,7 +549,7 @@ layout: default
     </div><!-- end of pattern -->
 
     <div class="pattern">
-      <span class="section-title color-gray-warm-dark">Buttons</span>
+      <span class="section-title color-gray-warm-dark" id="buttons">Buttons</span>
       <div class="pattern-item">
         <div class="inline">
           <button class="btn bg-blue white" name="Primary button"
@@ -507,8 +560,11 @@ layout: default
             type="button">Primary small</button>
         </div>
       </div><!-- end of pattern item -->
-  
-      <div class="pattern-item">
+
+      <button type="button" class="btn btn--small bg-blue white" data-a11y-toggle="target-9">
+          Display code »
+      </button>
+      <div class="pattern-item" id="target-9">
         <pre>
           <code class="language-markup">
             &lt;div class="inline">
@@ -523,6 +579,10 @@ layout: default
         </pre>
       </div><!-- end of pattern item -->
     </div><!-- end of pattern -->
+
+    <div class="article-top">
+      <a href="#top" class="top" title="Go to the top of the page">↑ Back to top</a>
+    </div>
 
   </div><!-- end of patterns -->
 </div><!-- end of page -->

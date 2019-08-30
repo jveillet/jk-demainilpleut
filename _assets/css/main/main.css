@@ -16,3 +16,8 @@ Description: Main page containers  styles
   padding-right: 1em;
   margin-bottom: 1em;
 }
+
+[aria-hidden = "true"],
+[data-a11y-toggle]:not([aria-controls]) {
+  display: none;
+}
