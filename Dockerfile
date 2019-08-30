@@ -1,4 +1,4 @@
-FROM ruby:2.6.1
+FROM ruby:2.6.3
 
 # Environment variables
 # Defaults can be changed in the docker-compose file
@@ -36,7 +36,7 @@ RUN apt-get clean \
 
 # Install the last bundler version
 # It is not available with the Heroku image
-RUN gem install bundler:1.17.3 --no-document
+RUN gem install bundler:2.0.2 --no-document
 
 # Install Gulp
 RUN npm install --global gulp-cli

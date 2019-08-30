@@ -3,10 +3,10 @@ layout: default
 ---
 
 <div class= "page">
-
   <h1>Styleguide</h1>
   <div class="article-excerpt">This is the collection of UI components we are using on the blog,
-    completed with code samples.</div>
+    completed with code samples.
+  </div>
 
   <div class="patterns">
 
@@ -30,7 +30,9 @@ layout: default
             <div class="color-text white">gray</div>
           </li>
         </ul>
-      </div>
+      </div><!-- end of pattern item -->
+    </div><!-- end of pattern -->
+
     <div class="pattern">
       <span class="section-title color-gray-warm-dark">Secondary colors</span>
       <div class="pattern-item">
@@ -51,8 +53,8 @@ layout: default
             <div class="color-text white">gray warm light</div>
           </li>
         </ul>
-      </div>
-    </div><!-- end of pattern item -->
+      </div><!-- end of pattern item -->
+    </div><!-- end of pattern -->
 
     <div class="pattern">
       <span class="section-title color-gray-warm-dark">Typography</span>
@@ -63,9 +65,9 @@ layout: default
         <p class="text"><em>Italic body text: Open Sans, Helvetica, Arial, sans-serif.</em></p>
         <p class="text"><u>Underlined body text: Open Sans, Helvetica, Arial, sans-serif.</u></p>
         <p class="text"><s>Scrached body text: Open Sans, Helvetica, Arial, sans-serif.</s></p>
-      </div>
-    </div><!-- end of pattern item -->
-
+      </div><!-- end of pattern item -->
+    </div><!-- end of pattern -->
+  
     <div class="pattern">
       <span class="section-title color-gray-warm-dark">Headings</span>
       <div class="pattern-item">
@@ -75,8 +77,8 @@ layout: default
         <h4 class="black">Heading 4</h4>
         <h5 class="black">Heading 5</h5>
         <h6 class="black">Heading 6</h6>
-      </div>
-    </div><!-- end of pattern item -->
+      </div><!-- end of pattern item -->
+    </div><!-- end of pattern -->
 
     <div class="pattern">
       <span class="section-title color-gray-warm-dark">Blockquote</span>
@@ -89,8 +91,8 @@ layout: default
             &lt;p class="quote">...&lt;/p>
           </code>
         </pre>
-      </div>
-    </div><!-- end of pattern item -->
+      </div><!-- end of pattern item -->
+    </div><!-- end of pattern -->
 
     <div class="pattern">
       <span class="section-title color-gray-warm-dark">Tables of content</span>
@@ -101,7 +103,7 @@ layout: default
           <li><a class="primary-link" href="#">Link 3</a></li>
           <li><a class="primary-link" href="#">Link 4</a></li>
         </ul>
-      </div>
+      </div><!-- end of pattern item -->
       <div class="pattern-item">
         <pre>
           <code class="language-markup">
@@ -113,30 +115,31 @@ layout: default
             &lt;/ul>
           </code>
         </pre>
-      </div>
-    </div><!-- end of pattern item -->
+      </div><!-- end of pattern item -->
+    </div><!-- end of pattern -->
 
     <div class="pattern">
       <span class="section-title color-gray-warm-dark">TopBar</span>
       <div class="pattern-item">
-        <div  class="topbar">
+        <div class="topbar">
           <div class="topbar-logo">
             <a href="#" class="topbar-logo-url">Foo bar</a>
           </div><!-- end of topBar logo -->
-        <div class="topbar-menu">
-          <button class="topbar-menu-btn topbar-menu-btn--small">Menu</button>
-            <nav id="js-menu" role="navigation" class="topbar-navigation">
-              <ul>
-                <li><a href="#" class="topbar-navigation-item">Link 1</a></li>
-                <li><a href="#" class="topbar-navigation-item">Link 2</a></li>
-                <li><a href="#" class="topbar-navigation-item">Link 3</a></li>
-                <li><a href="#" class="topbar-navigation-item">Link 4</a></li>
-              </ul>
-            </nav><!-- end of topBarNavigation -->
-          </div><!-- end of topBarMenu -->
+          <div class="topbar-menu">
+            <button class="topbar-menu-btn topbar-menu-btn--small">Menu</button>
+              <nav role="navigation" class="topbar-navigation">
+                <ul>
+                  <li><a href="#" class="topbar-navigation-item">Link 1</a></li>
+                  <li><a href="#" class="topbar-navigation-item">Link 2</a></li>
+                  <li><a href="#" class="topbar-navigation-item">Link 3</a></li>
+                  <li><a href="#" class="topbar-navigation-item">Link 4</a></li>
+                </ul>
+              </nav><!-- end of topBarNavigation -->
+            </div><!-- end of topBarMenu -->
         </div><!-- end of topBar -->
       </div><!-- end of pattern item -->
-       <div class="pattern-item">
+
+      <div class="pattern-item">
         <pre>
           <code class="language-markup">
             &lt;div  class="topbar">
@@ -145,7 +148,7 @@ layout: default
               &lt;/div>
               &lt;div class="topbar-menu">
                 &lt;button class="topbar-menu-btn topbar-menu-btn--small">Menu&lt;/button>
-                &lt;nav id="js-menu" role="navigation" class="topbar-navigation">
+                &lt;nav role="navigation" class="topbar-navigation">
                   &lt;ul>
                     &lt;li>&lt;a href="#" class="topbar-navigation-item">Link 1&lt;/a>&lt;/li>
                     &lt;li>&lt;a href="#" class="topbar-navigation-item">Link 2&lt;/a>&lt;/li>
@@ -157,417 +160,369 @@ layout: default
             &lt;/div>
           </code>
         </pre>
+      </div><!-- end of pattern item -->
     </div><!-- end of pattern -->
 
-<div class="pattern">
-  <span class="section-title color-gray-warm-dark">Blog post summary</span>
-  <div class="pattern-item">
-    <article id="post-1" class="article">
-      <h2><a href="#" title="Lorem ipsum dolor sit amet." class="article-title">Lorem ipsum dolor sit amet.</a></h2>
-      <div class="article-excerpt">Donec nec leo fringilla, pulvinar eros sit
-        amet, scelerisque enim. Cum sociis natoque penatibus et magnis dis
-        parturient montes, nascetur ridiculus mus. Donec fringilla a quam sit
-        amet iaculis. Nullam a nisl sit amet arcu posuere iaculis non a tortor.
-        Fusce non nulla arcu...
-      </div>
-      <div class="articles-footer">
-        <div class="articles-footer-wrapper">
-          <img src="https://placehold.it/80x80" width="32" height="32" alt="John Appleseed" class="articles-footer-avatar">
-          <span style="article-author"><a class="article-author--link" href="#">John Appleseed</a></span>
-          <span class="article-pubdate"> on <time datetime="2014-02-10T12:10:48-05:00">February 10, 2014</time></span>
-          <div class="articles-footer-tags">
-              <span class="article-tags-item">
-                <a href="#" class="article-tags-link">#tag1</a>
-              </span>
-              <span class="article-tags-item">
-                <a href="#" class="article-tags-link">#tag2</a>
-              </span>
-              <span class="article-tags-item">
-                <a href="#" class="article-tags-link">#tag3</a>
-              </span>
-          </div><!-- end of articles footer tags -->
-        </div><!-- end of articles footer wrapper -->
-      </div><!-- end of articles footer -->
-    </article><!-- end of article -->
-  </div><!-- end of pattern item -->
-  <div class="pattern-item">
-    <pre>
-      <code class="language-markup">
-        &lt;article id="post-1" class="article">
-          &lt;h2>&lt;a href="#" title="Lorem ipsum dolor sit amet." class="article-title">Lorem ipsum dolor sit amet.&lt;/a>&lt;/h2>
-          &lt;span class="article-author">&lt;a class="article-author--link" href="#">John Appleseed&lt;/a>&lt;/span>
-          &lt;div class="article-excerpt">Donec nec leo fringilla, pulvinar eros sit
+    <div class="pattern">
+      <span class="section-title color-gray-warm-dark">Blog post summary</span>
+      <div class="pattern-item">
+        <article class="article">
+          <h2><a href="#" title="Lorem ipsum dolor sit amet." class="article-title">Lorem ipsum dolor sit amet.</a></h2>
+          <div class="article-excerpt">Donec nec leo fringilla, pulvinar eros sit
             amet, scelerisque enim. Cum sociis natoque penatibus et magnis dis
             parturient montes, nascetur ridiculus mus. Donec fringilla a quam sit
             amet iaculis. Nullam a nisl sit amet arcu posuere iaculis non a tortor.
             Fusce non nulla arcu...
-          &lt;/div>
-          &lt;div class="articles-footer">
-            &lt;div class="articles-footer-wrapper">
-              &lt;img src="https://placehold.it/80x80" width="32" height="32" alt="John Appleseed" class="articles-footer-avatar">
-              &lt;span style="article-author">&lt;a class="article-author--link" href="#">John Appleseed&lt;/a>&lt;/span>
-              &lt;span class="article-pubdate"> on &lt;time datetime="2014-02-10T12:10:48-05:00">February 10, 2014&lt;/time>&lt;/span>
-              &lt;div class="articles-footer-tags">
+          </div>
+          <div class="articles-footer">
+            <div class="articles-footer-wrapper">
+              <img src="https://placehold.it/80x80" width="32" height="32" alt="John Appleseed" class="articles-footer-avatar">
+              <span style="article-author"><a class="article-author--link" href="#">John Appleseed</a></span>
+              <span class="article-pubdate"> on <time datetime="2014-02-10T12:10:48-05:00">February 10, 2014</time></span>
+              <div class="articles-footer-tags">
+                  <span class="article-tags-item">
+                    <a href="#" class="article-tags-link">#tag1</a>
+                  </span>
+                  <span class="article-tags-item">
+                    <a href="#" class="article-tags-link">#tag2</a>
+                  </span>
+                  <span class="article-tags-item">
+                    <a href="#" class="article-tags-link">#tag3</a>
+                  </span>
+              </div><!-- end of articles footer tags -->
+            </div><!-- end of articles footer wrapper -->
+          </div><!-- end of articles footer -->
+        </article><!-- end of article -->
+      </div><!-- end of pattern item -->
+
+      <div class="pattern-item">
+        <pre>
+          <code class="language-markup">
+            &lt;article class="article">
+              &lt;h2>&lt;a href="#" title="Lorem ipsum dolor sit amet." class="article-title">Lorem ipsum dolor sit amet.&lt;/a>&lt;/h2>
+              &lt;span class="article-author">&lt;a class="article-author--link" href="#">John Appleseed&lt;/a>&lt;/span>
+              &lt;div class="article-excerpt">Donec nec leo fringilla, pulvinar eros sit
+                amet, scelerisque enim. Cum sociis natoque penatibus et magnis dis
+                parturient montes, nascetur ridiculus mus. Donec fringilla a quam sit
+                amet iaculis. Nullam a nisl sit amet arcu posuere iaculis non a tortor.
+                Fusce non nulla arcu...
+              &lt;/div>
+              &lt;div class="articles-footer">
+                &lt;div class="articles-footer-wrapper">
+                  &lt;img src="https://placehold.it/80x80" width="32" height="32" alt="John Appleseed" class="articles-footer-avatar">
+                  &lt;span style="article-author">&lt;a class="article-author--link" href="#">John Appleseed&lt;/a>&lt;/span>
+                  &lt;span class="article-pubdate"> on &lt;time datetime="2014-02-10T12:10:48-05:00">February 10, 2014&lt;/time>&lt;/span>
+                  &lt;div class="articles-footer-tags">
+                    &lt;span class="article-tags-item">
+                      &lt;a href="#" class="article-tags-link">#tag1&lt;/a>
+                    &lt;/span>
+                    &lt;span class="article-tags-item">
+                      &lt;a href="#" class="article-tags-link">#tag2&lt;/a>
+                    &lt;/span>
+                    &lt;span class="article-tags-item">
+                      &lt;a href="#" class="article-tags-link">#tag3&lt;/a>
+                    &lt;/span>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/article>
+          </code>
+        </pre>
+      </div><!-- end of pattern item -->
+    </div><!-- end of pattern -->
+
+    <div class="pattern">
+      <span class="section-title color-gray-warm-dark">Blog post</span>
+      <div class="pattern-item">
+        <article class="article">
+          <h1 class="article-title">Lorem ipsum dolor sit amet.</h1>
+          <span class="article-author"><a class="article-author--link" href="#">John Appleseed</a></span>
+          <span class="article-pubdate">on&nbsp;<time datetime="2014-02-10T12:10:48-05:00">February 10, 2014</time></span>
+          <div class="article-tags">
+            <span class="article-tags-item">
+              <a href="#" class="article-tags-link">#tag1</a>
+            </span>
+            <span class="article-tags-item">
+              <a href="#" class="article-tags-link">#tag2</a>
+            </span>
+            <span class="article-tags-item">
+              <a href="#" class="article-tags-link">#tag3</a>
+            </span>
+          </div>
+          <div class="article-summary">
+            <span class="article-readingTime">3 min read</span>
+          </div>
+          <p>Donec nec leo fringilla, pulvinar eros sit amet, scelerisque enim. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec fringilla a quam sit amet iaculis. Nullam a nisl sit amet arcu posuere iaculis non a tortor. Fusce non nulla arcu. Vivamus pellentesque nulla sem, id faucibus magna aliquet eget. Ut elit turpis, tincidunt quis ligula sit amet, lobortis placerat odio. Cras a sapien aliquet, ultricies sem ornare, varius felis.</p>
+          <p>Duis rhoncus bibendum ultricies. Donec vestibulum ornare felis sit amet tincidunt. Suspendisse potenti. Donec sit amet dolor diam. Fusce luctus fermentum tellus non consectetur. Curabitur nec tellus odio. Etiam vitae nibh molestie, semper ante ac, interdum est. Nullam leo turpis, vulputate sed massa quis, elementum euismod nisi. Sed quis tellus quis velit vehicula consectetur non at nibh. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse suscipit placerat turpis quis lobortis. Mauris nisi orci, faucibus a malesuada at, auctor vitae nulla. Nulla ac erat a tortor vulputate gravida. Quisque fringilla eu purus sit amet pulvinar. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+          <p>Vivamus condimentum elit eu libero dapibus bibendum. Sed commodo, metus et pellentesque mattis, nisl elit laoreet mi, nec scelerisque arcu neque id tortor. Cras vehicula nulla quis hendrerit mattis. Nullam laoreet dignissim quam vitae faucibus. Pellentesque dignissim sit amet odio ac tempus. Integer quis faucibus ipsum. Aliquam bibendum metus eu sagittis aliquet. Aenean sollicitudin euismod dolor vel euismod. Nullam blandit lacinia venenatis.</p>
+        </article><!-- end of article -->
+      </div><!-- end of pattern item -->
+      <div class="pattern-item">
+        <pre>
+          <code class="language-markup">
+            &lt;article class="article">
+              &lt;h1 class="article-title">Lorem ipsum dolor sit amet.&lt;/h1>
+              &lt;span class="article-author">&lt;a class="article-author--link" href="#">John Appleseed&lt;/a>&lt;/span>
+              &lt;span class="article-pubdate">&mdash;&nbsp;&lt;time datetime="2014-02-10T12:10:48-05:00">February 10, 2014&lt;/time>&lt;/span>
+              &lt;div class="article-tags">
                 &lt;span class="article-tags-item">
-                  &lt;a href="#" class="article-tags-link">#tag1&lt;/a>
+                  lt;a href="#" class="article-tags-link">#tag1&lt;/a>
                 &lt;/span>
                 &lt;span class="article-tags-item">
                   &lt;a href="#" class="article-tags-link">#tag2&lt;/a>
                 &lt;/span>
                 &lt;span class="article-tags-item">
                   &lt;a href="#" class="article-tags-link">#tag3&lt;/a>
-                &lt;/span>
+                  &lt;/span>
               &lt;/div>
-            &lt;/div>
-          &lt;/div>
-        &lt;/article>
-      </code>
-    </pre>
-  </div>
-</div><!-- end of pattern -->
+              &lt;div class="article-summary">
+                &lt;span class="article-readingTime">3 min read&lt;/span>
+              &lt;/div>
+              &lt;p>Donec nec leo fringilla, pulvinar eros sit amet, scelerisque enim. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec fringilla a quam sit amet iaculis. Nullam a nisl sit amet arcu posuere iaculis non a tortor. Fusce non nulla arcu. Vivamus pellentesque nulla sem, id faucibus magna aliquet eget. Ut elit turpis, tincidunt quis ligula sit amet, lobortis placerat odio. Cras a sapien aliquet, ultricies sem ornare, varius felis.&lt;/p>
+              &lt;p>Duis rhoncus bibendum ultricies. Donec vestibulum ornare felis sit amet tincidunt. Suspendisse potenti. Donec sit amet dolor diam. Fusce luctus fermentum tellus non consectetur. Curabitur nec tellus odio. Etiam vitae nibh molestie, semper ante ac, interdum est. Nullam leo turpis, vulputate sed massa quis, elementum euismod nisi. Sed quis tellus quis velit vehicula consectetur non at nibh. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse suscipit placerat turpis quis lobortis. Mauris nisi orci, faucibus a malesuada at, auctor vitae nulla. Nulla ac erat a tortor vulputate gravida. Quisque fringilla eu purus sit amet pulvinar. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.&lt;/p>
+              &lt;p>Vivamus condimentum elit eu libero dapibus bibendum. Sed commodo, metus et pellentesque mattis, nisl elit laoreet mi, nec scelerisque arcu neque id tortor. Cras vehicula nulla quis hendrerit mattis. Nullam laoreet dignissim quam vitae faucibus. Pellentesque dignissim sit amet odio ac tempus. Integer quis faucibus ipsum. Aliquam bibendum metus eu sagittis aliquet. Aenean sollicitudin euismod dolor vel euismod. Nullam blandit lacinia venenatis.&lt;/p>
+            &lt;/article>
+          </code>
+        </pre>
+      </div><!-- end of pattern item -->
+    </div><!-- end of pattern -->
 
-<div class="pattern">
-  <span class="section-title color-gray-warm-dark">Blog post</span>
-  <div class="pattern-item">
-    <article id="post-1" class="article">
-      <h1 class="article-title">Lorem ipsum dolor sit amet.</h1>
-      <span class="article-author"><a class="article-author--link" href="#">John Appleseed</a></span>
-      <span class="article-pubdate">on&nbsp;<time datetime="2014-02-10T12:10:48-05:00">February 10, 2014</time></span>
-      <div class="article-tags">
-        <span class="article-tags-item">
-          <a href="#" class="article-tags-link">#tag1</a>
-        </span>
-        <span class="article-tags-item">
-          <a href="#" class="article-tags-link">#tag2</a>
-        </span>
-        <span class="article-tags-item">
-          <a href="#" class="article-tags-link">#tag3</a>
-        </span>
-      </div>
-      <div class="article-summary">
-        <span class="article-readingTime">3 min read</span>
-      </div>
-      <p>Donec nec leo fringilla, pulvinar eros sit amet, scelerisque enim. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec fringilla a quam sit amet iaculis. Nullam a nisl sit amet arcu posuere iaculis non a tortor. Fusce non nulla arcu. Vivamus pellentesque nulla sem, id faucibus magna aliquet eget. Ut elit turpis, tincidunt quis ligula sit amet, lobortis placerat odio. Cras a sapien aliquet, ultricies sem ornare, varius felis.</p>
-      <p>Duis rhoncus bibendum ultricies. Donec vestibulum ornare felis sit amet tincidunt. Suspendisse potenti. Donec sit amet dolor diam. Fusce luctus fermentum tellus non consectetur. Curabitur nec tellus odio. Etiam vitae nibh molestie, semper ante ac, interdum est. Nullam leo turpis, vulputate sed massa quis, elementum euismod nisi. Sed quis tellus quis velit vehicula consectetur non at nibh. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse suscipit placerat turpis quis lobortis. Mauris nisi orci, faucibus a malesuada at, auctor vitae nulla. Nulla ac erat a tortor vulputate gravida. Quisque fringilla eu purus sit amet pulvinar. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-      <p>Vivamus condimentum elit eu libero dapibus bibendum. Sed commodo, metus et pellentesque mattis, nisl elit laoreet mi, nec scelerisque arcu neque id tortor. Cras vehicula nulla quis hendrerit mattis. Nullam laoreet dignissim quam vitae faucibus. Pellentesque dignissim sit amet odio ac tempus. Integer quis faucibus ipsum. Aliquam bibendum metus eu sagittis aliquet. Aenean sollicitudin euismod dolor vel euismod. Nullam blandit lacinia venenatis.</p>
-    </article><!-- end of article -->
-  </div><!-- end of pattern item -->
-  <div class="pattern-item">
-    <pre>
-      <code class="language-markup">
-        &lt;article id="post-1" class="article">
-          &lt;h1 class="article-title">Lorem ipsum dolor sit amet.&lt;/h1>
-          &lt;span class="article-author">&lt;a class="article-author--link" href="#">John Appleseed&lt;/a>&lt;/span>
-          &lt;span class="article-pubdate">&mdash;&nbsp;&lt;time datetime="2014-02-10T12:10:48-05:00">February 10, 2014&lt;/time>&lt;/span>
-          &lt;div class="article-tags">
-            &lt;span class="article-tags-item">
-              lt;a href="#" class="article-tags-link">#tag1&lt;/a>
-            &lt;/span>
-            &lt;span class="article-tags-item">
-              &lt;a href="#" class="article-tags-link">#tag2&lt;/a>
-            &lt;/span>
-            &lt;span class="article-tags-item">
-              &lt;a href="#" class="article-tags-link">#tag3</a>
-              &lt;/span>
-          &lt;/div>
-          &lt;div class="article-summary">
-            &lt;span class="article-readingTime">3 min read&lt;/span>
-          &lt;/div>
-          &lt;p>Donec nec leo fringilla, pulvinar eros sit amet, scelerisque enim. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec fringilla a quam sit amet iaculis. Nullam a nisl sit amet arcu posuere iaculis non a tortor. Fusce non nulla arcu. Vivamus pellentesque nulla sem, id faucibus magna aliquet eget. Ut elit turpis, tincidunt quis ligula sit amet, lobortis placerat odio. Cras a sapien aliquet, ultricies sem ornare, varius felis.&lt;/p>
-          &lt;p>Duis rhoncus bibendum ultricies. Donec vestibulum ornare felis sit amet tincidunt. Suspendisse potenti. Donec sit amet dolor diam. Fusce luctus fermentum tellus non consectetur. Curabitur nec tellus odio. Etiam vitae nibh molestie, semper ante ac, interdum est. Nullam leo turpis, vulputate sed massa quis, elementum euismod nisi. Sed quis tellus quis velit vehicula consectetur non at nibh. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse suscipit placerat turpis quis lobortis. Mauris nisi orci, faucibus a malesuada at, auctor vitae nulla. Nulla ac erat a tortor vulputate gravida. Quisque fringilla eu purus sit amet pulvinar. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.&lt;/p>
-          &lt;p>Vivamus condimentum elit eu libero dapibus bibendum. Sed commodo, metus et pellentesque mattis, nisl elit laoreet mi, nec scelerisque arcu neque id tortor. Cras vehicula nulla quis hendrerit mattis. Nullam laoreet dignissim quam vitae faucibus. Pellentesque dignissim sit amet odio ac tempus. Integer quis faucibus ipsum. Aliquam bibendum metus eu sagittis aliquet. Aenean sollicitudin euismod dolor vel euismod. Nullam blandit lacinia venenatis.&lt;/p>
-        &lt;/article>
-      </code>
-    </pre>
-  </div><!-- end of pattern item -->
-</div><!-- end of pattern -->
+    <div class="pattern">
+      <span class="section-title color-gray-warm-dark">Images</span>
+      <div class="pattern-item">
+        <div class="resp-images">
+          <img src="https://placehold.it/1920x600?text=Placeholder%20image" alt="placeholder" class="aligncenter size-full " style="width: 100%;"/>
+        </div><!-- end of about section -->
+      </div><!-- end of pattern item -->
+    </div><!-- end of pattern -->
 
-<div class="pattern">
-  <span class="section-title color-gray-warm-dark">About</span>
-  <div class="pattern-item">
-    <div class="about about-box">
-      <h2 class="about-title">About the Author</h2>
-      <div class="about-author">
-        <div class="about-author-bio">
-          <a class="about-author-avatar" href="#"><img
-            src="https://placehold.it/80x80"
-            width="80" height="80" alt="user avatar"></a>
-          <p><span class="about-author-name"><a href="#" class="primary-link">John Appleseed</a></span>
-            <br><small class="about-author-description">
-              bla bla bla
-            </small>
-          </p>
-          <ul class="social">
-            <li class="social-item"><a href="#" class="social-twitter primary-link">@john</a></li>
-            <li class="social-item"><a href="#" class="social-linkedin primary-link">john</a></li>
-            <li class="social-item"><a href="#" class="social-github primary-link">@john</a></li>
+    <div class="pattern">
+      <span class="section-title color-gray-warm-dark">Pagination</span>
+      <div class="pattern-item">
+        <div class="pagination">
+          <ul class="page-numbers">
+            <li><span class="page-numbers current">1</span></li>
+            <li><a class="page-numbers primary-link" href="#">2</a></li>
+            <li><a class="page-numbers primary-link" href="#">3</a></li>
+            <li><a class="page-numbers primary-link" href="#">4</a></li>
+            <li><a class="page-numbers primary-link" href="#">5</a></li>
+            <li><a class="page-numbers primary-link" href="#">6</a></li>
+            <li><a class="page-numbers primary-link" href="#">7</a></li>
+            <li><a class="next page-numbers primary-link" href="#">Next »</a></li>
           </ul>
-        </div><!-- end of author bio -->
-      </div><!-- end of about author -->
-    </div><!-- end of about section -->
-  </div><!-- end of pattern item -->
-  <div class="pattern-item">
-    <pre>
-      <code class="language-markup">
-        &lt;div class="about about-box">
-          &lt;h2 class="about-title">About the Author&lt;/h2>
-          &lt;div class="about-author">
-            &lt;div class="about-author-bio">
-              &lt;a class="about-author-avatar" href="#">&lt;img
-                src="https://placehold.it/80x80"
-                width="80" height="80" alt="user avatar">&lt;/a>
-                &lt;p>&lt;span class="about-author-name">&lt;a href="#" class="primary-link">John Appleseed&lt;/a>&lt;/span>
-                  &lt;br>&lt;small class="about-author-description">
-                    bla bla bla
-                  &lt;/small>
-                &lt;/p>
-                &lt;ul class="social">
-                  &lt;li class="social-item">&lt;a href="#" class="social-twitter primary-link">@john&lt;/a>&lt;/li>
-                  &lt;li class="social-item">&lt;a href="#" class="social-linkedin primary-link">john&lt;/a>&lt;/li>
-                  &lt;li class="social-item">&lt;a href="#" class="social-github primary-link">@john&lt;/a>&lt;/li>
-                  &lt;li class="social-item">&lt;a href="#" class="social-gplus primary-link">+john&lt;/a>&lt;/li>
-                &lt;/ul>
+        </div><!-- end of pagination -->
+      </div><!-- end of pattern item -->
+
+      <div class="pattern-item">
+        <pre>
+          <code class="language-markup">
+            &lt;div class="pagination">
+              &lt;ul class="page-numbers">
+                &lt;li>&lt;span class="page-numbers current">1&lt;/span>&lt;/li>
+                &lt;li>&lt;a class="page-numbers primary-link" href="#">2&lt;/a>&lt;/li>
+                &lt;li>&lt;a class="page-numbers primary-link" href="#">3&lt;/a>&lt;/li>
+                &lt;li>&lt;a class="page-numbers primary-link" href="#">4&lt;/a>&lt;/li>
+                &lt;li>&lt;a class="page-numbers primary-link" href="#">5&lt;/a>&lt;/li>
+                &lt;li>&lt;a class="page-numbers primary-link" href="#">6&lt;/a>&lt;/li>
+                &lt;li>&lt;a class="page-numbers primary-link" href="#">7&lt;/a>&lt;/li>
+                &lt;li>&lt;a class="next page-numbers primary-link" href="#">Next »&lt;/a>&lt;/li>
+              &lt;/ul>
+            &lt;/div>
+          </code>
+        </pre>
+      </div><!-- end of pattern item -->
+    </div><!-- end of pattern -->
+
+    <div class="pattern">
+      <span class="section-title color-gray-warm-dark">Footer</span>
+      <div class="pattern-item">
+        <div class="footer">
+          <div class="grid-container">
+            <div class="row clearfix">
+              <div class="column third">
+                <h3 class="black">Latest posts</h3>
+                <ul>
+                  <li><a href="#" class="footer-link">Your cells react to ba...</a></li>
+                  <li><a href="#" class="footer-link">Hello world!</a></li>
+                  <li><a href="#" class="footer-link">You think water moves ...</a></li>
+                  <li><a href="#" class="footer-link">That show's called a p...</a></li>
+                  <li><a href="#" class="footer-link">Your bones don't break</a></li>
+                  <li><a href="#" class="footer-link">My money's in that off...</a></li>
+                  <li><a href="#" class="footer-link">Now that we know who y...</a></li>
+                </ul>
+              </div><!-- end of column -->
+              <div class="column third">
+                <h3 class="black">Menu</h3>
+                <ul>
+                  <li><a href="#" class="footer-link">Link 1</a></li>
+                  <li><a href="#" class="footer-link">Link 2</a></li>
+                  <li><a href="#" class="footer-link">Link 3</a></li>
+                  <li><a href="#" class="footer-link">Link 3</a></li>
+                </ul>
+              </div><!-- end of column -->
+              <div class="column third">
+                <h3 class="black">Categories</h3>
+                <ul>
+                 <li><a href="#" class="footer-link">Category_1 (7)</a></li>
+                 <li><a href="#" class="footer-link">Category_2 (2)</a></li>
+                 <li><a href="#" class="footer-link">Category_3 (4)</a></li>
+                 <li><a href="#" class="footer-link">Category_4 (4)</a></li>
+               </ul>
+             </div><!-- end of column -->
+           </div><!-- end of row -->
+         </div><!-- end of grid-container -->
+         <div class="footer-disclaimer">
+          Copyright &copy; {{ site.name }} 2016 - All this site's content under a <a rel="license" class="footer-disclaimer-link" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+         </div><!-- end of footer disclaimer -->
+        </div><!-- end of footer -->
+      </div><!-- end of pattern item -->
+
+      <div class="pattern-item">
+        <pre>
+          <code class="language-markup">
+            &lt;div class="footer">
+              &lt;div class="grid-container">
+                &lt;div class="row clearfix">
+                  &lt;div class="column third">
+                    &lt;h3 class="black">Latest posts&lt;/h3>
+                    &lt;ul>
+                      &lt;li>&lt;a href="#" class="footer-link">Your cells react to ba...&lt;/a>&lt;/li>
+                      &lt;li>&lt;a href="#" class="footer-link">Hello world!&lt;/a>&lt;/li>
+                      &lt;li>&lt;a href="#" class="footer-link">You think water moves ...&lt;/a>&lt;/li>
+                      &lt;li>&lt;a href="#" class="footer-link">That show's called a p...&lt;/a>&lt;/li>
+                      &lt;li>&lt;a href="#" class="footer-link">Your bones don't break&lt;/a>&lt;/li>
+                      &lt;li>&lt;a href="#" class="footer-link">My money's in that off...&lt;/a>&lt;/li>
+                      &lt;li>&lt;a href="#" class="footer-link">Now that we know who y...&lt;/a>&lt;/li>
+                    &lt;/ul>
+                  &lt;/div>
+                  &lt;div class="column third">
+                    &lt;h3 class="black">Menu&lt;/h3>
+                    &lt;ul>
+                      &lt;li>&lt;a href="#" class="footer-link">Link 1&lt;/a>&lt;/li>
+                      &lt;li>&lt;a href="#" class="footer-link">Link 2&lt;/a>&lt;/li>
+                      &lt;li>&lt;a href="#" class="footer-link">Link 3&lt;/a>&lt;/li>
+                      &lt;li>&lt;a href="#" class="footer-link">Link 3&lt;/a>&lt;/li>
+                    &lt;/ul>
+                  &lt;/div>
+                  &lt;div class="column third">
+                    &lt;h3 class="black">Categories&lt;/h3>
+                    &lt;ul>
+                     &lt;li>&lt;a href="#" class="footer-link">Category_1 (7)&lt;/a>&lt;/li>
+                     &lt;li>&lt;a href="#" class="footer-link">Category_2 (2)&lt;/a>&lt;/li>
+                     &lt;li>&lt;a href="#" class="footer-link">Category_3 (4)&lt;/a>&lt;/li>
+                     &lt;li>&lt;a href="#" class="footer-link">Category_4 (4)&lt;/a>&lt;/li>
+                   &lt;/ul>
+                 &lt;/div>
+               &lt;/div>
+             &lt;/div>
+             &lt;div class="footer-disclaimer">
+              Copyright &copy; demain·il·pleut 2018 - All this site's content under a &lt;a rel="license" class="footer-disclaimer-link" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License&lt;/a>.
+            &lt;/div>
+            &lt;/div>
+          </code>
+        </pre>
+      </div><!-- end of pattern item -->
+    </div><!-- end of pattern -->
+
+    <div class="pattern">
+      <span class="section-title color-gray-warm-dark">Code</span>
+      <div class="pattern-item">
+        <pre>
+          <code class="language-javascript">
+            var foo = "bar", baz = 5;
+          </code>
+        </pre>
+      </div><!-- end of pattern item -->
+      <div class="pattern-item">
+        <pre>
+          <code class="language-markup">
+            &lt;pre>
+              &lt;code class="language-javascript">
+                var foo = "bar", baz = 5;
+              &lt;/code>
+            &lt;/pre>
+          </code>
+        </pre>
+      </div><!-- end of pattern item -->
+    </div><!-- end of pattern -->
+
+    <div class="pattern">
+      <span class="section-title color-gray-warm-dark">Alerts</span>
+      <div class="pattern-item">
+        <div>
+          <h3>Info</h3>
+          <div class="alert alert--info">
+            <strong>Hello there!</strong> I'm a simple info panel.
+          </div>
+        </div>
+        <div>
+          <h3>Warning</h3>
+          <div class="alert alert--warning">
+            <strong>Be careful!!</strong> This advice needs your attention.
+          </div>
+        </div>
+        <div>
+          <h3>Danger</h3>
+          <div class="alert alert--danger">
+            <strong>Stop righ there!!!</strong> If you don't look this you're probably unleashing some kind of kraken.
+          </div>
+        </div>
+      </div><!-- end of pattern item -->
+
+      <div class="pattern-item">
+        <pre>
+          <code class="language-markup">
+            &lt;div>
+              &lt;h3>Info&lt;/h3>
+              &lt;div class="alert alert--info">
+                &lt;strong>Hello there!&lt;/strong> I'm a simple info panel.
               &lt;/div>
             &lt;/div>
-        &lt;/div>
-      </code>
-    </pre>
-  </div><!-- end of pattern item -->
-</div><!-- end of pattern -->
-
-<div class="pattern">
-  <span class="section-title color-gray-warm-dark">Images</span>
-  <div class="pattern-item">
-    <div class="resp-images">
-      <img src="https://placehold.it/1920x600?text=Placeholder%20image" alt="placeholder" class="aligncenter size-full " style="width: 100%;"/>
-    </div><!-- end of about section -->
-  </div><!-- end of pattern item -->
-</div><!-- end of pattern -->
-
-<div class="pattern">
-  <span class="section-title color-gray-warm-dark">Pagination</span>
-  <div class="pattern-item">
-   <div class="pagination">
-    <ul class="page-numbers">
-      <li><span class="page-numbers current">1</span></li>
-      <li><a class="page-numbers primary-link" href="#">2</a></li>
-      <li><a class="page-numbers primary-link" href="#">3</a></li>
-      <li><a class="page-numbers primary-link" href="#">4</a></li>
-      <li><a class="page-numbers primary-link" href="#">5</a></li>
-      <li><a class="page-numbers primary-link" href="#">6</a></li>
-      <li><a class="page-numbers primary-link" href="#">7</a></li>
-      <li><a class="next page-numbers primary-link" href="#">Next »</a></li>
-    </ul>
-  </div><!-- end of pagination -->
-</div><!-- end of pattern item -->
-<div class="pattern-item">
-    <pre>
-      <code class="language-markup">
-        &lt;div class="pagination">
-          &lt;ul class="page-numbers">
-            &lt;li>&lt;span class="page-numbers current">1&lt;/span>&lt;/li>
-            &lt;li>&lt;a class="page-numbers primary-link" href="#">2&lt;/a>&lt;/li>
-            &lt;li>&lt;a class="page-numbers primary-link" href="#">3&lt;/a>&lt;/li>
-            &lt;li>&lt;a class="page-numbers primary-link" href="#">4&lt;/a>&lt;/li>
-            &lt;li>&lt;a class="page-numbers primary-link" href="#">5&lt;/a>&lt;/li>
-            &lt;li>&lt;a class="page-numbers primary-link" href="#">6&lt;/a>&lt;/li>
-            &lt;li>&lt;a class="page-numbers primary-link" href="#">7&lt;/a>&lt;/li>
-            &lt;li>&lt;a class="next page-numbers primary-link" href="#">Next »&lt;/a>&lt;/li>
-          &lt;/ul>
-        &lt;/div>
-      </code>
-    </pre>
-  </div><!-- end of pattern item -->
-</div><!-- end of pattern -->
-
-<div class="pattern">
-  <span class="section-title color-gray-warm-dark">Footer</span>
-  <div class="pattern-item">
-    <div class="footer">
-      <div class="grid-container">
-        <div class="row clearfix">
-          <div class="column third">
-            <h3 class="black">Latest posts</h3>
-            <ul>
-              <li><a href="#" class="footer-link">Your cells react to ba...</a></li>
-              <li><a href="#" class="footer-link">Hello world!</a></li>
-              <li><a href="#" class="footer-link">You think water moves ...</a></li>
-              <li><a href="#" class="footer-link">That show's called a p...</a></li>
-              <li><a href="#" class="footer-link">Your bones don't break</a></li>
-              <li><a href="#" class="footer-link">My money's in that off...</a></li>
-              <li><a href="#" class="footer-link">Now that we know who y...</a></li>
-            </ul>
-          </div><!-- end of column -->
-          <div class="column third">
-            <h3 class="black">Menu</h3>
-            <ul>
-              <li><a href="#" class="footer-link">Link 1</a></li>
-              <li><a href="#" class="footer-link">Link 2</a></li>
-              <li><a href="#" class="footer-link">Link 3</a></li>
-              <li><a href="#" class="footer-link">Link 3</a></li>
-            </ul>
-          </div><!-- end of column -->
-          <div class="column third">
-            <h3 class="black">Categories</h3>
-            <ul>
-             <li><a href="#" class="footer-link">Category_1 (7)</a></li>
-             <li><a href="#" class="footer-link">Category_2 (2)</a></li>
-             <li><a href="#" class="footer-link">Category_3 (4)</a></li>
-             <li><a href="#" class="footer-link">Category_4 (4)</a></li>
-           </ul>
-         </div><!-- end of column -->
-       </div><!-- end of row -->
-     </div><!-- end of grid-container -->
-     <div class="footer-disclaimer">
-      Copyright &copy; {{ site.name }} 2016 - All this site's content under a <a rel="license" class="footer-disclaimer-link" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
-    </div>
-  </div><!-- end of footer -->
-</div><!-- end of pattern item -->
-<div class="pattern-item">
-    <pre>
-      <code class="language-markup">
-        &lt;div class="footer">
-          &lt;div class="grid-container">
-            &lt;div class="row clearfix">
-              &lt;div class="column third">
-                &lt;h3 class="black">Latest posts&lt;/h3>
-                &lt;ul>
-                  &lt;li>&lt;a href="#" class="footer-link">Your cells react to ba...&lt;/a>&lt;/li>
-                  &lt;li>&lt;a href="#" class="footer-link">Hello world!&lt;/a>&lt;/li>
-                  &lt;li>&lt;a href="#" class="footer-link">You think water moves ...&lt;/a>&lt;/li>
-                  &lt;li>&lt;a href="#" class="footer-link">That show's called a p...&lt;/a>&lt;/li>
-                  &lt;li>&lt;a href="#" class="footer-link">Your bones don't break&lt;/a>&lt;/li>
-                  &lt;li>&lt;a href="#" class="footer-link">My money's in that off...&lt;/a>&lt;/li>
-                  &lt;li>&lt;a href="#" class="footer-link">Now that we know who y...&lt;/a>&lt;/li>
-                &lt;/ul>
+            &lt;div>
+              &lt;h3>Warning&lt;/h3>
+              &lt;div class="alert alert--warning">
+                &lt;strong>Be careful!!&lt;/strong> This advice needs your attention.
               &lt;/div>
-              &lt;div class="column third">
-                &lt;h3 class="black">Menu&lt;/h3>
-                &lt;ul>
-                  &lt;li>&lt;a href="#" class="footer-link">Link 1&lt;/a>&lt;/li>
-                  &lt;li>&lt;a href="#" class="footer-link">Link 2&lt;/a>&lt;/li>
-                  &lt;li>&lt;a href="#" class="footer-link">Link 3&lt;/a>&lt;/li>
-                  &lt;li>&lt;a href="#" class="footer-link">Link 3&lt;/a>&lt;/li>
-                &lt;/ul>
+            &lt;/div>
+            &lt;div>
+              &lt;h3>Danger&lt;/h3>
+              &lt;div class="alert alert--danger">
+                &lt;strong>Stop righ there!!!&lt;/strong> If you don't look this you're probably unleashing some kind of kraken.
               &lt;/div>
-              &lt;div class="column third">
-                &lt;h3 class="black">Categories&lt;/h3>
-                &lt;ul>
-                 &lt;li>&lt;a href="#" class="footer-link">Category_1 (7)&lt;/a>&lt;/li>
-                 &lt;li>&lt;a href="#" class="footer-link">Category_2 (2)&lt;/a>&lt;/li>
-                 &lt;li>&lt;a href="#" class="footer-link">Category_3 (4)&lt;/a>&lt;/li>
-                 &lt;li>&lt;a href="#" class="footer-link">Category_4 (4)&lt;/a>&lt;/li>
-               &lt;/ul>
-             &lt;/div>
-           &lt;/div>
-         &lt;/div>
-         &lt;div class="footer-disclaimer">
-          Copyright &copy; demain·il·pleut 2018 - All this site's content under a &lt;a rel="license" class="footer-disclaimer-link" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License&lt;/a>.
-        &lt;/div>
-        &lt;/div>
-      </code>
-    </pre>
-  </div><!-- end of pattern item -->
-</div><!-- end of pattern -->
+            &lt;/div>
+          </code>
+        </pre>
+      </div><!-- end of pattern item -->
+    </div><!-- end of pattern -->
 
-<div class="pattern">
-  <span class="section-title color-gray-warm-dark">Code</span>
-  <div class="pattern-item">
-    <pre>
-      <code class="language-javascript">
-        var foo = "bar", baz = 5;
-      </code>
-    </pre>
-  </div><!-- end of pattern item -->
-  <div class="pattern-item">
-    <pre>
-      <code class="language-markup">
-        &lt;pre>
-          &lt;code class="language-javascript">
-            var foo = "bar", baz = 5;
-          &lt;/code>
-        &lt;/pre>
-      </code>
-    </pre>
-  </div><!-- end of pattern item -->
-</div><!-- end of pattern -->
+    <div class="pattern">
+      <span class="section-title color-gray-warm-dark">Buttons</span>
+      <div class="pattern-item">
+        <div class="inline">
+          <button class="btn bg-blue white" name="Primary button"
+            type="button">Primary</button>
+        </div>
+        <div class="inline">
+          <button class="btn btn--small bg-blue white" name="Small primary button"
+            type="button">Primary small</button>
+        </div>
+      </div><!-- end of pattern item -->
+  
+      <div class="pattern-item">
+        <pre>
+          <code class="language-markup">
+            &lt;div class="inline">
+              &lt;button class="btn bg-blue white" name="Primary button"
+              type="button">Primary&lt;/button>
+            &lt;/div>
+            &lt;div class="inline">
+              &lt;button class="btn btn--small bg-blue white" name="Small primary button"
+              type="button">Primary small&lt;/button>
+            &lt;/div>
+          </code>
+        </pre>
+      </div><!-- end of pattern item -->
+    </div><!-- end of pattern -->
 
-<div class="pattern">
-  <span class="section-title color-gray-warm-dark">Alerts</span>
-  <div class="pattern-item">
-    <div>
-      <h3>Info</h3>
-      <div class="alert alert--info">
-        <strong>Hello there!</strong> I'm a simple info panel.
-      </div>
-    </div>
-    <div>
-      <h3>Warning</h3>
-      <div class="alert alert--warning">
-        <strong>Be careful!!</strong> This advice needs your attention.
-      </div>
-    </div>
-    <div>
-      <h3>Danger</h3>
-      <div class="alert alert--danger">
-        <strong>Stop righ there!!!</strong> If you don't look this you're probably unleashing some kind of kraken.
-      </div>
-    </div>
-  </div><!-- end of pattern item -->
-  <div class="pattern-item">
-    <pre>
-      <code class="language-markup">
-        &lt;div>
-          &lt;h3>Info&lt;/h3>
-          &lt;div class="alert alert--info">
-            &lt;strong>Hello there!&lt;/strong> I'm a simple info panel.
-          &lt;/div>
-        &lt;/div>
-        &lt;div>
-          &lt;h3>Warning&lt;/h3>
-          &lt;div class="alert alert--warning">
-            &lt;strong>Be careful!!&lt;/strong> This advice needs your attention.
-          &lt;/div>
-        &lt;/div>
-        &lt;div>
-          &lt;h3>Danger&lt;/h3>
-          &lt;div class="alert alert--danger">
-            &lt;strong>Stop righ there!!!&lt;/strong> If you don't look this you're probably unleashing some kind of kraken.
-          &lt;/div>
-        &lt;/div>
-      </code>
-    </pre>
-  </div><!-- end of pattern item -->
-</div><!-- end of pattern -->
-
-<div class="pattern">
-  <span class="section-title color-gray-warm-dark">Buttons</span>
-  <div class="pattern-item">
-    <div class="inline">
-      <button class="btn bg-blue white" name="Primary button"
-        type="button">Primary</button>
-    </div>
-    <div class="inline">
-      <button class="btn btn--small bg-blue white" name="Small primary button"
-        type="button">Primary small</button>
-    </div>
-  </div><!-- end of pattern item -->
-  <div class="pattern-item">
-    <pre>
-      <code class="language-markup">
-        &lt;div class="inline">
-          &lt;button class="btn bg-blue white" name="Primary button"
-          type="button">Primary&lt;/button>
-        &lt;/div>
-        &lt;div class="inline">
-          &lt;button class="btn btn--small bg-blue white" name="Small primary button"
-          type="button">Primary small&lt;/button>
-        &lt;/div>
-      </code>
-    </pre>
-  </div><!-- end of pattern item -->
-</div><!-- end of pattern -->
-
-</div><!-- end of patterns -->
-
-</div><!-- end of article -->
+  </div><!-- end of patterns -->
+</div><!-- end of page -->
