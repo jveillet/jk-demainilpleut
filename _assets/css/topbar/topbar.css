@@ -342,10 +342,6 @@ Description: Topbar styles
     margin: 1em .25em;
   }
 
-  .topbar-navigation-item {
-    font-size: .9em;
-  }
-
   .topbar-navigation-item,
   .topbar-navigation-item:visited {
     color: #4d4f56;
