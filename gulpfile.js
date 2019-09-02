@@ -21,7 +21,7 @@ gulp.task('build:css', function() {
   return gulp.src(['_assets/css/**/*.css'])
         .pipe(sourcemaps.init())
         .pipe(cssnano())
-        .pipe( postcss([ autoprefixer({ browsers: ['last 4 versions'] }) ]) )
+        .pipe( postcss([ autoprefixer() ]) )
         .pipe(concat({path: 'bundle.min.css', cwd: ''}))
         .pipe(rev())
         .pipe(sourcemaps.write('.'))

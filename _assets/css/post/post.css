@@ -324,6 +324,17 @@ h2 .article-title:visited {
     margin-left: 3em;
   }
 
+  .article-tags-link:link,
+  .article-tags-link:visited {
+    background-color: #f1f1f1;
+    border-radius: 5%;
+    color: #494440 !important;
+    display: inline-block;
+    margin-top: 0;
+    padding: .5em;
+    text-decoration: none !important;
+  }
+
   .article-wrapper {
     margin: 0 auto;
   }
