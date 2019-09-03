@@ -243,18 +243,12 @@ h2 .article-title:visited {
   text-align: center;
 }
 
-.top {
-  color: #0071bc !important;
-  color: rgba(0, 113, 188, .5) !important;
-  font-size: 1em;
-  transition: color 500ms, transform 500ms;
-}
-
+.top:link,
+.top:visited,
 .top:hover,
 .top:active,
 .top:focus {
-  color: #0071bc !important;
-  color: rgba(0, 113, 188, 1) !important;
+  color: #0071bc;
 }
 
 @media all and (max-width: 21em) {
