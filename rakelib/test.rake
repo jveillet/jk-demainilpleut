@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'html-proofer'
+require 'html-proofer' if ENV['RACK_ENV'] == 'test'
 
 namespace :test do
   desc 'Test the website'
