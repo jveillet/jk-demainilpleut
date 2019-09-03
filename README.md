@@ -115,3 +115,22 @@ Or with Docker:
 ```bash
 $ docker-compose run --rm web bin/cibuild.sh
 ```
+## Contributing
+
+## To the code
+This project only accepts Pull Requests that references an issue.
+
+1. Fork it ( http://github.com/jveillet/jk-demainilpleut/fork )
+2. Create your feature branch (git checkout -b my-new-feature)
+3. Run the specs and our linter (bin/cibuild)
+4. Commit your changes (git commit -am 'Add some feature')
+5. Push to the branch (git push origin my-new-feature)
+6. Create new Pull Request
+
+## To the articles
+1. Fork it ( http://github.com/jveillet/jk-demainilpleut/fork )
+2. Create your feature branch for the new page (git checkout -b page/my-post-title)
+3. Create a post with the help of the command line: `bundle exec jekyll post "My post title"`, or a draft: `bundle exec jekyll draft "My post title"`
+4. When you are ready, publish the post or draft: `bundle exec jekyll publish _drafts/my-post-title.md`. You can specify a date by using the `--date` argument.
+5. Push to the branch (git push origin page/my-post-title)
+6. Create new Pull Request

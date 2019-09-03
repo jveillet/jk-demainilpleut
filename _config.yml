@@ -81,6 +81,28 @@ jekyll-archives:
     year: /archives/:year/
     month: /archives/:year/:month/
 
+# Jekyll compose configuration
+jekyll_compose:
+  draft_default_front_matter:
+    excerpt_separator: <!--readmore-->
+    layout: post
+    title: 'Title goes here'
+    published_at:
+    categories: []
+    permalink: /:title/
+    author:
+    summary: ''
+  post_default_front_matter:
+    excerpt_separator: <!--readmore-->
+    layout: post
+    title: 'Title goes here'
+    published_at:
+    categories: []
+    permalink: /:title/
+    author:
+    summary: ''
+    published: false
+
 defaults:
   -
     scope:
@@ -94,3 +116,4 @@ plugins:
   - jekyll-paginate
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-compose
