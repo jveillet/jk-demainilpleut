@@ -19,6 +19,7 @@ group :jekyll_plugins do
   gem 'jekyll-sitemap', '~> 1.3.1'
 end
 
-group :test do
+group :development, :test do
   gem 'html-proofer', '~> 3.11', '>= 3.11.1'
+  gem 'rspec', '~> 3.8'
 end
