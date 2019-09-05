@@ -221,3 +221,33 @@ a:active,
 a:hover {
   outline: 0;
 }
+
+.responsive-image {
+  display: block;
+  max-width: 100%;
+  border-radius: 2%;
+}
+
+@media (min-width: 30em) {
+
+  .responsive-image {
+    max-width: 31.25em;
+  }
+
+}
+
+@media (min-width: 50em) {
+
+  .responsive-image {
+    max-width: 46.875em;
+  }
+
+}
+
+@media (min-width: 70em) {
+
+  .responsive-image {
+    max-width: 62.5em;
+  }
+
+}

@@ -1,5 +1,8 @@
 ---
 layout: default
+image:
+ - src: placeholder.png
+   alt: 'Placeholder image'
 ---
 
 <div class= "page">
@@ -7,8 +10,6 @@ layout: default
   <div class="article-excerpt">This is the collection of UI components we are using on the blog,
     completed with code samples.
   </div>
-
-
 
   <div class="patterns">
 
@@ -23,7 +24,7 @@ layout: default
           <li><a class="primary-link" href="#topbar">TopBar</a></li>
           <li><a class="primary-link" href="#blog-summary">Blog Post Summary</a></li>
           <li><a class="primary-link" href="#blog-post">Blog Post</a></li>
-          <li><a class="primary-link" href="#images">Images</a></li>
+          <li><a class="primary-link" href="#images">Responsive Images</a></li>
           <li><a class="primary-link" href="#pagination">Pagination</a></li>
           <li><a class="primary-link" href="#footer">Footer</a></li>
           <li><a class="primary-link" href="#code">Code</a></li>
@@ -328,11 +329,28 @@ layout: default
     </div><!-- end of pattern -->
 
     <div class="pattern">
-      <span class="section-title color-gray-warm-dark" id="images">Images</span>
+      <span class="section-title color-gray-warm-dark" id="images">Responsive Images</span>
       <div class="pattern-item">
-        <div class="resp-images">
-          <img src="https://placehold.it/1920x600?text=Placeholder%20image" alt="placeholder" class="aligncenter size-full " style="width: 100%;"/>
-        </div><!-- end of about section -->
+        {% assign image =  page.image[0] %}
+        {% include srcset.html %}
+      </div><!-- end of pattern item -->
+
+      <button type="button" class="btn btn--small bg-blue white" data-a11y-toggle="target-10">
+          Display code »
+      </button>
+      <div class="pattern-item" id="target-10">
+        <pre>
+          <code class="language-liquid">
+             ---
+             image:
+               - src: test.jpg
+                 alt: 'Test'
+             ---
+
+             &#123;&#37; assign image =  page.image[0] &#37;&#125;
+             &#123;&#37; include srcset.html &#37;&#125;
+          </code>
+        </pre>
       </div><!-- end of pattern item -->
     </div><!-- end of pattern -->
 
