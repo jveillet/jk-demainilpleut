@@ -6,6 +6,14 @@ published_at: 2016-03-30T17:12:00+00:00
 categories: [Code, Wordpress]
 permalink: /:title/
 author: jveillet
+image:
+  - src: wp_docker_capture_1.png
+    alt: 'WordPress install page'
+  - src: wp_docker_capture_3.png
+    alt: 'WordPress admin interface'
+  - src: wp_docker_capture_4.png
+    alt: 'PHPMyAdmin interface'
+
 ---
 
 This is part II of an ongoing series about WordPress development with Docker. Part I was about installing Docker and preparing the environment. Our goal this time, is installing WordPress in a container, a database, and play a little bit with it.
@@ -102,15 +110,13 @@ $ docker-compose up
 
 As you can see in the screenshot, launching the browser with the url of the website, we are now greeted with the WordPress install step.
 
-<img src="{{ site.cdn }}/wp_docker_capture_1.png" alt="WordPress install page"
-     srcset="{{ site.cdn }}/large/wp_docker_capture_1.png 1024w, {{ site.cdn }}/wp_docker_capture_1.png 300w, {{ site.cdn }}/small/wp_docker_capture_1.png 768w"
-     sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px">
+{% assign image =  page.image[0] %}
+{% include srcset.html %}
 
 Configure the parameters that are asked, then login to the WordPress admin interface. And voila!
 
-<img src="{{ site.cdn }}/wp_docker_capture_3.png" alt="WordPress install page"
-     srcset="{{ site.cdn }}/large/wp_docker_capture_3.png 1024w, {{ site.cdn }}/wp_docker_capture_3.png 300w, {{ site.cdn }}/small/wp_docker_capture_3.png 768w"
-     sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px">
+{% assign image =  page.image[1] %}
+{% include srcset.html %}
 
 You can now configure everything like a regular WP installation, install themes, plugins, etc..
 
@@ -146,13 +152,12 @@ As you can see, we use the 8181 port to access the admin page of phpMyAdmin, and
 
 BOOOOM!!!
 
-<img src="{{ site.cdn }}/wp_docker_capture_4.png" alt="WordPress install page"
-     srcset="{{ site.cdn }}/large/wp_docker_capture_4.png 1024w, {{ site.cdn }}/wp_docker_capture_4.png 300w, {{ site.cdn }}/small/wp_docker_capture_4.png 768w"
-     sizes="(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px">
+{% assign image =  page.image[2] %}
+{% include srcset.html %}
 
 ### Renaming the Docker Compose file {#renaming}
 
-I get it, docker-compose.yml is a lame name, there are situations when you want to be able to launch different configurations. Let's create a different file, called "dev", with the content of the docker-compose.yml file.
+I get it, `docker-compose.yml` is a lame name, there are situations when you want to be able to launch different configurations. Let's create a different file, called "dev", with the content of the docker-compose.yml file.
 
 ```bash
 $ cp docker-compose.yml dev.yml
