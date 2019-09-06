@@ -34,7 +34,7 @@
     "gulp-rev": "^9.0.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
-    "postcss": "^7.0.17"
+    "postcss": "^7.0.18"
   },
   "devDependencies": {
     "eslint": "^6.3.0",
