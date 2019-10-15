@@ -39,7 +39,7 @@
   "devDependencies": {
     "eslint": "^6.5.1",
     "gulp-eslint": "^6.0.0",
-    "gulp-stylelint": "^9.0.0",
+    "gulp-stylelint": "^10.0.0",
     "stylelint": "^10.1.0"
   }
 }
