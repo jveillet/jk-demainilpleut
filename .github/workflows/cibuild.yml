@@ -1,0 +1,34 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js 12.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - name: npm install, build, and test
+      run: |
+        npm install
+        npm install --global gulp-cli
+        gulp lint
+    - name: Set up Ruby 2.6.x
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: 2.6.x
+    - name: Run Test Suite
+      run: |
+        sudo apt-get -yqq install libffi-dev libssl-dev libcurl4-gnutls-dev libxml2-dev libxslt1-dev
+        gem install bundler --no-document
+        bundle install
+        bin/cibuild.sh
+      env:
+        RACK_ENV: test
+        JEKYLL_ENV: test
+        NOKOGIRI_USE_SYSTEM_LIBRARIES: true
