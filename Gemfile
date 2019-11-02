@@ -21,5 +21,6 @@ end
 
 group :development, :test do
   gem 'html-proofer', '~> 3.13'
+  gem 'pkg-config', '~> 1.1'
   gem 'rspec', '~> 3.9'
 end
