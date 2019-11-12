@@ -9,7 +9,7 @@ gem 'jekyll', '~> 4.0'
 gem 'oj'
 gem 'puma', '~> 4.3.0'
 gem 'rack-jekyll', '~> 0.5.0'
-gem 'rake', '~> 13.0.0'
+gem 'rake', '~> 13.0.1'
 
 group :jekyll_plugins do
   gem 'jekyll-archives', '~> 2.2.1'
