@@ -20,7 +20,7 @@ group :jekyll_plugins do
 end
 
 group :development, :test do
-  gem 'html-proofer', '~> 3.13'
+  gem 'html-proofer', '~> 3.14'
   gem 'pkg-config', '~> 1.1'
   gem 'rspec', '~> 3.9'
 end
