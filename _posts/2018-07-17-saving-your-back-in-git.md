@@ -9,7 +9,8 @@ author: jveillet
 summary: 'Common situations with Git and how to resolve them'
 ---
 
-Here is a usefull collection of git commands that I keep coming back to, it saved me countless times when I was in tricky situations. I have finally decided to compile them here, I hope it can help you too!
+Here is a usefull collection of git commands that I keep coming back to, it saved me countless times when I was in tricky situations.
+I have finally decided to compile them here, I hope it can help you too!
 {: .intro}
 
 <!--readmore-->

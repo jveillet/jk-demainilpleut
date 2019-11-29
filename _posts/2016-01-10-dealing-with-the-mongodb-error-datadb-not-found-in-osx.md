@@ -24,7 +24,7 @@ $ mac:app jeremie$ mongod
 29 Data directory /data/db not found., terminating
 ```
 
-Basically, the output is pretty clear, you do not have the `data` directory, and its `db` subdirectory created in your root folder, which are essential to run the mongodb instance.
+The output is pretty clear, you do not have the `data` directory, and its `db` subdirectory created in your root folder, which are essential to run the mongodb instance.
 So let's go ahead and fix that, and create that directory.
 
 ```bash
@@ -48,7 +48,7 @@ $ sudo chmod 0755 /data/db
 $ sudo chown $USER /data/db
 ```
 
-Simply put, what it means on the first line is the owner have read, write, and execute rights, and others have only read and execute rights.
+What it means on the first line is the owner have read, write, and execute rights, and others have only read and execute rights.
 The second line changes the ownership of the directory from its current owner to the logged in user.
 
 Aaaaand, that's it! Next time you will fire the `mongod` command, you should see an output like this:

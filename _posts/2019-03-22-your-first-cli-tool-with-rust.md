@@ -20,7 +20,7 @@ It's a bit intimidating, but that's not what we will talk about here. Instead, w
 
 ## Why Rust?
 
-Ok, let me set things straight. I could have done CLI tools with any other language or framework. I could have picked C, Go, Ruby, whatever. Hell, I could just have used good old bash.
+Ok, let me set things straight. I could have done CLI tools with any other language or framework. I could have picked C, Go, Ruby, whatever. Hell, I could have used good old bash.
 
 I wanted to learn something new in 2018, Rust picked my curiosity and I had a need for building simple small tools to automate some process at work and for personal projects.
 
@@ -91,7 +91,7 @@ Running `target/debug/kt`
 Hello, world!
 ```
 
-Give yourself a pat in the back, you have just created and run your first Rust application! 🎉
+Give yourself a pat in the back, you have created and run your first Rust application! 🎉
 
 ## Parsing our first command line argument
 

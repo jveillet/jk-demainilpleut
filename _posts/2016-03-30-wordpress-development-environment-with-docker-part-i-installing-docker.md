@@ -55,13 +55,13 @@ $ docker run mysql
 [...]
 ```
 
-But, how is it going to know how to launch MySQL, you might say? Well, Docker has an "image hub", basically a repository with a lot of already configured images ready for you to use. So if the image doesn't exist on your system, it will "pull" it from the repository and install it before anything else. Of course you can build your own images, and even pushed them on the Docker repository, but it's a another story, for a different time.
+But, how is it going to know how to launch MySQL, you might say? Well, Docker has an "image hub", a repository with a lot of already configured images ready for you to use. So if the image doesn't exist on your system, it will "pull" it from the repository and install it before anything else. Of course you can build your own images, and even pushed them on the Docker repository, but it's a another story, for a different time.
 
 Once again, I encourage you to read through the [Docker Website](https://www.docker.com/), there are good tutorials and example.
 
 ## Create a docker machine (first install only) {#create}
 
-If this is your first install of Docker, and the first time ever you are using it, you have to create a Docker Machine, this is basically creating a VirtualBox image using the docker toolbox.
+If this is your first install of Docker, and the first time ever you are using it, you have to create a Docker Machine, which means creating a VirtualBox image using the docker toolbox.
 
 Fire up a terminal, because nearly everything will be done in the command line. To know if machines already exists you can invoke the docker-machine program.
 ```bash
@@ -101,7 +101,7 @@ NAME      ACTIVE   DRIVER       STATE     URL                         SWARM   DO
 default   *        virtualbox   Running   tcp://192.168.99.100:2376
 ```
 
-The Docker machine is now created, but we need to be able to talk to it, so just like the last line of the output says, we need to use the env parameter to connect to this machine.
+The Docker machine is now created, but we need to be able to talk to it, like the last line of the output says, we need to use the env parameter to connect to this machine.
 
 ## Connect to the Docker Machine {#connect}
 
@@ -129,12 +129,13 @@ CONTAINER ID    IMAGE    COMMAND    CREATED    STATUS    PORTS    NAMES
 The problem is, if you don't want to repeat this steps every time you start the Docker Machine, you can add the `eval "$(docker-machine env default)"` command into your `.bashrc` or your `.zshrc`, so that it will be launched every time you open a terminal window. Otherwise you are left with putting this command in your terminal before doing anything else with Docker, so go for the lazy way and put it in your bash profile file.
 
 <div class="alert alert--info">
-  <strong>Where is .bashrc, or .zshrc?</strong> Those files are located in your home folder, so if you <code>cd ~/</code> in your terminal, you should find them. If they do not exist, just do a <code>touch ~/.bashrc</code> or <code>touch ~/.zshrc</code> before editing them.
+  <strong>Where is .bashrc, or .zshrc?</strong> Those files are located in your home folder, so if you <code>cd ~/</code> in your terminal, you should find them. If they do not exist, do a <code>touch ~/.bashrc</code> or <code>touch ~/.zshrc</code> before editing them.
 </div>
 
 ## Start and stop machines {#start_stop}
 
-When you're done with whatever you were doing with your Docker environment, there is a command that permits to stop the machine (just like shutting down your computer), and, the opposite, a command to start the machine again.
+When you're done with whatever you were doing with your Docker environment, there is a command that permits to stop the machine (like shutting down your computer), and,
+the opposite, a command to start the machine again.
 
 ```bash
 $ docker-machine stop default

@@ -124,7 +124,8 @@ You can now configure everything like a regular WP installation, install themes,
 
 ### phpMyAdmin {#phpmyadmin}
 
-Being a command line ninja is pretty cool, but sometimes, one like to have an interface to navigate through the MySQL databases. Just like for MySQL, we need to add a container in the Compose file and link it to the database instance.
+Being a command line ninja is pretty cool, but sometimes, one like to have an interface to navigate through the MySQL databases. Like for MySQL,
+we need to add a container in the Compose file and link it to the database instance.
 
 ```bash
 wordpress:

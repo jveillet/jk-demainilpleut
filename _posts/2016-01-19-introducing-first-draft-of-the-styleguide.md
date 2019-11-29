@@ -8,7 +8,7 @@ permalink: /:title/
 author: jveillet
 ---
 
-A new section is up in the Menu: [The Styleduide]({{site.url}}/styleguide/)!
+A new section is up in the Menu: [The Styleduide]({{ 'styleguide' | absolute_url }})!
 
 ## A Styleguide to rule them all
 

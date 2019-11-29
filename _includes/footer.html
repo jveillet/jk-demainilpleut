@@ -6,7 +6,7 @@
       <h3 class="black">LATEST POSTS</h3>
       <ul>
         {% for post in site.posts limit:5 %}
-          <li><a href="{{ site.url }}{{ post.url }}" class="footer-link" title="{{ post.title }}">{{ post.title | truncate: 60, '...' }}</a></li>
+          <li><a href="{{ post.url | relative_url }}" class="footer-link" title="{{ post.title }}">{{ post.title | truncate: 60, '...' }}</a></li>
         {% endfor %}
       </ul>
     </div><!-- end of footer column -->
@@ -14,11 +14,11 @@
     <div class="footer-column">
       <h3 class="black">MENU</h3>
       <ul>
-        <li><a href="{{ site.url }}" class="footer-link">Articles</a></li>
-        <li><a href="{{ site.url }}/archives" class="footer-link">Archives</a></li>
-        <li><a href="{{ site.url }}/authors" class="footer-link">Authors</a></li>
-        <li><a href="{{ site.url }}/feed.xml" class="footer-link">RSS feed</a></li>
-        <li><a href="{{ site.url }}/styleguide" class="footer-link">Styleguide</a></li>
+        <li><a href="/" class="footer-link">Articles</a></li>
+        <li><a href="{% link archives/index.html %}" class="footer-link">Archives</a></li>
+        <li><a href="{% link authors/index.html %}" class="footer-link">Authors</a></li>
+        <li><a href="{% link feed.xml  %}" class="footer-link">RSS feed</a></li>
+        <li><a href="{% link styleguide/index.html %}" class="footer-link">Styleguide</a></li>
       </ul>
     </div><!-- end of footer column -->
 
@@ -26,8 +26,9 @@
       <h3 class="black">CATEGORIES</h3>
       <ul>
       {% for category in site.categories limit:8 %}
+        {% assign cat = category | first | downcase | replace: ' ', '-' %}
         <li>
-          <span class="footer-hastgag">#</span><a href="{{ site.url }}/archives/{{ category | first | downcase | replace: ' ', '-'  }}" class="footer-link">{{ category | first }}&nbsp;({{ category | last | size }})</a>
+          <span class="footer-hastgag">#</span><a href="{{ 'archives/' | append: cat | relative_url }}" class="footer-link">{{ category | first }}&nbsp;({{ category | last | size }})</a>
         </li>
       {% endfor %}
       </ul>

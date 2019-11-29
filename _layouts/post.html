@@ -19,7 +19,8 @@ layout: default
       </div>
       <div class="author-name-area">
         <div class="author-name-header">Author</div>
-        <a class="author-name article-author--link" href="/authors/{{ author.handle }}">{{ author.name }}</a>
+        {% assign author_url = 'authors/' | append: author.handle %}
+        <a class="author-name article-author--link" href="{{ author_url | relative_url }}">{{ author.name }}</a>
       </div>
       <div class="published">
         <div class="published-header">Published</div>
@@ -37,7 +38,8 @@ layout: default
     <div class="article-tags">
       {% for category in page.categories %}
         <span class="article-tags-item">
-          <a href="{{ site.url }}/archives/{{ category | downcase | replace: ' ', '-'  }}" class="article-tags-link">#{{ category }}</a>
+          {% assign cat = category | downcase | replace: ' ', '-' %}
+          <a href="{{ 'archives/' | append: cat | relative_url }}" class="article-tags-link">#{{ category }}</a>
         </span>
       {% endfor %}
     </div>

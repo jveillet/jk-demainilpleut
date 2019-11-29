@@ -28,7 +28,7 @@ on Heroku, and how to configure it to generate the static HTML files with each c
 
 One particular problem we were facing at work, was deploying documentation of our API on Heroku, without the need to host the generated files into our repository. This was
 leading us to a lot of manipulations and possibly errors, particularly when we wanted someone outside the dev team to write the documentation. What we were trying to
-achieve was to just commit the markdown page and be done with it.
+achieve was to commit the markdown page and be done with it.
 
 ## Set up Slate locally {#install}
 
@@ -53,10 +53,12 @@ The generated HTML files will be placed in a the `/docs` directory, based on wha
 
 ## Building the documentation on Heroku {#building}
 
-  Middleman is a static site generator, so we want to be able to generate the files as we deploy, without to have to commit the entire result in our repository.
-  The only way for Heroku to generate the files on deploy, is to use the `assets:precompile` asset pipeline, via a [Rake](https://github.com/ruby/rake) task. This was originally used for Rails app, but will come handy for our particular use.
+Middleman is a static site generator, so we want to be able to generate the files as we deploy, without to have to commit the entire result in our repository.
+The only way for Heroku to generate the files on deploy, is to use the `assets:precompile` asset pipeline, via a
+[Rake](https://github.com/ruby/rake) task. This was originally used for Rails app, but will come handy for our particular use.
 
 Create a `Rakefile` at the root of the project and add it the following.
+
 ```ruby
 require 'bundler/setup'
 
