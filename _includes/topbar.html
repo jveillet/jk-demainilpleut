@@ -1,21 +1,21 @@
 <div class="topbar">
   {% if jekyll.environment == 'production' %}
   <div class="topbar-logo">
-    <a href="{{ site.url }}" class="topbar-logo-url">{{site.name}}</a>
+    <a href="/" class="topbar-logo-url">{{site.name}}</a>
   </div><!-- end of topBar logo -->
   {% else %}
   <div class="topbar-logo-dev">
-    <a href="{{ site.url }}" class="topbar-logo-url">{{site.name}}</a>
+    <a href="/" class="topbar-logo-url">{{site.name}}</a>
   </div><!-- end of topBar logo -->
   {% endif %}
   <div class="topbar-menu">
     <button class="topbar-menu-btn topbar-menu-btn--small">Menu</button>
     <nav id="js-menu" role="navigation" class="topbar-navigation">
       <ul>
-        <li><a href="{{ site.url }}" class="page-home topbar-navigation-item">Articles</a></li>
-        <li><a href="{{ site.url }}/archives" class="page-archives topbar-navigation-item">Archives</a></li>
-        <li><a href="{{ site.url }}/authors" class="page-authors topbar-navigation-item">Authors</a></li>
-        <li><a href="{{ site.url }}/styleguide" class="page-styleguide topbar-navigation-item">Styleguide</a></li>
+        <li><a href="/" class="page-home topbar-navigation-item">Articles</a></li>
+        <li><a href="{% link archives/index.html %}" class="page-archives topbar-navigation-item">Archives</a></li>
+        <li><a href="{% link authors/index.html %}" class="page-authors topbar-navigation-item">Authors</a></li>
+        <li><a href="{% link styleguide/index.html %}" class="page-styleguide topbar-navigation-item">Styleguide</a></li>
       </ul>
       <button class="topbar-btn-close" name="Close menu" type="button">X</button>
     </nav><!-- end of topBarNavigation -->

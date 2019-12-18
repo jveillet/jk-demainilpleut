@@ -4,6 +4,7 @@
 set -e
 
 export NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+export LANG=en_US.UTF-8
 
 # Buil the static site first
 bundle exec jekyll build --config _config.yml

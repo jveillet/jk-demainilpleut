@@ -49,7 +49,7 @@ As you can see, you could have a whole bunch of branches of every name. Now, git
 $ git branch --merged
 ```
 
-Of course you can do the exact opposite and list the not merged ones.
+You can reverse the logic and do the exact opposite and list the not merged ones.
 
 ```bash
 $ git branch --no-merged

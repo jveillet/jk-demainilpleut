@@ -25,7 +25,7 @@ author: jveillet
     {% for post in site.posts %}
       {% if author.handle == post.author %}
         <li>
-          <a href="{{ site.url }}{{ post.url }}" class="primary-link">{{ post.title }}</a>
+          <a href="{{ post.url | relative_url }}" class="primary-link">{{ post.title }}</a>
         </li>
       {% endif %}
     {% endfor %}

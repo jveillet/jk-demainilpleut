@@ -117,7 +117,7 @@ drwxr-xr-x 1 jeremie.veillet Domain Users     0 Apr 15 13:51 wp-includes
 
 ## Adding your own theme {#theme}
 
-Now that we have full access to the WordPress installation, we can copy and paste our own theme into wp-content/theme, just like usual. For the sake of the demonstration, I will use [demain·il·pleut's](https://github.com/jveillet/wp-demainilpleut) theme, but you can use whatever theme you like, even modify the ones provided by WordPress like Twenty Sixteen or something.
+Now that we have full access to the WordPress installation, we can copy and paste our own theme into wp-content/theme, as usual. For the sake of the demonstration, I will use [demain·il·pleut's](https://github.com/jveillet/wp-demainilpleut) theme, but you can use whatever theme you like, even modify the ones provided by WordPress (e.g: Twenty Something).
 
 ```bash
 $ cd wordpress/wp-content/themes
@@ -132,7 +132,8 @@ Congrats, you are ready to develop in WordPress with Docker!
 
 ## Side note on volumes {#side}
 
-When defining the "volumes" section, putting the full path of your project can be error prone, but fortunately, we can use some environment variables in the Compose file to construct the path. Just like we do in a Terminal, we can use the $PWD variable to use the host current folder path.
+When defining the "volumes" section, putting the full path of your project can be error prone, but fortunately, we can use some environment
+variables in the Compose file to construct the path. As we do in a Terminal, we can use the `$PWD` variable to use the host current folder path.
 
 ```yaml
 [...]
@@ -143,7 +144,8 @@ When defining the "volumes" section, putting the full path of your project can b
 
 ## Wrapping up {#conclusion}
 
-We have learned how to install and configure Docker, and use WordPress and MySQL + phpMyAdmin in containers, and run everything with Docker Compose. In this chapter, we covered how to mount the WordPress installation from the container into a folder in the host machine, put a theme in it, as to modify it and see the results.
+We have learned how to install and configure Docker, and use WordPress and MySQL + phpMyAdmin in containers, and run everything with Docker Compose.
+In this chapter, we covered how to mount the WordPress installation from the container into a folder in the host machine, put a theme in it, as to modify it and see the results.
 
 **Other Parts in this series:**
 

@@ -8,7 +8,7 @@ layout: default
 
   <div class="archives-breadcrumb">
     <div class="breadcrumbs">
-      <div class="breadcrumb-item"><a href="{{ site.url }}/archives" class="primary-link breadcrumb-chevron">Archives</a></div>
+      <div class="breadcrumb-item"><a href="{{ 'archives/' | relative_url }}" class="primary-link breadcrumb-chevron">Archives</a></div>
       <div class="breadcrumb-item breadcrumb-active">{{ this_year }}</div>
     </div>
   </div>
@@ -24,7 +24,7 @@ layout: default
       <ul class="list-unordered">
         {% endif %}
 
-        <li><a href="{{ site.url }}{{ post.url }}" class="primary-link">{{ post.title }}</a></li>
+        <li><a href="{{ post.url | relative_url }}" class="primary-link">{{ post.title }}</a></li>
 
         {% if forloop.last %}
       </ul>
