@@ -19,7 +19,7 @@ ENV PATH $GEM_HOME/bin:$GEM_HOME/gems/bin:$PATH
 RUN mkdir -p $APP_HOME
 
 # Fetch the last version of Nodejs
-RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 
 # Install essentials softwares whith dev headers
 RUN apt-get clean \
