@@ -7,26 +7,26 @@ Description: Utility classes
 
 .quote {
   border-left: .375em solid #8ca755;
+  color: #494440;
   font-style: italic;
   font-weight: 400;
-  color: #494440;
   padding: .5em;
 }
 
 code {
-  font-family: Consolas, Monaco, "Andale Mono", monospace;
-  white-space: pre;
-  white-space: pre-wrap;
-  white-space: pre-line;
-  padding: .15625em .3125em;
-  color: #4e4e4e;
   background-color: #dce4ef;
+  color: #4e4e4e;
+  font-family: Consolas, Monaco, "Andale Mono", monospace;
+  padding: .15625em .3125em;
+  white-space: pre-line;
+  white-space: pre-wrap;
+  white-space: pre;
 }
 
 .section-title {
   display: block;
   font-weight: bold;
-  letter-spacing: .07em;
+  letter-spacing: .1em;
   margin-bottom: .75em;
   margin-top: .75em;
   text-transform: uppercase;
