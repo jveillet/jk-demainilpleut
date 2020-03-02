@@ -68,7 +68,7 @@ GEM
       mini_portile2 (~> 2.4.0)
     nokogumbo (2.0.2)
       nokogiri (~> 1.8, >= 1.8.4)
-    oj (3.10.2)
+    oj (3.10.3)
     parallel (1.19.1)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
