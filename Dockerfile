@@ -1,4 +1,4 @@
-FROM ruby:2.6.5
+FROM ruby:2.6.6
 
 # Environment variables
 # Defaults can be changed in the docker-compose file
