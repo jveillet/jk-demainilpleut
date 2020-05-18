@@ -8,26 +8,39 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     - name: Use Node.js 12.x
       uses: actions/setup-node@v1
       with:
         node-version: 12.x
+    - uses: actions/cache@v1
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-gems-
+    - uses: actions/cache@v1
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
     - name: npm install, build, and test
       run: |
         npm install
         npm install --global gulp-cli
         gulp lint
-    - name: Set up Ruby 2.6.x
+    - name: Set up Ruby 2.6
       uses: actions/setup-ruby@v1
       with:
-        ruby-version: 2.6.x
+        ruby-version: 2.6
     - name: Run Test Suite
       run: |
         sudo apt update
         sudo apt-get -yqq install patch zlib1g-dev liblzma-dev libffi-dev libssl-dev libcurl4-gnutls-dev libxslt-dev
         gem install bundler --no-document
-        bundle install
+        bundle config path vendor/bundle
+        bundle install --jobs 4 --retry 3
         bin/cibuild.sh
       env:
         RACK_ENV: test
