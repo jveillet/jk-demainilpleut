@@ -20,7 +20,7 @@ author: jveillet
   </div>
 
 <div class="archives">
-  <span class="section-title color-gray-warm-dark">Articles by {{ author.name }}</span>
+  <span class="section-title">Articles by {{ author.name }}</span>
   <ol class="list-unordered" start="1" type="1">
     {% for post in site.posts %}
       {% if author.handle == post.author %}

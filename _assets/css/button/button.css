@@ -22,21 +22,11 @@ Description: Buttons  styles
   text-decoration: none;
 }
 
-.btn::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
 .btn:hover,
 .btn:active,
 .btn:focus,
 .btn:visited {
   text-decoration: none;
-}
-
-.btn:active,
-.btn:focus {
-  outline: none;
 }
 
 .btn--small {

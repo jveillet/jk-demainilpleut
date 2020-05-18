@@ -5,7 +5,7 @@ Description: Footer section styles
 
 .footer {
   padding-top: 1rem;
-  background-color: #e4e2e0;
+  background-color: var(--footer-bg-color);
 }
 
 .footer-disclaimer {
@@ -16,7 +16,7 @@ Description: Footer section styles
 
 .footer-disclaimer-link,
 .footer-disclaimer-link:visited {
-  color: #0a0000;
+  color: var(--text-color);
   text-decoration: none;
   font-weight: 600;
 }
@@ -27,7 +27,7 @@ Description: Footer section styles
 
 .footer-link,
 .footer-link:visited {
-  color: #0a0000;
+  color: var(--text-color);
   text-decoration: none;
   font-weight: 400;
 }
@@ -37,7 +37,7 @@ Description: Footer section styles
 }
 
 .footer-hastgag {
-  color: #205493;
+  color: var(--primary-color-darker);
   font-weight: bold;
 }
 

@@ -12,7 +12,7 @@ Description: Styleguide specific  styles
 }
 
 .pattern-title {
-  color: #494440;
+  color: var(--grey-secondary);
   font-size: 1.5em;
 }
 
@@ -35,9 +35,11 @@ Description: Styleguide specific  styles
 
 .color-text {
   font-size: .8em;
-  font-weight: bold;
+  font-weight: 700;
   width: 100%;
-  margin-top: 40%;
+  margin-top: 60%;
+  color: #ffffff;
+  background-color: var(--black);
 }
 
 .inline {
@@ -51,4 +53,9 @@ Description: Styleguide specific  styles
 .inline button:last-child {
   margin-bottom: 0;
   margin-left: 0;
+}
+
+.btn-primary {
+  background-color: var(--primary-button-bg-color);
+  color: #ffffff;
 }

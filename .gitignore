@@ -58,6 +58,7 @@ npm-debug.log
 
 # IDE files
 /.idea/
+.vscode/
 
 # bash
 .bash_history

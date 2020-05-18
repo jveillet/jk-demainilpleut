@@ -3,20 +3,6 @@ Name: main.css
 Description: Main page containers  styles
 */
 
-.wrapper {
-  display: table;
-  height: 100%;
-  table-layout: fixed;
-  width: 100%;
-  background-color: #f1f1f1;
-}
-
-.main-container {
-  padding-left: 1em;
-  padding-right: 1em;
-  margin-bottom: 1em;
-}
-
 [aria-hidden = "true"],
 [data-a11y-toggle]:not([aria-controls]) {
   display: none;

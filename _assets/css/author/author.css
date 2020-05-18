@@ -44,11 +44,11 @@ Description: Author section styles
   margin-bottom: 1em;
   padding-bottom: 1em;
   width: 15em;
-  border-bottom: .06em solid #aeb0b5;
+  border-bottom: .06em solid var(--article-sep-color);
 }
 
 .members-articles-count {
-  color: #0071bc;
+  color: var(--primary-color);
   font-weight: 600;
 }
 
@@ -63,7 +63,6 @@ Description: Author section styles
 }
 
 .social-web {
-  background: url("/assets/images/icon-web.png") no-repeat left center;
   background: url("/assets/images/icon-web.svg") no-repeat left center,
     linear-gradient(transparent, transparent);
   background-size: auto 1.5em;
@@ -72,7 +71,6 @@ Description: Author section styles
 }
 
 .social-twitter {
-  background: url("/assets/images/twitter.png") no-repeat left center;
   background: url("/assets/images/twitter.svg") no-repeat left center,
     linear-gradient(transparent, transparent);
   background-size: auto 1.5em;
@@ -81,7 +79,6 @@ Description: Author section styles
 }
 
 .social-linkedin {
-  background: url("/assets/images/linkedin.png") no-repeat left center;
   background: url("/assets/images/linkedin.svg") no-repeat left center,
     linear-gradient(transparent, transparent);
   background-size: auto 1.5em;
@@ -90,7 +87,6 @@ Description: Author section styles
 }
 
 .social-github {
-  background: url("/assets/images/github.png") no-repeat left center;
   background: url("/assets/images/github.svg") no-repeat left center,
     linear-gradient(transparent, transparent);
   background-size: auto 1.5em;
@@ -99,7 +95,6 @@ Description: Author section styles
 }
 
 .social-gplus {
-  background: url("/assets/images/google_plus.png") no-repeat left center;
   background: url("/assets/images/google_plus.svg") no-repeat left center,
     linear-gradient(transparent, transparent);
   background-size: auto 1.5em;
@@ -108,7 +103,6 @@ Description: Author section styles
 }
 
 .social-facebook {
-  background: url("/assets/images/facebook.png") no-repeat left center;
   background: url("/assets/images/facebook.svg") no-repeat left center,
     linear-gradient(transparent, transparent);
   background-size: auto 1.5em;
@@ -117,7 +111,6 @@ Description: Author section styles
 }
 
 .social-gitlab {
-  background: url("/assets/images/gitlab.png") no-repeat left center;
   background: url("/assets/images/gitlab.svg") no-repeat left center,
     linear-gradient(transparent, transparent);
   background-size: auto 1.5em;
@@ -126,7 +119,6 @@ Description: Author section styles
 }
 
 .social-mastodon {
-  background: url("/assets/images/mastodon.png") no-repeat left center;
   background: url("/assets/images/mastodon.svg") no-repeat left center,
     linear-gradient(transparent, transparent);
   background-size: auto 1.5em;
@@ -135,7 +127,6 @@ Description: Author section styles
 }
 
 .social-slack {
-  background: url("/assets/images/slack.png") no-repeat left center;
   background: url("/assets/images/slack.svg") no-repeat left center,
     linear-gradient(transparent, transparent);
   background-size: auto 1.5em;
@@ -144,7 +135,6 @@ Description: Author section styles
 }
 
 .social-instagram {
-  background: url("/assets/images/instagram.png") no-repeat left center;
   background: url("/assets/images/instagram.svg") no-repeat left center,
     linear-gradient(transparent, transparent);
   background-size: auto 1.5em;
@@ -153,12 +143,11 @@ Description: Author section styles
 }
 
 .social-devto {
-  background: url("/assets/images/devblacksquarelogo.png") no-repeat left center;
-  background: url("/assets/images/devblacksquarelogo.svg") no-repeat left center,
+  background: url("/assets/images/rainbowdev.svg") no-repeat left center,
     linear-gradient(transparent, transparent);
   background-size: auto 1.5em;
   display: block;
-  padding: .5em 0 .5em 2.8em;
+  padding: .5em 0 .5em 2em;
 }
 
 @media all and (min-width: 47em) {

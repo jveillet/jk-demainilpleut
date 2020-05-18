@@ -5,7 +5,7 @@ Github URI: https://github.com/jveillet/jk-demainilpleut
 Author: Jérémie Veillet
 Author URI: https://github.com/jveillet
 Description: Base styles for demain·il·pleut
-Version: 2.4.0
+Version: 3.2.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -127,6 +127,44 @@ Use it to make something cool, have fun, and share what you've learned with othe
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+:root {
+  --text-color: #0a0000;
+  --main-bg-color: #ffffff;
+  --title-color: #0a0000;
+  --primary-color: #0071bc;
+  --grey: #5b616b;
+  --footer-bg-color: #e4e2e0;
+  --black: #2d2d2d;
+  --grey-secondary: #494440;
+  --primary-color-darker: #205493;
+  --primary-button-bg-color: #0071bc;
+  --tags-bg-color: #f1f1f1;
+  --tags-color: #494440;
+  --article-sep-color: #f1f1f1;
+  --link-visited: #4d4f56;
+  --alert-bg-color: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  :root {
+    --text-color: #ffffff;
+    --main-bg-color: #202020;
+    --title-color: #aaaaaa;
+    --primary-color: #4e8db5;
+    --grey: #cccccc;
+    --footer-bg-color: #2d2d2d;
+    --grey-secondary: #a37f6a;
+    --primary-color-darker: #6198cb;
+    --primary-button-bg-color: #467ba9;
+    --tags-bg-color: #2d2d2d;
+    --tags-color: #aaaaaa;
+    --article-sep-color: #2d2d2d;
+    --alert-bg-color: #2d2d2d;
+  }
+
+}
+
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -143,7 +181,8 @@ html {
 
 body {
   border: 0;
-  color: #0a0000;
+  background-color: var(--main-bg-color);
+  color: var(--text-color);
   font-family: "Open Sans", Arial, sans-serif;
   height: 100%;
   margin: 0;
@@ -212,10 +251,8 @@ audio:not([controls]) {
   height: 0;
 }
 
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
+button:focus {
+  outline: thin dotted;
 }
 
 textarea {
