@@ -43,9 +43,9 @@ A web browser of your choosing.
 We will use a simple directory structure, create a folder on your OS, then create an empty `docker-compose.yml` in it.
 
 ```bash
-$ mkdir wp-docker
-$ cd wp-docker/
-$ touch docker-compose.yml
+mkdir wp-docker
+cd wp-docker/
+touch docker-compose.yml
 ```
 
 ## Using docker-compose {#compose}
@@ -74,6 +74,7 @@ wordpress:
 You see that the text is indented, it is crucial to keep the text as is, as it is the norm for YML files. First line with "worpdress:" is the name of the container. Second line is the name of the image you will use (remember [Part I]({{site.url}}{% link _posts/2016-01-21-how-to-clean-up-local-git-branches-matching-a-name.md %}), Docker has a directory of pre-build images with a lot of softwares ready to be used). We will use the official (and latest version) WordPress image. Next parameter is the ports. In order to connect to the website, we need to tell Docker to map the port that is running on the Docker Machine, to a local port on our computer.
 
 We can see what's going on if we try to launch Docker Compose with what we have in the Compose file.
+
 ```bash
 $ docker-compose up
 [...]
@@ -103,6 +104,7 @@ wordpress_db:
 <div class="alert alert--danger">Please try not to use this password and use one of your own, even if you are using this on your local machine.</div>
 
 Run an "up" command and see what is going on.
+
 ```bash
 $ docker-compose up
 [...]
