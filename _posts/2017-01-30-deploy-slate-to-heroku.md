@@ -17,6 +17,7 @@ on Heroku, and how to configure it to generate the static HTML files with each c
 <!--readmore-->
 
 ## Table of Contents
+
 + [Some context](#context)
 + [Set up Slate locally](#install)
 + [Building the documentation on Heroku](#building)
@@ -106,13 +107,14 @@ web: bundle exec puma -p $PORT
 
 Middleman `source` and `build` directory can be customized to your needs, you will have to edit the configuration file `config.rb`.
 
-
 **Changing the source files directory:**
+
 ```ruby
 set :source, "#{File.dirname(__FILE__)}/my_source_dir"
 ```
 
 **Changing the build directory:**
+
 ```ruby
 set :build_dir, "#{File.dirname(__FILE__)}/my_build_dir"
 ```

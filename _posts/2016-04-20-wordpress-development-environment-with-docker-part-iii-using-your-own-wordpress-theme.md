@@ -79,6 +79,7 @@ $ docker-compose rm wordpress
 ```
 
 Start the WordPress container again:
+
 ```bash
 $ docker-compose up
 [...]

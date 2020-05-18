@@ -43,6 +43,7 @@ exclude:
   - bin
   - config.ru
   - docker-compose.yml
+  - docker-compose.override.yml
   - Dockerfile
   - Gemfile
   - Gemfile.lock
