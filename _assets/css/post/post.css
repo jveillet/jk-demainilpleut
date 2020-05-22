@@ -66,7 +66,6 @@ Description: Styles for articles / posts
 h2 .article-title,
 h2 .article-title:link,
 h2 .article-title:visited {
-  font-family: Raleway, Palatino, Arial, serif;
   font-size: 1.5em;
   font-weight: 700;
   color: var(--title-color) !important;
@@ -85,7 +84,6 @@ h2 .article-title:visited {
   padding-top: .1em;
   padding-right: .1em;
   padding-left: .1em;
-  font-family: Raleway, Palatino, Arial, serif;
   font-weight: 800;
 }
 
