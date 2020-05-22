@@ -14,7 +14,7 @@ image:
   <div class="patterns">
 
     <div class="pattern">
-      <span class="section-title color-gray-warm-dark">Sections</span>
+      <span class="section-title">Sections</span>
         <ul class="list-unordered">
           <li><a class="primary-link" href="#colors">Primary colors</a></li>
           <li><a class="primary-link" href="#typography">Typography</a></li>
@@ -34,42 +34,39 @@ image:
     </div><!-- end of pattern -->
 
     <div class="pattern">
-      <span class="section-title color-gray-warm-dark" id="colors">Primary colors</span>
+      <span class="section-title" id="colors">Primary colors</span>
       <div class="pattern-item">
         <ul class="colors">
-          <li class="color" style="background: #0071bc;">
-            <div class="color-text white">color-primary</div>
+          <li class="color" style="background: var(--primary-color);">
+            <div class="color-text">color-primary</div>
           </li>
-          <li class="color" style="background: #205493">
-            <div class="color-text white">color-primary-darker</div>
+          <li class="color" style="background: var(--primary-color-darker)">
+            <div class="color-text">color-primary-darker</div>
           </li>
           <li class="color" style="background: #ffffff;border: 1px solid #f1f1f1;">
-            <div class="color-text black">white</div>
+            <div class="color-text">white</div>
           </li>
           <li class="color" style="background: #0a0000;">
-            <div class="color-text white">black</div>
+            <div class="color-text">black</div>
           </li>
-          <li class="color" style="background: #5b616b">
-            <div class="color-text white">gray</div>
+          <li class="color" style="background: var(--grey)">
+            <div class="color-text">gray</div>
           </li>
         </ul>
       </div><!-- end of pattern item -->
     </div><!-- end of pattern -->
 
     <div class="pattern">
-      <span class="section-title color-gray-warm-dark">Secondary colors</span>
+      <span class="section-title">Secondary colors</span>
       <div class="pattern-item">
         <ul class="colors">
-          <li class="color" style="background: #aeb0b5">
+          <li class="color" style="background: var(--article-sep-color)">
             <div class="color-text black">gray light</div>
-          </li>
-          <li class="color" style="background: #d6d7d9">
-            <div class="color-text black">gray lighter</div>
           </li>
           <li class="color" style="background: #f1f1f1">
             <div class="color-text black">gray lightest</div>
           </li>
-          <li class="color" style="background: #494440">
+          <li class="color" style="background: var(--grey-secondary)">
             <div class="color-text white">gray warm dark</div>
           </li>
           <li class="color" style="background: #e4e2e0">
@@ -80,7 +77,7 @@ image:
     </div><!-- end of pattern -->
 
     <div class="pattern">
-      <span class="section-title color-gray-warm-dark" id="typography">Typography</span>
+      <span class="section-title" id="typography">Typography</span>
       <div class="pattern-item">
         <p class="text">Body text: Open Sans, Helvetica, Arial, sans-serif.</p>
         <p class="text"><small>Small body text: Open Sans, Helvetica, Arial, sans-serif.</small></p>
@@ -92,7 +89,7 @@ image:
     </div><!-- end of pattern -->
 
     <div class="pattern">
-      <span class="section-title color-gray-warm-dark" id="headings">Headings</span>
+      <span class="section-title" id="headings">Headings</span>
       <div class="pattern-item">
         <h1 class="black">Heading 1</h1>
         <h2 class="black">Heading 2</h2>
@@ -104,12 +101,12 @@ image:
     </div><!-- end of pattern -->
 
     <div class="pattern">
-      <span class="section-title color-gray-warm-dark" id="blockquote">Blockquote</span>
+      <span class="section-title" id="blockquote">Blockquote</span>
       <div class="pattern-item">
         <p class="quote">&ldquo;Let me explain something to you. Um, I am not “Mr. Lebowski”. You’re Mr. Lebowski. I’m the Dude. So that’s what you call me. You know, that or, uh, His Dudeness, or uh, Duder, or El Duderino if you’re not into the whole brevity thing.&rdquo; &mdash;The Big Lebowski</p>
       </div>
 
-      <button type="button" class="btn btn--small bg-blue white" data-a11y-toggle="target">
+      <button type="button" class="btn btn--small btn-primary" data-a11y-toggle="target">
           Display code »
       </button>
       <div class="pattern-item" id="target">
@@ -122,7 +119,7 @@ image:
     </div><!-- end of pattern -->
 
     <div class="pattern">
-      <span class="section-title color-gray-warm-dark" id="toc">Tables of content</span>
+      <span class="section-title" id="toc">Tables of content</span>
       <div class="pattern-item">
         <ul class="list-unordered">
           <li><a class="primary-link" href="#">Link 1</a></li>
@@ -132,7 +129,7 @@ image:
         </ul>
       </div><!-- end of pattern item -->
 
-      <button type="button" class="btn btn--small bg-blue white" data-a11y-toggle="target-1">
+      <button type="button" class="btn btn--small btn-primary" data-a11y-toggle="target-1">
           Display code »
       </button>
       <div class="pattern-item" id="target-1">
@@ -150,14 +147,14 @@ image:
     </div><!-- end of pattern -->
 
     <div class="pattern">
-      <span class="section-title color-gray-warm-dark" id="topbar">TopBar</span>
+      <span class="section-title" id="topbar">TopBar</span>
       <div class="pattern-item">
         <div class="topbar">
           <div class="topbar-logo">
             <a href="#" class="topbar-logo-url">Foo bar</a>
           </div><!-- end of topBar logo -->
           <div class="topbar-menu">
-            <button class="topbar-menu-btn topbar-menu-btn--small">Menu</button>
+            <button class="topbar-menu-btn topbar-menu-btn--small btn-primary">Menu</button>
               <nav role="navigation" class="topbar-navigation">
                 <ul>
                   <li><a href="#" class="topbar-navigation-item">Link 1</a></li>
@@ -170,7 +167,7 @@ image:
         </div><!-- end of topBar -->
       </div><!-- end of pattern item -->
 
-      <button type="button" class="btn btn--small bg-blue white" data-a11y-toggle="target-2">
+      <button type="button" class="btn btn--small btn-primary" data-a11y-toggle="target-2">
           Display code »
       </button>
       <div class="pattern-item" id="target-2">
@@ -181,7 +178,7 @@ image:
                 &lt;a href="#" class="topbar-logo-url">Foo bar&lt;/a>
               &lt;/div>
               &lt;div class="topbar-menu">
-                &lt;button class="topbar-menu-btn topbar-menu-btn--small">Menu&lt;/button>
+                &lt;button class="topbar-menu-btn topbar-menu-btn--small btn-primary">Menu&lt;/button>
                 &lt;nav role="navigation" class="topbar-navigation">
                   &lt;ul>
                     &lt;li>&lt;a href="#" class="topbar-navigation-item">Link 1&lt;/a>&lt;/li>
@@ -198,7 +195,7 @@ image:
     </div><!-- end of pattern -->
 
     <div class="pattern">
-      <span class="section-title color-gray-warm-dark" id="blog-summary">Blog post summary</span>
+      <span class="section-title" id="blog-summary">Blog post summary</span>
       <div class="pattern-item">
         <article class="article">
           <h2><a href="#" title="Lorem ipsum dolor sit amet." class="article-title">Lorem ipsum dolor sit amet.</a></h2>
@@ -229,7 +226,7 @@ image:
         </article><!-- end of article -->
       </div><!-- end of pattern item -->
 
-      <button type="button" class="btn btn--small bg-blue white" data-a11y-toggle="target-3">
+      <button type="button" class="btn btn--small btn-primary" data-a11y-toggle="target-3">
           Display code »
       </button>
       <div class="pattern-item" id="target-3">
@@ -269,7 +266,7 @@ image:
     </div><!-- end of pattern -->
 
     <div class="pattern">
-      <span class="section-title color-gray-warm-dark" id="blog-post">Blog post</span>
+      <span class="section-title" id="blog-post">Blog post</span>
       <div class="pattern-item">
         <article class="article">
           <h1 class="article-title">Lorem ipsum dolor sit amet.</h1>
@@ -295,7 +292,7 @@ image:
         </article><!-- end of article -->
       </div><!-- end of pattern item -->
 
-      <button type="button" class="btn btn--small bg-blue white" data-a11y-toggle="target-4">
+      <button type="button" class="btn btn--small btn-primary" data-a11y-toggle="target-4">
           Display code »
       </button>
       <div class="pattern-item" id="target-4">
@@ -329,13 +326,13 @@ image:
     </div><!-- end of pattern -->
 
     <div class="pattern">
-      <span class="section-title color-gray-warm-dark" id="images">Responsive Images</span>
+      <span class="section-title" id="images">Responsive Images</span>
       <div class="pattern-item">
         {% assign image =  page.image[0] %}
         {% include srcset.html %}
       </div><!-- end of pattern item -->
 
-      <button type="button" class="btn btn--small bg-blue white" data-a11y-toggle="target-10">
+      <button type="button" class="btn btn--small btn-primary" data-a11y-toggle="target-10">
           Display code »
       </button>
       <div class="pattern-item" id="target-10">
@@ -355,7 +352,7 @@ image:
     </div><!-- end of pattern -->
 
     <div class="pattern">
-      <span class="section-title color-gray-warm-dark" id="pagination">Pagination</span>
+      <span class="section-title" id="pagination">Pagination</span>
       <div class="pattern-item">
         <div class="pagination">
           <ul class="page-numbers">
@@ -371,7 +368,7 @@ image:
         </div><!-- end of pagination -->
       </div><!-- end of pattern item -->
 
-      <button type="button" class="btn btn--small bg-blue white" data-a11y-toggle="target-5">
+      <button type="button" class="btn btn--small btn-primary" data-a11y-toggle="target-5">
           Display code »
       </button>
       <div class="pattern-item" id="target-5">
@@ -395,7 +392,7 @@ image:
     </div><!-- end of pattern -->
 
     <div class="pattern">
-      <span class="section-title color-gray-warm-dark" id="footer">Footer</span>
+      <span class="section-title" id="footer">Footer</span>
       <div class="pattern-item">
         <div class="footer">
           <div class="footer-sections">
@@ -436,7 +433,7 @@ image:
         </div><!-- end of footer -->
       </div><!-- end of pattern item -->
 
-      <button type="button" class="btn btn--small bg-blue white" data-a11y-toggle="target-6">
+      <button type="button" class="btn btn--small btn-primary" data-a11y-toggle="target-6">
           Display code »
       </button>
       <div class="pattern-item" id="target-6">
@@ -485,7 +482,7 @@ image:
     </div><!-- end of pattern -->
 
     <div class="pattern">
-      <span class="section-title color-gray-warm-dark" id="code">Code</span>
+      <span class="section-title" id="code">Code</span>
       <div class="pattern-item">
         <pre>
           <code class="language-javascript">
@@ -494,7 +491,7 @@ image:
         </pre>
       </div><!-- end of pattern item -->
 
-      <button type="button" class="btn btn--small bg-blue white" data-a11y-toggle="target-7">
+      <button type="button" class="btn btn--small btn-primary" data-a11y-toggle="target-7">
           Display code »
       </button>
       <div class="pattern-item" id="target-7">
@@ -511,7 +508,7 @@ image:
     </div><!-- end of pattern -->
 
     <div class="pattern">
-      <span class="section-title color-gray-warm-dark" id="alerts">Alerts</span>
+      <span class="section-title" id="alerts">Alerts</span>
       <div class="pattern-item">
         <div>
           <h3>Info</h3>
@@ -533,7 +530,7 @@ image:
         </div>
       </div><!-- end of pattern item -->
 
-      <button type="button" class="btn btn--small bg-blue white" data-a11y-toggle="target-8">
+      <button type="button" class="btn btn--small btn-primary" data-a11y-toggle="target-8">
           Display code »
       </button>
       <div class="pattern-item" id="target-8">
@@ -563,30 +560,30 @@ image:
     </div><!-- end of pattern -->
 
     <div class="pattern">
-      <span class="section-title color-gray-warm-dark" id="buttons">Buttons</span>
+      <span class="section-title" id="buttons">Buttons</span>
       <div class="pattern-item">
         <div class="inline">
-          <button class="btn bg-blue white" name="Primary button"
+          <button class="btn btn-primary" name="Primary button"
             type="button">Primary</button>
         </div>
         <div class="inline">
-          <button class="btn btn--small bg-blue white" name="Small primary button"
+          <button class="btn btn--small btn-primary" name="Small primary button"
             type="button">Primary small</button>
         </div>
       </div><!-- end of pattern item -->
 
-      <button type="button" class="btn btn--small bg-blue white" data-a11y-toggle="target-9">
+      <button type="button" class="btn btn--small btn-primary" data-a11y-toggle="target-9">
           Display code »
       </button>
       <div class="pattern-item" id="target-9">
         <pre>
           <code class="language-markup">
             &lt;div class="inline">
-              &lt;button class="btn bg-blue white" name="Primary button"
+              &lt;button class="btn btn-primary" name="Primary button"
               type="button">Primary&lt;/button>
             &lt;/div>
             &lt;div class="inline">
-              &lt;button class="btn btn--small bg-blue white" name="Small primary button"
+              &lt;button class="btn btn--small btn-primary" name="Small primary button"
               type="button">Primary small&lt;/button>
             &lt;/div>
           </code>

@@ -5,7 +5,7 @@ Description: About section styles
 
 .about {
   background: #ffffff;
-  color: #0a0000;
+  color: var(--text-color);
   margin-bottom: 1em;
 }
 
@@ -36,10 +36,6 @@ Description: About section styles
 
 .about-author-name {
   font-weight: 700;
-}
-
-.about-author-description {
-  color: #5b616b;
 }
 
 @media all and (min-width: 47em) {

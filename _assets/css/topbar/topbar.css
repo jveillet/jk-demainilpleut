@@ -4,7 +4,6 @@ Description: Topbar styles
 */
 
 .topbar {
-  background-color: #ffffff;
   position: relative;
   background-image: linear-gradient(90deg,#f2f5ff,#5b83fd 25%,#2c5efa 25%,#03e474 50%,#ed9c0a 25%,#f5eb16 75%,#fa2c39 25%,#0027d7 100%);
   background-size: 100% .25em;
@@ -13,14 +12,12 @@ Description: Topbar styles
 }
 
 .topbar.active {
-  border-radius: 0 0 50% 50% / 0 0 25% 25%;
-  border-bottom: .0625em solid #f1f1f1;
   background-image: none;
 }
 
 .topbar-logo-url,
 .topbar-Logo-url:visited {
-  color: #0a0000;
+  color: var(--text-color);
   display: block;
   font-size: 1.5em;
   font-weight: 600;
@@ -30,12 +27,11 @@ Description: Topbar styles
 
 .topbar-logo-url:hover,
 .topbar-logo-url:focus {
-  color: #0071bc;
+  color: var(--primary-color);
   text-decoration: underline;
 }
 
 .topbar-logo {
-  background: url("/assets/images/logo-small.png") no-repeat left center;
   background: url("/assets/images/logo.svg") no-repeat left center,
     linear-gradient(transparent, transparent);
   background-size: auto 3em;
@@ -46,8 +42,22 @@ Description: Topbar styles
   z-index: 1;
 }
 
+@media (prefers-color-scheme: dark) {
+
+  .topbar-logo {
+    background: url("/assets/images/logo-light.svg") no-repeat left center,
+      linear-gradient(transparent, transparent);
+    background-size: auto 3em;
+    float: left;
+    margin-left: .5em;
+    padding-left: 2.8em;
+    position: relative;
+    z-index: 1;
+  }
+
+}
+
 .topbar-logo-dev {
-  background: url("/assets/images/dev/logo-small.png") no-repeat left center;
   background: url("/assets/images/dev/logo.svg") no-repeat left center,
     linear-gradient(transparent, transparent);
   background-size: auto 3em;
@@ -59,10 +69,8 @@ Description: Topbar styles
 }
 
 .topbar-menu-btn {
-  background-color: #0071bc;
   border-radius: .25em;
   border: none;
-  color: #ffffff;
   cursor: pointer;
   float: right;
   font-family: inherit;
@@ -98,7 +106,6 @@ Description: Topbar styles
 
 .topbar-menu-btn:active {
   box-shadow: 0 0 .3125em rgba(0, 0, 0, .5) inset;
-  outline: none;
 }
 
 .topbar .topbar-navigation {
@@ -139,11 +146,9 @@ Description: Topbar styles
 
 .topbar-btn-close.active {
   animation: bounce 1s ease-in;
-  background-color: #ffffff;
   border-radius: 100%;
   border: none;
-  bottom: -5%;
-  color: #494440;
+  bottom: -10%;
   cursor: pointer;
   display: block;
   font-size: 1.1em;
@@ -227,7 +232,7 @@ Description: Topbar styles
 
 .topbar-navigation-item,
 .topbar-navigation-item:visited {
-  color: #4d4f56;
+  color: var(--link-visited);
   display: block;
   font-weight: 600;
   padding: .5em;
@@ -237,7 +242,7 @@ Description: Topbar styles
 
 .topbar-navigation-item-current {
   border: 0;
-  color: #0071bc !important;
+  color: var(--primary-color) !important;
   font-weight: 600;
 }
 
@@ -294,7 +299,6 @@ Description: Topbar styles
   }
 
   .topbar-logo {
-    background: url("/assets/images/logo.png") no-repeat left center;
     background: url("/assets/images/logo.svg") no-repeat left center,
       linear-gradient(transparent, transparent);
     background-size: auto 3em;
@@ -307,8 +311,24 @@ Description: Topbar styles
     z-index: 1;
   }
 
+  @media (prefers-color-scheme: dark) {
+
+    .topbar-logo {
+      background: url("/assets/images/logo-light.svg") no-repeat left center,
+        linear-gradient(transparent, transparent);
+      background-size: auto 3em;
+      float: left;
+      font-size: 1.2em;
+      margin-left: 2em;
+      padding-left: 3em;
+      position: relative;
+      top: .2em;
+      z-index: 1;
+    }
+
+  }
+
   .topbar-logo-dev {
-    background: url("/assets/images/dev/logo.png") no-repeat left center;
     background: url("/assets/images/dev/logo.svg") no-repeat left center,
       linear-gradient(transparent, transparent);
     background-size: auto 3em;
@@ -344,30 +364,45 @@ Description: Topbar styles
 
   .topbar-navigation-item,
   .topbar-navigation-item:visited {
-    color: #4d4f56;
+    color: var(--link-visited);
     font-weight: 400;
     text-decoration: none;
   }
 
   .topbar-navigation-item:hover,
   .topbar-navigation-item:focus {
-    color: #0071bc;
+    color: var(--primary-color);
   }
 
   .topbar-navigation-item-current {
-    border-bottom: .25em solid #0071bc;
-    color: #0a0000 !important;
+    border-bottom: .25em solid var(--primary-color);
+    color: var(--text-color) !important;
     font-weight: 600;
   }
 
   .topbar-logo-url,
   .topbar-Logo-url:visited {
-    color: #0a0000;
+    color: var(--text-color);
     display: block;
     font-size: 1.2em;
     font-weight: 600;
     padding: .8em .5em;
     text-decoration: none;
+  }
+
+}
+
+@media (prefers-color-scheme: dark) {
+
+  .topbar-navigation-item,
+  .topbar-navigation-item:visited {
+    color: #cccccc;
+  }
+
+  .topbar.active {
+    border-radius: 0;
+    border-bottom: 0;
+    background-image: none;
   }
 
 }

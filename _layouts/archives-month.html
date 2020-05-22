@@ -8,8 +8,8 @@ layout: default
 
   <div class="archives-breadcrumb">
     <div class="breadcrumbs">
-      <div class="breadcrumb-item"><a href="{{ 'archives' | relative_url }}" class="primary-link breadcrumb-chevron">Archives</a></div>
-      <div class="breadcrumb-item"><a href="{{ 'archives/'| append: this_year | relative_url }}" class="primary-link breadcrumb-chevron">{{ this_year }}</a></div>
+      <div class="breadcrumb-item"><a href="{{ 'archives' | relative_url }}" class="primary-link breadcrumb-icon">Archives</a></div>
+      <div class="breadcrumb-item"><a href="{{ 'archives/'| append: this_year | relative_url }}" class="primary-link breadcrumb-icon">{{ this_year }}</a></div>
       <div class="breadcrumb-item breadcrumb-active">{{ page.date | date: "%B" }}</div>
     </div>
   </div>

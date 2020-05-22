@@ -12,9 +12,9 @@ layout: default
 </div>
 
 <div class="archives archives-spacing">
-  <span class="section-title color-gray-warm-dark">Last 10 Posts</span>
+  <span class="section-title">Last 10 Posts</span>
   <ol class="list-ordered" start="1" type="1">
-    {% for post in site.posts limit:10 offset:1 %}
+    {% for post in site.posts limit:10 offset:0 %}
     <li>
       <a href="{{ post.url | relative_url }}" class="primary-link">{{ post.title }}</a>
     </li>
@@ -23,7 +23,7 @@ layout: default
 </div>
 
 <div class ="archives archives-spacing">
-  <span class="section-title color-gray-warm-dark">By Categories</span>
+  <span class="section-title">By Categories</span>
   <ul class="list-unordered">
   {% for category in site.categories %}
     {% assign cat = category | first | downcase | replace: ' ', '-' %}
@@ -33,7 +33,7 @@ layout: default
 </div>
 
 <div class ="archives">
-  <span class="section-title color-gray-warm-dark">By month</span>
+  <span class="section-title">By month</span>
   {% assign counter = 0 %}
   {% for post in site.posts %}
     {% assign thisyear = post.date | date: "%B %Y" %}

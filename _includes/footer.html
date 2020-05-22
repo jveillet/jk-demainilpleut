@@ -3,7 +3,7 @@
 
   <div class="footer-sections">
     <div class="footer-column">
-      <h3 class="black">LATEST POSTS</h3>
+      <h3 class="footer-column-title">LATEST POSTS</h3>
       <ul>
         {% for post in site.posts limit:5 %}
           <li><a href="{{ post.url | relative_url }}" class="footer-link" title="{{ post.title }}">{{ post.title | truncate: 60, '...' }}</a></li>
@@ -12,7 +12,7 @@
     </div><!-- end of footer column -->
 
     <div class="footer-column">
-      <h3 class="black">MENU</h3>
+      <h3 class="footer-column-title">MENU</h3>
       <ul>
         <li><a href="/" class="footer-link">Articles</a></li>
         <li><a href="{% link archives/index.html %}" class="footer-link">Archives</a></li>
@@ -23,7 +23,7 @@
     </div><!-- end of footer column -->
 
     <div class="footer-column">
-      <h3 class="black">CATEGORIES</h3>
+      <h3 class="footer-column-title">CATEGORIES</h3>
       <ul>
       {% for category in site.categories limit:8 %}
         {% assign cat = category | first | downcase | replace: ' ', '-' %}

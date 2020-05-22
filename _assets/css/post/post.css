@@ -4,15 +4,12 @@ Description: Styles for articles / posts
 */
 
 .article {
-  background-color: #ffffff;
-  border-radius: .2em;
   margin-bottom: 1em;
   margin-top: 1em;
   padding: 2em;
 }
 
 .page {
-  background-color: #ffffff;
   border-radius: .2em;
   margin-bottom: 1em;
   margin-top: 1em;
@@ -20,19 +17,13 @@ Description: Styles for articles / posts
 }
 
 .articles {
-  background-color: #ffffff;
-  padding: 2em;
-  border-bottom: .0625em solid #f1f1f1;
-}
-
-.articles:first-child {
+  padding: 1em;
+  margin-bottom: 1em;
   margin-top: 1em;
-  border-radius: .2em .2em 0 0;
+  border-bottom: .0625em solid var(--article-sep-color);
 }
 
 .articles:last-child {
-  margin-bottom: 1em;
-  border-radius: 0 0 .2em .2em;
   border-bottom: 0;
 }
 
@@ -62,13 +53,13 @@ Description: Styles for articles / posts
 
 .primary-link,
 .primary-link:visited{
-  color: #0a0000;
+  color: var(--text-color);
   text-decoration: none;
 }
 
 .primary-link:hover,
 .primary-link:focus {
-  color: #0071bc;
+  color: var(--primary-color);
   text-decoration: underline;
 }
 
@@ -78,7 +69,7 @@ h2 .article-title:visited {
   font-family: Raleway, Palatino, Arial, serif;
   font-size: 1.5em;
   font-weight: 700;
-  color: #0a0000 !important;
+  color: var(--title-color) !important;
   line-height: 1.125;
   text-decoration: none !important;
 }
@@ -89,7 +80,6 @@ h2 .article-title:visited {
 
 .intro:first-child:first-letter {
   float: left;
-  color: #323a45;
   font-size: 4em;
   line-height: 1.5;
   padding-top: .1em;
@@ -107,22 +97,22 @@ h2 .article-title:visited {
 }
 
 .article-excerpt {
-  color: #5b616b;
+  color: var(--grey);
   font-weight: 400;
 }
 
 .article a:link {
-  color: #0071bc;
+  color: var(--primary-color);
   text-decoration: underline;
 }
 
 .article a:visited {
-  color: #205493;
+  color: var(--primary-color-darker);
   text-decoration: underline;
 }
 
 .article-pubdate {
-  color: #52545c;
+  color: var(--grey);
   margin: 0;
   font-style: italic;
   font-size: 1em;
@@ -134,20 +124,9 @@ h2 .article-title:visited {
   width: 100%;
 }
 
-.article-readingTime {
-  background: url("/assets/images/icon-time-small.png") no-repeat left center;
-  background: url("/assets/images/icon-time.svg") no-repeat left center,
-    linear-gradient(transparent, transparent);
-  background-size: auto 1.25em;
-  color: #0a0000;
-  font-size: .9em;
-  display: block;
-  padding: .5em 0 .5em 2em;
-}
-
 .article-author--link,
 .article-author--link:visited {
-  color: #0071bc;
+  color: var(--primary-color);
   text-decoration: none;
   font-weight: 600;
 }
@@ -174,9 +153,9 @@ h2 .article-title:visited {
 
 .article-tags-link:link,
 .article-tags-link:visited{
-  background-color: #f1f1f1;
+  background-color: var(--tags-bg-color);
   border-radius: 5%;
-  color: #494440 !important;
+  color: var(--tags-color) !important;
   display: inline-block;
   margin-top: .5em;
   padding: .5em;
@@ -184,8 +163,8 @@ h2 .article-title:visited {
 }
 
 .article-tags-item .article-tags-link:hover{
-  background-color: #494440;
-  color: #f1f1f1 !important;
+  background-color: var(--tags-color);
+  color: var(--tags-bg-color) !important;
 }
 
 .author-grid {
@@ -235,7 +214,7 @@ h2 .article-title:visited {
 
 .published time,
 .reading-area .reading-time {
-  color: #52545c;
+  color: var(--grey);
 }
 
 .article-top {
@@ -248,7 +227,7 @@ h2 .article-title:visited {
 .top:hover,
 .top:active,
 .top:focus {
-  color: #0071bc;
+  color: var(--primary-color);
 }
 
 @media all and (max-width: 21em) {
@@ -320,9 +299,9 @@ h2 .article-title:visited {
 
   .article-tags-link:link,
   .article-tags-link:visited {
-    background-color: #f1f1f1;
+    background-color: var(--tags-bg-color);
+    color: var(--tags-color) !important;
     border-radius: 5%;
-    color: #494440 !important;
     display: inline-block;
     margin-top: 0;
     padding: .5em;
@@ -335,6 +314,7 @@ h2 .article-title:visited {
 
   h1.article-title {
     font-size: 3em;
+    color: var(--title-color);
   }
 
   .article-categories {
@@ -351,7 +331,7 @@ h2 .article-title:visited {
   }
 
   .article-pubdate {
-    color: #52545c;
+    color: var(--grey);
     margin-left: .5em;
     font-size: 1em;
     font-style: italic;

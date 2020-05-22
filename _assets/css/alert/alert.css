@@ -5,7 +5,7 @@ Description: Styles for alert boxes
 
 .alert {
   padding: .5em;
-  background-color: #ffffff;
+  background-color: var(--alert-bg-color);
   box-shadow: 0 .25em .375em 0 hsla(0, 0%, 0%, .2);
 }
 
