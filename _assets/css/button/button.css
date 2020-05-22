@@ -8,7 +8,6 @@ Description: Buttons  styles
   display: inline-block;
   vertical-align: middle;
   white-space: nowrap;
-  font-family: inherit;
   font-size: 100%;
   cursor: pointer;
   border: none;
