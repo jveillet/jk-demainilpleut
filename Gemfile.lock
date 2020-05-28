@@ -105,6 +105,7 @@ GEM
     safe_yaml (1.0.5)
     sassc (2.3.0)
       ffi (~> 1.9)
+    secure_headers (6.3.0)
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
     typhoeus (1.4.0)
@@ -130,6 +131,7 @@ DEPENDENCIES
   rack-jekyll (~> 0.5.0)
   rake (~> 13.0.1)
   rspec (~> 3.9)
+  secure_headers (~> 6.3)
 
 RUBY VERSION
    ruby 2.6.6p146

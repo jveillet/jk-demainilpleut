@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "postinstall": "gulp build",
-    "build": "gulp build && jekyll b",
+    "build-assets": "gulp build && bundle exec jekyll b",
     "lint": "gulp lint"
   },
   "repository": {
