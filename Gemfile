@@ -10,6 +10,7 @@ gem 'oj'
 gem 'puma', '~> 4.3.5'
 gem 'rack-jekyll', '~> 0.5.0'
 gem 'rake', '~> 13.0.1'
+gem 'secure_headers', '~> 6.3'
 
 group :jekyll_plugins do
   gem 'jekyll-archives', '~> 2.2.1'
