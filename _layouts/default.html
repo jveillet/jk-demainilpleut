@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" class="no-js" data-theme="light">
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta charset="UTF-8">
@@ -40,6 +40,18 @@
   <link rel="icon" href="{{ img_url }}/favicon-16.png" sizes="16x16" />
   <link rel="icon" href="{{ img_url }}/favicon-128.png" sizes="128x128" />
   <link rel="manifest" href="{% link manifest.json %}">
+  <script>
+    if (
+          localStorage.getItem('data-theme') == 'dark' ||
+            (
+              window.matchMedia('(prefers-color-scheme: dark)').matches &&
+              !localStorage.getItem('data-theme')
+            )
+        ) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+    }
+</script>
+  </script>
 </head>
   <body>
     <!-- wrapper -->

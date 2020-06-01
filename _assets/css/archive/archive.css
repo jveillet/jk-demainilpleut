@@ -22,23 +22,11 @@ Description: Archives section styles
 }
 
 .breadcrumb-icon {
-  background: url("/assets/images/icon-breadcrumb.svg") no-repeat right center,
+  background: var(--breadcrumb-icon),
     linear-gradient(transparent, transparent);
   background-size: auto 1.5em;
   display: block;
   padding: .5em 1.5em .5em 1em;
-}
-
-@media (prefers-color-scheme: dark) {
-
-  .breadcrumb-icon {
-    background: url("/assets/images/icon-breadcrumb-light.svg") no-repeat right center,
-      linear-gradient(transparent, transparent);
-    background-size: auto 1.5em;
-    display: block;
-    padding: .5em 1.5em .5em 1em;
-  }
-
 }
 
 .breadcrumbs {

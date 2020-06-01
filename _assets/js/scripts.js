@@ -7,8 +7,31 @@ var PAGES = ['archives', 'styleguide', 'authors'];
  * @returns {void}
  */
 function addMenuClickEvent(selector) {
-    var element = document.querySelector(selector);
-    element.addEventListener('click', menuEventHandler);
+    // var element = document.querySelector(selector);
+    document.querySelector(selector).addEventListener('click', menuEventHandler);
+}
+
+/**
+ * Add Click event on the theme switcher toggle.
+ * @params {void}
+ * @returns {void}
+ */
+function addThemeToggleClickEvent() {
+    var element = document.querySelector('.js-theme-toggle');
+    element.addEventListener('click', function() {
+        var theme = document.documentElement.getAttribute('data-theme');
+        if (theme == 'dark') {
+            document.documentElement.setAttribute('data-theme', 'light');
+            element.innerHTML = '🌞';
+            localStorage.setItem('data-theme', 'light');
+            element.setAttribute('aria-label', 'Switch to dark theme');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            element.innerHTML = '🌙';
+            localStorage.setItem('data-theme', 'dark');
+            element.setAttribute('aria-label', 'Switch to light theme');
+        }
+    });
 }
 
 /**
@@ -52,6 +75,19 @@ function findInArray(arr, obj) {
 }
 
 /**
+ * Checks if the browser has no support for .prefers-color-scheme media query.
+ *
+ * @params {void}
+ * @returns {boolean} true if the browser has no support
+ */
+function hasNoPrefersColorSchemeSupport() {
+    var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches;
+    var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches;
+    return (!isDarkMode && !isLightMode && !isNotSpecified);
+}
+
+/**
  * Detect if the document is Ready.
  * Alternative to DOMContentLoaded.
  * Add utility classes and attach events to menu buttons.
@@ -62,5 +98,22 @@ document.onreadystatechange = function () {
         addMenuClickEvent('.topbar-menu-btn');
         addMenuClickEvent('.topbar-btn-close');
         displayCurrentMenuItem(window.location.pathname);
+
+        var theme = document.documentElement.getAttribute('data-theme');
+        var themeToggle = document.querySelector('.js-theme-toggle');
+        if (theme == 'dark') {
+            themeToggle.innerHTML = '🌙';
+            themeToggle.setAttribute('aria-label', 'Switch to light theme');
+        } else {
+            themeToggle.innerHTML = '🌞';
+            themeToggle.setAttribute('aria-label', 'Switch to dark theme');
+        }
+
+        if (window.CSS && CSS.supports('color', 'var(--text-color)') && !hasNoPrefersColorSchemeSupport()) {
+            addThemeToggleClickEvent();
+        } else {
+            var element = document.querySelector('.js-theme-toggle');
+            element.style.display = 'none';
+        }
     }
 };
