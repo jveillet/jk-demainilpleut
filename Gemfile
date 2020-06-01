@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 ruby '2.6.6'
 
 gem 'dotenv', '~> 2.7.5'
-gem 'jekyll', '~> 4.0'
+gem 'jekyll', '~> 4.1'
 gem 'oj'
 gem 'puma', '~> 4.3.5'
 gem 'rack-jekyll', '~> 0.5.0'
