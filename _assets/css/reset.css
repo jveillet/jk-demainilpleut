@@ -15,7 +15,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 /*   Base styles: opinionated defaults */
 
-:root {
+:root[data-theme = "light"] {
   --text-color: #0a0000;
   --main-bg-color: #ffffff;
   --title-color: #0a0000;
@@ -31,26 +31,27 @@ Use it to make something cool, have fun, and share what you've learned with othe
   --article-sep-color: #f1f1f1;
   --link-visited: #4d4f56;
   --alert-bg-color: #ffffff;
+  --breadcrumb-icon: url("/assets/images/icon-breadcrumb.svg") no-repeat right center;
+  --topbar-logo: url("/assets/images/logo.svg") no-repeat left center;
 }
 
-@media (prefers-color-scheme: dark) {
-
-  :root {
-    --text-color: #ffffff;
-    --main-bg-color: #202020;
-    --title-color: #aaaaaa;
-    --primary-color: #4e8db5;
-    --grey: #cccccc;
-    --footer-bg-color: #2d2d2d;
-    --grey-secondary: #a37f6a;
-    --primary-color-darker: #6198cb;
-    --primary-button-bg-color: #467ba9;
-    --tags-bg-color: #2d2d2d;
-    --tags-color: #aaaaaa;
-    --article-sep-color: #2d2d2d;
-    --alert-bg-color: #2d2d2d;
-  }
-
+:root[data-theme = "dark"]  {
+  --text-color: #ffffff;
+  --main-bg-color: #202020;
+  --title-color: #aaaaaa;
+  --primary-color: #4e8db5;
+  --grey: #cccccc;
+  --footer-bg-color: #2d2d2d;
+  --grey-secondary: #a37f6a;
+  --primary-color-darker: #6198cb;
+  --primary-button-bg-color: #467ba9;
+  --tags-bg-color: #2d2d2d;
+  --tags-color: #aaaaaa;
+  --article-sep-color: #2d2d2d;
+  --link-visited: #cccccc;
+  --alert-bg-color: #2d2d2d;
+  --breadcrumb-icon: url("/assets/images/icon-breadcrumb-light.svg") no-repeat right center;
+  --topbar-logo: url("/assets/images/logo-light.svg") no-repeat left center;
 }
 
 *, *:before, *:after {
