@@ -42,6 +42,6 @@
     "eslint": "^7.2.0",
     "gulp-eslint": "^6.0.0",
     "gulp-stylelint": "^13.0.0",
-    "stylelint": "^13.5.0"
+    "stylelint": "^13.6.0"
   }
 }
