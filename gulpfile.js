@@ -9,7 +9,6 @@ var autoprefixer = require('autoprefixer');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var del = require('del');
-var rev = require('gulp-rev');
 
 // Gulp task to clean bundled CSS files
 gulp.task('clean', function() {
@@ -23,13 +22,8 @@ gulp.task('build:css', function() {
         .pipe(cssnano())
         .pipe( postcss([ autoprefixer() ]) )
         .pipe(concat({path: 'bundle.min.css', cwd: ''}))
-        .pipe(rev())
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('assets/css/'))
-        .pipe(rev.manifest('assets/rev-manifest.json', {
-          merge: true // Merge with the existing manifest if one exists
-        }))
-        .pipe(gulp.dest('.'));
+        .pipe(gulp.dest('assets/css/'));
 });
 
 // Gulp task to minify and combine Javascript files.
@@ -38,13 +32,8 @@ gulp.task('build:js', function() {
     .pipe(sourcemaps.init())
     .pipe(concat({path: 'bundle.min.js', cwd: ''}))
     .pipe(uglify())
-    .pipe(rev())
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('assets/js/'))
-    .pipe(rev.manifest('assets/rev-manifest.json', {
-      merge: true // Merge with the existing manifest if one exists
-    }))
-    .pipe(gulp.dest('.'));
+    .pipe(gulp.dest('assets/js/'));
 });
 
 // Gulp build task to run the CSS & JS Build.

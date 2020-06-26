@@ -25,8 +25,7 @@
   {% endif %}
   <meta name="theme-color" content="#ffffff"/>
   <link href="{% link feed.xml %}" rel="alternate">
-  {% assign css_url = 'assets/css/' | relative_url %}
-  <link media="screen" rel="stylesheet" href="{{ css_url }}{% assets_src bundle.min.css %}" data-proofer-ignore/>
+  <link media="screen" rel="stylesheet" href="{{ '/assets/css/bundle.min.css' | relative_url }}?{{ site.time | date: '%s%N' }}"/>
   <link media="screen" rel="stylesheet" href="{{ '/assets/css/vendor/prism.min.css' | relative_url }}"/>
   {% if jekyll.environment == 'production' %}
     {% assign img_url = '/assets/images' | relative_url %}
@@ -51,7 +50,7 @@
           document.documentElement.setAttribute('data-theme', 'dark');
     }
 </script>
-  </script>
+<script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
 </head>
   <body>
     <!-- wrapper -->
@@ -70,7 +69,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" defer></script>
     <script src="{% link assets/js/vendor/prism.min.js %}" defer></script>
     <script src="{% link assets/js/vendor/a11y-toggle.min.js %}" defer></script>
-    {% assign js_url = 'assets/js/' | relative_url %}
-    <script src="{{ js_url }}{% assets_src bundle.min.js %}" defer data-proofer-ignore></script>
+    <script src="{% link assets/js/bundle.min.js %}?{{ site.time | date: '%s%N' }}" defer data-proofer-ignore></script>
   </body>
 </html>
