@@ -105,7 +105,7 @@ GEM
     safe_yaml (1.0.5)
     sassc (2.4.0)
       ffi (~> 1.9)
-    secure_headers (6.3.0)
+    secure_headers (6.3.1)
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
     typhoeus (1.4.0)
