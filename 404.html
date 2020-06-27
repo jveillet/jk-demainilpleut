@@ -1,27 +1,18 @@
 ---
 layout: default
-image:
-  - src: huge_mistake.jpg
-    alt: '404 - Not found'
 ---
 
 <article class="article page">
-
-  <h1>File or Page Not Found</h1>
-
   <div class="entry">
-    {% assign image =  page.image[0] %}
-    {% include srcset.html %}
-
-    <p>Someone on the team probably broke something and will be punished as we see fit.<br>
-    Rest assured that we are doing eveything in our power to make everything work smoothly <small>(Arrested Development's narrator voice: "They don't").</small><br>
-    Please hit us <a href="https://www.twitter.com/jveillet" class="primary-link">@jveillet</a>.
-    </p>
+    <h1 class="fourofour-title">404</h1>
+    <h2 class="fourofour-subtitle">File or Page Not Found</h2>
+    <div class="fourofour-image">
+      <img src="/assets/images/undraw_not_found_60pq.svg" alt="404 Error" >
+    </div>
     <div>
-      <h3>Here's suggestions you might find interesting:</h3>
       <ul class="list-unordered">
         <li>Visit the <a class="primary-link" href="{{ '/' | absolute_url }}">homepage</a> for fresh blogs.</li>
-        <li>Browse the <a class="primary-link" href="{{ 'archives' | absolute_url }}">archives</a> to digg up something weird and probably not accurate.</li>
+        <li>Browse the <a class="primary-link" href="{{ 'archives' | absolute_url }}">archives</a> to find (probably outdated) articles.</li>
       </ul>
     </div>
   </div>

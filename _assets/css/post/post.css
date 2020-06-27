@@ -228,6 +228,27 @@ h2 .article-title:visited {
   color: var(--primary-color);
 }
 
+.fourofour-title {
+  font-size: 10vw;
+  text-align: center;
+  margin: 0;
+  line-height: 1;
+}
+
+.fourofour-subtitle {
+  font-size: 3vw;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  line-height: 1;
+}
+
+.fourofour-image {
+  width: 60%;
+  max-width: 80em;
+  margin: 0 auto;
+}
+
 @media all and (max-width: 21em) {
 
   .author-grid {
