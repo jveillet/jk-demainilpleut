@@ -229,23 +229,23 @@ h2 .article-title:visited {
 }
 
 .fourofour-title {
-  font-size: 10vw;
+  font-size: calc(4em + 1vmin);
   text-align: center;
   margin: 0;
   line-height: 1;
 }
 
 .fourofour-subtitle {
-  font-size: 3vw;
+  font-size: calc(.75em + .75vmin);
   text-align: center;
-  margin-top: 1em;
-  margin-bottom: 2em;
   line-height: 1;
+  margin: 0;
 }
 
 .fourofour-image {
-  width: 60%;
+  width: 40%;
   max-width: 80em;
+  min-width: 10em;
   margin: 0 auto;
 }
 

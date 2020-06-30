@@ -58,7 +58,7 @@
     "string-quotes": "double",
     "unit-case": "lower",
     "unit-no-unknown": true,
-    "unit-whitelist": ["em", "rem", "%", "s", "vh", "vw", "ms", "deg", "fr"],
+    "unit-whitelist": ["em", "rem", "%", "s", "vh", "vw", "ms", "deg", "fr", "vmin", "vmax"],
     "value-no-vendor-prefix": true
   }
 }
