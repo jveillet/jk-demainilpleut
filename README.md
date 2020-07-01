@@ -1,5 +1,7 @@
 # jk-demainilpleut
+
 [![Build Status](https://github.com/jveillet/jk-demainilpleut/workflows/CI/badge.svg)](https://github.com/jveillet/jk-demainilpleut/actions)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=jveillet/jk-demainilpleut)](https://dependabot.com)
 
 Static HTML version of demainilpleut.fr using the static website generator
 [Jekyll](https://jekyllrb.com/).
@@ -13,6 +15,7 @@ JS.
 On the ruby side, this project uses [Bundler](https://bundler.io/).
 
 ### With Docker
+
 ```bash
 $ git clone git@github.com:jveillet/jk-demainilpleut.git
 $ cd jk-demainilpleut/
@@ -31,7 +34,6 @@ $ docker-compose run --rm web bundle exec jekyll serve -H 0.0.0.0 --incremental
 
 ### On linux (Debian 8+)
 
-Install nodejs and dependencies:
 ```bash
 # Add the latest node version to the sources
 $ curl -sL https://deb.nodesource.com/setup_10.x | bash - \
@@ -48,7 +50,6 @@ $ gulp lint
 
 ### On macOS (Sierra+)
 
-Install nodejs and dependencies:
 ```bash
 $ brew install node
 # Install Gulp
@@ -100,17 +101,21 @@ Basic tests are performed on the structure of the site (broken links, alt attrib
 They are launched automatically with every Pull Requests, via [GitHub Actions](https://help.github.com/en/github/automating-your-workflow-with-github-actions) (see [cibuild.yml](https://github.com/jveillet/jk-demainilpleut/blob/master/.github/workflows/cibuild.yml) file).
 
 You can run them manually via command line:
+
 ```bash
-$ ./bin/cibuild.sh
+./bin/cibuild.sh
 ```
 
 Or with Docker:
+
 ```bash
-$ docker-compose run --rm web bin/cibuild.sh
+docker-compose run --rm web bin/cibuild.sh
 ```
+
 ## Contributing
 
-## To the code
+### To the code
+
 This project only accepts Pull Requests that references an issue.
 
 1. Fork it ( http://github.com/jveillet/jk-demainilpleut/fork )
@@ -120,7 +125,8 @@ This project only accepts Pull Requests that references an issue.
 5. Push to the branch (git push origin my-new-feature)
 6. Create new Pull Request
 
-## To the articles
+### To the articles
+
 1. Fork it ( http://github.com/jveillet/jk-demainilpleut/fork )
 2. Create your feature branch for the new page (git checkout -b page/my-post-title)
 3. Create a post with the help of the command line: `bundle exec jekyll post "My post title"`, or a draft: `bundle exec jekyll draft "My post title"`
