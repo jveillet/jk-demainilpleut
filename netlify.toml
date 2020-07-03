@@ -1,0 +1,27 @@
+[[headers]]
+  for = "/*" # This defines which paths this specific [[headers]] block will cover.
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "same-origin"
+    X-Content-Type-Options = "nosniff"
+    Cache-Control = "max-age=2678400, public"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    Content-Security-Policy = '''
+    default-src 'self' https://avatars1.githubusercontent.com cdnjs.cloudflare.com fonts.googleapis.com https://placehold.it;
+    base-uri 'self';
+    child-src 'self';
+    font-src 'self' https://fonts.gstatic.com;
+    form-action 'self';
+    frame-ancestors 'none';
+    img-src 'self' https://avatars1.githubusercontent.com https://placehold.it;
+    manifest-src 'self';
+    media-src 'none';
+    object-src 'self';
+    script-src 'self' cdnjs.cloudflare.com 'unsafe-inline';
+    style-src 'self' fonts.googleapis.com;
+    worker-src 'self';'''
+[[headers]]
+  for = "assets/"
+  [headers.values]
+    Cache-Control = "max-age=604800, public"
