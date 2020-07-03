@@ -15,7 +15,7 @@ layout: default
       <div class="articles-footer">
         <div class="articles-footer-wrapper">
           <img src="{{ author.avatar }}" width="32" height="32" alt="{{ author.name }}" class="articles-footer-avatar">
-          <span style="article-author"><a class="article-author--link" href="{{ author.permalink | relative_url }}">{{ author.name }}</a></span>
+          <span class="article-author"><a class="article-author--link" href="{{ author.permalink | relative_url }}">{{ author.name }}</a></span>
           <span class="article-pubdate"> on <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %d, %Y' }}</time></span>
           <div class="articles-footer-tags">
             {% for category in post.categories %}

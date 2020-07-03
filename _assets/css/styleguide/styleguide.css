@@ -59,3 +59,40 @@ Description: Styleguide specific  styles
   background-color: var(--primary-button-bg-color);
   color: #ffffff;
 }
+
+.pattern-color-primary {
+  background: var(--primary-color);
+}
+
+.pattern-color-primary-darker {
+  background: var(--primary-color-darker);
+}
+
+.pattern-color-white {
+  background: #ffffff;
+  border: .0625em solid #f1f1f1;
+}
+
+.pattern-color-black {
+  background: #0a0000;
+}
+
+.pattern-color-gray {
+  background: var(--grey);
+}
+
+.pattern-color-gray-light {
+  background: var(--article-sep-color);
+}
+
+.pattern-color-gray-lightest {
+  background: #f1f1f1;
+}
+
+.pattern-color-gray-warm-dark {
+  background: var(--grey-secondary);
+}
+
+.pattern-color-gray-warm-light {
+  background: #e4e2e0;
+}

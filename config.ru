@@ -15,7 +15,7 @@ SecureHeaders::Configuration.default do |config|
   config.x_xss_protection = "1; mode=block"
   config.x_download_options = "noopen"
   config.x_permitted_cross_domain_policies = "none"
-  config.referrer_policy = %w(origin-when-cross-origin strict-origin-when-cross-origin)
+  config.referrer_policy = %w(same-origin)
   config.csp = {
     # # "meta" values. these will shape the header, but the values are not included in the header.
     preserve_schemes: true, # default: false. Schemes are removed from host sources to save bytes and discourage mixed content.
@@ -28,12 +28,12 @@ SecureHeaders::Configuration.default do |config|
     font_src: %w('self' https://fonts.gstatic.com),
     form_action: %w('self'),
     frame_ancestors: %w('none'),
-    img_src: %w('self' data: https://avatars1.githubusercontent.com),
+    img_src: %w('self' data: https://avatars1.githubusercontent.com https://placehold.it),
     manifest_src: %w('self'),
     media_src: %w('none'),
     object_src: %w('self'),
     script_src: %w('self' 'unsafe-inline' https://cdnjs.cloudflare.com;),
-    style_src: %w('self' 'unsafe-inline' https://fonts.googleapis.com),
+    style_src: %w('self' https://fonts.googleapis.com),
     worker_src: %w('self'),
     upgrade_insecure_requests: true, # see https://www.w3.org/TR/upgrade-insecure-requests/
   }
