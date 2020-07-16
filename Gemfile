@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 ruby '2.6.6'
 
-gem 'dotenv', '~> 2.7.5'
+gem 'dotenv', '~> 2.7.6'
 gem 'jekyll', '~> 4.1'
 gem 'oj'
 gem 'puma', '~> 4.3.5'
