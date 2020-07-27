@@ -8,6 +8,10 @@ description: Coding & Design for the rainy days
 # Used for Sitemap.xml and your RSS feed
 url: https://www.demainilpleut.fr
 
+# Canonical URL
+# See issue #456
+canonical_url: https://www.demainilpleut.dev
+
 # Your website logo (usefull for Twitter Cards)
 logo: assets/images/logo.png
 

@@ -24,7 +24,8 @@
   <meta name="twitter:card"  content="summary">
   {% endif %}
   <meta name="theme-color" content="#ffffff"/>
-  <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html', ''}}">
+  <meta name="color-scheme" content="dark light">
+  <link rel="canonical" href="{{ site.canonical_url }}{{ page.url | replace:'index.html', ''}}">
   <link href="{% link feed.xml %}" rel="alternate">
   <link media="screen" rel="stylesheet" href="{{ '/assets/css/bundle.min.css' | relative_url }}?{{ site.time | date: '%s%N' }}"/>
   <link media="screen" rel="stylesheet" href="{{ '/assets/css/vendor/prism.min.css' | relative_url }}"/>
