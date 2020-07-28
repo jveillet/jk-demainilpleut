@@ -99,7 +99,7 @@ $ gulp clean
 Basic tests are performed on the structure of the site (broken links, alt attributes on images,..), by using the
 [html-proofer](https://github.com/gjtorikian/html-proofer) Ruby Gem.
 
-They are launched automatically with every Pull Requests, via [GitHub Actions](https://help.github.com/en/github/automating-your-workflow-with-github-actions) (see [cibuild.yml](https://github.com/jveillet/jk-demainilpleut/blob/master/.github/workflows/cibuild.yml) file).
+They are launched automatically with every Pull Requests, via [GitHub Actions](https://help.github.com/en/github/automating-your-workflow-with-github-actions) (see [cibuild.yml](https://github.com/jveillet/jk-demainilpleut/blob/latest/.github/workflows/cibuild.yml) file).
 
 You can run them manually via command line:
 
