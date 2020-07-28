@@ -8,7 +8,8 @@ gem 'dotenv', '~> 2.7.6'
 gem 'jekyll', '~> 4.1'
 gem 'oj'
 gem 'puma', '~> 4.3.5'
-gem 'rack-jekyll', '~> 0.5.0'
+gem 'rack-jekyll', git: 'https://github.com/adaoraul/rack-jekyll',
+                   ref: 'master'
 gem 'rake', '~> 13.0.1'
 gem 'secure_headers', '~> 6.3'
 
