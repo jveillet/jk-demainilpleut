@@ -28,11 +28,11 @@ SecureHeaders::Configuration.default do |config|
     font_src: %w('self' https://fonts.gstatic.com),
     form_action: %w('self'),
     frame_ancestors: %w('none'),
-    img_src: %w('self' data: https://avatars1.githubusercontent.com https://placehold.it),
+    img_src: %w('self' data: https://avatars1.githubusercontent.com https://placehold.it https://demainilpleut.goatcounter.com/count),
     manifest_src: %w('self'),
     media_src: %w('none'),
     object_src: %w('self'),
-    script_src: %w('self' 'unsafe-inline' https://cdnjs.cloudflare.com;),
+    script_src: %w('self' 'unsafe-inline' https://cdnjs.cloudflare.com  https://gc.zgo.at/count.js),
     style_src: %w('self' https://fonts.googleapis.com),
     worker_src: %w('self'),
     upgrade_insecure_requests: true, # see https://www.w3.org/TR/upgrade-insecure-requests/
