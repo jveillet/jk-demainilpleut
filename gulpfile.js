@@ -12,7 +12,7 @@ var del = require('del');
 
 // Gulp task to clean bundled CSS files
 gulp.task('clean', function() {
-  return del(['assets/**/bundle*', 'assets/rev-manifest.json']);
+  return del(['assets/**/bundle*']);
 });
 
 // Gulp task to minify and combine CSS files.
@@ -36,8 +36,11 @@ gulp.task('build:js', function() {
     .pipe(gulp.dest('assets/js/'));
 });
 
-// Gulp build task to run the CSS & JS Build.
-gulp.task('build', gulp.series('clean', 'build:css', 'build:js'));
+// Gulp build task to build the CSS & JS.
+gulp.task('build', gulp.series('build:css', 'build:js'));
+
+// Gulp build task to clean the generated files and rebuild CSS & JS Build.
+gulp.task('regenerate', gulp.series('clean', 'build:css', 'build:js'));
 
 // Gulp task to lint the CSS styles in the codebase.
 // It uses Stylelint under the hood.
