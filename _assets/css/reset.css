@@ -5,7 +5,7 @@ Github URI: https://github.com/jveillet/jk-demainilpleut
 Author: Jérémie Veillet
 Author URI: https://github.com/jveillet
 Description: Base styles for demain·il·pleut
-Version: 3.2.0
+Version: 3.3.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -125,6 +125,31 @@ h6 {
   font-weight: 700;
 }
 
+h1 {
+  line-height: calc(1ex / .42);
+  margin: calc(1ex / .42) 0;
+}
+
+h2 {
+  line-height: calc(1ex / .42);
+  margin: calc(1ex / .42) 0;
+}
+
+h3 {
+  line-height: calc(1ex / .38);
+  margin: calc(1ex / .38) 0;
+}
+
+h4 {
+  font-size: 1.5em;
+  line-height: calc(1ex / .37);
+  margin: calc(1ex / .37) 0;
+}
+
+p {
+  line-height: calc(1ex / .32);
+}
+
 audio,
 canvas,
 video {
@@ -154,6 +179,14 @@ a, b, strong, dt {
 a:active,
 a:hover {
   outline: 0;
+}
+
+@supports (font-size-adjust: 1) {
+
+  article {
+    font-size-adjust: .5;
+  }
+
 }
 
 .responsive-image {
