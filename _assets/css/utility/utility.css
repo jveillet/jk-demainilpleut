@@ -6,11 +6,11 @@ Description: Utility classes
 /* Text utilities */
 
 .quote {
-  border-left: .375em solid var(--text-color);
-  color: var(--grey-secondary);
+  border-left: .3em solid var(--text-color);
   font-style: italic;
   font-weight: 400;
   padding: .5em;
+  margin: 0;
 }
 
 code {
