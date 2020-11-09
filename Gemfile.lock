@@ -85,7 +85,7 @@ GEM
       forwardable-extended (~> 2.6)
     pkg-config (1.4.4)
     public_suffix (4.0.6)
-    puma (5.0.2)
+    puma (5.0.4)
       nio4r (~> 2.0)
     rack (2.2.3)
     rainbow (3.0.0)
@@ -133,7 +133,7 @@ DEPENDENCIES
   jekyll-sitemap (~> 1.4.0)
   oj
   pkg-config (~> 1.4)
-  puma (~> 5.0.2)
+  puma (~> 5.0.4)
   rack-jekyll!
   rake (~> 13.0.1)
   rspec (~> 3.9)
