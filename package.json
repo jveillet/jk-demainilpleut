@@ -38,7 +38,7 @@
     "postcss": "^8.2.3"
   },
   "devDependencies": {
-    "eslint": "^7.17.0",
+    "eslint": "^7.22.0",
     "gulp-eslint": "^6.0.0",
     "gulp-stylelint": "^13.0.0",
     "stylelint": "^13.8.0"
