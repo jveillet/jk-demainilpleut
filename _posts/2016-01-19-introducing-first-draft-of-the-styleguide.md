@@ -3,7 +3,7 @@ excerpt_separator: <!--readmore-->
 layout: post
 title: 'Introducing first draft of the Styleguide'
 published_at: 2016-01-19T18:08:00+00:00
-categories: [Blog related, CSS]
+categories: [blog related, css]
 permalink: /:title/
 author: jveillet
 ---

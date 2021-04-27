@@ -4,7 +4,7 @@
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=jveillet/jk-demainilpleut)](https://dependabot.com)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/40732b0e-05bc-4aa8-ba99-6bf58f198219/deploy-status)](https://app.netlify.com/sites/demainilpleut/deploys)
 
-Static HTML version of demainilpleut.fr using the static website generator
+Static HTML version of demainilpleut.dev using the static website generator
 [Jekyll](https://jekyllrb.com/).
 
 ## Installation
@@ -37,7 +37,7 @@ $ docker-compose run --rm web bundle exec jekyll serve -H 0.0.0.0 --incremental
 
 ```bash
 # Add the latest node version to the sources
-$ curl -sL https://deb.nodesource.com/setup_10.x | bash - \
+$ curl -sL https://deb.nodesource.com/setup_12.x | bash - \
 # Install Node and Gulp
 $ apt-get install -y nodejs
 $ npm install -g gulp-cli
