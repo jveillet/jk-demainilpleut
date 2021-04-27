@@ -1,4 +1,4 @@
-FROM ruby:2.6.6
+FROM ruby:2.6.7
 
 # Environment variables
 # Defaults can be changed in the docker-compose file
@@ -35,7 +35,7 @@ RUN apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
 # Install the last bundler version
-RUN gem install bundler:2.1.4 --no-document
+RUN gem install bundler -v 2.2.16 --no-document
 
 # Install Gulp
 RUN npm install --global gulp-cli
