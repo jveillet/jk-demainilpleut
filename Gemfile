@@ -7,7 +7,7 @@ ruby '2.6.7'
 gem 'dotenv', '~> 2.7.6'
 gem 'jekyll', '~> 4.2'
 gem 'oj'
-gem 'puma', '~> 5.2.2'
+gem 'puma', '~> 5.3.1'
 gem 'rack-jekyll', git: 'https://github.com/adaoraul/rack-jekyll',
                    ref: 'master'
 gem 'rake', '~> 13.0.3'
