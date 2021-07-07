@@ -10,7 +10,7 @@ gem 'oj'
 gem 'puma', '~> 5.3.2'
 gem 'rack-jekyll', git: 'https://github.com/adaoraul/rack-jekyll',
                    ref: 'master'
-gem 'rake', '~> 13.0.3'
+gem 'rake', '~> 13.0.4'
 gem 'secure_headers', '~> 6.3'
 
 group :jekyll_plugins do
