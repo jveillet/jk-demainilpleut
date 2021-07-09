@@ -1,7 +1,6 @@
 # jk-demainilpleut
 
 [![Build Status](https://github.com/jveillet/jk-demainilpleut/workflows/CI/badge.svg)](https://github.com/jveillet/jk-demainilpleut/actions)
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=jveillet/jk-demainilpleut)](https://dependabot.com)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/40732b0e-05bc-4aa8-ba99-6bf58f198219/deploy-status)](https://app.netlify.com/sites/demainilpleut/deploys)
 
 Static HTML version of demainilpleut.dev using the static website generator
@@ -37,7 +36,7 @@ $ docker-compose run --rm web bundle exec jekyll serve -H 0.0.0.0 --incremental
 
 ```bash
 # Add the latest node version to the sources
-$ curl -sL https://deb.nodesource.com/setup_12.x | bash - \
+$ curl -sL https://deb.nodesource.com/setup_14.x | bash - \
 # Install Node and Gulp
 $ apt-get install -y nodejs
 $ npm install -g gulp-cli
@@ -119,7 +118,7 @@ docker-compose run --rm web bin/cibuild.sh
 
 This project only accepts Pull Requests that references an issue.
 
-1. Fork it ( http://github.com/jveillet/jk-demainilpleut/fork )
+1. Fork it [http://github.com/jveillet/jk-demainilpleut/fork](http://github.com/jveillet/jk-demainilpleut/fork)
 2. Create your feature branch (git checkout -b my-new-feature)
 3. Run the specs and our linter (bin/cibuild)
 4. Commit your changes (git commit -am 'Add some feature')
@@ -128,7 +127,7 @@ This project only accepts Pull Requests that references an issue.
 
 ### To the articles
 
-1. Fork it ( http://github.com/jveillet/jk-demainilpleut/fork )
+1. Fork it [http://github.com/jveillet/jk-demainilpleut/fork](http://github.com/jveillet/jk-demainilpleut/fork)
 2. Create your feature branch for the new page (git checkout -b page/my-post-title)
 3. Create a post with the help of the command line: `bundle exec jekyll post "My post title"`, or a draft: `bundle exec jekyll draft "My post title"`
 4. When you are ready, publish the post or draft: `bundle exec jekyll publish _drafts/my-post-title.md`. You can specify a date by using the `--date` argument.

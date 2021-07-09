@@ -1,6 +1,6 @@
-FROM ruby:2.6.7
+FROM ruby:2.7
 
-# Environment variables
+# Docker build arguments
 # Defaults can be changed in the docker-compose file
 ARG RACK_ENV=development
 ARG JEKYLL_ENV=development
@@ -9,24 +9,12 @@ ARG PORT=8080
 
 # Environment variables
 ENV DEBIAN_FRONTEND noninteractive
-ENV APP_HOME=/home/doctor/demainilpleut
-ENV BUNDLE_APP_CONFIG=$APP_HOME/.bundle/
-ENV BUNDLE_JOBS=10
-ENV GEM_HOME="/usr/local/bundle"
-ENV PATH $GEM_HOME/bin:$GEM_HOME/gems/bin:$PATH
 
-# Create the home directory for the new app user.
-RUN mkdir -p $APP_HOME
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
 
-# Fetch the last version of Nodejs
-RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
-
-# Install essentials softwares whith dev headers
-RUN apt-get clean \
-    && apt-get update -y \
-    && apt-get install -y --no-install-recommends \
-    build-essential \
-    sudo \
+RUN apt-get update -y \
+    && apt-get install -y \
+    apt-transport-https \
     libffi-dev \
     libssl-dev \
     libxml2-dev \
@@ -34,43 +22,26 @@ RUN apt-get clean \
     nodejs \
     && rm -rf /var/lib/apt/lists/*
 
-# Install the last bundler version
-RUN gem install bundler -v 2.2.16 --no-document
+RUN gem install bundler --no-document
+
+RUN mkdir -p /app
+
+WORKDIR /app
+
+COPY Gemfile* ./
+
+RUN bundle config
+RUN bundle install --jobs 4 --retry 3
+
+COPY package.json package-lock.json ./
 
 # Install Gulp
 RUN npm install --global gulp-cli
-
-# Create a new user with sudo powers
-RUN useradd -ms /bin/bash doctor
-RUN echo '%doctor ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
-
-# Copy local files to the container and apply rights to the user
-COPY --chown=doctor:doctor . $APP_HOME/
-RUN chown -hR doctor:doctor /home/doctor/
-
-# Move to the application folder
-WORKDIR $APP_HOME
-
-# Use custom user
-USER doctor
-
-# Copy the files needed for bundler
-COPY --chown=doctor:doctor Gemfile* $APP_HOME/
-
-# Install Bundler dependencies
-RUN bundle config
-RUN bundle install
-
-# Copy the files needed for NPM
-COPY --chown=doctor:doctor package* $APP_HOME/
 
 # Install local NPM dependencies
 RUN npm install
 
 EXPOSE 8080
-
-RUN unset BUNDLE_PATH
-RUN unset BUNDLE_BIN
 
 ENTRYPOINT ["bundle", "exec"]
 
