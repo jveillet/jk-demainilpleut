@@ -9,10 +9,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js 12.x
+    - name: Use Node.js 14.x
       uses: actions/setup-node@v1
       with:
-        node-version: 12.x
+        node-version: 14.x
     - uses: actions/cache@v2
       with:
         path: vendor/bundle
@@ -30,10 +30,10 @@ jobs:
         npm install
         npm install --global gulp-cli
         gulp lint
-    - name: Set up Ruby 2.6
+    - name: Set up Ruby 2.7
       uses: actions/setup-ruby@v1
       with:
-        ruby-version: 2.6
+        ruby-version: 2.7
     - name: Run Test Suite
       run: |
         sudo apt update
