@@ -7,39 +7,6 @@ updates:
     time: "09:00"
     timezone: Europe/Paris
   open-pull-requests-limit: 10
-  ignore:
-  - dependency-name: postcss
-    versions:
-    - 8.2.10
-    - 8.2.12
-    - 8.2.4
-    - 8.2.5
-    - 8.2.6
-    - 8.2.7
-    - 8.2.8
-    - 8.2.9
-  - dependency-name: eslint
-    versions:
-    - 7.18.0
-    - 7.19.0
-    - 7.20.0
-    - 7.21.0
-    - 7.22.0
-    - 7.23.0
-    - 7.24.0
-  - dependency-name: y18n
-    versions:
-    - 3.2.2
-  - dependency-name: stylelint
-    versions:
-    - 13.10.0
-    - 13.11.0
-    - 13.12.0
-    - 13.9.0
-  - dependency-name: autoprefixer
-    versions:
-    - 10.2.3
-    - 10.2.4
 - package-ecosystem: bundler
   directory: "/"
   schedule:
@@ -47,30 +14,7 @@ updates:
     time: "09:00"
     timezone: Europe/Paris
   open-pull-requests-limit: 10
-  ignore:
-  - dependency-name: html-proofer
-    versions:
-    - 3.18.6
-    - 3.18.8
-    - 3.19.0
-    - 3.19.1
-  - dependency-name: oj
-    versions:
-    - 3.11.2
-    - 3.11.3
-    - 3.11.4
-    - 3.11.5
-  - dependency-name: pkg-config
-    versions:
-    - 1.4.5
-    - 1.4.6
-  - dependency-name: kramdown
-    versions:
-    - 2.3.1
-  - dependency-name: secure_headers
-    versions:
-    - 6.3.2
-  - dependency-name: puma
-    versions:
-    - 5.2.0
-    - 5.2.1
+- package-ecosystem: "docker"
+  directory: "/"
+  schedule:
+    interval: "weekly"
