@@ -1,4 +1,4 @@
-FROM ruby:2.7
+FROM ruby:3.0.2
 
 # Docker build arguments
 # Defaults can be changed in the docker-compose file

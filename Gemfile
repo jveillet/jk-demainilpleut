@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-ruby '2.7.3'
+ruby '3.0.2'
 
 gem 'dotenv', '~> 2.7.6'
 gem 'jekyll', '~> 4.2'
@@ -26,3 +26,5 @@ group :development, :test do
   gem 'pkg-config', '~> 1.4'
   gem 'rspec', '~> 3.10'
 end
+
+gem "webrick", "~> 1.7"
