@@ -46,19 +46,19 @@ $ git branch
 As you can see, you could have a whole bunch of branches of every name. Now, git gives you the possibility of listing the branches that has been already merged.
 
 ```bash
-$ git branch --merged
+git branch --merged
 ```
 
 You can reverse the logic and do the exact opposite and list the not merged ones.
 
 ```bash
-$ git branch --no-merged
+git branch --no-merged
 ```
 
 Now you can go and use the results of these commands and add it to the delete method.
 
 ```bash
-$ git branch -d `git branch --merged`
+git branch -d `git branch --merged`
 ```
 
 But what if you want to delete branches based on their name or a part of their name ?
@@ -109,13 +109,13 @@ Pretty neat, yes? The `-v` stands for "select non-matching lines", not to be con
 How can we use this results to delete the matching branches? We have the possibility to chain the commands to the `git branch -d` and apply the filter to it. One nice thing about this command, is that you can pass in a list of branches you want to delete.
 
 ```bash
-$ git branch -d `git branch | grep "JIRA"`
+git branch -d `git branch | grep "JIRA"`
 ```
 
 This will use the result of the grep command, and pass the list to the `git branch -d`. Unfortunately, it will only delete the merged branches of this list. If you want to delete any branch no matter what, you have to use the `-D` flag instead.
 
 ```bash
-$ git branch -D `git branch | grep "JIRA"`
+git branch -D `git branch | grep "JIRA"`
 ```
 
 Happy cleaning 😊

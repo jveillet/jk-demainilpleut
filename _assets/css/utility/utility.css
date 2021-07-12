@@ -5,7 +5,7 @@ Description: Utility classes
 
 /* Text utilities */
 
-.quote {
+blockquote {
   border-left: .3em solid var(--text-color);
   font-style: italic;
   font-weight: 400;
@@ -33,6 +33,12 @@ code {
 }
 
 /* Lists utilities */
+
+.list-unstyled {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
 .list-unordered {
   list-style-type: disc;

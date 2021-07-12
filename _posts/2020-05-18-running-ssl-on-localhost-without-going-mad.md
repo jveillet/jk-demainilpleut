@@ -13,7 +13,6 @@ image:
 ---
 
 I admit it, this title is a little clickbaity. Have you tried to setup SLL for your local dev environment lately? Does it make you want to bang your head against a wall? Then this article might be for you, I battle tested this on different laptops, and it served me well. Let's be clear, this is superfluous, and most of the times it's unnecessary. You can probably live without using SSL/HTTPS for your local dev, but sometimes you may want to be able to do just that, because your work environment requires it, for consistency with what runs on the cloud, or to secure a little communications with external services.
-{: .intro}
 
 <!--readmore-->
 
@@ -30,7 +29,6 @@ This tool has saved my sanity.
 What is mkcert ? Let me answer by shamelessly quote [their GitHub page](https://github.com/FiloSottile/mkcert):
 
 > mkcert is a simple tool for making locally-trusted development certificates. It requires no configuration.
-{: .quote}
 
 That sounds good, right? It is, but you have to install first the tool on your machine. It is well explained on [mkcert's page](https://github.com/FiloSottile/mkcert).
 

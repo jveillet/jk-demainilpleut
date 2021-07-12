@@ -10,18 +10,16 @@ author: jveillet
 
 Welcome to the last part of the WordPress development environment with
 Docker. We will see how to use your own theme in the previous Docker container we created in [Part II]({% post_url 2016-03-30-wordpress-development-environment-with-docker-part-ii-using-docker-compose-to-install-wordpress %}).
-{: .intro}
 
 <!--readmore-->
 
 ## Table of Contents
 
-+ [Accessing the container](#container)
-+ [Sharing data](#mount)
-+ [Adding your own theme](#theme)
-+ [Side note on volumes](#side)
-+ [Wrapping up](#conclusion)
-{: .list-unordered}
+- [Accessing the container](#container)
+- [Sharing data](#mount)
+- [Adding your own theme](#theme)
+- [Side note on volumes](#side)
+- [Wrapping up](#conclusion)
 
 ## Accessing the container {#container}
 
@@ -150,6 +148,5 @@ In this chapter, we covered how to mount the WordPress installation from the con
 
 **Other Parts in this series:**
 
-+ [WordPress development environment with Docker Part I: installing Docker]({% post_url 2016-03-30-wordpress-development-environment-with-docker-part-i-installing-docker %})
-+ [Wordpress development environment with Docker Part II: Using Docker Compose to install WordPress]({% post_url 2016-03-30-wordpress-development-environment-with-docker-part-ii-using-docker-compose-to-install-wordpress %})
-{: .list-unordered}
+- [WordPress development environment with Docker Part I: installing Docker]({% post_url 2016-03-30-wordpress-development-environment-with-docker-part-i-installing-docker %})
+- [Wordpress development environment with Docker Part II: Using Docker Compose to install WordPress]({% post_url 2016-03-30-wordpress-development-environment-with-docker-part-ii-using-docker-compose-to-install-wordpress %})

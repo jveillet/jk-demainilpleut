@@ -17,20 +17,18 @@ image:
 ---
 
 This is part II of an ongoing series about WordPress development with Docker. Part I was about installing Docker and preparing the environment. Our goal this time, is installing WordPress in a container, a database, and play a little bit with it.
-{: .intro}
 
 <!--readmore-->
 
 ## Table of Contents
 
-+ [Prerequisites](#prerequisites)
-+ [Directory structure](#structure)
-+ [Using docker-compose](#compose)
-+ [Setting up WordPress](#wordpress)
-+ [Setting up a database](#database)
-+ [Bonus part](#bonus)
-+ [Wrapping up](#conclusion)
-{: .list-unordered}
+- [Prerequisites](#prerequisites)
+- [Directory structure](#structure)
+- [Using docker-compose](#compose)
+- [Setting up WordPress](#wordpress)
+- [Setting up a database](#database)
+- [Bonus part](#bonus)
+- [Wrapping up](#conclusion)
 
 ## Prerequisites {#prerequisites}
 
@@ -50,8 +48,7 @@ touch docker-compose.yml
 
 ## Using docker-compose {#compose}
 
->Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a Compose file to configure your application’s services. Then, using a single command, you create and start all the services from your configuration — [Docker Compose documentation](https://docs.docker.com/compose/overview/).
-{: .quote}
+> Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a Compose file to configure your application’s services. Then, using a single command, you create and start all the services from your configuration — [Docker Compose documentation](https://docs.docker.com/compose/overview/).
 
 You can also launch containers one by one by doing a docker run + parameters, but it is not really friendly (yes, this is highly subjective), and very verbose as you have to type a list of parameters the size of the Mississippi. Compose is a tool made to combine the launch of multiple containers ( = multiple run commands), with the help of a YML file. This file can take a lot of parameters, we will focus on the key ones we will need in order to accomplish a WordPress installation. As always check the [Docker documentation](https://docs.docker.com/compose/compose-file/) to know more.
 
@@ -163,7 +160,7 @@ BOOOOM!!!
 I get it, `docker-compose.yml` is a lame name, there are situations when you want to be able to launch different configurations. Let's create a different file, called "dev", with the content of the docker-compose.yml file.
 
 ```bash
-$ cp docker-compose.yml dev.yml
+cp docker-compose.yml dev.yml
 ```
 
 Launching this configuration will not be more difficult that previously, we add to tell the program to use a different path to compose. Use the `-f` flag with the new Compose file name.

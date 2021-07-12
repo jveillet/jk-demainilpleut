@@ -132,7 +132,7 @@ DEPENDENCIES
   jekyll-feed (~> 0.15.1)
   jekyll-paginate (~> 1.1.0)
   jekyll-sitemap (~> 1.4.0)
-  oj
+  oj (~> 3.12, >= 3.12.1)
   pkg-config (~> 1.4)
   puma (~> 5.3.2)
   rack-jekyll!

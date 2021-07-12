@@ -23,14 +23,13 @@ There is a lot of techniques and  methodologies this days to help you achieve th
 Demain·il·pleut has been build around that philosophy. I designed everything in the browser, most of the CSS and HTML markup is done by hand. I didn't use tools, frameworks, or library (at the exception of jQuery and [PrismJS](https://prismjs.com/)) because I thought that for a small project like this one, they would get in the way.
 
 Here is an overview of the approach I took:
-+ Every element on the page use CSS classes, using a BEM-like naming, I choose to name the components like `Component-Element--Modifier`.
-+ Very simple HTML markup.
-+ I use CSS Ids only for JS hooks.
-+ Only one CSS file of 14kb (10kb minified).
-+ For now, I use [Gulp](https://gulpjs.com/) to minify the CSS.
-+ Flexbox has a [browser compatibility of 95%](https://caniuse.com/#feat=flexbox) (as this time), that's great, so I had a little fun with it and used it to display the colors of the Styleguide.
-{: .list-unordered}
 
+- Every element on the page use CSS classes, using a BEM-like naming, I choose to name the components like `Component-Element--Modifier`.
+- Very simple HTML markup.
+- I use CSS Ids only for JS hooks.
+- Only one CSS file of 14kb (10kb minified).
+- For now, I use [Gulp](https://gulpjs.com/) to minify the CSS.
+- Flexbox has a [browser compatibility of 95%](https://caniuse.com/#feat=flexbox) (as this time), that's great, so I had a little fun with it and used it to display the colors of the Styleguide.
 
 ## Feedback welcome
 
@@ -38,10 +37,9 @@ Designing for the web is cool, what is even cooler is doing it on the open, the 
 
 ## What's next ?
 
-+ Code snippets under each component.
-+ Table of contents.
-+ Code refactoring.
-+ Better layout.
-+ Getting rid of jQuery (in favor of Vanilla JS).
-+ Automate things.
-{: .list-unordered}
+- Code snippets under each component.
+- Table of contents.
+- Code refactoring.
+- Better layout.
+- Getting rid of jQuery (in favor of Vanilla JS).
+- Automate things.
