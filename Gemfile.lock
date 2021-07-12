@@ -117,6 +117,7 @@ GEM
     typhoeus (1.4.0)
       ethon (>= 0.9.0)
     unicode-display_width (1.7.0)
+    webrick (1.7.0)
     yell (2.2.2)
 
 PLATFORMS
@@ -138,9 +139,10 @@ DEPENDENCIES
   rake (~> 13.0.3)
   rspec (~> 3.10)
   secure_headers (~> 6.3)
+  webrick (~> 1.7)
 
 RUBY VERSION
-   ruby 2.7.3p183
+   ruby 3.0.2p107
 
 BUNDLED WITH
    2.2.22
