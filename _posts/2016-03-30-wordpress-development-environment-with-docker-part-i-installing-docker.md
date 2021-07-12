@@ -11,19 +11,18 @@ author: jveillet
 Welcome to this (soon to be) series about WordPress development environment using [Docker](https://www.docker.com/). We will cover the basis of how to set up Docker, how to configure it to run a WordPress instance in a container, and how to add our theme, modify it, and see instantly the result.
 Part I is aimed at people who heard about Docker and containers, but never got deeper. If you already know what is it
 all about, and have a functioning environment, skip directly to [Part II]({% post_url 2016-03-30-wordpress-development-environment-with-docker-part-ii-using-docker-compose-to-install-wordpress %}).
-{: .intro}
 
 <!--readmore-->
 
 ## Table of Contents
-+ [Prerequisites](#prerequisites)
-+ [Introduction](#intro)
-+ [Create a docker machine](#create)
-+ [Connect to the Docker Machine](#connect)
-+ [Start and stop machines](#start_stop)
-+ [Getting the Host IP address](#ip)
-+ [Wrapping up](#conclusion)
-{: .list-unordered}
+
+- [Prerequisites](#prerequisites)
+- [Introduction](#intro)
+- [Create a docker machine](#create)
+- [Connect to the Docker Machine](#connect)
+- [Start and stop machines](#start_stop)
+- [Getting the Host IP address](#ip)
+- [Wrapping up](#conclusion)
 
 ## Prerequisites {#prerequisites}
 
@@ -32,24 +31,23 @@ A Terminal (No worries on OSX or Linux, if you're on Windows, try [Cygwin](https
 
 ## Introduction {#intro}
 
->“Docker allows you to package an application with all of its dependencies into a standardized unit for software development.
+> “Docker allows you to package an application with all of its dependencies into a standardized unit for software development.
 Docker containers wrap up a piece of software in a complete filesystem that contains everything it needs to run: code, runtime, system tools, system libraries – anything you can install on a server. This guarantees that it will always run the same, regardless of the environment it is running in.” — [Docker documentation](https://docs.docker.com).
-{: .quote}
 
 There are three key components of Docker:
-+ The docker program.
-+ Docker subcommands (run, compose, etc..).
-+ Docker images, that will run in containers.
-{: .list-unordered}
 
->“A container is a stripped-to-basics version of a Linux operating system. An image is software you load into a container. When you ran the command, the Engine software:
+- The docker program.
+- Docker subcommands (run, compose, etc..).
+- Docker images, that will run in containers.
+
+> “A container is a stripped-to-basics version of a Linux operating system. An image is software you load into a container. When you ran the command, the Engine software:
 checked to see if you had the hello-world software image
 downloaded the image from the Docker Hub (more about the hub later)
 loaded the image into the container and “ran” it
 ” — [Docker documentation](https://docs.docker.com).
-{: .quote}
 
 Imagine you want to run a MySQL server, you then have to ask Docker to run MySQL.
+
 ```bash
 $ docker run mysql
 [...]
@@ -64,6 +62,7 @@ Once again, I encourage you to read through the [Docker Website](https://www.doc
 If this is your first install of Docker, and the first time ever you are using it, you have to create a Docker Machine, which means creating a VirtualBox image using the docker toolbox.
 
 Fire up a terminal, because nearly everything will be done in the command line. To know if machines already exists you can invoke the docker-machine program.
+
 ```bash
 $ docker-machine ls
 NAME   ACTIVE   DRIVER   STATE   URL   SWARM   DOCKER   ERRORS
@@ -113,10 +112,12 @@ export DOCKER_CERT_PATH="/Users//.docker/machine/machines/default"
 export DOCKER_MACHINE_NAME="default"
 # Run this command to configure your shell:
 # eval "$(docker-machine env default)"
-</code></pre>
-<p>Again, the terminal prompt is saying what we must do in order to connect to the machine, run the command above:</p>
-<pre><code class="language-bash">
-$ eval "$(docker-machine env default)"
+```
+
+Again, the terminal prompt is saying what we must do in order to connect to the machine, run the command above:
+
+```bash
+eval "$(docker-machine env default)"
 ```
 
 That's it, your terminal session is now connected with the Docker machine. In order to know that everything runs smoothly, and see if there are containers running into the machine, you can do a `ps` command with the docker program (like you can do when you want to know what program is running on Linux or OSX).
@@ -138,8 +139,8 @@ When you're done with whatever you were doing with your Docker environment, ther
 the opposite, a command to start the machine again.
 
 ```bash
-$ docker-machine stop default
-$ docker-machine start default
+docker-machine stop default
+docker-machine start default
 ```
 
 ## Getting the Host IP address {#ip}

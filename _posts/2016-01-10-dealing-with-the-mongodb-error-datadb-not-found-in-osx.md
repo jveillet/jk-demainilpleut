@@ -18,6 +18,7 @@ if you landed somehow on this article, you have probably miss something in the i
 ## What the.. ?
 
 When trying to launch mongodb in your Terminal, I guess you have met with this kind of error message:
+
 ```bash
 $ mac:app jeremie$ mongod
 2015-10-09T12:06:37.396+0200 I STORAGE [initandlisten] exception in initAndListen:
@@ -28,10 +29,11 @@ The output is pretty clear, you do not have the `data` directory, and its `db` s
 So let's go ahead and fix that, and create that directory.
 
 ```bash
-$ mkdir -p /data/db
+mkdir -p /data/db
 ```
 
 If you try to launch the `mongod` command again after that, it will fail with something like the above:
+
 ```bash
 $ mac:app jeremie$ mongod
 2015-10-09T12:10:17.370+0200 I STORAGE [initandlisten] exception in initAndListen: 98 Unable to create/open lock file:
@@ -43,15 +45,17 @@ The directory is created, but you do not have sufficient rights to interact with
 ## Do I have the permission, Sir?
 
 Fixing this error can be done by using the two commands below:
+
 ```bash
-$ sudo chmod 0755 /data/db
-$ sudo chown $USER /data/db
+sudo chmod 0755 /data/db
+sudo chown $USER /data/db
 ```
 
 What it means on the first line is the owner have read, write, and execute rights, and others have only read and execute rights.
 The second line changes the ownership of the directory from its current owner to the logged in user.
 
 Aaaaand, that's it! Next time you will fire the `mongod` command, you should see an output like this:
+
 ```bash
 $ mac:~ jeremie$ mongod
 [...]

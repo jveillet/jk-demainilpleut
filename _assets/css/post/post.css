@@ -77,14 +77,13 @@ h2 .article-title:visited {
   margin-top: 2em;
 }
 
-.intro:first-child:first-letter {
+.article-content > p:first-child::first-letter {
+  color: var(--primary-color);
+  padding: 0 .3rem;
+  margin: 0 .3rem 0 0;
+  font-size: 4rem;
   float: left;
-  font-size: 4em;
-  line-height: 1.5;
-  padding-top: .1em;
-  padding-right: .1em;
-  padding-left: .1em;
-  font-weight: 800;
+  line-height: 1;
 }
 
 .article-summary {

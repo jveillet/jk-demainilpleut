@@ -36,7 +36,7 @@ image:
     <div class="pattern">
       <span class="section-title" id="colors">Primary colors</span>
       <div class="pattern-item">
-        <ul class="colors">
+        <ul class="colors list-unstyled">
           <li class="color pattern-color-primary">
             <div class="color-text">color-primary</div>
           </li>
@@ -59,7 +59,7 @@ image:
     <div class="pattern">
       <span class="section-title">Secondary colors</span>
       <div class="pattern-item">
-        <ul class="colors">
+        <ul class="colors list-unstyled">
           <li class="color pattern-color-gray-light">
             <div class="color-text black">gray-light</div>
           </li>
@@ -103,14 +103,14 @@ image:
     <div class="pattern">
       <span class="section-title" id="blockquote">Blockquote</span>
       <div class="pattern-item">
-        <p class="quote">&ldquo;Let me explain something to you. Um, I am not “Mr. Lebowski”. You’re Mr. Lebowski. I’m the Dude. So that’s what you call me. You know, that or, uh, His Dudeness, or uh, Duder, or El Duderino if you’re not into the whole brevity thing.&rdquo; &mdash;The Big Lebowski</p>
+        <blockquote>&ldquo;Let me explain something to you. Um, I am not “Mr. Lebowski”. You’re Mr. Lebowski. I’m the Dude. So that’s what you call me. You know, that or, uh, His Dudeness, or uh, Duder, or El Duderino if you’re not into the whole brevity thing.&rdquo; &mdash;The Big Lebowski</blockquote>
       </div>
 
       <button type="button" class="btn btn--small btn-primary" data-a11y-toggle="target">
           Display code »
       </button>
       <div class="pattern-item" id="target">
-        <pre><code class="language-markup">&lt;p class="quote">...&lt;/p></code></pre>
+        <pre><code class="language-md">> Let me explain something to you...</code></pre>
       </div><!-- end of pattern item -->
     </div><!-- end of pattern -->
 
@@ -129,12 +129,10 @@ image:
           Display code »
       </button>
       <div class="pattern-item" id="target-1">
-        <pre><code class="language-markup">&lt;ul class="list-unordered">
-  &lt;li>&lt;a class="primary-link" href="#">Link 1&lt;/a>&lt;/li>
-  &lt;li>&lt;a class="primary-link" href="#">Link 2&lt;/a>&lt;/li>
-  &lt;li>&lt;a class="primary-link" href="#">Link 3&lt;/a>&lt;/li>
-  &lt;li>&lt;a class="primary-link" href="#">Link 4&lt;/a>&lt;/li>
-&lt;/ul></code></pre>
+        <pre><code class="language-md">- [Link 1](#link 1)
+- [Link 2](#link 2)
+- [Link 3](#link 3)
+- [Link 4](#link 4)</code></pre>
       </div><!-- end of pattern item -->
     </div><!-- end of pattern -->
 
@@ -331,7 +329,7 @@ image:
       <span class="section-title" id="pagination">Pagination</span>
       <div class="pattern-item">
         <div class="pagination">
-          <ul class="page-numbers">
+          <ul class="page-numbers list-unstyled">
             <li><span class="page-numbers current">1</span></li>
             <li><a class="page-numbers primary-link" href="#">2</a></li>
             <li><a class="page-numbers primary-link" href="#">3</a></li>
@@ -370,7 +368,7 @@ image:
           <div class="footer-sections">
             <div class="footer-column">
               <h3 class="black">LATEST POSTS</h3>
-              <ul>
+              <ul class="list-unstyled">
                 <li><a href="#" class="footer-link">Your cells react to ba...</a></li>
                 <li><a href="#" class="footer-link">Hello world!</a></li>
                 <li><a href="#" class="footer-link">You think water moves ...</a></li>
@@ -382,7 +380,7 @@ image:
             </div><!-- end of column -->
             <div class="footer-column">
               <h3 class="black">MENU</h3>
-              <ul>
+              <ul class="list-unstyled">
                 <li><a href="#" class="footer-link">Link 1</a></li>
                 <li><a href="#" class="footer-link">Link 2</a></li>
                 <li><a href="#" class="footer-link">Link 3</a></li>
@@ -391,7 +389,7 @@ image:
             </div><!-- end of column -->
             <div class="footer-column">
               <h3 class="black">CATEGORIES</h3>
-              <ul>
+              <ul class="list-unstyled">
                <li><a href="#" class="footer-link">Category_1 (7)</a></li>
                <li><a href="#" class="footer-link">Category_2 (2)</a></li>
                <li><a href="#" class="footer-link">Category_3 (4)</a></li>
@@ -459,11 +457,9 @@ image:
           Display code »
       </button>
       <div class="pattern-item" id="target-7">
-        <pre><code class="language-markup">&lt;pre>
-  &lt;code class="language-javascript">
-    var foo = "bar", baz = 5;
-  &lt;/code>
-&lt;/pre></code></pre>
+        <pre><code class="language-md">```javascript
+var foo = "bar", baz = 5;
+```</code></pre>
       </div><!-- end of pattern item -->
     </div><!-- end of pattern -->
 

@@ -12,18 +12,15 @@ summary: 'Learn how to deploy the Slate documentation, and build the assets auto
 Documentaton is a big part of a project, more critical if you need to hand off the details of your API to multiple third parties that will interact with it.
 Here you will lean how to deploy [Slate](https://github.com/lord/slate), the API documentation generator based on [Middleman](https://middlemanapp.com/),
 on Heroku, and how to configure it to generate the static HTML files with each commit on a repository.
-{: .intro}
 
 <!--readmore-->
-
 ## Table of Contents
 
-+ [Some context](#context)
-+ [Set up Slate locally](#install)
-+ [Building the documentation on Heroku](#building)
-+ [Serving files](#serving)
-+ [Customizing the Middleman build configuration](#customizing)
-{: .list-unordered}
+- [Some context](#context)
+- [Set up Slate locally](#install)
+- [Building the documentation on Heroku](#building)
+- [Serving files](#serving)
+- [Customizing the Middleman build configuration](#customizing)
 
 ## Some context {#context}
 

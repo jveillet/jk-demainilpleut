@@ -34,7 +34,7 @@ layout: default
 {% if paginator.total_pages > 1 %}
 <div class="pagination">
   <div class="pagination-wrapper">
-    <ul class="page-numbers">
+    <ul class="page-numbers list-unstyled">
       {% if paginator.previous_page %}
         <li><a href="{{ paginator.previous_page_path | prepend: '/' | replace: '//', '/' | relative_url }}" class="page-numbers previous primary-link">&laquo; Prev</a></li>
       {% endif %}

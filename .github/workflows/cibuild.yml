@@ -24,7 +24,7 @@ jobs:
         npm install
         npm install --global gulp-cli
         gulp lint
-    - name: Set up Ruby 2.7
+    - name: Set up Ruby 3
       uses: ruby/setup-ruby@v1
       with:
         bundler-cache: true

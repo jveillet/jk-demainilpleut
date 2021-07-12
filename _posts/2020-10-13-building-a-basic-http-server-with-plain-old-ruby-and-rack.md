@@ -13,7 +13,6 @@ image:
 ---
 
 Occasionally, I find myself in need for a basic HTTP server that will render some static content (HTML, CSS, images,..), no complex installation, only build and launch. As I am a huge Ruby fan, I was wondering how can I achieve this in the simplest way possible with plain Ruby.
-{: .intro}
 
 ## What we will build
 
@@ -30,7 +29,6 @@ A basic HTTP server, serving a static HTML file. The Install process should be a
 According to the `rack` documentation:
 
 > Rack provides a minimal, modular, and adaptable interface for developing web applications in Ruby. By wrapping HTTP requests and responses in the simplest way possible, it unifies and distills the API for web servers, web frameworks, and software in between (the so-called middleware) into a single method call.
-{: .quote}
 
 Rack is used by most of the Ruby web servers you can find (puma, Sinatra, Webrick,..), it has an excellent support, a lot of plugins, and is very modular. Think of it has a framework to build Web servers on top of it.
 

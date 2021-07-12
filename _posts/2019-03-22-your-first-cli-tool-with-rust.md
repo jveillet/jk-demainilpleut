@@ -10,7 +10,6 @@ summary: 'Learn how to build your first CLI tool with Rust'
 ---
 
 In the wonderful world of programming, you may have heard about this new shiny language called Rust. It is an open-source systems programming language that focuses on speed, memory safety, and parallelism. It allows you to do low-level programming à la C/C++.
-{: .intro}
 
 You might have heard about it in the context of [Web Assembly](https://webassembly.org/). Rust is capable to compile WASM applications, you can find a wide variety of use cases on the [Web Assembly FAQ](https://webassembly.org/docs/use-cases/). It is also known as the basis of [servo](https://servo.org/), a high-performance browser engine, implemented in Firefox.
 
@@ -29,8 +28,10 @@ I wanted to learn something new in 2018, Rust picked my curiosity and I had a ne
 You can set up your workstation by using [Rustup](https://rustup.rs/), it is the main program that installs and configures all the Rust toolchain on your machine.
 
 If you are on Linux or macOS, there is a single command line that will do this for you:
+
 ```bash
 $ curl <https://sh.rustup.rs> -sSf | sh
+[...]
 ```
 
 If you are on Windows, it is very similar, but you need to download an `exe` on the [Rustup Website](https://rustup.rs/) and execute it.
@@ -44,13 +45,14 @@ What we will try to do here, is building a replica of the [cat](https://en.wikip
 To create the basic skeleton of the application, we will use a tool called [Cargo](https://github.com/rust-lang/cargo/). It is the package manager of Rust, think of it as the NPM (for my Javascript friends) or the Bundler (for the Rubyists) of the Rust toolchain.
 
 Open your terminal app, go to your favorite place to store source code, then type in the code below.
+
 ```bash
-$ cargo init kt
+cargo init kt
 ```
 
 This will create a directory called `kt` with the basis of the structure of our app.
 
-If we`cd` into that directory, we will see a architecture and, bonus point, that the project has git initialized by default. Neat!
+If we `cd` into that directory, we will see a architecture and, bonus point, that the project has git initialized by default. Neat!
 
 ```bash
 $ cd kt/
@@ -155,7 +157,6 @@ The extern crate keyword is for importing the library, you have to add this in t
 A quick note about Rust modules:
 
 > Rust has a module system that enables the reuse of code in an organized fashion. A module is a namespace which contains definitions of functions or types, and you can choose whether those definitions are visible outside their module (public) or not (private). — The Rust Documentation
-{: .quote}
 
 Here we are saying that we want to use the `Arg` and the `App` module. We want to be able to have a `FILE` argument for our app, that will contain a file path. Clap can help up express that with a method chaining fashion that is very pleasant.
 
@@ -527,17 +528,14 @@ Your turn to improve the tool!
 
 Don't hesitate to show me what you have built with it! 😎
 
-
 _Special thanks to Anaïs for reviewing this post_ 👍
-
 
 ## Going further
 
 - [cat](https://en.wikipedia.org/wiki/Cat_(Unix)): Wikipedia page of the cat utility.
-- [kt-rs](https://github.com/jveillet/kt-rs)
-- [Rust Cookbook](https://rust-lang-nursery.github.io/rust-cookbook/)
+- [kt-rs](https://github.com/jveillet/kt-rs): This article project.
+- [Rust Cookbook](https://rust-lang-nursery.github.io/rust-cookbook/).
 - [Clap](https://github.com/clap-rs/clap): A full featured, fast Command Line Argument Parser for Rust.
 - [Reqwest](https://github.com/seanmonstar/reqwest): An easy and powerful Rust HTTP Client.
 - [Serde](https://github.com/serde-rs/serde): Serialization framework for Rust.
 - [crates.io](https://crates.io/): The Rust community’s crate registry.
-{: .list-unordered}
