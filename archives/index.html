@@ -15,8 +15,8 @@ layout: default
   <span class="section-title">Last 10 Posts</span>
   <ol class="list-ordered" start="1" type="1">
     {% for post in site.posts limit:10 offset:0 %}
-    <li>
-      <a href="{{ post.url | relative_url }}" class="primary-link">{{ post.title }}</a>
+    <li class="archives-link">
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
     </li>
     {% endfor %}
   </ol>
@@ -27,7 +27,7 @@ layout: default
   <ul class="list-unordered">
   {% for category in site.categories %}
     {% assign cat = category | first | downcase | replace: ' ', '-' %}
-    <li><a href="{{ 'archives/' | append: cat | relative_url }}" class="primary-link">{{ category | first }}</a><span class="archives-complement">({{ category | last | size }})</span></li>
+    <li class="archives-link"><a href="{{ 'archives/' | append: cat | relative_url }}">{{ category | first }}</a><span class="archives-complement">({{ category | last | size }})</span></li>
   {% endfor %}
   </ul>
 </div>
@@ -40,7 +40,7 @@ layout: default
     {% assign prevyear = post.previous.date | date: "%B %Y" %}
     {% assign counter = counter | plus: 1 %}
     {% if thisyear != prevyear %}
-      <span><a href="{{ 'archives/' | relative_url }}{{ post.date | date:"%Y" }}/{{ post.date | date:"%m" }}" class="primary-link">{{ thisyear }}</a><span class="archives-complement">({{ counter }})</span></span>
+      <span class="archives-link"><a href="{{ 'archives/' | relative_url }}{{ post.date | date:"%Y" }}/{{ post.date | date:"%m" }}">{{ thisyear }}</a><span class="archives-complement">({{ counter }})</span></span>
       {% if forloop.last == false %}
         |&nbsp;
       {% endif %}

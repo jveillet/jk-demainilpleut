@@ -44,11 +44,11 @@ Description: Author section styles
   margin-bottom: 1em;
   padding-bottom: 1em;
   width: 15em;
-  border-bottom: .06em solid var(--article-sep-color);
+  border-bottom: .06em solid var(--articles-separator-color);
 }
 
 .members-articles-count {
-  color: var(--primary-color);
+  color: var(--members-articles-count-color);
   font-weight: 600;
 }
 

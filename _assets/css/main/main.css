@@ -1,9 +1,0 @@
-/**
-Name: main.css
-Description: Main page containers  styles
-*/
-
-[aria-hidden = "true"],
-[data-a11y-toggle]:not([aria-controls]) {
-  display: none;
-}

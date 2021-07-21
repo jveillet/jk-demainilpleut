@@ -5,7 +5,11 @@ Description: Footer section styles
 
 .footer {
   padding-top: 1rem;
-  background-color: var(--footer-bg-color);
+  background-color: var(--footer-background-color);
+}
+
+.footer-column-title {
+  color: var(--footer-column-title-color);
 }
 
 .footer-disclaimer {
@@ -16,7 +20,7 @@ Description: Footer section styles
 
 .footer-disclaimer-link,
 .footer-disclaimer-link:visited {
-  color: var(--text-color);
+  color: var(--main-text-color);
   text-decoration: none;
   font-weight: 600;
 }
@@ -27,7 +31,7 @@ Description: Footer section styles
 
 .footer-link,
 .footer-link:visited {
-  color: var(--text-color);
+  color: var(--main-text-color);
   text-decoration: none;
   font-weight: 400;
 }
@@ -37,10 +41,9 @@ Description: Footer section styles
 }
 
 .footer-hastgag {
-  color: var(--primary-color-darker);
+  color: var(--footer-hashtag-color);
   font-weight: bold;
 }
-
 
 .footer-sections {
   display: flex;

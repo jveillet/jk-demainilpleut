@@ -109,7 +109,7 @@ document.onreadystatechange = function () {
             themeToggle.setAttribute('aria-label', 'Switch to dark theme');
         }
 
-        if (window.CSS && CSS.supports('color', 'var(--text-color)') && !hasNoPrefersColorSchemeSupport()) {
+        if (window.CSS && CSS.supports('color', 'var(--main-text-color)') && !hasNoPrefersColorSchemeSupport()) {
             addThemeToggleClickEvent();
         } else {
             var element = document.querySelector('.js-theme-toggle');

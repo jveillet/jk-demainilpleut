@@ -1,12 +1,5 @@
 FROM ruby:3.0.2
 
-# Docker build arguments
-# Defaults can be changed in the docker-compose file
-ARG RACK_ENV=development
-ARG JEKYLL_ENV=development
-ARG NODE_ENV=development
-ARG PORT=8080
-
 # Environment variables
 ENV DEBIAN_FRONTEND noninteractive
 

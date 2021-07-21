@@ -20,7 +20,7 @@ Description: Styles for articles / posts
   padding: 1em;
   margin-bottom: 1em;
   margin-top: 1em;
-  border-bottom: .0625em solid var(--article-sep-color);
+  border-bottom: .0625em solid var(--articles-separator-color);
 }
 
 .articles:last-child {
@@ -53,13 +53,13 @@ Description: Styles for articles / posts
 
 .primary-link,
 .primary-link:visited{
-  color: var(--text-color);
+  color: var(--main-text-color);
   text-decoration: none;
 }
 
 .primary-link:hover,
 .primary-link:focus {
-  color: var(--primary-color);
+  color: var(--articles-primary-link-color);
   text-decoration: underline;
 }
 
@@ -68,7 +68,7 @@ h2 .article-title:link,
 h2 .article-title:visited {
   font-size: 1.5em;
   font-weight: 700;
-  color: var(--title-color) !important;
+  color: var(--articles-title-color) !important;
   line-height: 1.125;
   text-decoration: none !important;
 }
@@ -78,7 +78,7 @@ h2 .article-title:visited {
 }
 
 .article-content > p:first-child::first-letter {
-  color: var(--primary-color);
+  color: var(--articles-first-letter-color);
   padding: 0 .3rem;
   margin: 0 .3rem 0 0;
   font-size: 4rem;
@@ -94,22 +94,22 @@ h2 .article-title:visited {
 }
 
 .article-excerpt {
-  color: var(--grey);
+  color: var(--articles-excerpt-color);
   font-weight: 400;
 }
 
 .article a:link {
-  color: var(--primary-color);
+  color: var(--articles-primary-link-color);
   text-decoration: underline;
 }
 
 .article a:visited {
-  color: var(--primary-color-darker);
+  color: var(--articles-primary-link-visited-color);
   text-decoration: underline;
 }
 
 .article-pubdate {
-  color: var(--grey);
+  color: var(--articles-pubdate-color);
   margin: 0;
   font-style: italic;
   font-size: 1em;
@@ -123,7 +123,7 @@ h2 .article-title:visited {
 
 .article-author--link,
 .article-author--link:visited {
-  color: var(--primary-color);
+  color: var(--articles-primary-link-color);
   text-decoration: none;
   font-weight: 600;
 }
@@ -160,8 +160,8 @@ h2 .article-title:visited {
 }
 
 .article-tags-item .article-tags-link:hover{
-  background-color: var(--tags-color);
-  color: var(--tags-bg-color) !important;
+  background-color: var(--tags-hover-bg-color);
+  color: var(--tags-hover-color) !important;
 }
 
 .author-grid {
@@ -211,7 +211,7 @@ h2 .article-title:visited {
 
 .published time,
 .reading-area .reading-time {
-  color: var(--grey);
+  color: var(--articles-readingtime-color);
 }
 
 .article-top {
@@ -224,7 +224,7 @@ h2 .article-title:visited {
 .top:hover,
 .top:active,
 .top:focus {
-  color: var(--primary-color);
+  color: var(--articles-primary-link-color);
 }
 
 .fourofour-title {
@@ -332,7 +332,7 @@ h2 .article-title:visited {
 
   h1.article-title {
     font-size: 3em;
-    color: var(--title-color);
+    color: var(--articles-title-color);
   }
 
   .article-categories {
@@ -349,7 +349,7 @@ h2 .article-title:visited {
   }
 
   .article-pubdate {
-    color: var(--grey);
+    color: var(--articles-pubdate-color);
     margin-left: .5em;
     font-size: 1em;
     font-style: italic;
