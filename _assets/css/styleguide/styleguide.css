@@ -11,9 +11,14 @@ Description: Styleguide specific  styles
   margin-top: 2em;
 }
 
-.pattern-title {
-  color: var(--grey-secondary);
-  font-size: 1.5em;
+.pattern-item {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.pattern-item article {
+  margin: 0;
+  padding: 0;
 }
 
 .colors {
@@ -27,19 +32,96 @@ Description: Styleguide specific  styles
 }
 
 .color {
-  width: 10em;
+  width: 6em;
   height: 6em;
   text-align: center;
   margin: 1em;
+  border-radius: 100%;
+  border: .0625em solid var(--black-200);
 }
 
 .color-text {
-  font-size: .8em;
+  font-size: .85em;
   font-weight: 700;
   width: 100%;
-  margin-top: 60%;
-  color: #ffffff;
-  background-color: var(--black);
+  margin-top: 45%;
+  color: var(--black-500);
+}
+
+.color-text--inverted {
+  color: var(--white-400);
+}
+
+.pattern-color--blue-50 {
+  background-color: var(--blue-50);
+}
+
+.pattern-color--blue-100 {
+  background-color: var(--blue-100);
+}
+
+.pattern-color--blue-200 {
+  background-color: var(--blue-200);
+}
+
+.pattern-color--blue-300 {
+  background-color: var(--blue-300);
+}
+
+.pattern-color--blue-400 {
+  background-color: var(--blue-400);
+}
+
+.pattern-color--blue-500 {
+  background-color: var(--blue-500);
+}
+
+.pattern-color--blue-600 {
+  background-color: var(--blue-600);
+}
+
+.pattern-color--blue-700 {
+  background-color: var(--blue-700);
+}
+
+.pattern-color--blue-800 {
+  background-color: var(--blue-800);
+}
+
+.pattern-color--blue-900 {
+  background-color: var(--blue-900);
+}
+
+.pattern-color--orange-500 {
+  background-color: var(--orange-500);
+}
+
+.pattern-color--red-500 {
+  background-color: var(--red-500);
+}
+
+.pattern-color--black-500 {
+  background-color: var(--black-500);
+}
+
+.pattern-color--black-400 {
+  background-color: var(--black-400);
+}
+
+.pattern-color--black-300 {
+  background-color: var(--black-300);
+}
+
+.pattern-color--black-200 {
+  background-color: var(--black-200);
+}
+
+.pattern-color--white-500 {
+  background-color: var(--white-500);
+}
+
+.pattern-color--white-400 {
+  background-color: var(--white-400);
 }
 
 .inline {
@@ -53,46 +135,4 @@ Description: Styleguide specific  styles
 .inline button:last-child {
   margin-bottom: 0;
   margin-left: 0;
-}
-
-.btn-primary {
-  background-color: var(--primary-button-bg-color);
-  color: #ffffff;
-}
-
-.pattern-color-primary {
-  background: var(--primary-color);
-}
-
-.pattern-color-primary-darker {
-  background: var(--primary-color-darker);
-}
-
-.pattern-color-white {
-  background: #ffffff;
-  border: .0625em solid #f1f1f1;
-}
-
-.pattern-color-black {
-  background: #0a0000;
-}
-
-.pattern-color-gray {
-  background: var(--grey);
-}
-
-.pattern-color-gray-light {
-  background: var(--article-sep-color);
-}
-
-.pattern-color-gray-lightest {
-  background: #f1f1f1;
-}
-
-.pattern-color-gray-warm-dark {
-  background: var(--grey-secondary);
-}
-
-.pattern-color-gray-warm-light {
-  background: #e4e2e0;
 }

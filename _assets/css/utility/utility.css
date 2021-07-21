@@ -6,21 +6,21 @@ Description: Utility classes
 /* Text utilities */
 
 blockquote {
-  border-left: .3em solid var(--text-color);
+  border-left: .3em solid var(--main-text-color);
   font-style: italic;
   font-weight: 400;
   padding: .5em;
   margin: 0;
 }
 
-code {
+/* code {
   background-color: #dce4ef;
   color: #4e4e4e;
   font-family: Consolas, Monaco, "Andale Mono", monospace;
   white-space: pre-line;
   white-space: pre-wrap;
   white-space: pre;
-}
+} */
 
 .section-title {
   display: block;
@@ -29,7 +29,7 @@ code {
   margin-bottom: .75em;
   margin-top: .75em;
   text-transform: uppercase;
-  color: var(--grey-secondary);
+  color: var(--main-section-title-color);
 }
 
 /* Lists utilities */
@@ -48,12 +48,4 @@ code {
 .list-ordered {
   list-style-type: decimal;
   margin-left: 2em;
-}
-
-/* Form elements */
-
-.input {
-  border: .0625em solid #706666;
-  display: block;
-  font-size: 100%;
 }

@@ -17,7 +17,7 @@ Description: pagination styles
 }
 
 .page-numbers li {
-  border-right: .125em solid var(--article-sep-color);
+  border-right: .125em solid var(--articles-separator-color);
   float: left;
   font-weight: bold;
   height: 1.6rem;
@@ -30,14 +30,25 @@ Description: pagination styles
 }
 
 .page-numbers .current {
-  color: var(--grey);
+  color: var(--pagination-current-color);
   background: none;
+}
+
+.page-numbers a:link,
+.page-numbers a:visited {
+  text-decoration: none;
+  color: var(--pagination-link-color);
+}
+
+.page-numbers a:hover {
+  text-decoration: underline;
+  color: var(--pagination-link-hover-color);
 }
 
 @media all and (min-width: 47em) {
 
   .page-numbers li {
-    border-right: .125em solid var(--article-sep-color);
+    border-right: .125em solid var(--articles-separator-color);
     float: left;
     font-weight: bold;
     height: 1.6rem;

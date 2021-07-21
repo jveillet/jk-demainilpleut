@@ -8,8 +8,8 @@ layout: default
 
   <div class="archives-breadcrumb">
     <div class="breadcrumbs">
-      <div class="breadcrumb-item"><a href="{{ 'archives' | relative_url }}" class="primary-link breadcrumb-icon">Archives</a></div>
-      <div class="breadcrumb-item"><a href="{{ 'archives/'| append: this_year | relative_url }}" class="primary-link breadcrumb-icon">{{ this_year }}</a></div>
+      <div class="breadcrumb-item"><a href="{{ 'archives' | relative_url }}" class="breadcrumb-icon">Archives</a></div>
+      <div class="breadcrumb-item"><a href="{{ 'archives/'| append: this_year | relative_url }}" class="breadcrumb-icon">{{ this_year }}</a></div>
       <div class="breadcrumb-item breadcrumb-active">{{ page.date | date: "%B" }}</div>
     </div>
   </div>
@@ -26,7 +26,7 @@ layout: default
       <div class="articles-footer">
         <div class="articles-footer-wrapper">
           <img src="{{ author.avatar }}" width="32" height="32" alt="{{ author.name }}" class="articles-footer-avatar">
-          <span style="article-author"><a class="article-author--link" href="{{ 'authors/' | append: author.handle | relative_url }}">{{ author.name }}</a></span>
+          <span class="article-author"><a class="article-author--link" href="{{ 'authors/' | append: author.handle | relative_url }}">{{ author.name }}</a></span>
           <span class="article-pubdate"> on <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %d, %Y' }}</time></span>
           <div class="articles-footer-tags">
             {% for category in post.categories %}

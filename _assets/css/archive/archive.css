@@ -14,7 +14,7 @@ Description: Archives section styles
 .archives-complement {
   margin-left: .5em;
   font-size: .8em;
-  color: var(--text-color);
+  color: var(--main-text-color);
 }
 
 .archives-header {
@@ -44,4 +44,24 @@ Description: Archives section styles
 
 .breadcrumb-active {
   margin-left: 1em;
+}
+
+.breadcrumb-item a:link,
+.breadcrumb-item a:visited {
+  text-decoration: none;
+  color: var(--breadcrumb-color);
+}
+
+.breadcrumb-item a:hover {
+  text-decoration: underline;
+  color: var(--breadcrumb-hover-color);
+}
+
+.archives-link a:link,
+.archives-link a:hover {
+  color: var(--archives-link-color);
+}
+
+.archives-link a:visited {
+  color: var(--archives-link-visited-color);
 }
