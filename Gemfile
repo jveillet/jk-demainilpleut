@@ -11,7 +11,7 @@ gem 'dotenv', '~> 2.7.6'
 gem 'jekyll', '~> 4.2'
 
 # The fastest JSON parser and object serializer.
-gem 'oj', '~> 3.12', '>= 3.12.1'
+gem 'oj', '~> 3.12'
 
 # Puma is a simple, fast, threaded, and highly concurrent HTTP 1.1 server for Ruby/Rack applications.
 gem 'puma', '~> 5.3.2'
