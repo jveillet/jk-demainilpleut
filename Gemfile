@@ -14,7 +14,7 @@ gem 'jekyll', '~> 4.2'
 gem 'oj', '~> 3.12'
 
 # Puma is a simple, fast, threaded, and highly concurrent HTTP 1.1 server for Ruby/Rack applications.
-gem 'puma', '~> 5.3.2'
+gem 'puma', '~> 5.4.0'
 
 # Rack-Jekyll transforms your Jekyll app into a Rack application.
 gem 'rack-jekyll', git: 'https://github.com/adaoraul/rack-jekyll',
