@@ -1,7 +1,7 @@
 # jk-demainilpleut
 
-[![Build Status](https://github.com/jveillet/jk-demainilpleut/workflows/CI/badge.svg)](https://github.com/jveillet/jk-demainilpleut/actions)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/40732b0e-05bc-4aa8-ba99-6bf58f198219/deploy-status)](https://app.netlify.com/sites/demainilpleut/deploys)
+**/!\ This repo is now archived, please see now`jveillet/demainilpleut.dev`**
+
 
 Static HTML version of demainilpleut.dev using the static website generator
 [Jekyll](https://jekyllrb.com/).
